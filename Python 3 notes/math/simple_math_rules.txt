@@ -1,0 +1,62 @@
+
+📌 1. Four Basic Operations
+
+Addition (+):
+- a + b = b + a (Commutative)
+- (a+b)+c = a+(b+c) (Associative)
+Example: 5+3 = 3+5, (2+4)+6 = 2+(4+6)
+
+Subtraction (−):
+- Changing the order changes the result
+Example: 7-5 ≠ 5-7
+
+Multiplication (×):
+- a × b = b × a
+- (a×b)×c = a×(b×c)
+- Distributive: a×(b+c) = a×b + a×c
+Example: 4×3 = 3×4, 2×(3+5) = 2×3 + 2×5
+
+Division (÷):
+- Changing the order changes the result
+- Cannot divide by zero
+Example: 12÷4 ≠ 4÷12, a÷0 ❌
+
+📌 2. Rules for Positive and Negative Numbers
++ × + = +
++ × - = -
+- × - = +
+(Same rules for division)
+
+📌 3. Rules for Zero and One
+a + 0 = a
+a - 0 = a
+a × 0 = 0
+a ÷ 1 = a
+a × 1 = a
+
+📌 4. Rules of Exponents (Powers)
+a^m × a^n = a^(m+n)
+(a^m) ÷ (a^n) = a^(m-n)
+(a^m)^n = a^(m×n)
+a^0 = 1 (a ≠ 0)
+
+📌 5. Fraction Rules
+(a/b) + (c/b) = (a+c)/b
+(a/b) × (c/d) = (a×c)/(b×d)
+(a/b) ÷ (c/d) = (a/b) × (d/c)
+
+📌 6. BODMAS Rule
+Bracket → Order (powers/roots) → Division → Multiplication → Addition → Subtraction
+Example:
+6 + 2 × (3 + 1)^2
+= 6 + 2 × 16
+= 6 + 32
+= 38
+
+📌 7. Some Shortcut Tips
+1. Multiply by 5: (number × 10) ÷ 2
+   Example: 28×5 = (28×10) ÷ 2 = 140
+2. Multiply by 25: (number × 100) ÷ 4
+   Example: 36×25 = (36×100) ÷ 4 = 900
+3. Multiply by 9: (number × 10) − number
+   Example: 47×9 = (47×10) − 47 = 423

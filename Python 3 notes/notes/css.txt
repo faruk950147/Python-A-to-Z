@@ -1,0 +1,123 @@
+1. Universal Selector (*)
+
+সব element select করে।
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+2. Type Selector / Element Selector
+
+HTML ট্যাগের নাম দিয়ে select করা হয়।
+
+p {
+  color: blue;
+}
+
+3. Class Selector (.classname)
+
+class দিয়ে select করা হয়।
+
+.title {
+  font-size: 20px;
+  color: green;
+}
+
+4. ID Selector (#idname)
+
+একটি নির্দিষ্ট element select করতে।
+
+#header {
+  background: black;
+  color: white;
+}
+
+5. Group Selector (,)
+
+একাধিক element একসাথে select করতে।
+
+h1, h2, p {
+  font-family: Arial;
+}
+
+6. Descendant Selector (space)
+
+একটা element এর ভিতরের অন্য element।
+
+div p {
+  color: red;
+}
+
+7. Child Selector (>)
+
+শুধু immediate child select করে।
+
+div > p {
+  color: blue;
+}
+
+8. Adjacent Sibling Selector (+)
+
+একটি element-এর পরে যেটি সাথে সাথে আসে।
+
+h1 + p {
+  font-style: italic;
+}
+
+9. General Sibling Selector (~)
+
+একটি element-এর পরে আসা সব sibling element।
+
+h1 ~ p {
+  color: gray;
+}
+
+10. Attribute Selectors
+
+Element এর attribute অনুযায়ী select করা হয়।
+
+/* নির্দিষ্ট attribute */
+input[type="text"] {
+  border: 1px solid black;
+}
+
+/* যেসব attribute “btn” দিয়ে শুরু */
+a[href^="btn"] {
+  color: red;
+}
+
+/* যেসব attribute “pdf” দিয়ে শেষ */
+a[href$=".pdf"] {
+  color: green;
+}
+
+/* যেসব attribute এর মধ্যে “login” আছে */
+a[href*="login"] {
+  color: blue;
+}
+
+11. Pseudo-classes
+
+Element-এর state অনুযায়ী style।
+
+a:hover {
+  color: red;
+}
+input:focus {
+  border: 2px solid blue;
+}
+li:first-child {
+  font-weight: bold;
+}
+
+12. Pseudo-elements
+
+Element-এর নির্দিষ্ট অংশ select করতে।
+
+p::first-line {
+  color: green;
+}
+p::before {
+  content: "👉 ";
+}
