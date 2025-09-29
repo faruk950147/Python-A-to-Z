@@ -1,0 +1,44 @@
+Python Comments
+
+In Python, a comment is text in the code that the interpreter completely ignores during execution.
+Comments are only used for explanation, documentation, or notes so that programmers can better understand the code.
+
+1. Single-line Comment
+
+Used for a single line.
+It starts with #.
+
+# This is a single-line comment
+x = 10  # assigning a value to the variable
+print(x)  # output will be shown here
+
+2. Multi-line Comment (Docstring style / Triple quotes)
+
+To write comments spanning multiple lines, you can use ''' ... ''' or """ ... """.
+
+"""
+This is a multi-line comment.
+It is usually used for long explanations or documentation.
+"""
+x = 5
+y = 10
+print(x + y)
+
+3. Docstring (Function/Module/Class Documentation)
+
+When """ ... """ or ''' ... ''' is used inside a function, class, or module, it is called a docstring.
+This is used for documentation and can be viewed with help().
+
+def add(a, b):
+    """
+    This function returns the sum of two numbers.
+    Parameters:
+        a (int/float): first number
+        b (int/float): second number
+    Returns:
+        int/float: sum
+    """
+    return a + b
+
+print(add(2, 3))
+print(help(add))  # docstring will be displayed here
