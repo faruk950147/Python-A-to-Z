@@ -1,0 +1,27 @@
+Input and Output are basic concepts in computer science and programming. Simply put:
+
+Input:
+
+The data or information you give to a computer or program to process.
+
+Examples: typing a number on the keyboard, clicking the mouse, data from a file.
+
+Programming example (Python):
+
+name = input("Enter your name: ")  # user input
+
+
+Output:
+
+The result or information the computer or program gives back.
+
+Examples: text displayed on the screen, printed report, data saved in a file.
+
+Programming example (Python):
+
+print("Hello,", name)  # output shown on screen
+
+
+Simply:
+Input = the data you give to the computer
+Output = the result the computer gives you
