@@ -1,4 +1,5 @@
-ChatGPT said:
+
+# ======================= Variable =======================
 
 A variable is basically a container or a named memory location that can store a value. Simply put, a variable is a name that holds some data which can change while the program runs.
 
@@ -83,3 +84,65 @@ Tip: Variables are flexible. You can change their value anytime:
 
 age = 25
 age = 26  # Changed
+
+# ======================= Variable Rules =======================
+Variables in programming are used to store data, and each programming language has rules for naming them. Here are the general rules and best practices for variable names (I’ll explain in a language-agnostic way, mostly following Python/Java/C++ conventions):
+
+1. Rules for variable names
+
+Start with a letter or underscore
+
+Valid: name, _age
+
+Invalid: 1name, 9_age
+
+Can contain letters, digits, and underscores
+
+Valid: user1, user_name, total_amount2
+
+Invalid: user-name (hyphen not allowed), total$
+
+Cannot be a reserved keyword
+
+Keywords are words reserved by the programming language.
+
+Examples in Python: if, for, while, class, def
+
+You cannot name a variable for or class.
+
+Case-sensitive
+
+age, Age, and AGE are different variables.
+
+2. Best practices (not mandatory but recommended)
+
+Use meaningful names
+
+Good: total_price, student_name
+
+Bad: x, a1 (unless in loops or very short scope)
+
+Use lowercase with underscores (snake_case)
+
+Python: total_amount, user_name
+
+Java/C++ often use camelCase: totalAmount, userName
+
+Avoid starting with underscore unless needed
+
+_temp is sometimes used for temporary/internal variables.
+
+Be consistent
+
+Stick to a naming convention in your project.
+
+3. Examples of valid variable names
+name = "Faruk"
+_age = 25
+total_amount2 = 1000
+user_name = "Ahmed"
+
+# ======================= Examples of invalid variable names =======================
+1name = "Faruk"      # starts with digit
+user-name = "Ahmed"  # contains hyphen
+for = 5              # reserved keyword
