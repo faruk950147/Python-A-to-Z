@@ -1,0 +1,85 @@
+ChatGPT said:
+
+A variable is basically a container or a named memory location that can store a value. Simply put, a variable is a name that holds some data which can change while the program runs.
+
+For example, in Python:
+
+age = 25
+name = "Faruk"
+height = 5.9
+
+
+Here:
+
+age is a variable that holds the value 25.
+
+name is a variable that holds the value "Faruk".
+
+height is a variable that holds the value 5.9.
+
+Key points about variables:
+
+You can choose the variable name (like x, score, total), but there are rules—for example, in Python, a variable name cannot start with a number.
+
+The value of a variable can be changed:
+
+age = 25
+age = 26  # Now age is 26
+
+Great! Let’s go over types of variables and how they are used in programming. I’ll use Python examples, but the concept is similar in most languages.
+
+1. Integer (int)
+
+Stores whole numbers (no decimal).
+
+age = 25
+year = 2025
+
+2. Float (float)
+
+Stores decimal numbers.
+
+height = 5.9
+price = 99.99
+
+3. String (str)
+
+Stores text, enclosed in quotes.
+
+name = "Faruk"
+city = 'Dhaka'
+
+4. Boolean (bool)
+
+Stores True or False.
+
+is_student = True
+has_passed = False
+
+5. List
+
+Stores multiple values in order (like an array).
+
+fruits = ["apple", "banana", "mango"]
+numbers = [1, 2, 3, 4]
+
+6. Dictionary (dict)
+
+Stores data as key-value pairs.
+
+student = {"name": "Faruk", "age": 20, "city": "Dhaka"}
+
+7. Variable Rules
+
+Name must start with a letter or _ (underscore), not a number.
+
+Names can contain letters, numbers, or _.
+
+Cannot use Python keywords (like if, for, class).
+
+Case-sensitive (age ≠ Age).
+
+Tip: Variables are flexible. You can change their value anytime:
+
+age = 25
+age = 26  # Changed
