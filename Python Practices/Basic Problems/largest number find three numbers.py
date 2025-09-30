@@ -83,3 +83,14 @@ def largest_number(a, b, c):
             return c
 
 print(largest_number(1, 2, 3))
+
+
+
+
+def largest_number(a, b):
+    if a >= b:
+        return a
+    else:
+        return b
+
+print(largest_number(1, 2))
