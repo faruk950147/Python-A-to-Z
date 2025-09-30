@@ -1,0 +1,34 @@
+All Computer Diagrams
+
+Computer Hardware & Architecture Diagrams
+    1. Computer Block Diagram (Input, CPU, Memory, Output)
+    2. Von Neumann Architecture (CU, ALU, Memory, I/O)
+    3. Harvard Architecture Diagram
+    4. Memory Hierarchy Diagram (Register → Cache → RAM → Secondary → Tertiary)
+    5. CPU Internal Structure Diagram (Control Unit, ALU, Registers, Buses)
+
+Software & Data Related Diagrams
+    6. Data Flow Diagram (DFD)
+    7. Entity Relationship Diagram (ERD)
+    8. Use Case Diagram
+    9. Class Diagram (OOP / UML)
+    10. Sequence Diagram (UML)
+    11. Activity Diagram
+
+Networking Diagrams
+    12. Network Topology Diagrams (Bus, Star, Ring, Mesh, Hybrid)
+    13. OSI Model Diagram
+    14. TCP/IP Layered Diagram
+
+Operating System & Process Diagrams
+    15. Process State Transition Diagram
+    16. Deadlock Diagram
+    17. Paging / Segmentation Diagram
+    18. Process Scheduling Diagram
+
+Algorithms & Programming Flow
+    19. Flowchart Symbols
+    20. Loop Flowchart (for/while)
+    21. If/Else Flowchart
+    22. Sorting Algorithm Diagram (Bubble Sort, Quick Sort)
+    23. Searching Algorithm Diagram (Binary Search)
