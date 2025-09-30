@@ -85,7 +85,7 @@ print(p, type(p))  # 3j <class 'complex'>
 
 
 
-# impossible to convert
+# impossible to convert and invalid
 # int to list
 # int to tuple
 
