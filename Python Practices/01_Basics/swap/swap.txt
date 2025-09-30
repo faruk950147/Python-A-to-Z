@@ -1,0 +1,43 @@
+what is swap
+    swap is the process of exchanging the values of two variables.and it is used to swap the values of two variables.
+
+Suppose we have:
+
+x = 10
+y = 20
+
+
+We want to swap the values of x and y.
+
+Your line of code:
+
+x, y = y, x
+
+
+means:
+
+Python first looks at the right-hand side (y, x).
+
+y is 20
+
+x is 10
+→ So it creates the tuple (20, 10).
+
+Then Python assigns these values to the variables on the left-hand side:
+
+x = 20
+
+y = 10
+
+💡 In short, x, y = y, x is just a shortcut to swap two variables without using a temporary variable.
+
+Full example:
+
+x = 10
+y = 20
+
+# swap
+x, y = y, x
+
+print(x)  # 20
+print(y)  # 10
