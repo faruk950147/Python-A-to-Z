@@ -1,5 +1,3 @@
-# sum of n series
-from turtle import circle
 
 
 n = int(input("Enter a number: "))
