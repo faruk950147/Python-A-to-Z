@@ -1,0 +1,67 @@
+switch-case is a conditional structure in programming that lets you select and execute one block of code from multiple possible cases. Simply put, it’s similar to if-elif-else, but it’s cleaner and easier to read when you have many conditions.
+
+General structure (like in C/C++/Java):
+
+match (expression):
+    case value1:
+        # code to execute if expression == value1
+    case value2:
+        # code to execute if expression == value2
+    default:
+        # code to execute if no case matches
+
+
+Example:
+
+int day = 3;
+
+match(day):
+    case 1:
+        print("Monday");
+    case 2:
+        print("Tuesday");
+    case 3:
+        print("Wednesday");
+    default:
+        print("Invalid day");
+
+
+Here, day is 3, so the output will be:
+
+Wednesday
+
+
+Note: If you omit break, the program will continue executing the following cases as well.
+
+In Python, there is no direct switch-case, but you can do something similar with if-elif-else or dictionaries.
+
+Example 1: Using if-elif-else
+
+day = 3
+
+if day == 1:
+    print("Monday")
+elif day == 2:
+    print("Tuesday")
+elif day == 3:
+    print("Wednesday")
+else:
+    print("Invalid day")
+
+
+Example 2: Using a dictionary (Pythonic way)
+
+day = 3
+
+match = {
+    1: "Monday",
+    2: "Tuesday",
+    3: "Wednesday"
+}
+
+print(match.get(day, "Invalid day"))
+
+
+The get() method allows us to set a default value (Invalid day) if no case matches.
+
+In Python 3.10+, you can also use the match-case statement, which works very similar to C/Java’s switch-
