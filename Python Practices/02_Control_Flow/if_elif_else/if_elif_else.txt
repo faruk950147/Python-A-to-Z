@@ -1,0 +1,33 @@
+if-elif-else in Python is a decision-making statement that lets your program choose different actions based on conditions.
+
+How it works:
+
+if → checks the first condition.
+
+elif → (short for “else if”) checks another condition if the previous if was false.
+
+else → runs if all previous conditions are false.
+
+Example:
+x = 15
+
+if x > 20:
+    print("x is greater than 20")
+elif x == 20:
+    print("x is exactly 20")
+else:
+    print("x is less than 20")
+
+
+Output:
+
+x is less than 20
+
+
+Summary:
+
+if → first condition
+
+elif → additional condition
+
+else → default if all conditions fail
