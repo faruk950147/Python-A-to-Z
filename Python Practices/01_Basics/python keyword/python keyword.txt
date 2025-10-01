@@ -1,0 +1,68 @@
+Python keyword = special reserved words in Python.
+
+👉 You cannot use them as variable names, function names, or identifiers.
+👉 They have special meaning in Python language.
+
+Example:
+import keyword
+print(keyword.kwlist)
+
+
+This will print all keywords in Python.
+For example (Python 3.11):
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await',
+ 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except',
+ 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+ 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return',
+ 'try', 'while', 'with', 'yield']
+
+Some common Python keywords:
+
+if, else, elif → for conditions
+
+for, while → for loops
+
+def, class → for defining functions and classes
+
+try, except, finally → for error handling
+
+import, from → for importing modules
+
+| Keyword    | Meaning / Usage                                       |
+| ---------- | ----------------------------------------------------- |
+| `False`    | Boolean value for false.                              |
+| `True`     | Boolean value for true.                               |
+| `None`     | Represents null / no value.                           |
+| `and`      | Logical AND operator.                                 |
+| `or`       | Logical OR operator.                                  |
+| `not`      | Logical NOT operator.                                 |
+| `if`       | Conditional statement.                                |
+| `elif`     | Else-if condition.                                    |
+| `else`     | Alternative branch in condition.                      |
+| `for`      | Loop through items.                                   |
+| `while`    | Loop while condition is true.                         |
+| `break`    | Exit a loop.                                          |
+| `continue` | Skip to next loop iteration.                          |
+| `pass`     | Do nothing (placeholder).                             |
+| `def`      | Define a function.                                    |
+| `class`    | Define a class.                                       |
+| `return`   | Return value from a function.                         |
+| `yield`    | Return value from a generator function.               |
+| `lambda`   | Anonymous (inline) function.                          |
+| `try`      | Try block for error handling.                         |
+| `except`   | Handle exceptions (errors).                           |
+| `finally`  | Block that always runs (after try/except).            |
+| `raise`    | Raise an exception.                                   |
+| `import`   | Import a module.                                      |
+| `from`     | Import specific parts of a module.                    |
+| `as`       | Create an alias (e.g., `import numpy as np`).         |
+| `with`     | Context manager (auto handle resources).              |
+| `assert`   | Debugging check (must be true).                       |
+| `del`      | Delete a variable or object.                          |
+| `global`   | Declare a global variable inside a function.          |
+| `nonlocal` | Declare a variable from outer (but not global) scope. |
+| `in`       | Check membership (`x in list`).                       |
+| `is`       | Identity operator (`x is y`).                         |
+| `await`    | Wait for async operation (inside async function).     |
+| `async`    | Define asynchronous functions.                        |
