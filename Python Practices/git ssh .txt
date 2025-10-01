@@ -1,0 +1,27 @@
+#!/bin/bash
+# GitHub SSH একবারে setup করার script (Windows Git Bash)
+
+ssh -T git@github.com
+
+# ১️⃣ ইমেইল ইনপুট নিন
+read -p "আপনার GitHub ইমেইল দিন: " email
+
+# ২️⃣ নতুন SSH key তৈরি
+ssh-keygen -t ed25519 -C "$email"
+
+# ৩️⃣ SSH agent চালু
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# ৪️⃣ Public key দেখান
+echo ""
+echo "==============================================="
+echo "আপনার public key নিচে আছে, GitHub এ add করুন:"
+echo "==============================================="
+cat ~/.ssh/id_ed25519.pub
+echo "==============================================="
+echo ""
+
+# ৫️⃣ SSH টেস্ট
+echo "GitHub SSH test চালানো হচ্ছে..."
+ssh -T git@github.com
