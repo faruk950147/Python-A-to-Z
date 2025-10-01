@@ -50,3 +50,13 @@ print(type(f))  # <class 'tuple'>
 print(type(g))  # <class 'set'>
 print(type(h))  # <class 'dict'>
 
+ # Type Conversion
+
+x = 10
+y = 3.14
+z = "10"
+
+print(int(x))  # 10
+print(float(y))  # 3.14
+print(int(z))  # 10
+print(str(z))  # "10"
