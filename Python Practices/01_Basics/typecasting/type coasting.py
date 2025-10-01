@@ -13,7 +13,7 @@ print("String:", c_str)
 print("Boolean:", d_bool)
 
 # ===============================
-# 1️⃣ Integer Conversions
+# 1 Integer Conversions
 # ===============================
 print("\n===== Integer Conversions =====")
 print("int -> float:", float(a_int))           # 10.0
@@ -31,7 +31,7 @@ print("(a_int,):", (a_int,))   # (10,)
 print("{a_int}:", {a_int})     # {10}
 
 # ===============================
-# 2️⃣ Float Conversions
+# 2 Float Conversions
 # ===============================
 print("\n===== Float Conversions =====")
 print("float -> int:", int(b_float))       # 3
@@ -49,7 +49,7 @@ print("(b_float,):", (b_float,))
 print("{b_float}:", {b_float})
 
 # ===============================
-# 3️⃣ String Conversions
+# 3 String Conversions
 # ===============================
 print("\n===== String Conversions =====")
 str_num = "456"
@@ -67,7 +67,7 @@ print("str_alpha -> tuple:", tuple(str_alpha)) # ('h','e','l','l','o')
 print("str_alpha -> set:", set(str_alpha))     # {'e','h','o','l'}
 
 # ===============================
-# 4️⃣ Boolean Conversions
+# 4 Boolean Conversions
 # ===============================
 print("\n===== Boolean Conversions =====")
 print("bool True -> int:", int(d_bool))       # 1
@@ -77,7 +77,7 @@ print("bool True -> list:", [d_bool])         # [True]
 print("bool False -> bool:", bool(0))         # False
 
 # ===============================
-# 5️⃣ Container Conversions
+# 5 Container Conversions
 # ===============================
 print("\n===== Container Conversions =====")
 lst = [1,2,3]
@@ -95,7 +95,7 @@ print("set -> tuple:", tuple(st))     # (7,8,9)
 
 
 # ===============================
-# 6️⃣ Other Conversions
+# 6 Other Conversions
 # ===============================
 print("\n===== Other Conversions =====")
 print("int -> complex:", complex(a_int)) # 10+0j
