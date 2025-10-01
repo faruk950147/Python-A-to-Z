@@ -226,8 +226,11 @@ Associativity → Which way to evaluate when multiple operators have the same pr
 # is identity
 # is not identity
 
+# 8. ======================= walrus operator =======================
+# := walrus operator
 
-# 8. ======================= Other operators =======================
+
+# 9. ======================= Other operators =======================
 # yield yield
 # lambda lambda
 # @ operator
