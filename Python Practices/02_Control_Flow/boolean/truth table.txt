@@ -1,0 +1,171 @@
+Boolean logic and truth tables are foundational in programming, especially when dealing with conditional logic, digital circuits, or decision-making systems.
+
+Let's walk through Boolean logic and how to build truth tables using Python.
+
+1. Boolean Logic in Python
+
+    Python has built-in Boolean values and logical operators:
+
+    Boolean values:
+    True
+    False
+
+    Logical operators:
+    Operator	Name	Example	Result
+    and	AND	True and False	False
+    or	OR	True or False	True
+    not	NOT	not True	False
+
+
+2. Basic Boolean Logic Example
+
+    Let's look at a simple example:
+    a = True
+    b = False
+
+    print("a and b:", a and b)   # False
+    print("a or b:", a or b)     # True
+    print("not a:", not a)       # False
+
+3. Truth Table Generator (2 variables)
+
+    We’ll generate a truth table for two Boolean variables A and B.
+    from itertools import product
+
+    # Generate all combinations of A and B (0=False, 1=True)
+    values = list(product([False, True], repeat=2))
+
+    # Print header
+    print("A\tB\tA AND B\tA OR B\tNOT A")
+
+    # Print truth table
+    for A, B in values:
+        print(f"{A}\t{B}\t{A and B}\t{A or B}\t{not A}")
+
+    Output:
+    A	B	A AND B	A OR B	NOT A
+    False	False	False	False	True
+    False	True	False	True	True
+    True	False	False	True	False
+    True	True	True	True	False
+
+4. Extend to More Complex Expressions
+
+    You can modify the print line to include custom expressions like:
+
+    print(f"{A}\t{B}\t{A and B}\t{A or B}\t{not A}")
+    output:
+    A	B	A AND B	A OR B	NOT A
+    False	False	False	False	True
+    False	True	False	True	True
+    True	False	False	True	False
+    True	True	True	True	False
+
+
+5. Truth Table Function (Reusable)
+
+    Here’s a simple function to build a truth table for a 2-variable expression:
+    def truth_table(expr):
+        from itertools import product
+        values = list(product([False, True], repeat=2))
+        print("A\tB\t" + expr)
+        for A, B in values:
+            print(f"{A}\t{B}\t{eval(expr)}")
+
+        # Example usage
+        truth_table("A and B")
+
+        Output:
+        A	B	A and B
+        False	False	False
+        False	True	False
+        True	False	False
+        True	True	True
+
+
+# ======================= 1. Boolean Logic Basics =======================
+Sure! Let’s go step by step and make it clear.
+
+1. Boolean Logic Basics
+
+Boolean logic deals with truth values: True (1) and False (0).
+
+The main operations are:
+
+Operation	Symbol	Description
+AND	∧ or &&	True if both inputs are True
+OR	∨ or `	
+NOT	¬ or !	Inverts the value (True → False, False → True)
+XOR	⊕	True if inputs are different
+NAND	↑	Not AND (opposite of AND)
+NOR	↓	Not OR (opposite of OR)
+
+2. Truth Tables
+
+Truth tables show all possible inputs and their output for a Boolean operation.
+
+AND (A ∧ B)
+A	B	A ∧ B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+Only True if both A and B are True.
+
+OR (A ∨ B)
+A	B	A ∨ B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+True if any one of A or B is True.
+
+NOT (¬A)
+A	¬A
+0	1
+1	0
+
+Simply inverts the value.
+
+XOR (A ⊕ B)
+A	B	A ⊕ B
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+
+True if A and B are different.
+
+NAND (A ↑ B)
+A	B	A ↑ B
+0	0	1
+0	1	1
+1	0	1
+1	1	0
+
+Opposite of AND.
+
+NOR (A ↓ B)
+A	B	A ↓ B
+0	0	1
+0	1	0
+1	0	0
+1	1	0
+
+Opposite of OR.
+
+3. Combining Operations
+
+You can combine operators:
+
+Example: ¬(A ∧ B) ∨ C
+
+Step 1: Compute A ∧ B
+
+Step 2: Apply NOT → ¬(A ∧ B)
+
+Step 3: Apply OR with C → ¬(A ∧ B) ∨ C
+
+For combined expressions, truth tables get a bit bigger. For n variables, you have 2^n rows.
