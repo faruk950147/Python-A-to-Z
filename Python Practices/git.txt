@@ -1,103 +1,89 @@
-ইনস্টল হওয়ার পর টার্মিনালে গিয়ে নাম আর ইমেইল সেট করো (একবার করলেই হবে):
+1. Set Name and Email (only once after installation)
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
 
-git config --global user.name "তোমার নাম"
-git config --global user.email "তোমার ইমেইল"
 
-
-চেক করার জন্যঃ
+Check your configuration:
 
 git config --list
 
-2. নতুন প্রজেক্ট তৈরি
+2. Create a New Project
 mkdir myproject
 cd myproject
 echo "<h1>Hello GitHub</h1>" > index.html
 echo "# My First GitHub Project" > README.md
 
-এখন তোমার প্রজেক্টে দুইটা ফাইল আছে – index.html আর README.md
 
-3. Git Initialize করা
+Now your project has two files – index.html and README.md.
+
+3. Initialize Git
 git init
 
-এখন এই ফোল্ডারটা Git Repo হয়ে গেলো।
 
-4. স্ট্যাটাস দেখা
+This makes the folder a Git repository.
+
+4. Check Status
 git status
 
 
-দেখাবে কোন ফাইল নতুন আছে, কোনটা add হয়নি।
+This will show which files are new or not added yet.
 
-5. ফাইল Stage করা
+5. Stage Files
 git add index.html
 git add README.md
-# অথবা সব ফাইল একসাথে:
+# Or to add all files at once:
 git add .
 
-6. Commit করা
+6. Commit Files
 git commit -m "First commit: Added index.html and README.md"
 
 
-Commit মানে লোকাল সেভ। Git তোমার কাজের snapshot/history রাখবে।
+Commit = local save. Git keeps snapshots/history of your work.
 
-7. GitHub Repo তৈরি
+7. Create GitHub Repository
 
-GitHub এ গিয়ে New Repository তৈরি করো।
-ধরি নাম দিলা – myproject
-
-এখন Repo এর URL হবে এমনঃ
+Go to GitHub → click New Repository → give it a name, e.g., myproject.
+The repo URL will look like:
 
 https://github.com/username/myproject.git
 
-8. লোকাল Repo GitHub এর সাথে কানেক্ট করা
+8. Connect Local Repo to GitHub
 git remote add origin https://github.com/username/myproject.git
 
 
-এখানে username তোমার GitHub ইউজারনেম হবে।
+Replace username with your GitHub username.
 
-9. GitHub এ Push করা
-git branch -M main      # main branch সেট করা (প্রয়োজনে)
+9. Push to GitHub
+git branch -M main      # set branch name to main (if needed)
 git push -u origin main
 
 
-এখন তোমার প্রজেক্ট GitHub এ চলে গেলো 🎉
+Now your project is uploaded to GitHub.
 
-🔄 Daily Workflow (প্রতিদিন কাজ করার নিয়ম)
+Daily Workflow (Everyday Usage)
 
-যখন প্রজেক্টে নতুন পরিবর্তন করবে, তখন করোঃ
+When you make changes in your project:
 
-git status                  # কি পরিবর্তন হয়েছে দেখো
-git add .                   # সব পরিবর্তন stage করো
-git commit -m "Update work" # পরিবর্তন commit করো
-git push origin main        # GitHub এ পাঠাও
+git status                   # see what changed
+git add .                    # stage all changes
+git commit -m "Update work"  # commit changes
+git push origin main         # push to GitHub
 
-📌 অন্যদের Repo Clone করা
+Clone Others’ Repositories
 git clone https://github.com/username/repo-name.git
 
 
-এটা করলে প্রজেক্ট তোমার PC তে ডাউনলোড হয়ে যাবে।
+This downloads a project to your PC.
 
-Update নেওয়া (Pull)
+Get Updates (Pull)
 
-অন্য কেউ GitHub Repo তে পরিবর্তন করলে তুমি আপডেট নিতে পারো:
+If someone else updated the GitHub repo, you can sync:
 
 git pull origin main
-Extra Commands
-git log               # commit history দেখা
-git branch            # branch তালিকা
-git checkout -b dev   # dev নামে নতুন branch তৈরি
-git checkout main     # main branch এ ফেরা
-git diff              # পরিবর্তন কী কী হয়েছে তা দেখা
 
-
-
-git init → প্রজেক্টে Git চালু করা
-
-git add → ফাইল stage করা
-
-git commit → লোকাল সেভ করা
-
-git remote add origin → GitHub এর সাথে লিঙ্ক করা
-
-git push → GitHub এ পাঠানো
-
-git pull → GitHub থেকে নতুন আপডেট নামানো
+Extra Useful Commands
+git log               # view commit history
+git branch            # list branches
+git checkout -b dev   # create a new branch named dev
+git checkout main     # switch back to main branch
+git diff              # see what has changed
