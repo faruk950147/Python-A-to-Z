@@ -1,8 +1,37 @@
 # 1. ============================= What is dictionary ================================
 # → What is a dictionary in Python, how it works, key-value concept
 
-# 2. ============================= basic dictionary =================================
+# 2. ============================= basic dictionary =============================
+# Simple examples of dictionary
 # → How to create a dictionary (using {}, dict() constructor)
+
+# using {}
+dict1 = {"name": "John", "age": 30}
+
+# using dict() constructor
+dict2 = dict(name="John", age=30)
+
+# How to use dictionary
+# → How to access dictionary values (using keys)
+# → How to modify dictionary values (using keys)
+# → How to add new key-value pairs
+# → How to remove key-value pairs
+
+# access dictionary values (using keys)
+print(dict1["name"])
+print(dict2["name"])
+
+# modify dictionary values (using keys)
+dict1["age"] = 31
+dict2["age"] = 31
+
+# add new key-value pairs
+dict1["city"] = "New York"
+dict2["city"] = "New York"
+
+# remove key-value pairs
+dict1.pop("age")
+dict2.pop("age")
 
 # 3. ============================= dictionary methods ===============================
 # → List of all dictionary methods (copy(), clear(), get(), items(), etc.)
@@ -54,3 +83,8 @@
 # 17. ============================= dictionary setdefault ===========================
 # → dict.setdefault(key, default_value)  
 # Related to update()
+
+# ============================= practical use cases =========================
+# - Data processing
+# - Business logic
+# - Algorithm implementation
