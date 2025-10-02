@@ -4,6 +4,11 @@
 # 2. ============================= basic dictionary =============================
 # Simple examples of dictionary
 # → How to create a dictionary (using {}, dict() constructor)
+# How to use dictionary
+# → How to access dictionary values (using keys)
+# → How to modify dictionary values (using keys)
+# → How to add new key-value pairs
+# → How to remove key-value pairs
 
 # using {}
 dict1 = {"name": "John", "age": 30}
@@ -11,11 +16,7 @@ dict1 = {"name": "John", "age": 30}
 # using dict() constructor
 dict2 = dict(name="John", age=30)
 
-# How to use dictionary
-# → How to access dictionary values (using keys)
-# → How to modify dictionary values (using keys)
-# → How to add new key-value pairs
-# → How to remove key-value pairs
+
 
 # access dictionary values (using keys)
 print(dict1["name"])
