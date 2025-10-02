@@ -1,5 +1,19 @@
 # 1. ============================= What is dictionary ================================
 # → What is a dictionary in Python, how it works, key-value concept
+# dictionary is a collection of key-value pairs where each key is unique
+# dictionary is mutable
+# dictionary is ordered (as of Python 3.7)
+# dictionary is indexed
+# dictionary is iterable
+# dictionary is a reference type
+# dictionary is a dynamic type
+# dictionary is a mutable type
+# dictionary is a collection type
+# dictionary is a data structure
+# dictionary is a container type
+# dictionary is a hash table
+# dictionary is a map
+# dictionary is a dictionary
 
 # 2. ============================= basic dictionary =============================
 # Simple examples of dictionary
@@ -15,8 +29,6 @@ dict1 = {"name": "John", "age": 30}
 
 # using dict() constructor
 dict2 = dict(name="John", age=30)
-
-
 
 # access dictionary values (using keys)
 print(dict1["name"])
