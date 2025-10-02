@@ -32,7 +32,7 @@ dict2 = dict(name="John", age=30)
 
 # access dictionary values (using keys)
 print(dict1["name"])
-print(dict2["name"])
+print(dict2["age"])
 
 # modify dictionary values (using keys)
 dict1["age"] = 31
