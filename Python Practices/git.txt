@@ -1,122 +1,39 @@
-| Category                      | Command                                    | Description                               |
-| ----------------------------- | ------------------------------------------ | ----------------------------------------- |
-| **Local Repository**          | `git init`                                 | Initialize Git in the working directory   |
-|                               | `git status`                               | Check changes in working directory        |
-|                               | `git add <file>`                           | Add file to staging area                  |
-|                               | `git add .` or `git add -A`                | Add all files to staging area             |
-|                               | `git commit -m "msg"`                      | Commit changes to local repository        |
-|                               | `git log`                                  | View commit history                       |
-|                               | `git diff`                                 | Show changes in working directory         |
-|                               | `git diff --staged`                        | Show staged changes                       |
-|                               | `git diff <file>`                          | Show changes in a specific file           |
-| **Remote Setup**              | `git remote add origin <url>`              | Add a remote repository                   |
-|                               | `git remote -v`                            | View remote repository URLs               |
-|                               | `git remote set-url origin <url>`          | Change remote repository URL              |
-|                               | `git remote remove origin`                 | Remove a remote repository                |
-| **Push & Pull**               | `git push -u origin main`                  | Push local repo → remote (first time)     |
-|                               | `git push`                                 | Push changes to remote                    |
-|                               | `git pull origin main`                     | Pull changes from remote → local          |
-|                               | `git clone <url>`                          | Clone a remote repository                 |
-| **Fetch & Merge**             | `git fetch origin`                         | Fetch changes from remote without merging |
-|                               | `git merge origin/main`                    | Merge remote changes into local branch    |
-| **Branching & Collaboration** | `git checkout -b <branch>`                 | Create & switch to a new branch           |
-|                               | `git push -u origin <branch>`              | Push a branch to remote                   |
-|                               | `git checkout -b <branch> origin/<branch>` | Track a remote branch locally             |
-|                               | `git push origin --delete <branch>`        | Delete a remote branch                    |
+# 1. ============================================================== What is Git Git Introduction ================================================================
+    Git is a version control system that helps track changes in code and collaborate with others.
+    
 
 
-# 2. ====================== Git Introduction ======================
-# → What is Git, how it works, version control system
-# → How to install Git
-# → How to configure Git
-# → How to use Git
+# 2. ============================================================== Git Useful Commands ==========================================================================
 
-1. Set Name and Email (only once after installation)
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
+| Category                      | Command                                          | Description                                               |
+| ----------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
+| **Global Configuration**      | `git config --list`                              | Check Git configuration                                   |
+|                               | `git config --global user.name "Your Name"`      | Set your username (only once after installation)          |
+|                               | `git config --global user.email "you@email.com"` | Set your email (only once after installation)             |
+| **Local Repository**          | `git init`                                       | Initialize Git in the working directory                   |
+|                               | `git status`                                     | Check changes in working directory                        |
+|                               | `git add <file>`                                 | Add file to staging area                                  |
+|                               | `git add .` or `git add -A`                      | Add all files to staging area                             |
+|                               | `git commit -m "msg"`                            | Commit changes to local repository                        |
+|                               | `git log`                                        | View commit history                                       |
+|                               | `git diff`                                       | Show changes in working directory                         |
+|                               | `git diff --staged`                              | Show staged changes                                       |
+|                               | `git diff <file>`                                | Show changes in a specific file                           |
+|                               | `git reset --hard HEAD~`                         | Reset to previous commit                                  |
+|                               | `git reset`                                      | Reset to previous commit (keep changes)                   |
+| **Remote Setup**              | `git remote add origin <url>`                    | Add a remote repository                                   |
+|                               | `git remote -v`                                  | View remote repository URLs                               |
+|                               | `git remote set-url origin <url>`                | Change remote repository URL                              |
+|                               | `git remote remove origin`                       | Remove a remote repository                                |
+| **Push & Pull**               | `git push -u origin main`                        | Push local repo → remote (first time)                     |
+|                               | `git push`                                       | Push changes to remote                                    |
+|                               | `git pull origin main`                           | Pull changes from remote → local                          |
+|                               | `git clone <url>`                                | Clone a remote repository                                 |
+| **Fetch & Merge**             | `git fetch origin`                               | Fetch changes from remote without merging                 |
+|                               | `git merge origin/main`                          | Merge remote changes into local branch                    |
+| **Branching & Collaboration** | `git checkout -b <branch>`                       | Create & switch to a new branch                           |
+|                               | `git push -u origin <branch>`                    | Push a branch to remote                                   |
+|                               | `git checkout -b <branch> origin/<branch>`       | Track a remote branch locally                             |
+|                               | `git push origin --delete <branch>`              | Delete a remote branch                                    |
+|----------------------------------------------------------------------------------------------------------------------------------------------|
 
-
-Check your configuration:
-
-git config --list
-
-2. Create a New Project
-mkdir myproject
-cd myproject
-echo "<h1>Hello GitHub</h1>" > index.html
-echo "# My First GitHub Project" > README.md
-
-
-Now your project has two files – index.html and README.md.
-
-3. Initialize Git
-git init
-
-
-This makes the folder a Git repository.
-
-4. Check Status
-git status
-
-
-This will show which files are new or not added yet.
-
-5. Stage Files
-git add index.html
-git add README.md
-# Or to add all files at once:
-git add .
-
-6. Commit Files
-git commit -m "First commit: Added index.html and README.md"
-
-
-Commit = local save. Git keeps snapshots/history of your work.
-
-7. Create GitHub Repository
-
-Go to GitHub → click New Repository → give it a name, e.g., myproject.
-The repo URL will look like:
-
-https://github.com/username/myproject.git
-
-8. Connect Local Repo to GitHub
-git remote add origin https://github.com/username/myproject.git
-
-
-Replace username with your GitHub username.
-
-9. Push to GitHub
-git branch -M main      # set branch name to main (if needed)
-git push -u origin main
-
-
-Now your project is uploaded to GitHub.
-
-Daily Workflow (Everyday Usage)
-
-When you make changes in your project:
-
-git status                   # see what changed
-git add .                    # stage all changes
-git commit -m "Update work"  # commit changes
-git push origin main         # push to GitHub
-
-Clone Others’ Repositories
-git clone https://github.com/username/repo-name.git
-
-
-This downloads a project to your PC.
-
-Get Updates (Pull)
-
-If someone else updated the GitHub repo, you can sync:
-
-git pull origin main
-
-Extra Useful Commands
-git log               # view commit history
-git branch            # list branches
-git checkout -b dev   # create a new branch named dev
-git checkout main     # switch back to main branch
-git diff              # see what has changed
