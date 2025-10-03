@@ -1,3 +1,36 @@
+| Category                      | Command                                    | Description                               |
+| ----------------------------- | ------------------------------------------ | ----------------------------------------- |
+| **Local Repository**          | `git init`                                 | Initialize Git in the working directory   |
+|                               | `git status`                               | Check changes in working directory        |
+|                               | `git add <file>`                           | Add file to staging area                  |
+|                               | `git add .` or `git add -A`                | Add all files to staging area             |
+|                               | `git commit -m "msg"`                      | Commit changes to local repository        |
+|                               | `git log`                                  | View commit history                       |
+|                               | `git diff`                                 | Show changes in working directory         |
+|                               | `git diff --staged`                        | Show staged changes                       |
+|                               | `git diff <file>`                          | Show changes in a specific file           |
+| **Remote Setup**              | `git remote add origin <url>`              | Add a remote repository                   |
+|                               | `git remote -v`                            | View remote repository URLs               |
+|                               | `git remote set-url origin <url>`          | Change remote repository URL              |
+|                               | `git remote remove origin`                 | Remove a remote repository                |
+| **Push & Pull**               | `git push -u origin main`                  | Push local repo → remote (first time)     |
+|                               | `git push`                                 | Push changes to remote                    |
+|                               | `git pull origin main`                     | Pull changes from remote → local          |
+|                               | `git clone <url>`                          | Clone a remote repository                 |
+| **Fetch & Merge**             | `git fetch origin`                         | Fetch changes from remote without merging |
+|                               | `git merge origin/main`                    | Merge remote changes into local branch    |
+| **Branching & Collaboration** | `git checkout -b <branch>`                 | Create & switch to a new branch           |
+|                               | `git push -u origin <branch>`              | Push a branch to remote                   |
+|                               | `git checkout -b <branch> origin/<branch>` | Track a remote branch locally             |
+|                               | `git push origin --delete <branch>`        | Delete a remote branch                    |
+
+
+# 2. ====================== Git Introduction ======================
+# → What is Git, how it works, version control system
+# → How to install Git
+# → How to configure Git
+# → How to use Git
+
 1. Set Name and Email (only once after installation)
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
