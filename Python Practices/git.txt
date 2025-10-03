@@ -1,9 +1,30 @@
 # 1. ============================================================== What is Git Git Introduction ================================================================
     Git is a version control system that helps track changes in code and collaborate with others.
-    
 
+# 2. ============================================================== Git SSH ==========================================================================
+    #!/bin/bash
+    # GitHub SSH one time setup script (Windows Git Bash)
+    ssh -T git@github.com
+    # Email input
+    read -p "Enter your GitHub email: " email
+    # New SSH key generation
+    ssh-keygen -t ed25519 -C "$email"
+    # SSH agent start
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    # Public key display
+    echo ""
+    echo "==============================================="
+    echo "Your public key is below, add it to GitHub:"
+    echo "==============================================="
+    cat ~/.ssh/id_ed25519.pub
+    echo "==============================================="
+    echo ""
+    # SSH test
+    echo "GitHub SSH test is running..."
+    ssh -T git@github.com
 
-# 2. ============================================================== Git Useful Commands ==========================================================================
+# 3. ============================================================== Git Useful Commands ==========================================================================
 
 | Category                      | Command                                          | Description                                               |
 | ----------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
