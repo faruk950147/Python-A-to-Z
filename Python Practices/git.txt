@@ -37,7 +37,7 @@
 |                               | `git add .` or `git add -A`                      | Add all files to staging area                             |
 |                               | `git commit -m "msg"`                            | Commit changes to local repository                        |
 |                               | `git log`                                        | View commit history                                       |
-|                               | `git diff`                                       | Show changes in working directory                         |
+|                               | `git diff`                                       | Show changes in working directory compare to staged area  |
 |                               | `git diff --staged`                              | Show staged changes                                       |
 |                               | `git diff <file>`                                | Show changes in a specific file                           |
 |                               | `git reset --hard HEAD~`                         | Reset to previous commit                                  |
