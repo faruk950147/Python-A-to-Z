@@ -1,8 +1,13 @@
 # 1. ============================= What is list =================================
 # What is a list in Python, key features, mutability, ordered, etc.
+# list is a collection of items in a specific order.
+# list is mutable, ordered, indexed, allows duplicates.
 
 # 2. ============================= basic list ===================================
 # How to create a list: [], list(), nested lists
+list1 = [1, 2, 3, 4, 5]
+list2 = list([1, 2, 3, 4, 5])
+list3 = [1, [2, 3], 4, 5]
 
 # 3. ============================= list methods ================================
 # Overview of all available list methods

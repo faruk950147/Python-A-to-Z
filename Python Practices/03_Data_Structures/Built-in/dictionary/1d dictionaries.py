@@ -69,7 +69,7 @@ dict3.keys()
 dict3.values()
 
 # pop()
-dict3.pop("name")
+dict3.pop("name", None)
 
 # popitem()
 dict3.popitem()
