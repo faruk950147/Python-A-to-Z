@@ -1,4 +1,20 @@
 """
+# =================== Python Datatypes ===================
+1. primitive datatypes
+   - int      → 10, -5, 1000
+   - float    → 3.14, -0.5
+   - complex  → 2+3j
+   - bool     → True, False
+   - NoneType → None
+   - bytes    → b"hello"
+   - bytearray → bytearray([65, 66, 67])
+   - memoryview→ memoryview(b"hello")  
+2. non-primitive datatypes
+   - str      → "Hello", 'Python'
+   - list     → [1, 2, 3]
+   - tuple    → (1, 2, 3)
+   - set      → {1, 2, 3}
+   - dict     → {"name": "Faruk", "age": 20}
 Python Datatypes (Quick Notes)
 ==============================
 
