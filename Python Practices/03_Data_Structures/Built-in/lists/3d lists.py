@@ -41,6 +41,7 @@ list3d = [
     [[5, 6], [7, 8]]
 ]
 
+print("============================= 2. List Access Functions 3d =============================")
 # ============================= 3. List Access Functions =============================
 print(list3d)
 print(list3d[0])
@@ -57,7 +58,12 @@ print(list3d[1][1][1])
 # [5, 6]
 # 3
 # 8
+# Slicing
+print("============================= 3. List Slicing Functions 3d =============================")
+print(list3d[0][1][1:2])
+print(list3d[1][0][1:2])
 
+print("============================= 4. List Add Functions 3d =============================")
 # ============================= 4. List Add Functions =============================
 list3d[0][0].append(11)
 print(list3d[0][0])
@@ -75,7 +81,7 @@ list3d[1][1].extend([70, 80])
 print(list3d[1][1])
 # Output: [7, 8, 70, 80]
 
-
+print("============================= 5. List Modify Functions 3d =============================")
 # ============================= 5. List Modify Functions =============================
 list3d[0][0][1] = 20
 print(list3d[0][0])
@@ -94,7 +100,7 @@ list3d[1][0].insert(1, 60)
 print(list3d[1][0])
 # Output: [5, 60, 6]
 
-
+print("============================= 6. List Delete Functions 3d =============================")
 # ============================= 6. List Delete Functions =============================
 list3d[0][1].remove(11)
 print(list3d[0][1])
@@ -120,7 +126,7 @@ list3d[1][1].pop()
 print(list3d[1][1])
 # Output: [70]
 
-
+print("============================= 7. Looping List 3d =============================")
 # ============================= 7. Looping List =============================
 for i in range(len(list3d)): # Range of list3d (2D list)
     for j in range(len(list3d[i])): # Range of list3d[i] (1D list)
@@ -134,6 +140,7 @@ for i in list3d: # i is list3d[i] (1D list)
             print(k, end=" ")
 # Output: 1 20 3 4 5 6 70 80 11
 
+print("============================= 8. List Comprehension 3d =============================")
 # ============================= 8. List Comprehension =============================
 flatten = [list3d[i][j][k] for i in range(len(list3d)) for j in range(len(list3d[i])) for k in range(len(list3d[i][j]))]
 print(flatten)
@@ -143,11 +150,9 @@ flatten = [k for i in list3d for j in i for k in j]
 print(flatten)
 # Output: [1, 20, 3, 4, 5, 6, 70, 80, 11]
 
+print("============================= 9. List condition Functions 3d =============================")
 # ============================= 9. List condition Functions =============================
 print(any(k == 70 for i in range(len(list3d)) for j in range(len(list3d[i])) for k in range(len(list3d[i][j]))))   # True
 print(all(k > 0 for i in range(len(list3d)) for j in range(len(list3d[i])) for k in range(len(list3d[i][j]))))     # True
 print(20 in flatten)   # True
 print(100 not in flatten) # True
-
-# ============================= 10. List Slicing =============================
-# [start:stop:step]
