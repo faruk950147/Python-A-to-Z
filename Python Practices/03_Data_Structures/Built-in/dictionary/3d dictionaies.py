@@ -37,11 +37,9 @@ list1 = [
 
 # ============================= 3. Dictionary Access Functions =============================
 
-# Dictionary Of Dictionary Access
 print(dict1["dept1"]["person1"]["name"])  # John
 print(dict1["dept1"]["person2"]["age"])   # 25
 
-# List Of Dictionary Access
 print(list1[0]["dept1"]["person1"]["name"])  # John
 print(list1[0]["dept1"]["person2"]["age"])   # 25
 
@@ -66,11 +64,9 @@ print(dict1)
 print(list1)
 
 # ============================= 6. Dictionary Delete Functions =============================
-# Dictionary থেকে ডিলিট
-dict1["dept1"].pop("person3")   # নির্দিষ্ট key ডিলিট
-dict1.pop("dept2")              # পুরো dept ডিলিট
+dict1["dept1"].pop("person3")   # Delete specific key
+dict1.pop("dept2")              # Delete entire department
 
-# List থেকে ডিলিট
 list1[0]["dept1"].pop("person3")
 list1[0].pop("dept2")
 
@@ -78,8 +74,6 @@ print(dict1)
 print(list1)
 
 # ============================= 7. Looping Dictionary =============================
-
-# Dictionary Of Dictionary Looping
 for key, value in dict1.items():
     print(f"Department: {key}")
     for inner_key, inner_value in value.items():
@@ -87,7 +81,6 @@ for key, value in dict1.items():
         for inner_inner_key, inner_inner_value in inner_value.items():
             print(f"    {inner_inner_key} → {inner_inner_value}")
 
-# List Of Dictionary Looping
 for dic in list1:
     for key, value in dic.items():
         print(f"Department: {key}")
@@ -97,7 +90,27 @@ for dic in list1:
                 print(f"    {inner_inner_key} → {inner_inner_value}")
 
 # ============================= 8. Dictionary Comprehension =============================
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  
 
+even_squares = {x: x**2 for x in range(1, 11) if x % 2 == 0}
+print(even_squares)
 
-# ============================= 9. Dictionary condition Functions =============================
+# ============================= 9. Dictionary Condition Functions =============================
+dictA = {"a": 1, "b": 2, "c": 3}
+dictB = {"a": 1, "b": 2, "c": 3}
+dictC = {"a": 1, "b": 5, "d": 9}
 
+print(dictA == dictB)   # True
+print(dictA == dictC)   # False
+
+print("a" in dictA)     # True
+print("z" in dictA)     # False
+
+print(2 in dictA.values())   # True
+print(9 in dictA.values())   # False
+
+print(dictA.keys() & dictC.keys())   # {'a'}
+print(dictA.keys() - dictC.keys())   # {'b', 'c'}
+
+print(dictA.items() & dictC.items()) # {('a', 1)}
