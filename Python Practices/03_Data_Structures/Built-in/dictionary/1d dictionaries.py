@@ -27,6 +27,7 @@ dict2["age"] = 31
 # add new key-value
 dict1["city"] = "New York"
 dict2["city"] = "New York"
+print("=========================== 2. Basic Dictionary =============================")
 
 # ============================= 3. Dictionary Access Functions =============================
 dict3 = {"name": "Alice", "age": 25, "city": "London"}
@@ -44,6 +45,7 @@ print(dict3.get("country", "N/A")) # N/A
 print(dict3.keys())    # dict_keys(['name', 'age', 'city'])
 print(dict3.values())  # dict_values(['Alice', 25, 'London'])
 print(dict3.items())   # dict_items([('name', 'Alice'), ('age', 25), ('city', 'London')])
+print("=========================== 3. Dictionary Access Functions =============================")
 
 # ============================= 4. Dictionary Add Functions =============================
 dict4 = {"a": 1, "b": 2}
@@ -54,6 +56,7 @@ print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
 # setdefault() → add new key if not exists, do nothing if exists
 dict4.setdefault("e", 5)
 print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+print("=========================== 4. Dictionary Add Functions =============================")
 
 # ============================= 5. Dictionary Modify Functions =============================
 dict4["a"] = 3
@@ -63,6 +66,7 @@ print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
 # setdefault() → add new key if not exists, do nothing if exists
 dict4.setdefault("e", 5)
 print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+print("=========================== 5. Dictionary Modify Functions =============================")
 
 # ============================= 6. Dictionary Delete Functions =============================
 dict7 = {"name": "John", "age": 30, "city": "New York"}
@@ -84,6 +88,7 @@ print(dict7)   # {}
 
 # del → delete entire dictionary
 del dict7
+print("=========================== 6. Dictionary Delete Functions =============================")
 
 # ============================= 7. Looping Dictionary =============================
 dict8 = {"x": 10, "y": 20, "z": 30}
@@ -100,6 +105,8 @@ for v in dict8.values():
 for k, v in dict8.items():
     print("Key:", k, "Value:", v)
 
+print("=========================== 7. Looping Dictionary =============================")
+
 # ============================= 8. Dictionary Comprehension =============================
 # create a dictionary with squares
 squares = {x: x*x for x in range(1, 6)}
@@ -108,6 +115,8 @@ print(squares)  # {1:1, 2:4, 3:9, 4:16, 5:25}
 # filter only even numbers
 evens = {x: x for x in range(10) if x % 2 == 0}
 print(evens)   # {0:0, 2:2, 4:4, 6:6, 8:8}
+
+print("=========================== 8. Dictionary Comprehension =============================")
 
 # ============================= 9. Dictionary condition Functions =============================
 dict1 = {"name": "John", "age": 31, "city": "New York"}
@@ -123,4 +132,6 @@ if key in dict1:
     print(dict1[key])   # New York
 else:
     print("Key not found")
+
+print("=========================== 9. Dictionary condition Functions =============================")
 
