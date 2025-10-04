@@ -64,8 +64,6 @@ print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
 dict4.setdefault("e", 5)
 print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
-
-
 # ============================= 6. Dictionary Delete Functions =============================
 dict7 = {"name": "John", "age": 30, "city": "New York"}
 
