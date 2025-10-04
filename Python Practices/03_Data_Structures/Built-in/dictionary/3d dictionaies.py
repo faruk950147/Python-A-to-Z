@@ -57,7 +57,7 @@ print(list1)
 
 # ============================= 5. Dictionary Modify Functions =============================
 dict1["dept1"]["person1"]["age"] = 32
-dict1["dept2"]["person4"]["age"] = 36   # ✅ এখানে dept2 তে person4 আছে
+dict1["dept2"]["person4"]["age"] = 36   
 
 list1[0]["dept1"]["person1"]["age"] = 32
 list1[0]["dept2"]["person4"]["age"] = 36

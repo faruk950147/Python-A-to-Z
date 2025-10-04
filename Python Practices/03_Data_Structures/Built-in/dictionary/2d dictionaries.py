@@ -96,8 +96,7 @@ for key, value in dict1.items(): # key = person1, value = {name: John, age: 30, 
 # loop through list of dictionaries
 for key, value in dict_list[0].items():
     print(f"{key} → {value}")
-    for inner_key, inner_value in value.items():
-        print(f"   {inner_key} → {inner_value}")
+    
 
 # ============================= 8. Dictionary Comprehension =============================
 # create a dictionary with squares
