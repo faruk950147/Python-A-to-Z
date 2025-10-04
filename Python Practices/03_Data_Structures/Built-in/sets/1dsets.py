@@ -8,10 +8,6 @@
 # → reference type, dynamic type, hash table based
 
 # ============================= 2. Basic Set =============================
-# Set creation
-
-
-# ============================= 2. Basic Set =============================
 set1 = {1, 2, 3}
 set2 = set([1, 2, 3])
 set3 = set("abc")
