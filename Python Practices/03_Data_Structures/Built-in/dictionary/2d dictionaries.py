@@ -81,6 +81,14 @@ dict1.clear()
 print(dict1)
 
 # ============================= 7. Looping Dictionary =============================
+# loop through dictionary of dictionaries
+for key, value in dict1.items(): # key = person1, value = {name: John, age: 30, city: New York}
+    print(key)   # person1, person2
+    for inner_key, inner_value in value.items(): # inner_key = name, inner_value = John
+        print(f"   {inner_key} → {inner_value}")
+
+
+# loop through list of dictionaries
 for key, value in dict_list[0].items():
     print(f"{key} → {value}")
 
