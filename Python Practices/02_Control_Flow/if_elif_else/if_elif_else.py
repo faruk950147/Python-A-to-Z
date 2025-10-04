@@ -25,6 +25,7 @@
 
 
 """
+print("================ Simple decision making ===================")
 x = 15
 
 if x == 20:
@@ -32,7 +33,8 @@ if x == 20:
 else:
     print("x is not 20")
     
-    # ================ if elif else Simple decision making =================== 
+print("================ elif decision making ===================")
+# ================ if elif else Simple decision making =================== 
 x = 15
 
 if x == 20:
@@ -42,6 +44,7 @@ elif x > 20:
 else:
     print("x is not 20")
     
+print("================ elif advanced decision making ===================")
 # ================ if elif else advanced decision making =================== 
 x = 15
 
@@ -54,6 +57,7 @@ elif x < 20:
 else:
     print("x is not 20")
     
+print("================ elif nested decision making ===================")
     
 #  ================ if elif else nested decision making =================== 
 
@@ -84,8 +88,18 @@ positive"  or negative"
 """
 x = 15
 y = 5
-
+print("================ nested decision making ===================")
+# first condition is True so it will check second condition
 if x > 10:
+    print("x is greater than 10")
+    if y > 0:
+        print("y is positive")
+    else:
+        print("y is zero or negative")
+else:
+    print("x is 10 or less")
+# first condition is False so it will not check second condition just skip it and go to else
+if x == 10:
     print("x is greater than 10")
     if y > 0:
         print("y is positive")
