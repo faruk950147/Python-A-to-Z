@@ -33,8 +33,10 @@ list1 = [
         }
     }
 ]
-# dictionary modify
 
+# direct access
+
+# dictionary modify
 
 # add new key-value
 
