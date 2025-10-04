@@ -45,15 +45,15 @@ print(dict3.keys())    # dict_keys(['name', 'age', 'city'])
 print(dict3.values())  # dict_values(['Alice', 25, 'London'])
 print(dict3.items())   # dict_items([('name', 'Alice'), ('age', 25), ('city', 'London')])
 
-# ============================= 4. Dictionary Update Functions =============================
-dict6 = {"a": 1, "b": 2}
-dict6["a"] = 3
-dict6.update({"c": 3, "d": 4})  # add new key or replace existing value
-print(dict6)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
+# ============================= 4. Dictionary Add Functions =============================
+dict4 = {"a": 1, "b": 2}
+dict4["a"] = 3
+dict4.update({"c": 3, "d": 4})  # add new key or replace existing value
+print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
 
 # setdefault() → add new key if not exists, do nothing if exists
-dict6.setdefault("e", 5)
-print(dict6)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+dict4.setdefault("e", 5)
+print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
 # ============================= 5. Dictionary Delete Functions =============================
 dict7 = {"name": "John", "age": 30, "city": "New York"}
