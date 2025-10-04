@@ -64,7 +64,7 @@ dict1.update({"person3": {"name": "Alice", "age": 28, "city": "Chicago"}})
 dict1.setdefault("person4", {"name": "Bob", "age": 22, "city": "Miami"})
 print(dict1)
 
-# ============================= 5. Dictionary Delete Functions =============================
+# ============================= 6. Dictionary Delete Functions =============================
 # delete specific key
 del dict1["person2"]
 
@@ -80,11 +80,11 @@ print("Last item:", last_item)
 dict1.clear()
 print(dict1)
 
-# ============================= 6. Looping Dictionary =============================
+# ============================= 7. Looping Dictionary =============================
 for key, value in dict_list[0].items():
     print(f"{key} → {value}")
 
-# ============================= 7. Dictionary Comprehension =============================
+# ============================= 8. Dictionary Comprehension =============================
 # create a dictionary with squares
 squares = {x: x*x for x in range(1, 6)}
 print(squares)
@@ -92,3 +92,23 @@ print(squares)
 # filter only even numbers
 evens = {x: x for x in range(10) if x % 2 == 0}
 print(evens)
+
+# ============================= 9. Dictionary condition Functions =============================
+dict2 = {
+    "person1": {"name": "John", "age": 31, "city": "New York"},
+    "person2": {"name": "Jane", "age": 25, "city": "Los Angeles"}
+}
+
+# Find keys with specific value (if age is 25 or 31)
+values = [25, 31]
+result = {k: v for k, v in dict2.items() if v["age"] in values}
+print(result)
+# {'person1': {'name': 'John', 'age': 31, 'city': 'New York'},
+#  'person2': {'name': 'Jane', 'age': 25, 'city': 'Los Angeles'}}
+
+# Search key
+key = "person1"
+if key in dict2:
+    print(dict2[key])   # {'name': 'John', 'age': 31, 'city': 'New York'}
+else:
+    print("Key not found")

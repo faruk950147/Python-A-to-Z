@@ -55,7 +55,18 @@ print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
 dict4.setdefault("e", 5)
 print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
-# ============================= 5. Dictionary Delete Functions =============================
+# ============================= 5. Dictionary Modify Functions =============================
+dict4["a"] = 3
+dict4.update({"c": 3, "d": 4})  # add new key or replace existing value
+print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
+
+# setdefault() → add new key if not exists, do nothing if exists
+dict4.setdefault("e", 5)
+print(dict4)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+
+
+# ============================= 6. Dictionary Delete Functions =============================
 dict7 = {"name": "John", "age": 30, "city": "New York"}
 
 # delete specific key
@@ -76,7 +87,7 @@ print(dict7)   # {}
 # del → delete entire dictionary
 del dict7
 
-# ============================= 6. Looping Dictionary =============================
+# ============================= 7. Looping Dictionary =============================
 dict8 = {"x": 10, "y": 20, "z": 30}
 
 # loop through keys
@@ -91,7 +102,7 @@ for v in dict8.values():
 for k, v in dict8.items():
     print("Key:", k, "Value:", v)
 
-# ============================= 7. Dictionary Comprehension =============================
+# ============================= 8. Dictionary Comprehension =============================
 # create a dictionary with squares
 squares = {x: x*x for x in range(1, 6)}
 print(squares)  # {1:1, 2:4, 3:9, 4:16, 5:25}
@@ -99,3 +110,19 @@ print(squares)  # {1:1, 2:4, 3:9, 4:16, 5:25}
 # filter only even numbers
 evens = {x: x for x in range(10) if x % 2 == 0}
 print(evens)   # {0:0, 2:2, 4:4, 6:6, 8:8}
+
+# ============================= 9. Dictionary condition Functions =============================
+dict1 = {"name": "John", "age": 31, "city": "New York"}
+
+# Find keys with specific value
+values = [25, 31]
+result = {k: v for k, v in dict1.items() if v in values}
+print(result)   # {'age': 31}
+
+# Search key
+key = "city"
+if key in dict1:
+    print(dict1[key])   # New York
+else:
+    print("Key not found")
+
