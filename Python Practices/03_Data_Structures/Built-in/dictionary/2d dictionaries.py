@@ -9,7 +9,7 @@
 
 # ============================= 2. Basic Dictionary =============================
 
-# Dictionary of Dictionaries
+# Dictionary of Dictionaries 2d
 dict1 = {
     "person1": {
         "name": "John",
@@ -23,7 +23,7 @@ dict1 = {
     }
 }
 
-# List of Dictionaries
+# List of Dictionaries 2d
 dict_list = [
     {
         "name": "John",

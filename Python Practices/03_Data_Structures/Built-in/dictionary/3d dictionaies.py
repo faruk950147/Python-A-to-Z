@@ -8,8 +8,35 @@
 # → reference type, dynamic type, hash table based
 
 # ============================= 2. Basic Dictionary =============================
-# Dictionary creation
 
+# Dictionary of Dictionaries 3D
+dict1 = {
+    "dept1": {
+        "person1": {"name": "John", "age": 31, "city": "New York"},
+        "person2": {"name": "Jane", "age": 25, "city": "Los Angeles"}
+    },
+    "dept2": {
+        "person3": {"name": "Alice", "age": 28, "city": "London"},
+        "person4": {"name": "Bob", "age": 35, "city": "Paris"}
+    }
+}
+# List of Dictionaries 3D
+list1 = [
+    {
+        "dept1": {
+            "person1": {"name": "John", "age": 31, "city": "New York"},
+            "person2": {"name": "Jane", "age": 25, "city": "Los Angeles"}
+        },
+        "dept2": {
+            "person3": {"name": "Alice", "age": 28, "city": "London"},
+            "person4": {"name": "Bob", "age": 35, "city": "Paris"}
+        }
+    }
+]
+# dictionary modify
+
+
+# add new key-value
 
 # ============================= 3. Dictionary Access Functions =============================
 
@@ -30,3 +57,4 @@
 
 
 # ============================= 9. Dictionary condition Functions =============================
+

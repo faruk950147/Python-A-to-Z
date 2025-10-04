@@ -10,10 +10,10 @@
 # ============================= 2. Basic Dictionary =============================
 # Dictionary creation
 
-# using {}
+# using {} 1d
 dict1 = {"name": "John", "age": 30}
 
-# using dict() constructor
+# using dict() constructor 1d
 dict2 = dict(name="John", age=30)
 
 # dictionary access (key based)
