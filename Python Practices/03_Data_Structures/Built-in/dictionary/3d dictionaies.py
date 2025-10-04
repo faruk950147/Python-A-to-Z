@@ -34,14 +34,16 @@ list1 = [
     }
 ]
 
-# direct access
-
-# dictionary modify
-
-# add new key-value
-
 # ============================= 3. Dictionary Access Functions =============================
 
+# Dictionary Of Dictionary Access
+# direct access
+print(dict1["dept1"]["person1"]["name"])  # John
+print(dict1["dept1"]["person2"]["age"])   # 25
+
+# List Of Dictionary Access
+print(list1[0]["dept1"]["person1"]["name"])  # John
+print(list1[0]["dept1"]["person2"]["age"])   # 25
 
 # ============================= 4. Dictionary Add Functions =============================
 

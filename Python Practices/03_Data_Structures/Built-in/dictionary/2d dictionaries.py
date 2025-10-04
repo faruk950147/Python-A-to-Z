@@ -39,8 +39,13 @@ dict_list = [
 
 # ============================= 3. Dictionary Access Functions =============================
 
+# Dictionary Of Dictionary Access
 # direct access
 print(dict1["person1"]["name"])   # John
+print(dict_list[1]["city"])       # Los Angeles
+
+# List Of Dictionary Access
+print(dict_list[0]["name"])       # John
 print(dict_list[1]["city"])       # Los Angeles
 
 # get() → key not found, return None or default value
