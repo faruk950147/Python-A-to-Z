@@ -1,28 +1,14 @@
-# 1. ============================= What is dictionary ================================
-# → What is a dictionary in Python, how it works, key-value concept
-# dictionary is a collection of key-value pairs where each key is unique
-# dictionary is mutable
-# dictionary is ordered (as of Python 3.7)
-# dictionary is indexed
-# dictionary is iterable
-# dictionary is a reference type
-# dictionary is a dynamic type
-# dictionary is a mutable type
-# dictionary is a collection type
-# dictionary is a data structure
-# dictionary is a container type
-# dictionary is a hash table
-# dictionary is a map
-# dictionary is a dictionary
+# ============================= 1. What is Dictionary =============================
+# → Dictionary is a collection of key-value pairs
+# → every key is unique
+# → Dictionary is mutable (change possible)
+# → Python 3.7+ is ordered
+# → key is indexed
+# → loop is iterable
+# → reference type, dynamic type, hash table based
 
-# 2. ============================= basic dictionary =============================
-# Simple examples of dictionary
-# → How to create a dictionary (using {}, dict() constructor)
-# How to use dictionary
-# → How to access dictionary values (using keys)
-# → How to modify dictionary values (using keys)
-# → How to add new key-value pairs
-# → How to remove key-value pairs
+# ============================= 2. Basic Dictionary =============================
+# Dictionary creation
 
 # using {}
 dict1 = {"name": "John", "age": 30}
@@ -30,23 +16,86 @@ dict1 = {"name": "John", "age": 30}
 # using dict() constructor
 dict2 = dict(name="John", age=30)
 
-# access dictionary values (using keys)
-print(dict1["name"])
-print(dict2["age"])
+# dictionary access (key based)
+print(dict1["name"])  # John
+print(dict2["age"])   # 30
 
-# modify dictionary values (using keys)
+# dictionary modify
 dict1["age"] = 31
 dict2["age"] = 31
 
-# add new key-value pairs
+# add new key-value
 dict1["city"] = "New York"
 dict2["city"] = "New York"
 
-# remove key-value pairs
-dict1.pop("age")
-dict2.pop("age")
+# ============================= 3. Dictionary Access Functions =============================
+dict3 = {"name": "Alice", "age": 25, "city": "London"}
+# show dictionary
+print(dict3)
 
-# 3. ============================= dictionary methods ===============================
-# → List of all dictionary methods (copy(), clear(), get(), items(), etc.)
-dict3 = {"name": "John", "age": 30}
-dict4 = dict3.copy() # creates a new dictionary with the same key-value pairs
+# direct access
+print(dict3["name"])  
+
+# get() → key not found, return None or default value
+print(dict3.get("country"))        # None
+print(dict3.get("country", "N/A")) # N/A
+
+# keys(), values(), items()
+print(dict3.keys())    # dict_keys(['name', 'age', 'city'])
+print(dict3.values())  # dict_values(['Alice', 25, 'London'])
+print(dict3.items())   # dict_items([('name', 'Alice'), ('age', 25), ('city', 'London')])
+
+# ============================= 4. Dictionary Update Functions =============================
+dict6 = {"a": 1, "b": 2}
+dict6["a"] = 3
+dict6.update({"c": 3, "d": 4})  # add new key or replace existing value
+print(dict6)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4}
+
+# setdefault() → add new key if not exists, do nothing if exists
+dict6.setdefault("e", 5)
+print(dict6)   # {'a': 3, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# ============================= 5. Dictionary Delete Functions =============================
+dict7 = {"name": "John", "age": 30, "city": "New York"}
+
+# delete specific key
+del dict7["name"]
+
+# pop() → delete specific key and return value
+age_value = dict7.pop("age")
+print("Popped age:", age_value)
+
+# popitem() → delete last inserted key-value
+last_item = dict7.popitem()
+print("Last item:", last_item)
+
+# clear() → remove all items
+dict7.clear()
+print(dict7)   # {}
+
+# del → delete entire dictionary
+del dict7
+
+# ============================= 6. Looping Dictionary =============================
+dict8 = {"x": 10, "y": 20, "z": 30}
+
+# loop through keys
+for k in dict8.keys():
+    print("Key:", k)
+
+# loop through values
+for v in dict8.values():
+    print("Value:", v)
+
+# loop through key-value pairs
+for k, v in dict8.items():
+    print("Key:", k, "Value:", v)
+
+# ============================= 7. Dictionary Comprehension =============================
+# create a dictionary with squares
+squares = {x: x*x for x in range(1, 6)}
+print(squares)  # {1:1, 2:4, 3:9, 4:16, 5:25}
+
+# filter only even numbers
+evens = {x: x for x in range(10) if x % 2 == 0}
+print(evens)   # {0:0, 2:2, 4:4, 6:6, 8:8}
