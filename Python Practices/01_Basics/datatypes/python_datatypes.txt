@@ -11,6 +11,23 @@ Python is a dynamically typed language, meaning you don’t need to explicitly d
 Built-in Datatypes in Python
 ----------------------------
 
+1. Primitive Datatype
+   - int      → 10, -5, 1000
+   - float    → 3.14, -0.5
+   - complex  → 2+3j
+   - bool     → True, False
+   - NoneType → None
+   - bytes    → b"hello"
+   - bytearray → bytearray([65, 66, 67])
+   - memoryview→ memoryview(b"hello")
+
+2. Non-Primitive Datatype
+   - str      → "Hello", 'Python'
+   - list     → [1, 2, 3]
+   - tuple    → (1, 2, 3)
+   - set      → {1, 2, 3}
+   - dict     → {"name": "Faruk", "age": 20}
+
 1. Numbers
    - int  → integers (e.g., 10, -5, 1000)
    - float → decimal numbers (e.g., 3.14, -0.5)
