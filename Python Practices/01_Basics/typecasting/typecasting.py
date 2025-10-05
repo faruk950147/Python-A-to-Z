@@ -14,35 +14,35 @@ Happens mostly when performing operations between different types.
 """
 
 # ======================= 1. directly possible =======================
-
+# ======================== int ========================
 # int → int	int(10)	10
 # 1.example
 print(int(10))
 
 # 2.example
 print(int("10"))
-
+# ======================== float ========================
 # int → float	float(10)	10.0
 # 1.example
 print(float(10))
 
 # 2.example
 print(float("10"))
-
+# ======================== complex ========================
 # int → complex	complex(10)	10+0j
 # 1.example
 print(complex(10))
 
 # 2.example
 print(complex("10"))
-
+# ======================== bool ========================
 # int → bool	bool(10)	True
 # 1.example
 print(bool(10))
 
 # 2.example
 print(bool("10"))
-
+# ======================== str ========================
 # int → str	str(10)	'10'
 # 1.example
 print(str(10))

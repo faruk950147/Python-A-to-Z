@@ -72,7 +72,18 @@ print(unique_numbers)
 value = None
 print(value)
 
+# ======================= Multiple Assignment =======================
+# Assign the same value to multiple variables at once.
+a = b = c = 10
+print(a)
+print(b)
+print(c)
 
+# Assign different values to multiple variables at once.
+a, b, c = 10, 20, 30
+print(a)
+print(b)
+print(c)
 
 # ======================= memory location =======================
 a = 10 # same memory location because of small int and same value
