@@ -54,21 +54,21 @@ print(str("10"))
 
 # ======================= 2. directly not possible =======================
 
-# int → list	list(10)	❌ TypeError, int iterable is not possible because int is not iterable
+# int → list	list(10) TypeError, int iterable is not possible because int is not iterable
 # 1.example
 print(list(10))
 
 # 2.example
 print(list("10"))
 
-# int → tuple	tuple(10)	❌ TypeError, int iterable is not possible because int is not iterable
+# int → tuple	tuple(10)	 TypeError, int iterable is not possible because int is not iterable
 # 1.example
 print(tuple(10))
 
 # 2.example
 print(tuple("10"))
 
-# int → set	set(10)	❌ TypeError, int iterable is not possible because int is not iterable
+# int → set	set(10)	 TypeError, int iterable is not possible because int is not iterable
 # 1.example
 print(set(10))
 
