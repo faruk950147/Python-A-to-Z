@@ -19,24 +19,64 @@ print("string3 (created):", string3)
 # ============================= 3. String Access Functions =============================
 print("\n============================ String Access Functions =============================")
 print("string1 (accessed):", string1)
-
 # String Slicing
 print("\n============================ String Slicing =============================")
-print(f"Slice string1 [1:3]: {string1[1:3]}")           # el starting index 1 ending index 3
-print(f"Reverse using slicing: {string1[::-1]}")       # !dlroW olleH reverse
-print(f"First 3 elements: {string1[:3]}")              # Hel first 3 elements starting index 0 ending index 3
-print(f"Last 2 elements: {string1[-2:]}")              # d! last 2 elements starting index -2 ending index -1
-print(f"From index 3 to end: {string1[3:]}")           # lo, World! from index 3 to end starting index 3 ending index len(string1)
-print(f"Alternate elements: {string1[::2]}")           # Hlo ol! alternate elements starting index 0 ending index len(string1) step 2
-print(f"Reverse alternate elements: {string1[::-2]}") # !drWolH reverse alternate elements starting index len(string1) ending index 0 step -2
-print(f"Alternate elements from index 1: {string1[1::2]}")  # el,Wrd alternate elements from index 1 starting index 1 ending index len(string1) step 2
-print(f"Alternate elements from index -2: {string1[-2::-2]}") # dW,le alternate elements from index -2 starting index -2 ending index -1 step -2
-print(f"Alternate elements from index -1: {string1[-1::-2]}") # !dlroW olleH alternate elements from index -1 starting index -1 ending index -2 step -2
-print(f"Alternate elements from index -1: {string1[5:len(string1)]}") # World! starting index 5 ending index len(string1)
-print(f"Alternate elements from index -1: {string1[5:]}") # World! starting index 5 ending index len(string1)
-print(f"Alternate elements from index 5 to 10: {string1[:10]}") # Hello, World alternate elements from index 5 to 10 starting index 0 ending index 10
-print(f"Alternate elements from index 5 to 10: {string1[5:10]}") # World starting index 5 ending index 10
-print(f"Alternate elements from index 5 to 10: {string1[5:10:2]}") # Wrd starting index 5 ending index 10 step 2
+string1 = "Hello World"
+
+print(f"Slice string1 [1:3]: {string1[1:3]}")   
+# "el" → starts from index 1 ("e"), stops before index 3 ("l"), step = 1
+
+print(f"Slice string1 [:3]: {string1[:3]}")     
+# "Hel" → start is missing, so defaults to 0, stops before index 3, step = 1
+
+print(f"Slice string1 [0:]: {string1[0:]}")     
+# "Hello World" → starts from index 0, end is missing so goes till the end
+
+print(f"Slice string1 [:]: {string1[:]}")       
+# "Hello World" → start is missing (0), end is missing (till the end), so the whole string
+
+print(f"Slice string1 [::]: {string1[::]}")     
+# "Hello World" → same as [:], because step is missing so default step = 1
+
+print(f"Slice string1 [::2]: {string1[::2]}")   
+# "HloWrd" → start = 0, end = till the end, step = 2 (takes every 2nd character)
+
+print(f"Slice string1 [::3]: {string1[::3]}")   
+# "HlWl" → start = 0, end = till the end, step = 3 (takes every 3rd character)
+
+# =============================== Negative Indexing ===============================
+print("\n============================ Negative Indexing =============================")
+print(f"Slice string1 [-1]: {string1[-1]}")   
+# "!" → starts from the end, stops before index 0, step = 1
+
+print(f"Slice string1 [-2:]: {string1[-2:]}")   
+# "d" → starts from the end, stops before index 0, step = 1
+
+print(f"Slice string1 [:-2]: {string1[:-2]}")   
+# "Hello Wor" → starts from index 0, stops before index -2, step = 1
+
+
+print(f"Slice string1 [-2:-1]: {string1[-2:-1]}")   
+# "d" → starts from the end, stops before index 0, step = 1
+
+print(f"Slice string1 [-2:-3]: {string1[-2:-3]}")   
+# "d" → starts from the end, stops before index 0, step = 1
+
+# Reverse String
+print("\n============================ String Reverse =============================")
+print(f"Slice string1 [::-1]: {string1[::-1]}")   
+# "dlroW olleH" → start = 0, end = till the end, step = -1 (takes every character in reverse)
+
+print(f"Slice string1 [::-2]: {string1[::-2]}")   
+# "dlroW olleH" → start = 0, end = till the end, step = -2 (takes every 2nd character in reverse)
+
+print(f"Slice string1 [::-3]: {string1[::-3]}")   
+# "dlroW olleH" → start = 0, end = till the end, step = -3 (takes every 3rd character in reverse)
+
+print(f"Slice string1 [::-4]: {string1[::-4]}")   
+# "dlroW olleH" → start = 0, end = till the end, step = -4 (takes every 4th character in reverse)
+
+
 
 # ============================= 4. String Add Functions =============================
 print("\n============================ String Add Functions =============================")
@@ -58,6 +98,8 @@ print("Remove 'World':", string1.replace("World", ""))  # "Hello, !"
 
 # ============================= 7. Looping String =============================
 print("\n============================ Looping String =============================")
+for i in range(len(string1)):
+    print(string1[i], end=" ")  # every character is printed separately
 for char in string1:
     print(char, end=" ")  # every character is printed separately
 

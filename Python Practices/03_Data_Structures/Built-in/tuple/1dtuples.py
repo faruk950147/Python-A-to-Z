@@ -23,17 +23,62 @@ print(f"Initial tuple4: {tuple4}")
 print(f"Initial tuple5: {tuple5}")
 # Slice tuple1
 print("\n============================ Tuple Slicing =============================")
-print(f"Slice tuple1: {tuple1[1:3]}")
-print(f"Reverse using slicing: {tuple1[::-1]}")
-print(f"First 3 elements: {tuple1[:3]}")
-print(f"Last 2 elements: {tuple1[3:]}")
-print(f"Alternate elements: {tuple1[::2]}")
-print(f"Reverse alternate elements: {tuple1[::-2]}")
-print(f"Alternate elements from index 1: {tuple1[1::2]}")
-print(f"Alternate elements from index -2: {tuple1[-2::-2]}")
-print(f"Alternate elements from index -1: {tuple1[-1::-2]}")
-print(f"Alternate elements from index -2: {tuple1[-2::-2]}")
-print(f"Alternate elements from index -1: {tuple1[-1::-2]}")
+tuple1 = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd')
+
+print(f"Slice tuple1 [1:3]: {tuple1[1:3]}")   
+# ('e', 'l') → starts from index 1 ("e"), stops before index 3 ("l"), step = 1
+
+print(f"Slice tuple1 [:3]: {tuple1[:3]}")     
+# ('H', 'e', 'l') → start missing, defaults to 0, stops before index 3
+
+print(f"Slice tuple1 [0:]: {tuple1[0:]}")     
+# ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd') → full tuple
+
+print(f"Slice tuple1 [:]: {tuple1[:]}")       
+# same as full tuple (copy)
+
+print(f"Slice tuple1 [::]: {tuple1[::]}")     
+# same as full tuple (default step = 1)
+
+print(f"Slice tuple1 [::2]: {tuple1[::2]}")   
+# ('H', 'l', 'o', 'r', 'd') → every 2nd element
+
+print(f"Slice tuple1 [::3]: {tuple1[::3]}")   
+# ('H', 'l', ' ', 'r') → every 3rd element
+
+
+# =============================== Negative Indexing ===============================
+print("\n============================ Negative Indexing =============================")
+print(f"Slice tuple1 [-1]: {tuple1[-1]}")   
+# 'd' → last element
+
+print(f"Slice tuple1 [-2:]: {tuple1[-2:]}")   
+# ('l', 'd') → last 2 elements
+
+print(f"Slice tuple1 [:-2]: {tuple1[:-2]}")   
+# ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r') → all except last 2
+
+print(f"Slice tuple1 [-2:-1]: {tuple1[-2:-1]}")   
+# ('l',) → only the second last element
+
+print(f"Slice tuple1 [-2:-3]: {tuple1[-2:-3]}")   
+# () → empty tuple (because stop < start in forward direction)
+
+
+# ============================= Tuple Reverse =============================
+print("\n============================ Tuple Reverse =============================")
+print(f"Slice tuple1 [::-1]: {tuple1[::-1]}")   
+# ('d', 'l', 'r', 'o', 'W', ' ', 'o', 'l', 'l', 'e', 'H')
+
+print(f"Slice tuple1 [::-2]: {tuple1[::-2]}")   
+# ('d', 'r', 'W', 'l', 'H') → every 2nd element in reverse
+
+print(f"Slice tuple1 [::-3]: {tuple1[::-3]}")   
+# ('d', 'o', 'o', 'H') → every 3rd element in reverse
+
+print(f"Slice tuple1 [::-4]: {tuple1[::-4]}")   
+# ('d', 'W', 'l') → every 4th element in reverse
+
 # ============================= 4. Tuple Add Functions =============================
 print("\n============================ Tuple Add Functions =============================")
 tuple1d = (1, 2, 3)

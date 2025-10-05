@@ -44,18 +44,62 @@ print(f"First element: {list1d[0]}")        # first element
 print(f"Last element: {list1d[-1]}")       # last element
 
 print("\n============================ List Slicing =============================")
-# Slice → [start:stop:step]
-print(f"Slice: {list1d[1:3]}")      # slice
-print(f"Reverse using slicing: {list1d[::-1]}")     # reverse using slicing
-print(f"First 3 elements: {list1d[:3]}")       # first 3 elements
-print(f"Last 2 elements: {list1d[3:]}")       # last 2 elements
-print(f"Alternate elements: {list1d[::2]}")      # alternate elements
-print(f"Reverse alternate elements: {list1d[::-2]}")     # reverse alternate elements
-print(f"Alternate elements from index 1: {list1d[1::2]}")     # alternate elements from index 1
-print(f"Alternate elements from index -2: {list1d[-2::-2]}")   # alternate elements from index -2
-print(f"Alternate elements from index -1: {list1d[-1::-2]}")   # alternate elements from index -1
-print(f"Alternate elements from index -2: {list1d[-2::-2]}")   # alternate elements from index -2
-print(f"Alternate elements from index -1: {list1d[-1::-2]}")   # alternate elements from index -1
+list1 = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']
+
+print(f"Slice list1 [1:3]: {list1[1:3]}")   
+# ['e', 'l'] → starts from index 1, stops before index 3
+
+print(f"Slice list1 [:3]: {list1[:3]}")     
+# ['H', 'e', 'l'] → start missing (default 0), stops before index 3
+
+print(f"Slice list1 [0:]: {list1[0:]}")     
+# ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'] → full list
+
+print(f"Slice list1 [:]: {list1[:]}")       
+# full list (copy)
+
+print(f"Slice list1 [::]: {list1[::]}")     
+# full list (step default = 1)
+
+print(f"Slice list1 [::2]: {list1[::2]}")   
+# ['H', 'l', 'o', 'r', 'd'] → every 2nd element
+
+print(f"Slice list1 [::3]: {list1[::3]}")   
+# ['H', 'l', ' ', 'r'] → every 3rd element
+
+
+# =============================== Negative Indexing ===============================
+print("\n============================ Negative Indexing =============================")
+print(f"Slice list1 [-1]: {list1[-1]}")   
+# 'd' → last element
+
+print(f"Slice list1 [-2:]: {list1[-2:]}")   
+# ['l', 'd'] → last 2 elements
+
+print(f"Slice list1 [:-2]: {list1[:-2]}")   
+# ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r'] → all except last 2
+
+print(f"Slice list1 [-2:-1]: {list1[-2:-1]}")   
+# ['l'] → only the second last element
+
+print(f"Slice list1 [-2:-3]: {list1[-2:-3]}")   
+# [] → empty list (because stop < start in forward slicing)
+
+
+# ============================= List Reverse =============================
+print("\n============================ List Reverse =============================")
+print(f"Slice list1 [::-1]: {list1[::-1]}")   
+# ['d', 'l', 'r', 'o', 'W', ' ', 'o', 'l', 'l', 'e', 'H']
+
+print(f"Slice list1 [::-2]: {list1[::-2]}")   
+# ['d', 'r', 'W', 'l', 'H'] → every 2nd element in reverse
+
+print(f"Slice list1 [::-3]: {list1[::-3]}")   
+# ['d', 'o', 'o', 'H'] → every 3rd element in reverse
+
+print(f"Slice list1 [::-4]: {list1[::-4]}")   
+# ['d', 'W', 'l'] → every 4th element in reverse
+
 
 
 # ============================= 4. List Add Functions =============================
