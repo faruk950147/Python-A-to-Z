@@ -8,6 +8,8 @@
 # → reference type, dynamic type, hash table based
 
 # ============================= 2. Basic Tuple =============================
+tuple = (1) # Not tuple because it is not iterable and we can use () in int number a = (1) for example
+tuple0 = (1,) # Tuple with single element it is iterable because used () and comma
 tuple1 = (1, 2, 3)
 tuple2 = tuple([1, 2, 3])
 tuple3 = tuple("abc")
