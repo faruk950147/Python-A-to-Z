@@ -117,11 +117,3 @@ print("Ends with 'World!'? ->", string1.endswith("World!"))
 print("Is alphabetic? ->", string1.isalpha())   # False (because of space)
 print("Is digit? ->", string1.isdigit())       # False
 print("Contains 'Hello'? ->", "Hello" in string1)
-
-# ============================= 10. Row String Functions =============================
-print("\n============================ Row String Format Functions =============================")
-print("Row string:", r"C:\Users\Username\Documents")
-string3 = "Hello World"
-print("Row string: {}".format(string3))
-print("Row string: {}".format(string3))
-
