@@ -28,10 +28,15 @@ print(f"First 3 elements: {string1[:3]}")              # Hel
 print(f"Last 2 elements: {string1[-2:]}")              # d!
 print(f"From index 3 to end: {string1[3:]}")           # lo, World!
 print(f"Alternate elements: {string1[::2]}")           # Hlo ol!
-print(f"Reverse alternate elements: {string1[::-2]}")  # !drWolH
+print(f"Reverse alternate elements: {string1[::-2]}") # !drWolH
 print(f"Alternate elements from index 1: {string1[1::2]}")  # el,Wrd
 print(f"Alternate elements from index -2: {string1[-2::-2]}") # dW,le
-print(f"Alternate elements from index -1: {string1[-1::-2]}") # !o lH
+print(f"Alternate elements from index -1: {string1[-1::-2]}") # !dlroW olleH
+print(f"Alternate elements from index -1: {string1[5:len(string1)]}") # World!
+print(f"Alternate elements from index -1: {string1[5:]}") # World!
+print(f"Alternate elements from index 5 to 10: {string1[:10]}") # Hello, World
+print(f"Alternate elements from index 5 to 10: {string1[5:10]}") # World
+print(f"Alternate elements from index 5 to 10: {string1[5:10:2]}") # Wrd
 
 # ============================= 4. String Add Functions =============================
 print("\n============================ String Add Functions =============================")
