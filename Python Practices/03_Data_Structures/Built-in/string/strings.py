@@ -22,21 +22,21 @@ print("string1 (accessed):", string1)
 
 # String Slicing
 print("\n============================ String Slicing =============================")
-print(f"Slice string1 [1:3]: {string1[1:3]}")           # el
-print(f"Reverse using slicing: {string1[::-1]}")       # !dlroW olleH
-print(f"First 3 elements: {string1[:3]}")              # Hel
-print(f"Last 2 elements: {string1[-2:]}")              # d!
-print(f"From index 3 to end: {string1[3:]}")           # lo, World!
-print(f"Alternate elements: {string1[::2]}")           # Hlo ol!
-print(f"Reverse alternate elements: {string1[::-2]}") # !drWolH
-print(f"Alternate elements from index 1: {string1[1::2]}")  # el,Wrd
-print(f"Alternate elements from index -2: {string1[-2::-2]}") # dW,le
-print(f"Alternate elements from index -1: {string1[-1::-2]}") # !dlroW olleH
-print(f"Alternate elements from index -1: {string1[5:len(string1)]}") # World!
-print(f"Alternate elements from index -1: {string1[5:]}") # World!
-print(f"Alternate elements from index 5 to 10: {string1[:10]}") # Hello, World
-print(f"Alternate elements from index 5 to 10: {string1[5:10]}") # World
-print(f"Alternate elements from index 5 to 10: {string1[5:10:2]}") # Wrd
+print(f"Slice string1 [1:3]: {string1[1:3]}")           # el starting index 1 ending index 3
+print(f"Reverse using slicing: {string1[::-1]}")       # !dlroW olleH reverse
+print(f"First 3 elements: {string1[:3]}")              # Hel first 3 elements starting index 0 ending index 3
+print(f"Last 2 elements: {string1[-2:]}")              # d! last 2 elements starting index -2 ending index -1
+print(f"From index 3 to end: {string1[3:]}")           # lo, World! from index 3 to end starting index 3 ending index len(string1)
+print(f"Alternate elements: {string1[::2]}")           # Hlo ol! alternate elements starting index 0 ending index len(string1) step 2
+print(f"Reverse alternate elements: {string1[::-2]}") # !drWolH reverse alternate elements starting index len(string1) ending index 0 step -2
+print(f"Alternate elements from index 1: {string1[1::2]}")  # el,Wrd alternate elements from index 1 starting index 1 ending index len(string1) step 2
+print(f"Alternate elements from index -2: {string1[-2::-2]}") # dW,le alternate elements from index -2 starting index -2 ending index -1 step -2
+print(f"Alternate elements from index -1: {string1[-1::-2]}") # !dlroW olleH alternate elements from index -1 starting index -1 ending index -2 step -2
+print(f"Alternate elements from index -1: {string1[5:len(string1)]}") # World! starting index 5 ending index len(string1)
+print(f"Alternate elements from index -1: {string1[5:]}") # World! starting index 5 ending index len(string1)
+print(f"Alternate elements from index 5 to 10: {string1[:10]}") # Hello, World alternate elements from index 5 to 10 starting index 0 ending index 10
+print(f"Alternate elements from index 5 to 10: {string1[5:10]}") # World starting index 5 ending index 10
+print(f"Alternate elements from index 5 to 10: {string1[5:10:2]}") # Wrd starting index 5 ending index 10 step 2
 
 # ============================= 4. String Add Functions =============================
 print("\n============================ String Add Functions =============================")
