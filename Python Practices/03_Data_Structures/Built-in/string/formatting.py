@@ -1,4 +1,4 @@
-# ============================= Format String Functions =============================
+# ============================= Format Operator Functions =============================
 string3 = "Hello World"
 print("My string is: %s" % string3)
 
