@@ -30,8 +30,6 @@ def higher_order(op):     # takes a string
     else:
         return mul
     
-# ============================= 3. Function as another function =======================================
-
 # Getting functions
 f1 = higher_order("add")   # f1 = add
 f2 = higher_order("mul")   # f2 = mul
