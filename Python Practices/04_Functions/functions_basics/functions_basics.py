@@ -11,15 +11,7 @@
 
 
 # 1. First-class function
-# In Python, functions are first-class citizens, meaning:
 
-# You can store a function in a variable
-
-# You can pass a function as an argument
-
-# You can return a function from another function
-
-# You can keep functions inside data structures
 
 # 1. First-class function
 def square(x):
@@ -27,6 +19,47 @@ def square(x):
 
 f = square   # storing function in a variable
 print(f(5))  # output: 25
+
+# 1. You can store a function in a variable
+def greet(name):
+    return f"Hello, {name}!"
+
+say_hello = greet  # storing function in a variable
+print(say_hello("Faruk"))
+
+
+# 2. You can pass a function as an argument
+def call_func(func, value):
+    return func(value)
+
+print(call_func(greet, "Ahmed"))
+
+
+# 3. You can return a function from another function
+def outer_func():
+    def inner_func():
+        return "I'm inside the outer function!"
+    return inner_func  # returning function itself, not calling it
+
+result = outer_func()
+print(result())  # calling inner function
+
+
+# 4. You can keep functions inside data structures
+def add(x, y): return x + y
+def sub(x, y): return x - y
+def mul(x, y): return x * y
+
+operations = {
+    "add": add,
+    "sub": sub,
+    "mul": mul
+}
+
+print(operations["add"](10, 5))
+print(operations["sub"](10, 5))
+print(operations["mul"](10, 5))
+
 
 # 2. Pure function
 # A pure function is one that:

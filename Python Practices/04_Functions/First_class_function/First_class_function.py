@@ -12,53 +12,48 @@
 # - Functional programming patterns
 
 # ============================= First-Class Function Examples =============================================
-# Example 1: Function as a Variable
-def greet():
-    print("Hello from function")
-# Assigning function to variable it is first class function 
-# what we are doing here is storing function in variable    
-greet_var = greet 
-print(greet_var)
-greet_var()
+def square(x):
+    return x * x
 
-# Example 2: Function as an Argument
-def apply(func, x, y):
-    return func(x, y)
+f = square   # storing function in a variable
+print(f(5))  # output: 25
 
-def add(x, y):
-    return x + y
+# 1. You can store a function in a variable
+def greet(name):
+    return f"Hello, {name}!"
 
-def multiply(x, y):
-    return x * y
+say_hello = greet  # storing function in a variable
+print(say_hello("Faruk"))
 
-result1 = apply(add, 5, 3)  # 8
-result2 = apply(multiply, 4, 6)  # 24
-print(result1)
-print(result2)
 
-# Example 3: Function as a Return Value
-def call_func(func):
-    func()
+# 2. You can pass a function as an argument
+def call_func(func, value):
+    return func(value)
 
-def say_hello():
-    print("Hello")
+print(call_func(greet, "Ahmed"))
 
-call_func(say_hello)   # say_hello function is passed as an argument to call_func function
 
-# Example 4: Function as a Return Value
-def outer():
-    def inner():
-        print("I am inner function")
-    return inner
+# 3. You can return a function from another function
+def outer_func():
+    def inner_func():
+        return "I'm inside the outer function!"
+    return inner_func  # returning function itself, not calling it
 
-returned_func = outer()
-returned_func()
+result = outer_func()
+print(result())  # calling inner function
 
-# Example 5: Function as a Return Value
-def add(a, b): return a + b
-def sub(a, b): return a - b
 
-operations = [add, sub]
-print(operations[0](10, 5))  # 15
-print(operations[1](10, 5))  # 5
+# 4. You can keep functions inside data structures
+def add(x, y): return x + y
+def sub(x, y): return x - y
+def mul(x, y): return x * y
 
+operations = {
+    "add": add,
+    "sub": sub,
+    "mul": mul
+}
+
+print(operations["add"](10, 5))
+print(operations["sub"](10, 5))
+print(operations["mul"](10, 5))
