@@ -1,12 +1,11 @@
 Got it. Let me explain the difference between Higher-Order Function and Callback Function in English with clear examples.
 # ============================= 0. Higher-Order Function (HOF) =======================================
-Higher-Order Function (HOF)
+একটা ফাংশন যদি অন্য ফাংশনের উপর কাজ করতে পারে (যেমন: তাকে argument হিসেবে নেয় বা return করে), তখন সেই ফাংশনকে বলা হয় Higher-Order Function।
+Higher Order Function is a function that takes another function as an argument, OR returns another function as a result.
 
-A function that either:
+If a function accepts another function as an argument → it’s a Higher-Order Function.
 
-Takes another function as an argument, OR
-
-Returns another function as a result.
+If a function returns another function → it’s also a Higher-Order Function.
 
 Example:
 
@@ -57,7 +56,7 @@ print(f2(5, 6))     # 30
 # Here, higher_order is a Higher-Order Function.
 
 # ============================= 3. Callback Function =======================================
-Callback Function
+Callback মানে হলো — একটা ফাংশনকে আরেকটা ফাংশনের argument হিসেবে পাঠানো, যাতে ওই ফাংশন তার কাজ শেষ হওয়ার পর ওই দেওয়া ফাংশনটাকে আবার call করে।
 
 A function that is passed as an argument to another function (HOF) and is later executed (called back).
 
