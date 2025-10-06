@@ -1,47 +1,27 @@
-# ============================= What is function ==============================
-# A function is a block of reusable code that performs a specific task.
+# ============================= What is args and kwargs ==============================
 
-# ============================= basic function ==============================
-# Defining and calling a function using def
+# Args (Arguments) is a special syntax in Python that allows a function to accept a variable number of arguments.
 
-# ============================= function arguments ===========================
-# Different types of arguments: positional, keyword, default, variable length
+# Kwargs (Keyword Arguments) is a special syntax in Python that allows a function to accept a variable number of keyword arguments.
 
-# ============================= positional arguments =========================
-# Arguments that must be passed in correct order
+# def function_name(name):
+#     return name
 
-# ============================= keyword arguments ============================
-# Arguments passed by name (key=value)
+# function_name("John")
 
-# ============================= default arguments ===========================
-# Arguments with default values if not provided
+# def function_name(*args): # Return args is a tuple
+#     # Function body
+#     # Perform some operations
+#     #return result
+    
+# def function_name(**kwargs): # Return kwargs is a dictionary
+#     # Function body
+#     # Perform some operations
+#     #return result
 
-# ============================= variable length arguments ===================
-# *args (non-keyword) and **kwargs (keyword arguments)
+# def function_name(*args, **kwargs): # Return args is a tuple and kwargs is a dictionary
+#     # Function body
+#     # Perform some operations
+#     #return result
 
-# ============================= function return =============================
-# Returning values using return
 
-# ============================= function scope ==============================
-# Local scope, global scope, nonlocal
-
-# ============================= anonymous function (lambda) =================
-# Small one-line functions using lambda keyword
-
-# ============================= recursive function ==========================
-# A function that calls itself
-
-# ============================= nested function =============================
-# Function inside another function
-
-# ============================= higher-order function =======================
-# A function that takes another function as an argument or returns one
-
-# ============================= built-in functions ==========================
-# Examples: len(), sum(), min(), max(), type(), etc.
-
-# ============================= docstring ===================================
-# Function documentation using triple quotes
-
-# ============================= pass statement ==============================
-# Placeholder for empty function body
