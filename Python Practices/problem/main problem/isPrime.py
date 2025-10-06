@@ -9,7 +9,7 @@ def Is_Prime(n):
 
 n = int(input("Enter a number: "))
 for i in range(2, n):
-    if Is_Prime(n):
-        print(f'{n} is a prime number')
+    if Is_Prime(i):
+        print(f'{i} is a prime number')
     else:
-        print(f'{n} is not a prime number')
+        print(f'{i} is not a prime number')
