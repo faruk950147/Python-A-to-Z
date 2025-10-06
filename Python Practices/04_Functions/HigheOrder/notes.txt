@@ -1,0 +1,94 @@
+Got it. Let me explain the difference between Higher-Order Function and Callback Function in English with clear examples.
+# ============================= 0. Higher-Order Function (HOF) =======================================
+Higher-Order Function (HOF)
+
+A function that either:
+
+Takes another function as an argument, OR
+
+Returns another function as a result.
+
+Example:
+
+def higher_order(func):   # takes another function
+    print("Inside HOF")
+    func()   # calling the function
+
+def say_hello():
+    print("Hello!")
+
+higher_order(say_hello)
+
+
+# ============================= 1. Function as Argument (pass) =======================================
+def higher_order(func, a, b):   # takes function + args
+    return func(a, b)           # calls the function
+
+def add(x, y):
+    return x + y
+
+def mul(x, y):
+    return x * y
+
+print(higher_order(add, 10, 20))   # 30
+print(higher_order(mul, 5, 6))     # 30
+
+# ============================= 2. Function Return =======================================
+def higher_order(op):     # takes a string
+    def add(x, y):
+        return x + y
+
+    def mul(x, y):
+        return x * y
+
+    if op == "add":
+        return add        # returning function (not calling)
+    else:
+        return mul
+
+# Getting functions
+f1 = higher_order("add")   # f1 = add
+f2 = higher_order("mul")   # f2 = mul
+
+print(f1(10, 20))   # 30
+print(f2(5, 6))     # 30
+
+
+# Here, higher_order is a Higher-Order Function.
+
+# ============================= 3. Callback Function =======================================
+Callback Function
+
+A function that is passed as an argument to another function (HOF) and is later executed (called back).
+
+In the above example:
+
+higher_order = Higher-Order Function
+
+say_hello = Callback Function (because it is passed and executed later)
+
+Key Difference
+Concept	Higher-Order Function (HOF)	Callback Function
+Definition	A function that accepts another function as an argument or returns a function	A function that is passed as an argument to a HOF and executed later
+Role	Caller (controls execution)	Callee (gets executed)
+Example	doTask("Learning JS", done) → doTask is HOF	done is callback function
+
+Easy Way to Remember
+
+HOF = The function that takes/returns another function.
+
+Callback = The function that is passed to HOF to be executed.
+
+def do_task(task, callback):   # HOF (takes another function)
+    print("Doing:", task)
+    callback()   # calling the callback
+
+def done():
+    print("Task finished!")
+
+def notify():
+    print("Sending notification...")
+
+# Using different callback functions
+do_task("Learning Python", done)
+do_task("Completing Homework", notify)
