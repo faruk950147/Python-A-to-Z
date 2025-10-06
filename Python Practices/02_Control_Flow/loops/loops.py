@@ -99,7 +99,7 @@ for fruit in range(len(fruits)):
 
 
 """
-
+# positive looping
 i = 1
 while i <= 5:
     print(i)
@@ -113,6 +113,42 @@ while i <= 5:
 # 3
 # 4
 # 5
+
+for i in range(1, 6):
+    print(i)
+
+# Output:
+
+# 1
+# 2
+# 3
+# 4
+# 5
+
+# negative looping
+i = 5
+while i >= 1:
+    print(i)
+    i -= 1
+
+# Output:
+
+# 5
+# 4
+# 3
+# 2
+# 1
+
+for i in range(5, 0, -1):
+    print(i)
+
+# Output:
+
+# 5
+# 4
+# 3
+# 2
+# 1
 
 # 3. Loop control statements
 
@@ -128,6 +164,7 @@ for i in range(1, 6):
 
 # 1
 # 2
+# 3
 
 
 # continue → skip the current iteration
