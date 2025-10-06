@@ -3,12 +3,12 @@
 
 # 1. Using index
 def sumOfFirstAndLastNumber(list):
-    return list[0] + list[-1]
+    return list[0] + list[-1] # 1 + 5 = 6 it last index is found out
 print(sumOfFirstAndLastNumber([1, 2, 3, 4, 5]))
 
 # 2. Using len()
 def sumOfFirstAndLastNumber(list):
-    return list[0] + list[len(list) - 1]
+    return list[0] + list[len(list) - 1] # 1 + 5 = 6 it last index is found out
 print(sumOfFirstAndLastNumber([1, 2, 3, 4, 5]))
 
 # 3. Using for loop

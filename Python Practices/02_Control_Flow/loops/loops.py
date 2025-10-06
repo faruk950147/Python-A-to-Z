@@ -99,38 +99,47 @@ for fruit in range(len(fruits)):
 
 
 """
-# positive looping
+# ============================= positive looping =============================
+
+# ===================== while loop =====================
+i = 1
+while i <= 5:
+    print('Hello World')
+    i += 1
+
+# Output:
+
+# Hello World
+# Hello World
+# Hello World
+# Hello World
+# Hello World
+
 i = 1
 while i <= 5:
     print(i)
     i += 1
 
+while True: # infinite loop
+    print('Hello World')
+    
 
-# Output:
 
-# 1
-# 2
-# 3
-# 4
-# 5
-
+# ===================== for loop =====================
+for _ in range(1, 6):
+    print('Hello World')
+    
 for i in range(1, 6):
-    print(i)
+    print(i)    
+    
+# ===================== negative looping =====================
 
-# Output:
-
-# 1
-# 2
-# 3
-# 4
-# 5
-
-# negative looping
+# ===================== while loop =====================
 i = 5
 while i >= 1:
     print(i)
     i -= 1
-
+    
 # Output:
 
 # 5
@@ -139,9 +148,10 @@ while i >= 1:
 # 2
 # 1
 
+# ===================== for loop =====================
 for i in range(5, 0, -1):
     print(i)
-
+    
 # Output:
 
 # 5
@@ -150,30 +160,61 @@ for i in range(5, 0, -1):
 # 2
 # 1
 
-# 3. Loop control statements
+# ============================= break and continue while loop =============================
 
-# break → stop the loop immediately
+# break
+i = 1
+while i <= 5:
+    if i == 3:
+        break
+    print(i)
+    i += 1
 
+# Output:
+
+# 1
+# 2
+
+# continue
+i = 1
+while i <= 5:
+    if i == 3:
+        continue
+    print(i)
+    i += 1
+
+# Output:
+
+# 1
+# 2
+# 4
+# 5
+
+i = 1
+while True:
+    if i == 3:
+        break
+    print(i)
+    i += 1
+
+# ============================= break and continue for loop =============================
+
+# break
 for i in range(1, 6):
     if i == 3:
         break
     print(i)
 
-
 # Output:
 
 # 1
 # 2
-# 3
 
-
-# continue → skip the current iteration
-
+# continue
 for i in range(1, 6):
     if i == 3:
         continue
     print(i)
-
 
 # Output:
 
@@ -181,4 +222,3 @@ for i in range(1, 6):
 # 2
 # 4
 # 5
-
