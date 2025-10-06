@@ -21,6 +21,7 @@
 
 # You can keep functions inside data structures
 
+# 1. First-class function
 def square(x):
     return x * x
 
