@@ -127,5 +127,8 @@ def Is_Prime_Sieve(n):
             if (n % i) == 0 or (n % (i + 2)) == 0: # if n is divisible by any of these, it's not a prime number
                 return False
     return True
-
-print(Is_Prime_Sieve(3))
+                     
+if Is_Prime_Sieve(7):
+    print("Prime")
+else:
+    print("Not Prime")
