@@ -19,7 +19,7 @@ def say_hello():
 say_hello()
 
 
-# ============================= function as argument =========================
+# ============================= function as an argument =========================
 def greet(func):
     func()
 
