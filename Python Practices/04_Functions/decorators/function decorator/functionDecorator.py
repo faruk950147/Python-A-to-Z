@@ -4,6 +4,7 @@
 # adds some functionality, and returns a new function. 
 # It is used to modify the behavior of a function or class.
 
+# # ============================= Function based decorator ==============================
 # def decorator(func):
 #     def wrapper():
 #         print("Before function call")
@@ -11,16 +12,7 @@
 #         print("After function call")
 #     return wrapper
 
-
-# # ============================= Function based decorator ==============================
-# def my_decorator(func):
-#     def wrapper():
-#         print("Start")
-#         func()
-#         print("End")
-#     return wrapper
-
-# @my_decorator
+# @decorator
 # def say_hello():
 #     print("Hello")
     
@@ -28,13 +20,13 @@
 
 
 # ============================= function as argument =========================
-# def greet(func):
-#     func()
+def greet(func):
+    func()
 
-# def hello():
-#     print("Hello World")
+def hello():
+    print("Hello World")
 
-# greet(hello)
+greet(hello)
 
 
 # ============================= function return function =====================
@@ -84,6 +76,15 @@
 # def hello_repeat():
 #     print("Hello")
 
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__}")
+        return func(*args, **kwargs)
+    return wrapper
+
+def add(a, b):
+    return a + b
+
 
 # ============================= functools.wraps ==============================
 # from functools import wraps
@@ -99,22 +100,6 @@
 # def say_wrap():
 #     """Original function"""
 #     print("Hi from wrap")
-
-
-# ============================= class-based decorator ========================
-# class MyDecorator:
-#     def __init__(self, func):
-#         self.func = func
-    
-#     def __call__(self):
-#         print("Before call")
-#         self.func()
-#         print("After call")
-
-# @MyDecorator
-# def greet_class():
-#     print("Hello from function")
-
 
 # ============================= practical use cases ==========================
 # # Logging
@@ -175,20 +160,3 @@
 #     time.sleep(1)
 #     print("Done")
 
-
-# ============================= Test Calls ==============================
-# if __name__ == "__main__":
-#     say_hello()
-#     greet(hello)
-#     f()
-#     say_hi()
-#     test()
-#     hello_repeat()
-#     print(say_wrap.__name__, "-", say_wrap.__doc__)
-#     greet_class()
-#     print(add(5, 10))
-#     view_dashboard("admin")
-#     view_dashboard("guest")
-#     print(square(4))
-#     print(square(4))  # Cached
-#     slow_function()
