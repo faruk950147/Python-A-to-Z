@@ -5,18 +5,18 @@
 # It is used to modify the behavior of a function or class.
 
 # # ============================= Function based decorator ==============================
-# def decorator(func):
-#     def wrapper():
-#         print("Before function call")
-#         func()
-#         print("After function call")
-#     return wrapper
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
 
-# @decorator
-# def say_hello():
-#     print("Hello")
+@decorator
+def say_hello():
+    print("Hello")
     
-# say_hello()
+say_hello()
 
 
 # ============================= function as argument =========================
