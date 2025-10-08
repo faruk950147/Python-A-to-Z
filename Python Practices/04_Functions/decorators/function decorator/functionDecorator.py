@@ -5,28 +5,28 @@
 # It is used to modify the behavior of a function or class.
 
 # # ============================= Function based decorator ==============================
-def decorator(func):
-    def wrapper():
-        print("Before function call")
-        func()
-        print("After function call")
-    return wrapper
+# def decorator(func):
+#     def wrapper():
+#         print("Before function call")
+#         func()
+#         print("After function call")
+#     return wrapper
 
-@decorator
-def say_hello():
-    print("Hello")
+# @decorator
+# def say_hello():
+#     print("Hello")
     
-say_hello()
+# say_hello()
 
 
 # ============================= function as an argument =========================
-def greet(func):
-    func()
+# def greet(func):
+#     func()
 
-def hello():
-    print("Hello World")
+# def hello():
+#     print("Hello World")
 
-greet(hello)
+# greet(hello)
 
 
 # ============================= function return function =====================
@@ -38,21 +38,22 @@ greet(hello)
 
 # f = outer() # that means store and call inner() function
 # f()
+# outer() # just outer function
 
 
 # ============================= multiple decorators ==========================
 # def deco1(func):
 #     def wrapper():
-#         print("Deco1 Start")
+#         print("Deco1 Before function call")
 #         func()
-#         print("Deco1 End")
+#         print("Deco1 After function call")
 #     return wrapper
 
 # def deco2(func):
 #     def wrapper():
-#         print("Deco2 Start")
+#         print("Deco2 Before function call")
 #         func()
-#         print("Deco2 End")
+#         print("Deco2 After function call")
 #     return wrapper
 
 # @deco1
@@ -82,8 +83,11 @@ def decorator(func):
         return func(*args, **kwargs)
     return wrapper
 
+@decorator
 def add(a, b):
     return a + b
+
+print(add(3, 2))
 
 
 # ============================= functools.wraps ==============================
@@ -102,18 +106,6 @@ def add(a, b):
 #     print("Hi from wrap")
 
 # ============================= practical use cases ==========================
-# # Logging
-# def log(func):
-#     def wrapper(*args, **kwargs):
-#         print(f"Calling {func.__name__}")
-#         return func(*args, **kwargs)
-#     return wrapper
-
-# @log
-# def add(a, b):
-#     return a + b
-
-
 # # Authorization
 # def require_admin(func):
 #     def wrapper(user):
