@@ -1,12 +1,12 @@
 def decorator(func):
     def wrapper():
-        print("Start")
+        print("Before")
         func()
-        print("End")
+        print("After")
     return wrapper
 
 @decorator
-def say_hello():
-    print("Hello")
+def say():
+    print("Hello Word")
     
-say_hello()
+say()
