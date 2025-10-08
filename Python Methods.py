@@ -16,7 +16,7 @@ removeprefix(), removesuffix(), replace(), rfind(), rindex(), rjust(), rpartitio
 splitlines(), startswith(), strip(), swapcase(), title(), translate(), upper(), zfill()
 
 # 🔹 List Methods
-append(), clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort()
+append(), clear(), copy(), count(), extend(), index(), insert(), pop(), remove(), reverse(), sort(), cmp()
 
 # 🔹 Dictionary Methods
 clear(), copy(), fromkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
