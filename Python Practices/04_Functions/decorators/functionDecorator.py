@@ -23,6 +23,8 @@ def my_decorator(func):
 @my_decorator
 def say_hello():
     print("Hello")
+    
+say_hello()
 
 
 # ============================= function as argument =========================
