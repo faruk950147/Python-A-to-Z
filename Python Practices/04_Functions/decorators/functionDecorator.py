@@ -34,7 +34,7 @@ def greet(func):
 def hello():
     print("Hello World")
 
-# greet(hello)
+greet(hello)
 
 
 # ============================= function return function =====================
