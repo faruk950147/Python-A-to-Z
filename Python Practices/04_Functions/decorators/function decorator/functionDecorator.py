@@ -13,44 +13,39 @@
 
 
 # # ============================= Function based decorator ==============================
-def my_decorator(func):
-    def wrapper():
-        print("Start")
-        func()
-        print("End")
-    return wrapper
+# def my_decorator(func):
+#     def wrapper():
+#         print("Start")
+#         func()
+#         print("End")
+#     return wrapper
 
-@my_decorator
-def say_hello():
-    print("Hello")
+# @my_decorator
+# def say_hello():
+#     print("Hello")
     
-say_hello()
+# say_hello()
 
 
 # ============================= function as argument =========================
-def greet(func):
-    func()
+# def greet(func):
+#     func()
 
-def hello():
-    print("Hello World")
+# def hello():
+#     print("Hello World")
 
-greet(hello)
+# greet(hello)
 
 
 # ============================= function return function =====================
 # def outer():
+#     print("I'm outer function")
 #     def inner():
 #         print("I am inner function")
 #     return inner
 
-# f = outer()
-# # f()
-
-
-# ============================= @decorator syntax ============================
-# @my_decorator
-# def say_hi():
-#     print("Hi")
+# f = outer() # that means store and call inner() function
+# f()
 
 
 # ============================= multiple decorators ==========================
@@ -72,6 +67,8 @@ greet(hello)
 # @deco2
 # def test():
 #     print("Function Body")
+    
+# test()
 
 
 # ============================= decorators with arguments ====================
