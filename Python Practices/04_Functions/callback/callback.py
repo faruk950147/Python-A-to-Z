@@ -1,6 +1,7 @@
 # ============================= What is callback function =============================
 # A callback function is a function that is passed as an argument to another function and is executed inside that function.
 
+from functools import reduce
 # Example: callback function
 def simple(a, b, callback):
     return callback(a, b)
@@ -24,6 +25,7 @@ def doTask(task, callback):
     print("Doing task:", task)
     callback() # calling the callback function
 
+
 def done():
     print("Task finished!")
 
@@ -33,8 +35,18 @@ def notify():
 doTask("Learning JS", done)
 doTask("Completing Homework", notify)
 
-# ============================= function returning function ================================
-# Example: a function that creates and returns another function
+def doTask(task, callback):
+    print("Doing task:", task)
+    callback("Completed " + task + " done successfully!")  # here callback function is done and " " + task + " done successfully!" is the argument 
+
+def done(message):
+    print("Task finished! →", message)
+
+def notify(message):
+    print("Notification:", message)
+
+doTask("Learning JS", done)
+doTask("Completing Homework", notify)
 
 def createMultiplier(x):
     def multiplier(y):
@@ -45,7 +57,6 @@ multiplyBy2 = createMultiplier(2)
 print(multiplyBy2(5)) # Output: 10
 
 # ============================= built-in higher-order functions ============================
-from functools import reduce
 # map(), filter(), reduce(), sorted(), any(), all()
 # Example: map()
 def square(x):
@@ -81,7 +92,7 @@ def is_positive(x):
     return x > 0
 
 numbers = [1, 2, 3, 4, 5]
-result = any(is_positive, numbers)
+result = any(map(is_positive, numbers))
 print(result) # Output: True
 
 # Example: all()
@@ -89,5 +100,5 @@ def is_positive(x):
     return x > 0
 
 numbers = [1, 2, 3, 4, 5]
-result = all(is_positive, numbers)
+result = all(map(is_positive, numbers))
 print(result) # Output: True
