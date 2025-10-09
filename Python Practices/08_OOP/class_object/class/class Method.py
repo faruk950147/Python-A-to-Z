@@ -1,10 +1,14 @@
 class Human:
+    # Class variable (shared by all instances)
+    species = "Homo sapiens"
+
     def __init__(self, name, age):
+        # Instance variables (unique for each object)
         self.name = name
         self.age = age
 
-    # Instance methods (require object) that means instance method need object
-    # carry object reference
+    # Instance methods (require an object)
+    # They carry the object reference (self)
     def showName(self):
         print(f"Name: {self.name}")
 
@@ -15,26 +19,37 @@ class Human:
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         
-    # Class method (does not require object) that means class method does not need object
-    # carry class reference
+    # Class method (does not require an object)
+    # It carries the class reference (cls)
+    # Can access and modify class variables
     @classmethod
     def showClassName(cls):
-        print("Human")
+        print(f"Class Name: {cls.__name__}")
+        print(f"Species: {cls.species}")
 
-    # Static method (does not require object or class reference) that means static method does not need object or class reference
-    # carry no reference
+    # Static method (requires neither object nor class reference)
+    # It carries no reference
+    # Used for general-purpose utility work
     @staticmethod
     def showClassInfo():
-        print("Human class")
+        print("This is the Human class, representing all human beings.")
         
 
 if __name__ == "__main__":
-    # Instance method examples
+    # Creating an object (instance)
     human = Human("Faruk", 22)
+
+    # Instance method examples (object required)
     human.showName()
     human.showAge()
     human.showInfo()
 
-    # Class and static method examples (no object needed)
+    print("------------------------")
+
+    # Class method examples (no object required)
     Human.showClassName()
+
+    print("------------------------")
+
+    # Static method examples (no object or class reference required)
     Human.showClassInfo()
