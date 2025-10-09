@@ -4,6 +4,7 @@ class Human:
         self.age = age
 
     # Instance methods (require object) that means instance method need object
+    # carry object reference
     def showName(self):
         print(f"Name: {self.name}")
 
@@ -15,11 +16,13 @@ class Human:
         print(f"Age: {self.age}")
         
     # Class method (does not require object) that means class method does not need object
+    # carry class reference
     @classmethod
     def showClassName(cls):
         print("Human")
 
     # Static method (does not require object or class reference) that means static method does not need object or class reference
+    # carry no reference
     @staticmethod
     def showClassInfo():
         print("Human class")
