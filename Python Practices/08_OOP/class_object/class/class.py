@@ -6,7 +6,10 @@ if __name__ == "__main__":
     print(cartoon)
     
 class Cartoon:
-    # instance variables
+    # default constructor
+    # def __init__(self):
+    #     pass
+    # instance variables and parameterized constructor
     def __init__(self, name, age):
         self.name = name    # instance variable 'name'
         self.age = age      # instance variable 'age'
@@ -34,11 +37,17 @@ if __name__ == "__main__":
 class Cartoon:
     name = "Cartoon"   # class variable
     age = 10           # class variable
-
+    
+    # default constructor
+    # def __init__(self):
+    #     pass
+    
+    # instance variables and parameterized constructor
     def __init__(self, name, age):
         self.name = name    # instance variable
         self.age = age      # instance variable
 
+    # instance method
     def display(self):
         print(self.name, self.age)
         print(Cartoon.name, Cartoon.age)
