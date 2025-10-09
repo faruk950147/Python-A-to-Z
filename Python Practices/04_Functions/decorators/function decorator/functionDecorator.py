@@ -77,6 +77,39 @@
 # def hello_repeat():
 #     print("Hello")
 
+# def repeat(n):
+#     def decorator(func):
+#         def wrapper(*args, **kwargs):   # <-- here argument pass as an argument
+#             for _ in range(n):
+#                 func(*args, **kwargs)   # <-- here argument pass as an argument
+#         return wrapper
+#     return decorator
+
+
+
+# @repeat(3)
+# def greet(name):
+#     print(f"Hello, {name}!")
+    
+
+# greet("Faruk")
+
+def repeat(n):
+    def decorator(func):
+        def wrapper(a, b):   # <-- here argument pass as an argument
+            for _ in range(n):
+                func(a, b)   # <-- here argument pass as an argument
+        return wrapper
+    return decorator
+
+@repeat(3)
+def greet(a, b):
+    print(f"Hello, {a}!")
+    
+
+greet("Faruk", "Faruk")
+
+
 def decorator(func):
     def wrapper(*args, **kwargs):
         print(f"Calling {func.__name__}")
