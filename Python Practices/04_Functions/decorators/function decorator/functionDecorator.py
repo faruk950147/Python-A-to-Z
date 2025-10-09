@@ -104,7 +104,7 @@ def repeat(n):
 
 @repeat(3)
 def greet(a, b):
-    print(f"Hello, {a}!")
+    print(f"Hello, {a} {b}!")
     
 
 greet("Faruk", "Faruk")
