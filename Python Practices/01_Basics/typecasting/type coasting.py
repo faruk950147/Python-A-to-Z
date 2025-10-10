@@ -7,10 +7,10 @@ a_int = 10
 b_float = 3.14
 c_str = "123"
 d_bool = True
-print("Integer:", a_int)
-print("Float:", b_float)
-print("String:", c_str)
-print("Boolean:", d_bool)
+print("Integer:", a_int) # 10
+print("Float:", b_float) # 3.14
+print("String:", c_str) # '123'
+print("Boolean:", d_bool) # True
 
 # ===============================
 # 1 Integer Conversions
