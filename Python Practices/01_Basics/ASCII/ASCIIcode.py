@@ -12,30 +12,35 @@
 # it is a way to convert characters into numbers that can be processed by a computer
 # it is a way to convert numbers back into characters that can be displayed on a screen
 
+print("======================== UPPERCASE LETTERS ========================")
 # ASCII values of uppercase letters
 print(ord('A'))
 print(ord('Z'))
 print(chr(65))
 print(chr(90))
 
+print("======================== LOWERCASE LETTERS ========================")
 # ASCII values of lowercase letters
 print(ord('a'))
 print(ord('z'))
 print(chr(97))
 print(chr(122))
 
+print("======================== NUMBERS ========================")
 # ASCII values of numbers
 print(ord('0'))
 print(ord('9'))
 print(chr(48))
 print(chr(57))
 
+print("======================== SPECIAL CHARACTERS ========================")
 # ASCII values of special characters
 print(ord('!'))
 print(ord('~'))
 print(chr(33))
 print(chr(126))
 
+print("======================== WHITESPACE CHARACTERS ========================")
 # ASCII values of whitespace characters
 print(ord(' '))
 print(ord('\t'))

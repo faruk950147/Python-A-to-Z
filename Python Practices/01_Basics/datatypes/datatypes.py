@@ -47,32 +47,42 @@ Python Datatypes (Quick Notes)
    - memoryview→ memoryview(b"hello")
 """
 # Example:
+# =================== primitive datatypes ===================
+int = 10 # int      → 10, -5, 1000
+float = 3.14 # float    → 3.14, -0.5
+bool = True # bool     → True, False
+complex = 2+3j # complex  → 2+3j
+NoneType = None # NoneType → None
+bytes = b"hello" # bytes    → b"hello"
+bytearray = bytearray([65, 66, 67]) # bytearray → bytearray([65, 66, 67])
+memoryview = memoryview(b"hello")  # memoryview→ memoryview(b"hello")
 
-a = 10
-b = 3.14
-c = "Python"
-d = True
-e = [1, 2, 3]
-f = (1, 2, 3)
-g = {"x", "y"}
-h = {"name": "Faruk", "age": 20}
+print(type(int))  # <class 'int'>
+print(type(float))  # <class 'float'>
+print(type(bool))  # <class 'bool'>
+print(type(complex))  # <class 'complex'>
+print(type(NoneType))  # <class 'NoneType'>
+print(type(bytes))  # <class 'bytes'>
+print(type(bytearray))  # <class 'bytearray'>
+print(type(memoryview))  # <class 'memoryview'>
 
-print(type(a))  # <class 'int'>
-print(type(b))  # <class 'float'>
-print(type(c))  # <class 'str'>
-print(type(d))  # <class 'bool'>
-print(type(e))  # <class 'list'>
-print(type(f))  # <class 'tuple'>
-print(type(g))  # <class 'set'>
-print(type(h))  # <class 'dict'>
 
-# Type Conversion
 
-x = 10
-y = 3.14
-z = "10"
+# =================== non-primitive datatypes ===================
+# string
+str = "Python" # str      → "Hello", 'Python'
+# list
+lst = [1, 2, 3] # list     → [1, 2, 3]
+# tuple
+tpl = (1, 2, 3) # tuple    → (1, 2, 3)
+# set
+st = {"x", "y"} # set      → {1, 2, 3}
+# dictionary
+dct = {"name": "Faruk", "age": 20} # dict     → {"name": "Faruk", "age": 20}
 
-print(int(x))  # 10
-print(float(y))  # 3.14
-print(int(z))  # 10
-print(str(z))  # "10"
+print(type(str))  # <class 'str'>
+print(type(lst))  # <class 'list'>
+print(type(tpl))  # <class 'tuple'>
+print(type(st))  # <class 'set'>
+print(type(dct))  # <class 'dict'>
+
