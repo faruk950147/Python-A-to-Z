@@ -22,7 +22,7 @@ class Human:
     # Class method (does not require an object)
     # It carries the class reference (cls)
     # Can access and modify class variables
-    @classmethod
+    @classmethod # why use class method? because it can access and modify class variables
     def showClassName(cls):
         print(f"Class Name: {cls.__name__}")
         print(f"Species: {cls.species}")
@@ -30,7 +30,7 @@ class Human:
     # Static method (requires neither object nor class reference)
     # It carries no reference
     # Used for general-purpose utility work
-    @staticmethod
+    @staticmethod # why use static method? because it requires neither object nor class reference   
     def showClassInfo():
         print("This is the Human class, representing all human beings.")
         
