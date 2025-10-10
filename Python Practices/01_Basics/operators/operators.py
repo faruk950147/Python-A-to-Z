@@ -8,6 +8,8 @@
 
 
 # 1. ======================= Arithmetic operators =======================
+# Arithmetic operators is a symbol that is used to perform arithmetic operations.
+
 # + addition
 # - subtraction
 # * multiplication
@@ -29,6 +31,8 @@ print(-a)
 
 
 # 2. ======================= Assignment operators =======================
+# Assignment operators is a symbol that is used to assign a value to a variable.
+
 # = assignment
 # += addition assignment
 # -= subtraction assignment
@@ -44,6 +48,8 @@ print(x)
 
 
 # 3. ======================= Comparison operators =======================
+# Comparison operators is a symbol that is used to compare two values.
+
 # == equal to
 # != not equal to
 # > greater than
@@ -63,6 +69,8 @@ print(a <= b)
 
 
 # 4. ======================= Logical operators =======================
+# Logical operators is a symbol that is used to perform logical operations.
+
 # and logical and
 # or logical or
 # not logical not
@@ -76,6 +84,8 @@ print(not a)
 
 
 # 5. ======================= Bitwise operators =======================
+# Bitwise operators is a symbol that is used to perform bitwise operations.
+
 # & bitwise AND
 # | bitwise OR
 # ^ bitwise XOR
@@ -95,6 +105,8 @@ print(a >> b)
 
 
 # 6. ======================= Membership operators =======================
+# Membership operators is a symbol that is used to perform membership operations.
+
 # in membership
 # not in membership
 
@@ -105,6 +117,8 @@ print(10 not in a)
 
 
 # 7. ======================= Identity operators =======================
+# Identity operators is a symbol that is used to perform identity operations.
+
 # is identity
 # is not identity
 
@@ -116,6 +130,8 @@ print(a is not b)
 
 
 # 8. ======================= walrus operator =======================
+# Walrus operator is a symbol that is used to assign a value to a variable.
+
 # := walrus operator
 
 # 8. example
@@ -127,6 +143,8 @@ while (i := 10) > 10:
     print(i)
 
 # 9. ======================= Ternary operators =======================
+# Ternary operators is a symbol that is used to perform ternary operations.
+
 # condition_if_true if condition else condition_if_false
 
 # 9. example
@@ -136,6 +154,8 @@ print(a if a > b else b)
 
 
 # 10. ======================= Other operators =======================
+# Other operators is a symbol that is used to perform other operations.
+
 # yield yield
 # lambda lambda
 # @ operator
