@@ -1,18 +1,20 @@
 # IIFE (Immediately Invoked Function Expression)
 # It is a function that is executed as soon as it is defined.
-# It is a function that is executed as soon as it is defined.
-# It is a function that is executed as soon as it is defined.
+
 
 # ================================= IIFE with lambda function =================================
 # Example
-print((lambda x: x + 1)(2))
+# Function declare + call 
+(lambda: print("IIFE in Python executed!"))()
 
-# Example 2
-print((lambda x, y: x + y)(2, 3))
+(lambda name: print(f"Hello, {name}!"))("Faruk")
+
+result = (lambda x, y: x + y)(5, 10)
+print(result)
 
 # ================================= IIFE with def function =================================
 def iife():
     print("Hello")
 
-iife()
+()
 
