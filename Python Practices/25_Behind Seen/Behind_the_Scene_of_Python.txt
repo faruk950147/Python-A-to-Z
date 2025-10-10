@@ -1,0 +1,57 @@
+Behind the Scene of Python
+
+1.  Introduction Python হলো একটি interpreted, high-level,
+    object-oriented programming language। যখন আমরা কোনো Python প্রোগ্রাম
+    চালাই, তখন সেটা সরাসরি কম্পিউটার বুঝতে পারে না। Python কোডকে প্রথমে
+    কিছু ধাপে ধাপে প্রসেস করতে হয় — এই পুরো প্রক্রিয়াটাকেই বলা হয়
+    “Behind the Scene of Python”।
+
+2.  Python Program Execution Process Python প্রোগ্রাম এক্সিকিউশন
+    প্রক্রিয়া মোটামুটি ৪টি ধাপে সম্পন্ন হয়: Source Code (.py) → Compiler
+    → Bytecode (.pyc) → Python Virtual Machine (PVM) → Output
+
+3.  Step 1: Writing the Source Code তুমি যখন .py ফাইলে কোড লেখো, সেটাই
+    হলো source code। উদাহরণ: print(“Hello, Faruk!”)
+
+4.  Step 2: Compilation to Bytecode Python একটি interpreter-based
+    language, তবে এটি bytecode compilation করে। যখন তুমি কোড চালাও, তখন
+    Python প্রথমে কোডটিকে bytecode নামের intermediate (মধ্যবর্তী)
+    ফরম্যাটে রূপান্তর করে।
+
+Output File: pycache/hello.cpython-310.pyc
+
+5.  Step 3: Python Virtual Machine (PVM) এরপর bytecode চলে যায় Python
+    Virtual Machine (PVM)-এর কাছে। PVM-এর কাজ:
+
+-   Bytecode পড়া এবং এক্সিকিউট করা।
+-   Error handling করা।
+-   Memory management করা।
+
+6.  Step 4: Output Generation সব instruction execute হয়ে গেলে, স্ক্রিনে
+    প্রোগ্রামের ফলাফল দেখা যায়: Hello, Faruk!
+
+7.  Major Internal Components of Python Parser - Syntax check করে এবং
+    parse tree তৈরি করে Compiler - কোডকে bytecode এ রূপান্তর করে PVM
+    (Interpreter) - Bytecode এক্সিকিউট করে Memory Manager -
+    Variable/Object-এর জন্য memory allocate করে Garbage Collector -
+    Unused memory cleanup করে
+
+8.  Memory Management in Python Python-এ সবকিছুই object হিসেবে সংরক্ষিত
+    হয়। যখন তুমি কোনো variable তৈরি করো, তখন memory allocate হয়। যখন
+    object আর দরকার হয় না, তখন garbage collector সেটাকে মুছে ফেলে।
+
+9.  Why Python is Slower
+
+-   Interpreter line-by-line কাজ করে
+-   Dynamic type checking হয়
+-   High-level abstraction বেশি
+
+10. Summary 1 Source Code → তুমি কোড লিখো (.py) 
+    Compilation → Compiler কোডকে Bytecode-এ রূপান্তর করে 
+    PVM Execution → PVM Bytecode এক্সিকিউট করে 
+    Output → চূড়ান্ত ফলাফল স্ক্রিনে প্রদর্শন
+    হয়
+
+11. Conclusion Python-এর “behind the scene” প্রক্রিয়া বোঝা মানে হলো
+    কীভাবে তোমার লেখা কোড আসলে interpreter বুঝে, compile করে, execute
+    করে — সেটা জানা।
