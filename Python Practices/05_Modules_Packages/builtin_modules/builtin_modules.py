@@ -1,13 +1,12 @@
 # ============================= What is Builtin Modules =============================
 # Builtin modules are modules that come with Python installation.
 
+# name small letter
+# name should be descriptive
+# name should be unique
+
 # ============================= basic builtin modules =============================
-# Simple examples of builtin modules
-
-# ============================= import builtin modules =============================
-# How to import builtin modules
-
-# ============================= practical use cases =========================
-# - Data processing
-# - Business logic
-# - Algorithm implementation
+import math
+print(math.sqrt(16))
+print(math.floor(16.5))
+print(math.ceil(16.5))
