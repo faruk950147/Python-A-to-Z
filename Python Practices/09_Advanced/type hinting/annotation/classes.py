@@ -2,12 +2,15 @@
 # ===================== 1. instance annotation =====================
 from typing import ClassVar, Final, Dict
 class A:
+    # instance annotation and type alias is str variable
     name: str
     age: int
     gender: str
+    # class annotation and type alias is ClassVar[str] variable
     address: ClassVar[str] = "Dhaka"
+    # final annotation and type alias is Final[str] variable
     country: Final[str] = "Bangladesh"
-    # dict annotation type alias is Dict[str, str]
+    # dict annotation type alias is Dict[str, str] variable
     info: Dict[str, str] = {"name": "John", "age": "30", "gender": "Male"}
 
 a: A = A()
