@@ -1,7 +1,6 @@
 # ============================= what is context manager =============================
 # Context manager is a way to manage resources.
 # It is a way to create a new context manager by using the context manager protocol.
-# It is a way to create a new context manager by using the context manager protocol.
 
 # 1. Example
 with open("file.txt", "r") as file:
