@@ -16,5 +16,5 @@ print(result)
 def iife():
     print("Hello")
 
-()
+iife()
 
