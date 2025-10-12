@@ -11,10 +11,28 @@
 # fun()
 
 def add(a, b):
-    def subtruct(a, b):
+    def subtract(a, b):
         return a - b
-    # print(subtruct(9,6))
+    # here calling subtract function inside add function
+    # that's why it can access subtract function 
+    # because it is scope of add function
+    print("Subtract:", subtract(a, b)) # here calling subtract function inside add function 
     return a + b
-print(add(9,6))
+
+print('Add:', add(9,6))
 d = add
-print(d(9,7))
+print('Subtract:', d(9,7)) # here calling add function
+
+# def greet(lang, name):
+#     def english(word):
+#         return word + ", " + name
+#     def bangla(word):
+#         return word + ", " + name
+
+#     if lang == "english":
+#         return english("Hello")
+#     elif lang == "bangla":
+#         return bangla("Hello")
+
+# print(greet("english", "Faruk"))
+# print(greet("bangla", "Faruk"))
