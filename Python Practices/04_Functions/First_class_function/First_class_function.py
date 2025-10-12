@@ -23,6 +23,9 @@ print(say_hello("Faruk"))
 
 # 2. You can pass a function as an argument
 def call_func(func, value):
+    # get function as an argument and value as an argument
+    # return function with value as an argument
+    # return greet("Ahmed") means return greet function with "Ahmed" as an argument
     return func(value)
 
 print(call_func(greet, "Ahmed"))
@@ -38,7 +41,17 @@ result = outer_func()
 print(result())  # calling inner function
 
 
-# 4. You can keep functions inside data structures
+# 4. You can return a function from another function
+def outer_func(a):
+    def inner_func(b):
+        return a + b
+    return inner_func  # returning function itself, not calling it
+
+result = outer_func(10)
+print(result())  # calling inner function
+
+
+# 5. You can keep functions inside data structures
 def add(x, y): return x + y
 def sub(x, y): return x - y
 def mul(x, y): return x * y
