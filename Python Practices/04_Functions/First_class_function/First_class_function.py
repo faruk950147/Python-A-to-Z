@@ -12,11 +12,6 @@
 # - Functional programming patterns
 
 # ============================= First-Class Function Examples =============================================
-def square(x):
-    return x * x
-
-f = square   # storing function in a variable
-print(f(5))  # output: 25
 
 # 1. You can store a function in a variable
 def greet(name):
