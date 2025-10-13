@@ -1,4 +1,12 @@
 # Closure in Python (Detailed Notes)
+
+# How becomes a Closure?
+# Condition	Description
+# 1.	There must be a nested function (an inner function defined inside an outer function).
+# 2.	The inner function must use a variable from the outer function.
+# 3.	The outer function must return the inner function, and the inner function must remember the outer variable even after the outer function has finished.
+
+
 # 1. What is a Closure?
 
 # A closure is a function object that remembers values in the enclosing scopes even if those scopes are no longer in memory.
