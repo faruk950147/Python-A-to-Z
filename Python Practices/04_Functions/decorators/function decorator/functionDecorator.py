@@ -8,14 +8,7 @@ import time
 # without changing their code.
 
 
-# ============================= Function as an argument =========================
-def decorator1(func, word):
-    func(word)
 
-def display1(word):
-    print("Hello", word + "!")
-
-decorator1(display1, "World")
 
 
 # ============================= Basic Decorator =================================
