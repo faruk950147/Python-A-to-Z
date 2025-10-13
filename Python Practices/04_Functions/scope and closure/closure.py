@@ -26,6 +26,9 @@ def outer_function(message):
 
 my_func = outer_function("Hello, Closure!")
 my_func()
+print(my_func)
+print(my_func.__closure__)
+print(my_func.__closure__[0].cell_contents)
 
 # Step-by-Step Execution
 
