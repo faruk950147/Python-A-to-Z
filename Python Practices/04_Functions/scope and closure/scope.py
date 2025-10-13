@@ -13,3 +13,12 @@
 # Global scope: The variables defined inside a function are only accessible inside that function.
 # Built-in scope: The variables defined inside a function are only accessible inside that function.
 
+def outer_func():
+    x = 'local'
+    def inner_func():
+        print(x)
+    # return inner_func() # here inner_func() is called
+    return inner_func # here inner_func is returned
+
+my_func = outer_func()
+my_func()

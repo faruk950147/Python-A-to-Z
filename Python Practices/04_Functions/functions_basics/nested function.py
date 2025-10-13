@@ -10,6 +10,7 @@
 # fun = outer # assign outer function to a variable
 # fun() # calling outer function
 
+
 def add(a, b):
     def subtract(a, b):
         return a - b
