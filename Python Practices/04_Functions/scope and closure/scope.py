@@ -17,8 +17,18 @@ def outer_func():
     x = 'local'
     def inner_func():
         print(x)
-    # return inner_func() # here inner_func() is called
+    return inner_func() # here inner_func() is called
+    # return inner_func # here inner_func is returned
+
+a = outer_func()
+print(a)
+
+def outer_func():
+    x = 5
+    def inner_func():
+        y = 6
+        return x + y
     return inner_func # here inner_func is returned
 
-my_func = outer_func()
-my_func()
+a = outer_func()
+print(a())
