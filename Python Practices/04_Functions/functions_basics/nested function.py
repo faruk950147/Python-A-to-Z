@@ -4,11 +4,11 @@
 #     print("outer")
 #     def inner():
 #         print("inner")
-#     inner()
-# outer()
+#     inner() # calling inner function inside outer function
+# outer() # calling outer function
 
-# fun = outer
-# fun()
+# fun = outer # assign outer function to a variable
+# fun() # calling outer function
 
 def add(a, b):
     def subtract(a, b):

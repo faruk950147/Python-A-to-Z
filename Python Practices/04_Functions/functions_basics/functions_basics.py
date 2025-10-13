@@ -43,6 +43,7 @@ def outer_func():
     def inner_func():
         return "I'm inside the outer function!"
     return inner_func  # returning function itself, not calling it
+    # inner_func() # calling inner function
 
 result = outer_func()
 print(result())  # calling inner function
