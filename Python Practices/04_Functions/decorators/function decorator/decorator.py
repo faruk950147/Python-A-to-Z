@@ -1,6 +1,7 @@
-def decorator_func(word):
-    def real_decorator(func):
-        def wrapper(message):
+# ============================= Function based decorator ========================
+def decorator_func(word): # <-- decorator function takes ONE argument (the function)
+    def real_decorator(func): # <-- real actual decorator function takes ONE argument (the function)
+        def wrapper(message): # <-- wrapper function takes ONE argument (the function)
             print("Before function call")
             func(word)
             print("After function call")

@@ -1,11 +1,11 @@
 from functools import wraps
-# ============================= What is decorator ==============================
+import time
+
+# ============================= What is a Decorator ==============================
 # A decorator is a function that takes another function as an argument,
 # adds or modifies functionality, and returns a new function.
-# It is mainly used to modify or extend the behavior of a function or class
-# without changing its actual code.
-
-# A decorator always takes exactly ONE argument — the function it decorates.
+# It allows you to extend or modify the behavior of functions or methods
+# without changing their code.
 
 
 # ============================= Function as an argument =========================
@@ -18,13 +18,13 @@ def display(word):
 decorator(display, "World")
 
 
-# ============================= Basic Function based decorator ==================
-def outer_function(func):       # <-- outer function takes ONE argument (the function)
-    def inner_function(word):       # <-- inner function (wrapper)
+# ============================= Basic Decorator =================================
+def outer_function(func):
+    def inner_function(word):
         print("Before function call")
-        func(word)                  # <-- calling the original function
+        func(word)
         print("After function call")
-    return inner_function       # <-- return the inner function
+    return inner_function
 
 @outer_function
 def say_hello(word):
@@ -32,6 +32,8 @@ def say_hello(word):
 
 say_hello("World")
 
+
+# ============================= Decorator with arguments =======================
 def decorator_func(word):
     def real_decorator(func):
         def wrapper(message):
@@ -41,30 +43,24 @@ def decorator_func(word):
         return wrapper
     return real_decorator
 
-
-@decorator_func("Python")  # if we pass argument here, it will be passed to the inner function
-def say_hello(name):
+@decorator_func("Python")
+def say_hello_arg(name):
     print("Hello", name)
 
-say_hello("World")
-
+say_hello_arg("World")
 
 
 # ============================= Decorator with *args and **kwargs ================
 def decorator_args(func):
     def wrapper(*args, **kwargs):
-        print("Something is happening before the function is called.")
-        for arg in args:
-            print("Positional arg:", arg)
-        for key, value in kwargs.items():
-            print("Keyword arg:", key, "=", value)
+        print("Before function call")
         func(*args, **kwargs)
-        print("Something is happening after the function is called.")
+        print("After function call")
     return wrapper
 
 @decorator_args
 def say_hello_args(name, age):
-    print("Hello", name, "you are", age, "years old.")
+    print(f"Hello {name}, you are {age} years old.")
 
 say_hello_args("John", 30)
 
@@ -72,16 +68,16 @@ say_hello_args("John", 30)
 # ============================= Multiple decorators ============================
 def deco1(func):
     def wrapper():
-        print("Deco1 Before function call")
+        print("Deco1 Before")
         func()
-        print("Deco1 After function call")
+        print("Deco1 After")
     return wrapper
 
 def deco2(func):
     def wrapper():
-        print("Deco2 Before function call")
+        print("Deco2 Before")
         func()
-        print("Deco2 After function call")
+        print("Deco2 After")
     return wrapper
 
 @deco1
@@ -92,7 +88,7 @@ def test():
 test()
 
 
-# ============================= Decorator with arguments =======================
+# ============================= Repeat decorator ===============================
 def repeat(n):
     def decorator(func):
         def wrapper(*args, **kwargs):
@@ -106,22 +102,6 @@ def greet(name):
     print(f"Hello, {name}!")
 
 greet("Faruk")
-
-
-# ============================= Decorator with multiple parameters =============
-def repeat_n_times(n):
-    def decorator(func):
-        def wrapper(a, b):
-            for _ in range(n):
-                func(a, b)
-        return wrapper
-    return decorator
-
-@repeat_n_times(3)
-def greet_two(a, b):
-    print(f"Hello, {a} {b}!")
-
-greet_two("Faruk", "Ahmed")
 
 
 # ============================= Simple logging decorator =======================
@@ -157,7 +137,8 @@ print("Function name:", say_wrap.__name__)
 print("Docstring:", say_wrap.__doc__)
 
 
-# ============================= Practical use cases ============================
+# ============================= Practical Use Cases ============================
+
 # ---------- Authorization Example ----------
 def require_admin(func):
     def wrapper(user):
@@ -182,6 +163,7 @@ def cached(func):
         if x in cache:
             print("Returning from cache")
             return cache[x]
+        print("Calculating...")
         result = func(x)
         cache[x] = result
         return result
@@ -189,7 +171,6 @@ def cached(func):
 
 @cached
 def square(n):
-    print("Calculating...")
     return n * n
 
 print(square(4))
@@ -197,14 +178,12 @@ print(square(4))
 
 
 # ---------- Timing Example ----------
-import time
-
 def timing(func):
     def wrapper(*args, **kwargs):
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()
-        print(f"{func.__name__} took {end-start:.4f} seconds")
+        print(f"{func.__name__} took {end - start:.4f} seconds")
         return result
     return wrapper
 
