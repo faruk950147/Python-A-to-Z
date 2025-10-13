@@ -64,7 +64,10 @@ class Student:
     
     @marks.setter # setter decorator allows only setting like an attribute
     def marks(self, marks): 
-        self.__marks = marks
+        if marks < 0 or marks > 600:
+            return ValueError("Marks should be between 0 and 600")
+        else:
+            self.__marks = marks
 
 
 if __name__ == "__main__":
