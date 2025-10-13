@@ -7,15 +7,6 @@ import time
 # It allows you to extend or modify the behavior of functions or methods
 # without changing their code.
 
-
-
-
-
-
-
-
-
-
 # ============================= functools.wraps Example ========================
 def my_decorator_wrap(func):
     @wraps(func)
