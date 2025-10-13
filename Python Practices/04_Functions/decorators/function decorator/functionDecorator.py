@@ -9,24 +9,24 @@ import time
 
 
 # ============================= Function as an argument =========================
-def decorator(func, word):
+def decorator1(func, word):
     func(word)
 
-def display(word):
-    print("Hello", word)
+def display1(word):
+    print("Hello", word + "!")
 
-decorator(display, "World")
+decorator1(display1, "World")
 
 
 # ============================= Basic Decorator =================================
-def outer_function(func):
-    def inner_function(word):
+def decorator2(func): # <-- decorator function takes ONE argument (the function)
+    def wrapper(word): # <-- real actual wrapper function takes ONE argument (the function)
         print("Before function call")
         func(word)
         print("After function call")
-    return inner_function
+    return wrapper
 
-@outer_function
+@decorator2
 def say_hello(word):
     print("Hello", word)
 
@@ -34,9 +34,9 @@ say_hello("World")
 
 
 # ============================= Decorator with arguments =======================
-def decorator_func(word):
-    def real_decorator(func):
-        def wrapper(message):
+def decorator_func(word): # <-- decorator function takes ONE argument (the function)
+    def real_decorator(func): # <-- real actual decorator function takes ONE argument (the function)
+        def wrapper(message): # <-- wrapper function takes ONE argument (the function)
             print("Before function call")
             func(word)
             print("After function call")
@@ -51,8 +51,8 @@ say_hello_arg("World")
 
 
 # ============================= Decorator with *args and **kwargs ================
-def decorator_args(func):
-    def wrapper(*args, **kwargs):
+def decorator_args(func): # <-- decorator function takes ONE argument (the function)
+    def wrapper(*args, **kwargs): # <-- real actual wrapper function takes ONE argument (the function)
         print("Before function call")
         func(*args, **kwargs)
         print("After function call")
@@ -89,11 +89,11 @@ test()
 
 
 # ============================= Repeat decorator ===============================
-def repeat(n):
+def repeat(num):
     def decorator(func):
         def wrapper(*args, **kwargs):
-            for _ in range(n):
-                func(*args, **kwargs)
+            for _ in range(num):
+                func(*args, **kwargs).sum()
         return wrapper
     return decorator
 
