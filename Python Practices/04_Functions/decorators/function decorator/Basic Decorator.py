@@ -3,7 +3,10 @@
 # adds or modifies functionality, and returns a new function.
 # It allows you to extend or modify the behavior of functions or methods
 # without changing their code.
-
+# func = say_hello
+# decorator2(func)
+# word = "World"
+# decorator2(say_hello)
 # ============================= Basic Decorator =================================
 def decorator2(func): # <-- decorator function takes ONE argument (the function)
     def wrapper(word): # <-- real actual wrapper function takes ONE argument (the function)
@@ -22,6 +25,8 @@ say_hello("World")
 
 
 # ============================= Multiple decorators ============================
+# func = test
+
 def deco1(func):
     def wrapper():
         print("Deco1 Before")
