@@ -1,5 +1,6 @@
 # ============================= What is callback function =============================
-# A callback function is a function that is passed as an argument to another function and is executed inside that function.
+# A callback function is a function that is passed as an argument
+# to another function and is executed inside that function.
 
 from functools import reduce
 # Example: callback function
