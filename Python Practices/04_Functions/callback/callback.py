@@ -44,13 +44,13 @@ def doTask(task, callback):
     callback("Completed " + task + " done successfully!")  
 
 def done(message):
-    print("Task finished! →", message)
+    print("Task finished!", message)
 
 def notify(message):
     print("Notification:", message)
 
 doTask("Learning JS", done) # output: Doing task: Learning JS
-                            #         Task finished! → Completed Learning JS done successfully!
+                            #         Task finished! Completed Learning JS done successfully!
 doTask("Completing Homework", notify) # output: Doing task: Completing Homework
                                         #         Notification: Completed Completing Homework done successfully!
 
