@@ -64,7 +64,7 @@
   "editor.tokenColorCustomizations": {
     "comments": "#A3CB38",
     "keywords": "#ffa801",
-    "strings": "##05c46b",
+    "strings": "#05c46b",
     "numbers": "#0fbcf9",
     "functions": "#c494f1",
     "variables": "#b951e2"
