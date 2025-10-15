@@ -1,4 +1,9 @@
-# Great! Let’s go over types of variables and how they are used in programming. I’ll use Python examples, but the concept is similar in most languages.
+# Great! Let’s go over types of variables and how they are used in programming. 
+# I’ll use Python examples, but the concept is similar in most languages.
+# variable or identifier is a name that is used to store a value. and it is case sensitive.
+# variable name must start with a letter or _ (underscore), not a number.
+# variable name can contain letters, numbers, or _.
+# variable name cannot use Python keywords (like if, for, class).
 
 # 1. Integer (int)
 # Stores whole numbers (no decimal).

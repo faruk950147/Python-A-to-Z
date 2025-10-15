@@ -1,7 +1,7 @@
 
 # ======================= Variable =======================
 
-A variable is basically a container or a named memory location that can store a value. Simply put, a variable is a name that holds some data which can change while the program runs.
+A variable or identifier is basically a container or a named memory location that can store a value. Simply put, a variable is a name that holds some data which can change while the program runs.
 
 For example, in Python:
 
