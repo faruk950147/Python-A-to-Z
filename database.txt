@@ -1,0 +1,111 @@
+-- ===========================
+-- DATABASE: e_commerce
+-- ===========================
+CREATE DATABASE IF NOT EXISTS e_commerce;
+USE e_commerce;
+
+-- ===========================
+-- Users Table
+-- ===========================
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ===========================
+-- Categories Table
+-- ===========================
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ===========================
+-- Products Table
+-- ===========================
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
+);
+
+-- ===========================
+-- Product Variants (Colors, Sizes)
+-- ===========================
+CREATE TABLE product_variants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    variant_type ENUM('Color','Size') NOT NULL,
+    variant_value VARCHAR(50) NOT NULL,
+    additional_price DECIMAL(10,2) DEFAULT 0,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
+-- ===========================
+-- Orders Table
+-- ===========================
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL,
+    status ENUM('Pending','Processing','Completed','Cancelled') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- ===========================
+-- Order Items Table
+-- ===========================
+CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    variant_id INT,
+    quantity INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
+    FOREIGN KEY (variant_id) REFERENCES product_variants(id) ON DELETE SET NULL
+);
+
+-- ===========================
+-- Payments Table
+-- ===========================
+CREATE TABLE payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    payment_method ENUM('CashOnDelivery','PayPal','CreditCard') DEFAULT 'CashOnDelivery',
+    payment_status ENUM('Pending','Completed','Failed') DEFAULT 'Pending',
+    paid_amount DECIMAL(10,2),
+    paid_at TIMESTAMP NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+);
+
+-- ===========================
+-- Sample Data (Optional)
+-- ===========================
+INSERT INTO categories (name, description) VALUES 
+('Electronics','Electronic gadgets and devices'),
+('Clothing','Apparels for men and women');
+
+INSERT INTO products (category_id, name, description, price, stock) VALUES 
+(1,'Smartphone','Latest Android smartphone',500,50),
+(2,'T-Shirt','Cotton t-shirt',20,200);
+
+INSERT INTO product_variants (product_id, variant_type, variant_value, additional_price) VALUES
+(1,'Color','Black',0),
+(1,'Color','White',0),
+(2,'Size','M',0),
+(2,'Size','L',0);
