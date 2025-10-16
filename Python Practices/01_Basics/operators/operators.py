@@ -22,6 +22,7 @@ print(a + b)
 print(a - b)
 print(a * b)
 print(a / b)
+print(a // b)
 print(a % b)
 print(a ** b)
 print(-a)
@@ -83,12 +84,12 @@ print(not a)
 # 5. ======================= Bitwise operators =======================
 # Bitwise operators is a symbol that is used to perform bitwise operations.
 
-# & bitwise AND
-# | bitwise OR
-# ^ bitwise XOR
-# ~ bitwise NOT
-# << left shift
-# >> right shift
+# & it is a ampersand bitwise AND
+# | it is a pipe bitwise OR
+# ^ it is a caret bitwise XOR
+# ~ it is a tilde bitwise NOT
+# << it is a left shift
+# >> it is a right shift
 
 # 5. example
 a = 10
