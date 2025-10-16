@@ -2,9 +2,6 @@
 # operator = + # operator is an operator 
 # operand = 10 # operand is a value
 
-# operator precedence and associativity
-# operator precedence is the order in which operators are evaluated
-# associativity is the order in which operators are evaluated
 
 
 # 1. ======================= Arithmetic operators =======================
