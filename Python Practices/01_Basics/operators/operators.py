@@ -7,10 +7,10 @@
 # 1. ======================= Arithmetic operators =======================
 # Arithmetic operators is a symbol that is used to perform arithmetic operations.
 
-# + addition
+# + addition 
 # - subtraction
 # * multiplication
-# / division // floor division
+# / division returns float and // floor division returns int
 # % modulo
 # ** exponentiation
 # ~ absolute value
@@ -34,7 +34,7 @@ print(-a)
 # += addition assignment
 # -= subtraction assignment
 # *= multiplication assignment
-# /= division assignment
+# /= division assignment returns float and // floor division assignment returns int
 # %= modulo assignment
 # **= exponentiation assignment
 
