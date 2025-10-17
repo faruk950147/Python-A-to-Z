@@ -17,5 +17,4 @@
 
 # calculate the decimal unicode code point of a character
 # 1*16^5 + 0*16^4 + 0*16^3 + 0*16^2 + 0*16^1 + 41*16^0 = 65
-# 1*16^5 + 0*16^4 + 0*16^3 + 0*16^2 + 0*16^1 + 41*16^0 = 65
 
