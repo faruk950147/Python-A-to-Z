@@ -1,4 +1,5 @@
 # ASCII Code in Python
+# ASCII stands for American Standard Code for Information Interchange
 # all characters have a corresponding ASCII value
 # ord() function returns the ASCII value of a character
 # chr() function returns the character of a ASCII value

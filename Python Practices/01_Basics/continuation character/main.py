@@ -23,3 +23,8 @@ str1 = "Hello, World!"
 str2 = "Hello, " + \
     "World!"
 print(str1 == str2)
+
+# another example
+for i in \
+    range(10):
+        print(i)
