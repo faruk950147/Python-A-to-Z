@@ -141,6 +141,7 @@ while (i := 10) > 10:
     print(i)
 
 # 9. ======================= Ternary operators =======================
+# Ternary operator in python does not exist but we can use it by using if-else
 # Ternary operators is a symbol that is used to perform ternary operations.
 
 # condition_if_true if condition else condition_if_false
