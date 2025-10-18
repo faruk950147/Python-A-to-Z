@@ -11,8 +11,9 @@ if a == b:
 if a != b:
     print("a is not equal to b")
 
-# ======================== elif ========================
-# Only the condition true runs; others are skipped
+# ======================== elif rules ========================
+# Only the condition true runs; others are conditionally not checked and skipped if true
+# elif runs only if the previous conditions are false
 if a > b:
     print("a is greater than b")
 elif a < b:
