@@ -139,6 +139,23 @@ else:
     print(i)
 while (i := 10) > 10:
     print(i)
+    
+data = [10, 20, 30, 40, 50]
+i = 0
+while (i := i + 1) < (n := len(data)):
+    print(f"traverse {i} : {data[i]}")
+    
+data = [10, 20, 30, 40, 50]
+i = 0
+
+# Traverse loop
+while (i := i + 1) < (n := len(data)):
+    print(f"traverse {i} : {data[i]}")
+
+# Pop loop
+while len(data) > 0:
+    print(f"pop {i} : {data.pop()}")
+    i += 1
 
 # 9. ======================= Ternary operators =======================
 # Ternary operator in python does not exist but we can use it by using if-else
