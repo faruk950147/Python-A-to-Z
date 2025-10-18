@@ -9,3 +9,9 @@ while (i := i + 1) < (n := len(data)):
 while len(data) > 0:
     print(f"pop {i} : {data.pop()}")
     i += 1
+    
+while (ans := input("Do you want to continue? (y/n): ").lower()) == 'y':
+    print("Hello process")
+    
+if ans == 'n':
+    print("Bye")
