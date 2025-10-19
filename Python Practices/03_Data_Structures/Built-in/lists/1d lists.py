@@ -21,8 +21,8 @@
 # reverse()  → reverse list
 # copy()     → shallow copy
 # len(list)  → length of list
-# max(list)  → maximum element
-# min(list)  → minimum element
+# max(list, key)  → maximum element key that means length of element depends on key
+# min(list, key)  → minimum element key that means length of element depends on key
 # sum(list)  → sum of elements (if numbers)
 # sorted(list) → returns new sorted list
 # any(list)  → True if any element is True
