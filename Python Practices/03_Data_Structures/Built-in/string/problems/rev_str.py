@@ -5,3 +5,8 @@ def rev_str(word):
     return rev_string
 
 print(rev_str("you"))
+
+def rev_str2(word):
+    return word[::-1]
+
+print(rev_str2("you"))
