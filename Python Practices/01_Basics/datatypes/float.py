@@ -11,3 +11,10 @@ print("float = 3.14 # float    → 3.14, -0.5\nprint(float) # 3.14")
 # =================== Float Example ===================
 num_float = 3.14 # float    → 3.14, -0.5
 print(type(num_float)) # <class 'float'>
+
+# =================== as_integer_ratio ===================
+num_int = 15
+print(num_int.as_integer_ratio()) # (15, 1)
+a, b = num_int.as_integer_ratio()
+print(a,b) # 15 1
+
