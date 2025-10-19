@@ -1,71 +1,75 @@
 """
 # =================== Python Datatypes ===================
-1. primitive datatypes
-   - int      → 10, -5, 1000
-   - float    → 3.14, -0.5
-   - complex  → 2+3j
-   - bool     → True, False
-   - NoneType → None
-   - bytes    → b"hello"
-   - bytearray → bytearray([65, 66, 67])
-   - memoryview→ memoryview(b"hello")  
-2. non-primitive datatypes
-   - str      → "Hello", 'Python'
-   - list     → [1, 2, 3]
-   - tuple    → (1, 2, 3)
-   - set      → {1, 2, 3}
-   - dict     → {"name": "Faruk", "age": 20}
-Python Datatypes (Quick Notes)
-==============================
 
-1. Numbers
-   - int      → 10, -5, 1000
-   - float    → 3.14, -0.5
-   - complex  → 2+3j
+1. Primitive Datatypes
+   It has unlimited length of digits, only limited by memory.
+   But in other programming languages, numbers have a fixed size.
 
-2. Text
-   - str      → "Hello", 'Python'
+   - int        → 10, -5, 1000
+     # it has unlimited length of digits only limited by memory
 
-3. Boolean
-   - bool     → True, False
+   - float      → 3.14, -0.5
+     # it has limited length of digits (approximately 15–17 decimal digits)
+     # and a value range of about ±1.8 × 10^308
 
-4. Sequence Types
-   - list     → [1, 2, 3]
-   - tuple    → (1, 2, 3)
-   - range    → range(5) → 0 to 4
+   - complex    → 2+3j
+     # consists of a real and an imaginary part
+     # both parts are stored as float values
 
-5. Set Types
-   - set      → {1, 2, 3}
-   - frozenset→ frozenset({1, 2, 3})
+   - bool       → True, False
+     # represents Boolean values (True = 1, False = 0)
 
-6. Mapping
-   - dict     → {"name": "Faruk", "age": 20}
+   - NoneType   → None
+     # represents the absence of a value or null
 
-7. Binary Types
-   - bytes     → b"hello"
-   - bytearray → bytearray([65, 66, 67])
-   - memoryview→ memoryview(b"hello")
+   - bytes      → b"hello"
+     # represents an immutable sequence of bytes
+
+   - bytearray  → bytearray([65, 66, 67])
+     # represents a mutable sequence of bytes
+
+   - memoryview → memoryview(b"hello")
+     # provides a memory view of a bytes-like object
+
+
+2. Non-Primitive Datatypes
+   # These are built from primitive datatypes and can hold multiple values.
+
+   - str        → "Hello", 'Python'
+     # represents text data (sequence of characters)
+
+   - list       → [1, 2, 3]
+     # ordered, mutable (can be changed) collection
+
+   - tuple      → (1, 2, 3)
+     # ordered, immutable (cannot be changed) collection
+
+   - set        → {1, 2, 3}
+     # unordered collection of unique elements
+
+   - dict       → {"name": "Faruk", "age": 20}
+     # key-value pairs used for mapping data
 """
-# Example:
-# =================== primitive datatypes ===================
-int = 10 # int      → 10, -5, 1000
-float = 3.14 # float    → 3.14, -0.5
-bool = True # bool     → True, False
-complex = 2+3j # complex  → 2+3j
-NoneType = None # NoneType → None
-bytes = b"hello" # bytes    → b"hello"
-bytearray = bytearray([65, 66, 67]) # bytearray → bytearray([65, 66, 67])
-memoryview = memoryview(b"hello")  # memoryview→ memoryview(b"hello")
 
-print(type(int))  # <class 'int'>
-print(type(float))  # <class 'float'>
-print(type(bool))  # <class 'bool'>
-print(type(complex))  # <class 'complex'>
-print(type(NoneType))  # <class 'NoneType'>
-print(type(bytes))  # <class 'bytes'>
-print(type(bytearray))  # <class 'bytearray'>
-print(type(memoryview))  # <class 'memoryview'>
+# =================== Primitive Datatypes Example ===================
 
+num_int = 10            # int → 10, -5, 1000
+num_float = 3.14        # float → 3.14, -0.5
+is_active = True         # bool → True, False
+num_complex = 2 + 3j    # complex → 2+3j
+nothing = None          # NoneType → None
+data_bytes = b"hello"   # bytes → b"hello"
+data_bytearray = bytearray([65, 66, 67])  # bytearray → bytearray([65, 66, 67])
+data_memoryview = memoryview(b"hello")    # memoryview → memoryview(b"hello")
+
+print(type(num_int))         # <class 'int'>
+print(type(num_float))       # <class 'float'>
+print(type(is_active))       # <class 'bool'>
+print(type(num_complex))     # <class 'complex'>
+print(type(nothing))         # <class 'NoneType'>
+print(type(data_bytes))      # <class 'bytes'>
+print(type(data_bytearray))  # <class 'bytearray'>
+print(type(data_memoryview)) # <class 'memoryview'>
 
 
 # =================== non-primitive datatypes ===================
