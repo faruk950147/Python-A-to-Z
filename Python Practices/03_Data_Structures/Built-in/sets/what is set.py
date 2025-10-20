@@ -1,7 +1,7 @@
 # =================== What is Set ===================
 
 # Set is a collection of items. 
-# Set is unordered, unindexed, and unchangeable.
+# Set is unordered, unindexed, and unchangeable but items are immutable.
 # Set is written with round brackets.
 # when the run output show unordered, 
 # unindexed, and unchangeable, it means that the set is unordered,

@@ -20,6 +20,16 @@
 # Hashable: Because tuples are immutable, they can be used as keys in dictionaries or elements in sets.
 
 # Note: The immutability of tuples makes them safer to use when you don’t want data to change.
+# =================== What is Tuple ===================
+
+# Tuple is a collection of items. 
+# Tuple is ordered, unchangeable, and allows duplicate values.
+# Tuple is written with round brackets.
+# when the run output show ordered, unchangeable, and allows duplicate values, it means that the tuple is ordered, unchangeable, and allows duplicate values.
+# Tuple is immutable (change not possible) but its items are immutable only if they themselves are immutable.
+# Tuple is iterable (loop possible).
+tuple = (1,2,3, [4,5,6]) # itq is mutable (change possible) because its item is mutable.
+
 # ============================= 2. Basic Tuple =============================
 tuple1 = (1, 2, 3)
 tuple2 = tuple([1, 2, 3])

@@ -1,7 +1,7 @@
 # ============================= 1. What is Set =============================
 # → Set is a collection of items in a specific order
 # → every item is unique
-# → Set is mutable (change possible)
+# → Set is mutable (change possible) but items are immutable
 # → Python 3.7+ is ordered
 # → item is indexed
 # → loop is iterable
