@@ -6,6 +6,7 @@
 # → Iterable (can use loop)
 # → Reference type, dynamic type
 # → Stored in contiguous memory (not hash table)
+# → String is immutable (change not possible) and its items are always immutable.
 
 # ============================= 2. Basic String =============================
 print("\n============================ String Creation =============================")
