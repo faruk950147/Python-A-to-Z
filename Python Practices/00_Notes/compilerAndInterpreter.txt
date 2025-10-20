@@ -1,0 +1,56 @@
+# ===================== what is compiler =====================
+
+compiler is a program that translates source code written in a high-level programming language into machine code that can be executed by a computer.
+
+
+
+# ===================== what is interpreter =====================
+
+interpreter is a program that translates source code written in a high-level programming language into machine code that can be executed by a computer.
+
+# ===================== what is high-level programming language =====================
+
+high-level programming language is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is machine language =====================
+
+machine language is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is machine code =====================
+
+machine code is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is source code =====================
+
+source code is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is object code =====================
+
+object code is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is assembly language =====================
+
+assembly language is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is binary =====================
+
+binary is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is hexadecimal =====================
+
+hexadecimal is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is decimal =====================
+
+decimal is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+# ===================== what is octal =====================
+
+octal is a programming language that is designed to be easy to read and write, and is closer to human language than machine language.
+
+
+# ===================== compiler vs interpreter =====================
+
+compiler is a program that translates source code written in a high-level programming language into machine code that can be executed by a computer.
+
+interpreter is a program that translates source code written in a high-level programming language into machine code that can be executed by a computer.

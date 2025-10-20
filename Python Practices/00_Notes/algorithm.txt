@@ -1,0 +1,21 @@
+# ===================== what is algorithm =====================
+
+algorithm is a step-by-step procedure or set of rules to solve a problem.
+
+
+
+# ===================== what is data structure =====================
+
+data structure is a way of organizing data in a computer so that it can be used efficiently.
+
+
+
+# ===================== what is programming =====================
+
+programming is a process of creating a set of instructions that a computer can understand and execute.
+
+
+
+# ===================== what is python =====================
+
+python is a high-level, interpreted programming language known for its readability and ease of use.
