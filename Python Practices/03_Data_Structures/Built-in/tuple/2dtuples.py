@@ -1,81 +1,77 @@
-# ============================= 1. What is Tuple =============================
-# → Tuple is a collection of items in a specific order
-# → every item is unique
-# → Tuple is immutable (change not possible)
-# → Python 3.7+ is ordered
-# → item is indexed
-# → loop is iterable
-# → reference type, dynamic type, hash table based  
+    # ============================= 1. What is Tuple =============================
+# Ordered Collection: Elements in a tuple maintain a specific order.
+
+# Indexed: Each element has a fixed index.
+
+# Immutable: Once created, a tuple cannot be changed. → Methods like sort(), reverse(), pop(), remove() do not work.
+
+# Iterable: Tuples can be iterated using loops (for, while).
+
+# Duplicates Allowed: Tuples can contain multiple identical values.
+
+# Faster than Lists: Tuples are more memory-efficient and faster for access than lists.
+
+# Heterogeneous Data: A tuple can store different types of data together (e.g., int, str, float).
+
+# Fixed Data: Useful for storing fixed-size data.
+
+# Reference & Dynamic Type: Tuples are reference types and dynamically typed in Python.
+
+# Hashable: Because tuples are immutable, they can be used as keys in dictionaries or elements in sets.
+
+# Note: The immutability of tuples makes them safer to use when you don’t want data to change.
 
 # ============================= 2. Basic 2D Tuple =============================
-tuple1 = ((1, 2, 3), (4, 5, 6))
+tuple2d = ((1, 2, 3), (4, 5, 6))
+print("\n2D Tuple:", tuple2d)
 
-print("\n============================ Tuple Access Functions =============================")
 # ============================= 3. Tuple Access Functions =============================
-print(f"tuple1 (accessed): {tuple1}")
-print(f"tuple1 (accessed): {tuple1[0]}")
-print(f"tuple1 (accessed): {tuple1[1]}")
-print(f"tuple1 (accessed): {tuple1[0][0]}")
-print(f"tuple1 (accessed): {tuple1[0][1]}")
-print(f"tuple1 (accessed): {tuple1[0][2]}")
-print(f"tuple1 (accessed): {tuple1[1][0]}")
-print(f"tuple1 (accessed): {tuple1[1][1]}")
-print(f"tuple1 (accessed): {tuple1[1][2]}")
-# Slice
-print("\n============================ Tuple Slicing =============================")
-print(f"tuple1 (accessed): {tuple1[0:2]}")
-print(f"tuple1 (accessed): {tuple1[0:2][0]}")
-print(f"tuple1 (accessed): {tuple1[0:2][1]}")
-print(f"tuple1 (accessed): {tuple1[0:2][0][0]}")
-print(f"tuple1 (accessed): {tuple1[0:2][0][1]}")
-print(f"tuple1 (accessed): {tuple1[0:2][0][2]}")
-print(f"tuple1 (accessed): {tuple1[0:2][1][0]}")
-print(f"tuple1 (accessed): {tuple1[0:2][1][1]}")
-print(f"tuple1 (accessed): {tuple1[0:2][1][2]}")
+print("\nAccessing elements in 2D Tuple:")
+print("tuple2d[0]:", tuple2d[0])
+print("tuple2d[1]:", tuple2d[1])
+print("tuple2d[0][0]:", tuple2d[0][0])
+print("tuple2d[0][1]:", tuple2d[0][1])
+print("tuple2d[0][2]:", tuple2d[0][2])
+print("tuple2d[1][0]:", tuple2d[1][0])
+print("tuple2d[1][1]:", tuple2d[1][1])
+print("tuple2d[1][2]:", tuple2d[1][2])
 
-print("\n================================== Tuple Add Functions===================================")
-# ============================= Tuple Add Functions =============================
-tuple1d = ((1, 2, 3), (4, 5, 6))
-tuple1d = tuple1d + ((7, 8, 9), (10, 11, 12))
-print(f"tuple1d (added): {tuple1d}")
-tuple1d.append((13, 14, 15))
-print(f"tuple1d (added): {tuple1d}")
-tuple1d.extend([(16, 17, 18), (19, 20, 21)])
-print(f"tuple1d (added): {tuple1d}")
-tuple1d.insert(0, (0, 0, 0))
-print(f"tuple1d (added): {tuple1d}")
+# Slice example
+print("\nSlicing 2D Tuple:")
+print("tuple2d[0:2]:", tuple2d[0:2])
+print("tuple2d[0:2][0]:", tuple2d[0:2][0])
+print("tuple2d[0:2][1]:", tuple2d[0:2][1])
 
-print("\n================================== Tuple Modify Functions===================================")
-# ============================= Tuple Modify Functions =============================
-tuple1d = ((1, 2, 3), (4, 5, 6))
-tuple1d.sort()        # sort tuple
-tuple1d.reverse()     # reverse tuple
-tuple1d.copy()        # shallow copy tuple
+# ============================= 4. Tuple "Add" Functions =============================
+# Tuples are immutable → we cannot use append/extend/insert
+# We can create a new tuple
+tuple2d_added = tuple2d + ((7, 8, 9), (10, 11, 12))
+tuple2d_added = ((0, 0, 0),) + tuple2d_added  # prepend
+print("\nTuple after adding elements:", tuple2d_added)
 
-print("\n================================== Tuple Delete Functions===================================")
-# ============================= Tuple Delete Functions =============================
-tuple1d = ((1, 2, 3), (4, 5, 6))
-tuple1d.pop(3) # Remove element at index 3
-tuple1d.remove(2) # Remove element 2
-tuple1d.clear() # Clear tuple
-# del tuple1d # Delete tuple
-# print("tuple1d (removed):", tuple1d)
+# ============================= 5. Tuple Modify Functions =============================
+# Tuples are immutable → cannot sort/reverse in place
+tuple2d_mod = ((3, 2, 1), (6, 5, 4))
+tuple2d_sorted = tuple(sorted(tuple2d_mod[0])), tuple(sorted(tuple2d_mod[1]))
+tuple2d_reversed = tuple(reversed(tuple2d_mod[0])), tuple(reversed(tuple2d_mod[1]))
+tuple2d_copy = tuple(tuple2d_mod)
+print("\nOriginal tuple:", tuple2d_mod)
+print("Sorted tuple:", tuple2d_sorted)
+print("Reversed tuple:", tuple2d_reversed)
+print("Copied tuple:", tuple2d_copy)
 
-print("\n================================== Tuple Loop Functions===================================")
-# ============================= Tuple Loop Functions =============================
-tuple1d = ((1, 2, 3), (4, 5, 6))
-for i in range(len(tuple1d)):
-    print(tuple1d[i])
+# ============================= 6. Tuple Loop Functions =============================
+print("\nLooping through 2D tuple:")
+for row in tuple2d:
+    for col in row:
+        print(col, end=" ")
+    print()
 
-for i in tuple1d:
-    print(i)
-
-print("\n================================== Tuple Comprehension Functions===================================")
-# ============================= Tuple Comprehension Functions =============================
-tuple1d = ((1, 2, 3), (4, 5, 6))
-squares = (x**2 for x in range(10))           # (0,1,4,9,...,81)
-even = (x for x in range(10) if x % 2 == 0)   # (0,2,4,6,8)
-chars = (c.upper() for c in "python")         # ('P','Y','T','H','O','N')
-print(f"squares: {squares}")
-print(f"even: {even}")
-print(f"chars: {chars}")
+# ============================= 7. Tuple Comprehension Functions =============================
+# Tuple comprehension → generator expression → convert to tuple
+squares = tuple(x**2 for x in range(10))
+even = tuple(x for x in range(10) if x % 2 == 0)
+chars = tuple(c.upper() for c in "python")
+print("\nSquares:", squares)
+print("Even numbers:", even)
+print("Chars:", chars)
