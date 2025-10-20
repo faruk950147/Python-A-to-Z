@@ -1,4 +1,5 @@
 # =================== memory address deference ===================
+# always create new object and assign to a
 a = 10
 print('Value of a first line:', a)
 print('ID of a first line:', id(a))
@@ -14,16 +15,17 @@ print('Value of b fourth line:', b)
 print('ID of b fourth line:', id(b))
 
 # =================== memory address deference ===================
+# always create new object and assign to a
 a = [1, 2, 3]
 print('Value of a list:', a)
 print('ID of a list:', id(a))
 
-
+# always create new object and assign to a
 a = a + [4, 5, 6]
 print('Value of a list:', a)
 print('ID of a list:', id(a))
 
-
+# always create new object and assign to a
 a += [4, 5, 6] # append to the same object
 print('Value of a list:', a)
 print('ID of a list:', id(a))
