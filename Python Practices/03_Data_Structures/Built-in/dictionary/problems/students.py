@@ -10,12 +10,19 @@ students = {}
 #         continue
 # print(f"All students marks: {students}")
 
+students = {}
+
 num = int(input("How many students: "))
+
 for i in range(num):
-    roll, marks = map(int, float, input(f"Enter roll and marks of student {i+1}: ").split())
+    roll, marks = input(f"Enter roll and marks of student {i+1}: ").split()
+    roll = int(roll)
+    marks = float(marks)
+
     if roll not in students:
         students[roll] = marks
     else:
         print("Roll already exists.")
         continue
+
 print(f"All students marks: {students}")
