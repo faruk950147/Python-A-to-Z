@@ -18,3 +18,6 @@
 dict1 = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}
 for item in dict1:
     print(f"{item} ======> {dict1[item]}")
+    
+for key, item in dict1.items():
+    print(f"Keys {key} ======> Values {item}")
