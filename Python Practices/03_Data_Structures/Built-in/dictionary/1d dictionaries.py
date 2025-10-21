@@ -17,6 +17,7 @@ dict1 = {"name": "John", "age": 30}
 
 # using dict() constructor 1d
 dict2 = dict(name="John", age=30)
+dict3 = dict([("name", "John"), ("age", 30)])
 
 # dictionary access (key based)
 print(dict1["name"])  # John
