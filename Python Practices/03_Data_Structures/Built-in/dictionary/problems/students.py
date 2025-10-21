@@ -12,7 +12,7 @@ students = {}
 
 num = int(input("How many students: "))
 for i in range(num):
-    roll, marks = map(int, input(f"Enter roll and marks of student {i+1}: ").split())
+    roll, marks = map(int, float, input(f"Enter roll and marks of student {i+1}: ").split())
     if roll not in students:
         students[roll] = marks
     else:
