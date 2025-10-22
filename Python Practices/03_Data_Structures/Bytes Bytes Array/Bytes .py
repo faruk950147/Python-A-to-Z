@@ -4,13 +4,25 @@
 # used for representing binary data. also used for representing image, audio, video, etc.
 # file operations, network programming, etc.
 
-# ===================== how to create bytes =====================
-# ===================== str (string) example =====================
+# 1 byte = 8 bits every bit can be 0 or 1
+# 1 KB = 1024 bytes | 1 KB = 1024 * 8 bits
+# 1 MB = 1024 KB | 1 MB = 1024 * 1024 * 8 bits
+# 1 GB = 1024 MB | 1 GB = 1024 * 1024 * 1024 * 8 bits
+# 1 TB = 1024 GB | 1 TB = 1024 * 1024 * 1024 * 1024 * 8 bits
 
+# ===================== str (string) example =====================
+# pure python string
 text = "Hello World"
 print(text)               # Hello World
 print(type(text))         # <class 'str'>
-print(text.encode())      # b'Hello World'  → string থেকে bytes
+
+# string to bytes
+print(text.encode())      # b'Hello World'  → string to bytes
+print(type(text.encode())) # <class 'bytes'>
+
+# bytes to string (decode)
+print(text.decode())      # Hello World  → bytes to string
+print(type(text.decode())) # <class 'str'>
 
 # string translation
 table = str.maketrans("Helo", "HELO")
