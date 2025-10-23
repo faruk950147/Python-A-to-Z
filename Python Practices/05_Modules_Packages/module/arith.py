@@ -9,7 +9,9 @@ class Mathematics:
         try:
             if not args:
                 return 0
-            total = sum(args)
+            total = 0
+            for num in args:
+                total += num
             log_info(f"Addition successful: {list(args)} = {total}")
             return total
         except Exception as e:
@@ -87,7 +89,11 @@ class Mathematics:
         try:
             results = []
             for num in args:
-                results.append(num ** (1/3))
+                # Negative number support
+                if num < 0:
+                    results.append(-abs(num) ** (1/3))
+                else:
+                    results.append(num ** (1/3))
             log_info(f"Cube roots calculated: {results}")
             return results
         except Exception as e:
@@ -116,6 +122,16 @@ class Mathematics:
             log_error(f"Error calculating absolute value: {e}")
             return None
 
+
 if __name__ == "__main__":
     mathematics = Mathematics()
-    mathematics.addition(10,90)
+
+    print("Addition:", mathematics.addition(10, 90))
+    print("Difference:", mathematics.difference(100, 50, 20))
+    print("Multiplication:", mathematics.multiplication(5, 6, 2))
+    print("Division:", mathematics.division(100, 2, 5))
+    print("Power:", mathematics.power(2, 3, 2))
+    print("Square Root:", mathematics.square_root(16, 25, 36))
+    print("Cube Root:", mathematics.cube_root(8, 27, -8))
+    print("Factorial:", mathematics.factorial(5, 3, 0))
+    print("Absolute Value:", mathematics.absolute_value(-10, 5, -7))
