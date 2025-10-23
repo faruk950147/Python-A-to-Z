@@ -55,7 +55,7 @@ CREATE TABLE product_variants (
 );
 
 -- ===========================
--- Orders Table
+-- Orders Table thats means case sales
 -- ===========================
 CREATE TABLE orders (
     _id INT AUTO_INCREMENT PRIMARY KEY,
@@ -67,7 +67,7 @@ CREATE TABLE orders (
 );
 
 -- ===========================
--- Order Items Table
+-- Order Items Table thats means case sales items
 -- ===========================
 CREATE TABLE order_items (
     _id INT AUTO_INCREMENT PRIMARY KEY,
@@ -82,7 +82,7 @@ CREATE TABLE order_items (
 );
 
 -- ===========================
--- Payments Table
+-- Payments Table thats means case sales_details
 -- ===========================
 CREATE TABLE payments (
     _id INT AUTO_INCREMENT PRIMARY KEY,
@@ -95,7 +95,7 @@ CREATE TABLE payments (
 );
 
 -- ===========================
--- Sample Data
+-- Sample Data thats means case data
 -- ===========================
 INSERT INTO categories (_name, _description) VALUES 
 ('Electronics','Electronic gadgets and devices'),
