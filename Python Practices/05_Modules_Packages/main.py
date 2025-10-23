@@ -12,3 +12,7 @@ print("Hello World")
 # Useful when the file is part of a package or you want module-relative imports to work.
 # without extension .py execute 
 # python -m main
+
+# specific library specific directory
+# python -m pip install requests --target=/path/to/directory
+# python -m pip install requests --target .
