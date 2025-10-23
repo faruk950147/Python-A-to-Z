@@ -3,6 +3,7 @@
 # all elements of bytes must be in range(0, 256).
 # used for representing binary data. also used for representing image, audio, video, etc.
 # file operations, network programming, etc.
+# bytes is a memory efficient sequence of bytes.
 
 # 1 byte = 8 bits every bit can be 0 or 1
 # 1 KB = 1024 bytes | 1 KB = 1024 * 8 bits
