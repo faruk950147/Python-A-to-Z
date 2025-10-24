@@ -2,7 +2,7 @@ class MarkGraded:
     def __init__(self, marks):
         self.marks = marks  
 
-    # individual mark to grade & grade point
+    # mark to grade & grade point
     def markGraded(self, mark):
         if mark >= 80:
             return "A+", 5.0
@@ -19,19 +19,18 @@ class MarkGraded:
         else:
             return "F", 0.0
 
-    # all grades and points
+    # all grades & points
     def allGrades(self):
         return [self.markGraded(mark) for mark in self.marks]
 
     # CGPA calculation
     def cgpa(self):
         points = [self.markGraded(mark)[1] for mark in self.marks]
-        if 0.0 in points:  # if any F is there
+        if 0.0 in points:
             return 0.0
-        cgpa = sum(points) / len(points)
-        return round(cgpa, 2)  # up to two decimal places
+        return round(sum(points) / len(points), 2)
 
-    # final letter grade based on CGPA
+    # final grade based on CGPA
     def finalGrade(self):
         gpa = self.cgpa()
         if gpa == 0.0:
@@ -51,13 +50,23 @@ class MarkGraded:
         else:
             return "F"
 
+    # print result sheet
+    def printResultSheet(self):
+        print("Bangladesh Board of Education")
+        print("Exam Result Sheet")
+        print("-" * 50)
+        print(f"{'Subject':<10}{'Number':<10}{'Grade':<10}{'Grade Point':<10}")
+        print("-" * 50)
+        for i, mark in enumerate(self.marks, 1):
+            grade, point = self.markGraded(mark)
+            print(f"{i:<10}{mark:<10}{grade:<10}{point:<10}")
+        print("-" * 50)
+        print(f"CGPA: {self.cgpa()}")
+        print(f"Final Grade: {self.finalGrade()}")
+        print("-" * 50)
+
+
 if __name__ == "__main__":
-    marks = [95, 85, 78, 88, 92, 67, 74]  
+    marks = [95, 90, 92, 88, 92, 80,80]
     student = MarkGraded(marks)
-
-    print("Individual Grades & Points:")
-    for i, (grade, point) in enumerate(student.allGrades(), 1):
-        print(f"Subject {i}: Grade {grade}, Point {point}")
-
-    print("CGPA:", student.cgpa())
-    print("Final Grade:", student.finalGrade())
+    student.printResultSheet()
