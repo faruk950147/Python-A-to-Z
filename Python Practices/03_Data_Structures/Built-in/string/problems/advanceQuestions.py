@@ -4,7 +4,7 @@
 
 
 def reverseString(str):
-   #split return list 
+   #split return list ['Sky', 'is', 'blue']
    str = str.split(" ") 
    #reverse list ['blue', 'is', 'Sky']
    str = str[::-1]
