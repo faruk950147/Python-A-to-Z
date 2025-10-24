@@ -8,10 +8,11 @@
 # 3. Global scope
 # 4. Built-in scope
 
-# Local scope: The variables defined inside a function are only accessible inside that function.
-# Enclosing scope: The variables defined inside a function are only accessible inside that function.
-# Global scope: The variables defined inside a function are only accessible inside that function.
-# Built-in scope: The variables defined inside a function are only accessible inside that function.
+# Local scope: Variables declared inside a function, accessible only within that function.
+# Enclosing scope: Variables from the outer (enclosing) function accessible inside an inner function.
+# Global scope: Variables declared at the top level of a module, accessible everywhere in that file.
+# Built-in scope: Names that are preassigned in Python, like len(), print(), etc.
+
 
 def outer_func():
     x = 'local'
