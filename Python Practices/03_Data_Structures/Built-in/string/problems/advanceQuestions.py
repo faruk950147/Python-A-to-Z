@@ -1,7 +1,6 @@
 # 1. Question: Reverse a String
 # input "Sky is blue"
 # output "blue is sky"
-from turtle import reset
 
 
 def reverseString(str):
@@ -13,6 +12,8 @@ def reverseString(str):
    return " ".join(str).lower()
 
 print(reverseString("Sky is blue"))
+
+# output: blue is sky
 
 # 2. Question: Remove Duplicates from a List
 # lst [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
@@ -28,7 +29,18 @@ def removeDuplicates1(lst):
     return result
 print(removeDuplicates1([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
 
+# output: [1, 4]
 
+def removeDuplicates(lst):
+    result = []
+    for i in lst:
+        if lst.count(i) >= 1 and i not in result:
+            result.append(i)
+    return result
+
+print(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
+
+# output: [1, 2, 3, 4, 5, 6]
 
 # 3. Question: Count the Occurrences of Each Character in a String
 # str1 = "a,a,a,b,b,c,c,c"
@@ -46,3 +58,6 @@ def count_characters(s):
 
 str1 = "a,a,a,b,b,c,c,c"
 print(count_characters(str1))
+
+# output: a:3, b:2, c:3
+
