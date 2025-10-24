@@ -1,6 +1,10 @@
 # ============================= What is function ==============================
 # A function is a block of reusable code that performs a specific task.
-
+# in functional programming, three are four types of identifiers.
+# 1. local identifier
+# 2. nonlocal identifier
+# 3. global identifier
+# 4. built-in identifier
 # ============================= basic type of function ==============================
 # 1. First-class function
 # 2. Pure function
