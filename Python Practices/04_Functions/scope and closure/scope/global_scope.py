@@ -21,4 +21,4 @@ def func():
 
 func()
 
-
+print(globals())
