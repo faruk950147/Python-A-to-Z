@@ -20,7 +20,7 @@ def func():
     print(x)
     print(globals())
     
-    x = 30  # global scope
+    x = 30  # local scope
     print(x)
     print(globals())
 
