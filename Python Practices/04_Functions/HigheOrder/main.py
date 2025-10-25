@@ -16,3 +16,4 @@ print(f"sorted([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]): {sorted([3, 1, 4, 1, 5, 9, 2,
 print(f"any([False, False, True]): {any([False, False, True])}")
 
 print(f"all([True, True, True]): {all([True, True, True])}")
+
