@@ -15,9 +15,14 @@ def func():
     # we use the global keyword.change the global scope inside a function, 
     # that's why we use the global keyword before the variable.
     # change the value of global scope inside a function,
-    global x 
+    global x  # global scope
     x = 20
     print(x)
+    print(globals())
+    
+    x = 30  # global scope
+    print(x)
+    print(globals())
 
 func()
 
