@@ -14,6 +14,11 @@ square = lambda x: x * x
 print(square(4))  # Output: 16
 
 
+lam = lambda a, b: (a + b, a - b, a * b, a / b)
+sum, sub, mul, div = lam(10, 5)
+print('Faruk sum:', sum, 'sub:', sub, 'mul:', mul, 'div:', div)
+
+
 # ============================= lambda vs normal function ===============================
 # Normal function
 def add_func(a, b):
