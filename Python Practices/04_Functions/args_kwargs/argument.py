@@ -10,6 +10,13 @@ print(greet("Faruk"))   # Output: Hello, Faruk!
 
 
 # ====================== Types of Arguments ======================
+# 1. Positional Arguments
+# 2. Keyword Arguments
+# 3. Default Arguments
+# 4. Mutable Immutable Default Arguments
+# 5. Variable-Length Arguments (*args)
+# 6. Keyword Variable-Length Arguments (**kwargs)
+# 7. Combination of All Types
 
 
 # ===============================================================
