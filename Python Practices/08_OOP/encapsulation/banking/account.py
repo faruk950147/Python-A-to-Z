@@ -48,15 +48,18 @@ class Account:
     def set_balance(self, balance, password):
         if not self.verify_password(password):
             print("Access denied. Wrong password.")
-            return
+            return False
         if isinstance(balance, (int, float)):
             if balance >= 0:
                 self.__balance = balance
                 print("Balance updated successfully")
+                return True
             else:
                 print("Balance cannot be negative")
+                return False
         else:
             print("Balance must be a number")
+            return False
 
     def __str__(self):
         return f"Account owner: {self.owner}\nBalance: {self.__balance}"
