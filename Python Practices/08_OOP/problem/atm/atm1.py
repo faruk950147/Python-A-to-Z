@@ -19,3 +19,14 @@ class ATM:
         self._history: Dict[str, str] = {}
         self._log(f"Account created. Initial balance: {self._balance:.2f}")
         
+        self.menu = {
+            "1": "Create Account",
+            "2": "Change Pin", 
+            "3": "Reset Pin",      
+            "4": "Debit",
+            "5": "Credit",
+            "6": "Check Balance",
+            "7": "Transfer",
+            "8": "Mini Statement",
+            "9": "Exit"
+        }

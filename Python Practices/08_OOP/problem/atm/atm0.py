@@ -12,6 +12,10 @@ class ATM:
         self._last_withdrawal_day = None  # yyyy-mm-dd string
         self._history: List[str] = []
         self._log(f"Account created. Initial balance: {self._balance:.2f}")
+        
+        self.menu = {
+            
+        }
 
     # --- internal helpers ---
     def _today_str(self) -> str:
