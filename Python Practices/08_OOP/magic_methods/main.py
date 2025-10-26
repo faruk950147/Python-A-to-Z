@@ -68,12 +68,12 @@ class Container:
 
     # ----------------- Arithmetic -----------------
     def __add__(self, other):
-        if isinstance(other, MyContainer):
-            return MyContainer(self.name + "&" + other.name, self.items + other.items)
+        if isinstance(other, Container):
+            return Container(self.name + "&" + other.name, self.items + other.items)
         return NotImplemented
 
     def __iadd__(self, other):
-        if isinstance(other, MyContainer):
+        if isinstance(other, Container):
             self.items += other.items
         return self
 
@@ -94,10 +94,10 @@ class Container:
 
     # ----------------- Copying -----------------
     def __copy__(self):
-        return MyContainer(self.name + "_copy", self.items.copy())
+        return Container(self.name + "_copy", self.items.copy())
 
     def __deepcopy__(self, memo):
-        return MyContainer(self.name + "_deepcopy", copy.deepcopy(self.items, memo))
+        return Container(self.name + "_deepcopy", copy.deepcopy(self.items, memo))
 
     # ----------------- Destructor -----------------
     def __del__(self):
@@ -127,7 +127,7 @@ c1.new_attr = "Hello"          # __setattr__
 del c1.new_attr                 # __delattr__
 print(dir(c1))                 # __dir__
 
-c2 = MyContainer("Beta", [4,5])
+c2 = Container("Beta", [4,5])
 c3 = c1 + c2                    # __add__
 print(c3)
 
