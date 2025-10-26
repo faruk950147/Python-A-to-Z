@@ -1,6 +1,6 @@
 import copy
 
-class MyContainer:
+class Container:
     def __init__(self, name, items):
         self.name = name
         self.items = list(items)
@@ -104,7 +104,7 @@ class MyContainer:
         print(f"Container '{self.name}' deleted!")
 
 # ====================== Testing ======================
-c1 = MyContainer("Alpha", [1,2,3])
+c1 = Container("Alpha", [1,2,3])
 print(c1)                     # __str__
 print(repr(c1))               # __repr__
 print(bytes(c1))              # __bytes__
