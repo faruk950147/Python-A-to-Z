@@ -1,12 +1,9 @@
 # ==========================================
-# 📁 all.py
+# all.py
 # Module: Example of __all__ usage and scope
 # ==========================================
 
 # Common variable definition
-from tabnanny import check
-import this
-
 
 str1 = "I'm a string from all.py"
 
