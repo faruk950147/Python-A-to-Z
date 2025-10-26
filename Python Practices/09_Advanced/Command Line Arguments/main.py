@@ -29,3 +29,4 @@
 # ============================== example ============================== #
 # filename: calculator.py
 import sys
+print(sys.argv)
