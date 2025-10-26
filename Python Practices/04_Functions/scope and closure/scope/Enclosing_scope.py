@@ -1,26 +1,27 @@
-# =============================== what is enclosing scope ===============================
-# enclosing scope is the scope of a variable or identifier that is defined inside a nested function.
+# =============================== What is Enclosing Scope ===============================
+# Enclosing scope refers to variables defined in an outer function
+# that are accessible inside a nested (inner) function.
 
-# =============================== example ===============================
+# =============================== Example ===============================
 def outer_func(x):
-    # x is a local scope. but it is accessible inside the nested function.
+    # x is local to outer_func
     def inner_func(y):
-        # here x is a enclosing scope.
-        # y is a local scope.
-        print(x)
-        print(y)
+        # y is local to inner_func
+        # x from outer_func is an enclosing variable here
+        print("Enclosing variable x:", x)
+        print("Local variable y:", y)
     inner_func(20)
+
 outer_func(10)
 
-# =============================== accessing enclosing scope ===============================
-def outer_func(x):
-    # x is a local scope. but it is accessible inside the nested function.
-    def inner_func(y):
-        # here x is a enclosing scope.
-        # y is a local scope.
-        print(x)
-        print(y)
-    inner_func(20)
-outer_func(10)
+# =============================== Accessing and Modifying Enclosing Scope ===============================
+def outer_func():
+    x = 10  # local to outer_func
+    def inner_func():
+        nonlocal x  # allows modifying x from outer_func
+        x += 5
+        print("Modified x inside inner_func:", x)
+    inner_func()
+    print("x in outer_func after inner_func:", x)
 
-
+outer_func()
