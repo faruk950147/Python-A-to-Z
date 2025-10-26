@@ -30,3 +30,9 @@
 # filename: calculator.py
 import sys
 print(sys.argv)
+
+# ============================== run ============================== #
+# python main.py 10 20 4.5 'hello' 'world' (1, 2, 3, 4, 5)
+
+# ============================== output ============================== #
+# ['main.py', '10', '20', '4.5', 'hello', 'world']
