@@ -8,11 +8,11 @@ print(dir())
 # '__name__', '__package__', '__spec__', 'all'
 # ]
 
-# from all import *
+from all import *
 
 
-# print(str1)
-# print(dir())
+print(str1)
+print(dir())
 
 # output:
 # [
