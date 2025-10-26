@@ -18,7 +18,7 @@ class ATM:
         self._credit_today = 0.0
         self._last_credit_day: Union[str, None] = None  # yyyy-mm-dd string
         
-        # FIX: Changed self._history from Dict to List to support 'append'
+        # Changed self._history from Dict to List to support 'append'
         self._history: List[str] = [] 
         
         self._log(f"Account created. Initial balance: {self._balance:.2f}")
@@ -51,13 +51,13 @@ class ATM:
             self._debit_today = 0.0
             self._last_debit_day = today
             
-        # FIX: Added Credit limit reset
+        # Added Credit limit reset
         if self._last_credit_day != today:
             print(f"DEBUG: Credit daily limit of ${self.daily_credit_limit:.2f} reset.")
             self._credit_today = 0.0
             self._last_credit_day = today
 
-    # FIX: Corrected _log to use list append
+    # Corrected _log to use list append
     def _log(self, text: str):
         """Logs a transaction or event with a timestamp."""
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
@@ -88,7 +88,7 @@ class ATM:
         
     def debit(self):
         """Handles a cash withdrawal transaction."""
-        print("\n--- 💸 Debit (Withdrawal) ---")
+        print("\n--- Debit (Withdrawal) ---")
         if not self._authenticate():
             return
 
@@ -103,16 +103,16 @@ class ATM:
         if amount <= 0:
             print("Withdrawal amount must be positive.")
         elif amount > self._balance:
-            print(f"❌ Insufficient balance. Current balance: ${self._balance:.2f}")
+            print(f"Insufficient balance. Current balance: ${self._balance:.2f}")
         elif amount > (self.daily_debit_limit - self._debit_today):
             remaining = self.daily_debit_limit - self._debit_today
-            print(f"❌ Daily debit limit of ${self.daily_debit_limit:.2f} exceeded.")
+            print(f"Daily debit limit of ${self.daily_debit_limit:.2f} exceeded.")
             print(f"You can only withdraw up to ${remaining:.2f} today.")
         else:
             self._balance -= amount
             self._debit_today += amount
             self._log(f"Debited ${amount:.2f}. New balance: ${self._balance:.2f}. Daily debit total: ${self._debit_today:.2f}")
-            print(f"✅ Transaction successful. Please take your cash. Remaining balance: ${self._balance:.2f}")
+            print(f"Transaction successful. Please take your cash. Remaining balance: ${self._balance:.2f}")
 
     def credit(self):
         """Handles a cash deposit transaction."""
