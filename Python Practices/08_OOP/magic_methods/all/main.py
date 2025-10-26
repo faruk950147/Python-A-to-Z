@@ -1,18 +1,18 @@
-# import all
+import all
 
-# print(dir())
+print(dir())
 
 # output:
-[
-'__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', 
-'__name__', '__package__', '__spec__', 'all'
-]
+# [
+# '__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', 
+# '__name__', '__package__', '__spec__', 'all'
+# ]
 
-from all import *
+# from all import *
 
 
-print(str1)
-print(dir())
+# print(str1)
+# print(dir())
 
 # output:
 # [
