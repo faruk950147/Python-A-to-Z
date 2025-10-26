@@ -29,7 +29,13 @@
 # ============================== example ============================== #
 # filename: calculator.py
 import sys
-print(sys.argv)
+lst = sys.argv
+print(lst)
+print(type(lst))
+print(lst[0])
+print(lst[1])
+for i in lst:
+    print(i)
 
 # ============================== run ============================== #
 # python main.py 10 20 4.5 'hello' 'world' (1, 2, 3, 4, 5)
