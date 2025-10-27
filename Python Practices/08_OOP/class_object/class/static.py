@@ -3,6 +3,7 @@
 # It is marked with @staticmethod decorator.
 
 # 1. change name of person class instance through object and can't change class variable name
+# instance method
 class Person:
     name = "John"
 
@@ -17,6 +18,7 @@ if __name__ == "__main__":
     print(Person.name)   # Output: John
 
 # 2. change name of person class is can change class variable name through class
+# class method
 class Person2:
     name = "John"
 
