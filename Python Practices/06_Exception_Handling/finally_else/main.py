@@ -12,4 +12,4 @@
 # finally:
 #     # code to run regardless of whether an exception occurred or not
 
-# ============================== basic finally else =============================
+# ============================== math finally else =============================
