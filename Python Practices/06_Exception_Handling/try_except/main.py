@@ -24,7 +24,7 @@ except ZeroDivisionError:
 except Exception as e:
     print("Invalid input", str(e))
     
-# ============================== 3. file try except =============================
+# ============================== 2. file try except =============================
 
 try:
     if os.path.exists('data.txt'):
@@ -37,7 +37,7 @@ except Exception as e:
     print("An error occurred:", str(e))
 
     
-# ============================== 2. function try except =============================
+# ============================== 3. function try except =============================
 def add_numbers(a, b):
     return a + b
 
