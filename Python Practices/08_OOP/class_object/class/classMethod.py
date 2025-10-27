@@ -1,36 +1,47 @@
-# Static method is a method that is bound to the class and not the object of the class.
-# It can't access or modify class state.
-# It is marked with @staticmethod decorator.
+# Static method is a method that is bound to the class, not the instance (object).
+# It cannot access or modify the class or instance state.
+# It is marked using the @staticmethod decorator.
+# Example below is NOT using a static method — it’s showing how instance and class variables differ.
 
-# 1. change name of person class instance through object and can't change class variable name
-class Person:
-    name = "John"
+# 1. Instance method: Change the name of the college through an object instance.
+# But this will NOT change the class variable — it will only create a new instance variable.
 
-    def changeName(self, name):
-        self.name = name   # here self means instance (object) it is new name created
+# class Person:
+#      # Class variable (shared by all objects)
+#     college_name = "TMSS Technical Institute"
 
-if __name__ == "__main__":
-    p1 = Person()
-    p1.changeName("Doe")
+#     def changeName(self, collage_name):
+#         # Here 'self' refers to the instance, not the class.
+#         # So this line creates a NEW instance variable named 'college_name'
+#         # instead of changing the class variable.
+#         self.college_name = collage_name
 
-    print(p1.name)       # Output: Doe
-    print(Person.name)   # Output: John
 
-# 2. change name of person class is can change class variable name through class
-class Person2:
-    name = "John"
+# if __name__ == "__main__":
+#     p1 = Person()
+#     p1.changeName("TTI")   # Changes only for p1, not for the class
 
-    def changeName(self, name):
-        Person2.name = name   # here class variable name is changed or modified it is changed name of class variable
+#     print(p1.college_name)       # Output: TTI (instance variable)
+#     print(Person.college_name)   # Output: TMSS Technical Institute (class variable remains unchanged)
 
-if __name__ == "__main__":
-    p1 = Person2()
-    p1.changeName("Doe")
+# 2. Class method: Change the name of the college through the class.
+# This will change the class variable for ALL objects.
 
-    print(p1.name)        # Output: Doe
-    print(Person2.name)   # Output: Doe
+# class Person2:
+#     name = "John"
 
-# 3. class method
+#     def changeName(self, name):
+#         Person2.name = name   # here class variable name is changed or modified it is changed name of class variable
+
+# if __name__ == "__main__":
+#     p1 = Person2()
+#     p1.changeName("Doe")
+
+#     print(p1.name)        # Output: Doe
+#     print(Person2.name)   # Output: Doe
+
+# 3. Class method: Change the name of the college through the class.
+# This will change the class variable for ALL objects.
 class Person3:
     name = "John"
 
