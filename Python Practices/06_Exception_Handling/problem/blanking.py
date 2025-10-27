@@ -37,6 +37,7 @@ class Account:
 
     @property
     def balance(self):
+        """Return current balance (without pin check)"""
         return self._balance
 
     @balance.setter
@@ -44,6 +45,12 @@ class Account:
         if amount < 500:
             raise MinimValueError("Balance cannot be less than 500")
         self._balance = amount
+
+    def check_balance(self, pin):
+        """Return balance only if pin is correct"""
+        if not self.verify_pin(pin):
+            return "Invalid PIN"
+        return f"Your current balance is: {self._balance}"
 
     def deposit(self, amount):
         if amount < 500:
@@ -89,7 +96,8 @@ class Account:
                     print(self.reset_pin(new_pin))
 
                 elif choice == "5":
-                    print(f"Current Balance: {self.balance}")
+                    pin = int(input("Enter PIN to check balance: "))
+                    print(self.check_balance(pin))
 
                 elif choice == "6":
                     print("Exiting... Thank you!")
@@ -97,7 +105,7 @@ class Account:
 
                 else:
                     print("Invalid choice. Please try again.")
-            
+
             except MinimValueError as e:
                 print("Error:", e)
             except ValueError:
