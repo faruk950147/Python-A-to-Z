@@ -36,44 +36,68 @@ import os
 # is_open() function is used to check if the file is open.
 
 # ============================== write file ===========================
-with open('data.txt', 'w') as file:
-    file.write('Hello, World!')
+if os.path.exists('data.txt'):
+    os.remove('data.txt')
+else:
+    with open('data.txt', 'w') as file:
+        file.write('Hello, World!')
 
 # ============================= read file =============================
-with open('data.txt', 'r') as file:
-    content = file.read()
-    print(content)
-
-print("data.txt file read successfully!")
+if os.path.exists('data.txt'):
+    with open('data.txt', 'r') as file:
+        content = file.read()
+        print(content)
+    print("data.txt file read successfully!")
+else:
+    print("data.txt file does not exist!")
 
 # ============================= append to file =============================
-with open('data.txt', 'a') as file:
-    file.write('\nHello again!')
-
-print("data.txt file appended successfully!")
+if os.path.exists('data.txt'):
+    with open('data.txt', 'a') as file:
+        file.write('\nHello again!')
+    print("data.txt file appended successfully!")
+else:
+    print("data.txt file does not exist!")
 
 # ============================= binary file =============================
-with open('data.txt', 'wb') as file:
-    file.write(b'Hello in binary!')
-
-print("data.txt binary written successfully!")
+if os.path.exists('data.txt'):
+    with open('data.txt', 'wb') as file:
+        file.write(b'Hello in binary!')
+    print("data.txt binary written successfully!")
+else:
+    print("data.txt file does not exist!")
 
 # ============================= rename file =============================
-os.rename('data.txt', 'data2.txt')
-print("data.txt file renamed successfully!")
+if os.path.exists('data.txt'):
+    os.rename('data.txt', 'data2.txt')
+    print("data.txt file renamed successfully!")
+else:
+    print("data.txt file does not exist!")
 
 # ============================= create directory =============================
-os.mkdir('data_dir')
-print("data_dir directory created successfully!")
+if os.path.exists('data_dir'):
+    os.remove('data_dir')
+else:
+    os.mkdir('data_dir')
+    print("data_dir directory created successfully!")
 
 # ============================= list directory =============================
-print(os.listdir('.'))
-print("Current directory listed successfully!")
+if os.path.exists('data_dir'):
+    print(os.listdir('data_dir'))
+    print("data_dir directory listed successfully!")
+else:
+    print("data_dir directory does not exist!")
 
 # ============================= remove directory =============================
-os.rmdir('data_dir')
-print("data_dir directory removed successfully!")
+if os.path.exists('data_dir'):
+    os.rmdir('data_dir')
+    print("data_dir directory removed successfully!")
+else:
+    print("data_dir directory does not exist!")
 
 # ============================= delete file =============================
-os.remove('data2.txt')
-print("data2.txt file deleted successfully!")
+if os.path.exists('data2.txt'):
+    os.remove('data2.txt')
+    print("data2.txt file deleted successfully!")
+else:
+    print("data2.txt file does not exist!")
