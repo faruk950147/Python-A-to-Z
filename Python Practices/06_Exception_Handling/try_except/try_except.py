@@ -1,5 +1,5 @@
 # ============================= What is Try Except =============================
-# try-except হলো Python-এর error handling system।
+# try-except is Python-of error handling system।
 # where error in try block, then except block will be executed.
 # where no error in try block, then except block will not be executed.
 # Structure:
