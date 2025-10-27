@@ -5,28 +5,28 @@
 
 # ============================= Custom Exception Syntax =============================
 # class className(Exception):
-#     pass
-# raise className("Something went wrong!")
+#     pass 
 
 # ============================= Basic Raise Custom Example =========================
 
 # Step 1: Create a custom exception
 class AgeValueError(Exception):
-    """Raised when something specific goes wrong"""
+    """Age is not allowed to be less than 18"""
     pass
 
-# Step 2: Use the custom exception
-def check_age(age):
-    if age < 18 :
-        # Step 3: Raise the custom exception
-        raise AgeValueError(f"Age is not allowed: {age}")
-    return age
-
-# Step 4: Handle the exception
 try:
-    check_age(15)
+    age = float(input("Enter a number: "))
+    # Step 2: Raise the custom exception
+    if age < 18:
+        raise AgeValueError("Age is not allowed to be less than 18.")
+    else:
+        print("Age is allowed: ", age)
+# Step 3: Handle the custom exception
 except AgeValueError as e:
-    print(f"AgeValueError: {e}")
+    print("AgeValueError: ", str(e))
+except Exception as e:
+    print("Exception: ", str(e))
+
 
 # Output:
-# AgeValueError: Age is not allowed: 15
+# AgeValueError: Age is not allowed to be less than 18.
