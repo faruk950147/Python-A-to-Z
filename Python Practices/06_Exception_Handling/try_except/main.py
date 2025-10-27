@@ -63,6 +63,27 @@ except Exception as e:
     print("An error occurred:", str(e))
 
 
+# ============================== 4. class try except =============================
+class Calculator:
+    def __init__(self):
+        self.result = 0
+
+    def add(self, a, b):
+        return a + b
+
+    def divide(self, a, b):
+        return a / b
+if __name__ == "__main__":
+    try:
+        calc = Calculator()
+        num1, num2 = map(int, input('Enter two numbers: ').split())
+        print("Sum from input:", calc.add(num1, num2))
+    except ValueError:
+        print("Invalid input. Please enter exactly two integers.")
+    except ZeroDivisionError:
+        print("Cannot divide by zero.")
+    except Exception as e:
+        print("An error occurred:", str(e))
 
 
 
