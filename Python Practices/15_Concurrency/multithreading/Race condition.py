@@ -1,6 +1,6 @@
 import threading
 import time
-
+# race condition is a situation where two or more threads access a shared resource and try to modify it at the same time.
 # Shared resource (All buses are using this ticket counter)
 available_seats = 5
 

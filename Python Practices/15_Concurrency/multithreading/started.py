@@ -1,5 +1,5 @@
-# start() # Start the thread
-# join() # Wait for the thread to finish
+# start() # Start the thread and run the thread
+# join() # Wait for the thread to finish and block the main thread
 
 import threading
 import time
