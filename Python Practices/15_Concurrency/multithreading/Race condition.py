@@ -38,3 +38,60 @@ if __name__ == "__main__":
     bus3.join()
 
     print("All buses finished checking!")
+
+balance = 100
+class Account(threading.Thread):
+    def withdraw(amount):
+        global balance
+        for _ in range(100000):
+            balance -= amount
+
+    def deposit(amount):
+        global balance
+        for _ in range(100000):
+            balance += amount
+
+    t1 = threading.Thread(target=withdraw, args=(1,))
+    t2 = threading.Thread(target=deposit, args=(1,))
+
+    t1.start()
+    t2.start()
+
+    t1.join()
+    t2.join()
+
+print("Final Balance:", balance)
+
+""" 
+class Account(threading.Thread):
+    balance = 100  # Shared resource (All threads are using this balance)
+
+    def __init__(self, name, amount, action):
+        super().__init__()
+        self.name = name
+        self.amount = amount
+        self.action = action  # 'deposit' or 'withdraw'
+
+    def run(self):
+        for _ in range(100000):
+            if self.action == 'deposit':
+                Account.balance += self.amount
+            elif self.action == 'withdraw':
+                Account.balance -= self.amount
+
+
+t1 = Account("Thread-1", 1, 'withdraw')
+t2 = Account("Thread-2", 1, 'deposit')
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print("Final Balance:", Account.balance)
+
+
+# race condition in python
+
+ """
