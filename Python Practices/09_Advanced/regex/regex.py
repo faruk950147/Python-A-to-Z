@@ -1,5 +1,5 @@
 # ============================= regex =============================
-# Regex is a way to match a string against a pattern.
+# Regular Expression (RegEx) is a sequence of characters that forms a search pattern.
 # It is a way to match a string against a pattern.
 # dot (.) matches any single character.
 # caret (^) matches the start of the string.
