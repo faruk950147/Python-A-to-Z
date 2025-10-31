@@ -1,7 +1,7 @@
 import re
 
 # ====================== . dot any character ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("..", string)
 if match:
     print(match.group())
@@ -20,69 +20,109 @@ else:
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
 
 # ====================== ^ character start ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("^B", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
 
 # ====================== $ character end ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("d$", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
 
 # ====================== * character 0 or more ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("B.*d", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
     
 # ====================== + character 1 or more ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("B.+d", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
     
 # ====================== ? character 0 or 1 ======================
-string = "Bangladesh"
-match = re.search("B.+d", string)
+""" string = "Bangladesh"
+match = re.search("B.+?d", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found") """
     
 
 # ====================== {n} character n times ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("B.{3}d", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found")"""
     
     
 # ====================== \w word ======================
-string = "Bangladesh"
+""" string = "Bangladesh"
 match = re.search("\w", string)
 if match:
     print(match.group())
 else:
-    print("Not found")
+    print("Not found")"""
     
 # ====================== \W not word ======================
 string = "Bangladesh"
-match = re.search("\W", string)
+match = re.search("\W", string) # space or special character
+if match:
+    print(match.group())
+else:
+    print("Not found")
+
+# ====================== \d digit ======================
+string = "Bangladesh"
+match = re.search("\d", string) # space or special character
+if match:
+    print(match.group())
+else:
+    print("Not found")
+
+# ====================== \D not digit ======================
+string = "Bangladesh"
+match = re.search("\D", string) # space or special character
+if match:
+    print(match.group())
+else:
+    print("Not found")
+
+# ====================== \s whitespace ======================
+string = "Bangladesh"
+match = re.search("\s", string) # space or special character
+if match:
+    print(match.group())
+else:
+    print("Not found")
+
+# ====================== \S not whitespace ======================
+string = "Bangladesh"
+match = re.search("\S", string) # space or special character
+if match:
+    print(match.group())
+else:
+    print("Not found")
+
+# ====================== [] ======================
+string = "Bangladesh"
+match = re.search("\S", string) # space or special character
 if match:
     print(match.group())
 else:
