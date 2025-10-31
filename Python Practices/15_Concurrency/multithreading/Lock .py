@@ -3,7 +3,11 @@
 # ===============================
 # Lock is a synchronization primitive that can be used to protect shared resources from concurrent access.
 # It helps avoid race conditions.
-
+# with lock: is a context manager that automatically acquires and releases the lock.
+# acquire() is a blocking call. It will block the thread until the lock is available.
+# that means if the lock is already held by another thread, the current thread will wait until the lock is released.
+# release() is a non-blocking call. It releases the lock.
+# that means it releases the lock and allows other threads to acquire it.
 import threading
 
 # ===============================
