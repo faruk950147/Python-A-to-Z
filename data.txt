@@ -1,3 +1,7 @@
-    This is a test file.
-    It has multiple lines.
-    Each line has different number of words.
+Monday: 33.0
+Tuesday: 33.0
+Wednesday: 33.0
+Thursday: 45.0
+Friday: 44.0
+Saturday: 55.0
+Sunday: 22.0
