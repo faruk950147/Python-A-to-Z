@@ -51,9 +51,15 @@ if __name__ == "__main__":
 # Condition is a more complex object that can be used to synchronize threads.
 # It is used to coordinate the actions of threads.
 
+condition = threading.Condition()
+
 # Semaphore
 # Semaphore is a more complex object that can be used to synchronize threads.
 # It is used to limit the number of threads that can access a resource.
 
+semaphore = threading.Semaphore(2)
+
 # Queue
 # Queue is a more complex object that can be used to transfer data between threads.
+
+queue = threading.Queue()
