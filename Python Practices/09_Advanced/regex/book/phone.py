@@ -1,20 +1,5 @@
+
 import re
-
-text = "+8801712345678"
-match = re.search(r"(\+?88)?01[3-9]\d{8}", text)
-
-if match:
-    phone = match.group()
-    if phone.startswith("+88"):
-        print(f"Valid BD phone (with +88): {phone}")
-    elif phone.startswith("01"):
-        print(f"Valid BD phone (without country code): {phone}")
-    else:
-        print("Invalid phone number")
-elif match == +999:
-    print(f"Valid BD phone (without country code): {match.group()}")    
-else:
-    print("Invalid phone number")
 
 # Country codes and names
 country_codes = {
