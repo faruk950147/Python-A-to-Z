@@ -23,7 +23,8 @@ import re
 # It returns a list of all non-overlapping matches of pattern in string, as a list of strings.
 pattern = r'(\w+land *)'
 string = "Bangladesh America Afghanistan Cambodia China Denmark New York New Lands Netherlands"
-matches = re.findall(pattern, string)
+# re.IGNORECASE ignores case sensitivity. and it is optional.flag
+matches = re.findall(pattern, string, re.IGNORECASE)
 print(matches)
 
 # =============================== re.search ===============================
@@ -34,13 +35,15 @@ pattern = r"(\w+a*)"
 string = "Bangladesh America Afghanistan Cambodia China Denmark"
 
 # 1. method
-if re.search(pattern, string):
+# re.IGNORECASE ignores case sensitivity. and it is optional.flag
+if re.search(pattern, string, re.IGNORECASE):
     print("Match found!")
 else:
     print("Match not found!")
     
 # 2. method
-match = re.search(pattern, string)
+# re.IGNORECASE ignores case sensitivity. and it is optional.flag
+match = re.search(pattern, string, re.IGNORECASE)
 if match:
     print(match.group()) # group () returns the part of the string where there is a match.
 else:
@@ -55,13 +58,15 @@ pattern = r"America"
 string = "America Bangladesh"
 
 # 1. method
-if re.match(pattern, string):
+# re.IGNORECASE ignores case sensitivity. and it is optional.flag
+if re.match(pattern, string, re.IGNORECASE):
     print("Match found!")
 else:
     print("Match not found!")
     
 # 2. method
-match = re.match(pattern, string)
+# re.IGNORECASE ignores case sensitivity. and it is optional.flag
+match = re.match(pattern, string, re.IGNORECASE)
 if match:
     print(match.group()) # group () returns the part of the string where there is a match.
 else:
