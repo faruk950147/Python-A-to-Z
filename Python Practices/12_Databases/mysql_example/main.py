@@ -9,9 +9,12 @@ try:
         password="",
         database="python_db"
     )
-
+    
     # Create a cursor object
     cursor = conn.cursor()
+    
+    # Create a database
+    cursor.execute("CREATE DATABASE IF NOT EXISTS python_db")
     
     # Create a table
     cursor.execute("""
