@@ -1,3 +1,5 @@
+Python Automation মানে হলো Python ব্যবহার করে যেকোনো রিপিটেটিভ (বারবার করতে হয় এমন)
+কাজ অটোমেটিকভাবে করানো—মানে মানুষ না করেও কম্পিউটার নিজে নিজে কাজ করে ফেলবে।
 Python Automation Roadmap (বাংলা ভার্সন)
 
 Level 1: Basic Preparation
