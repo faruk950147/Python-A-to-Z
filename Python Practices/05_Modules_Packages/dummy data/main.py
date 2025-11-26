@@ -1,0 +1,20 @@
+from faker import Faker
+
+fake = Faker()
+
+print(fake.name())
+print(fake.email())
+print(fake.address())
+print(fake.phone_number())
+print(fake.company())
+print(fake.text())
+print(fake.date())
+print(fake.time())
+print(fake.word())
+print(fake.words())
+print(fake.sentence())
+print(fake.sentences())
+print(fake.paragraph())
+print(fake.paragraphs())
+print(fake.text())
+print(fake.texts())
