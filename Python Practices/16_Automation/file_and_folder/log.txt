@@ -1,0 +1,7 @@
+2025-11-27 18:09:03.707926 - Created folder: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\MainFolder
+2025-11-27 18:09:03.710930 - Created folder: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles
+2025-11-27 18:09:03.727276 - Created folder: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\Archive
+2025-11-27 18:09:03.731138 - File created: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\MainFolder\example.txt
+2025-11-27 18:09:03.740327 - File moved to destination: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles
+2025-11-27 18:09:03.754082 - Organized example.txt into folder: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles\txt
+2025-11-27 18:09:03.757569 - Automation completed successfully.
