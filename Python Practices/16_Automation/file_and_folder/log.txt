@@ -5,3 +5,5 @@
 2025-11-27 18:09:03.740327 - File moved to destination: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles
 2025-11-27 18:09:03.754082 - Organized example.txt into folder: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles\txt
 2025-11-27 18:09:03.757569 - Automation completed successfully.
+2025-11-27 21:25:26.227417 - File created: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\MainFolder\example.txt
+2025-11-27 21:25:26.236844 - File moved to destination: L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\Python Practices\16_Automation\file_and_folder\ProcessedFiles
