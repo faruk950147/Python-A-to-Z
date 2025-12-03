@@ -163,6 +163,34 @@ while len(data) > 0:
 
 # condition_if_true if condition else condition_if_false
 
+# The syntax for Python’s ternary operator (one-line if-else) is:
+
+# result = value_if_true if condition else value_if_false
+
+# What each part means:
+
+# value_if_true → This comes before if. It is the value that will be used if the condition is True.
+
+# condition → This comes after if. It is the condition that Python checks.
+
+# value_if_false → This comes after else. It is the value that will be used if the condition is False.
+
+# Example:
+# a = 10
+# b = 20
+
+# result = a if a > b else b
+
+# Step by step:
+
+# a → Comes before if. Will be returned if the condition is True.
+
+# a > b → The condition to check (10 > 20 → False).
+
+# b → Comes after else. Will be returned if the condition is False.
+
+# So, “what comes before if” = the value you want if the condition is True.
+
 # 9. example
 a = 10
 b = 20
