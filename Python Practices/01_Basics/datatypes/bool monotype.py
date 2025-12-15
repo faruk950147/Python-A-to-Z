@@ -2,6 +2,14 @@
 # =================== Boolean ===================
 # boolean type is a binary type it has only two values
 # bool → True, False or 0, 1 none zero any other value is True
+# False, None, 0, "", ()
+print(bool(False)) # False
+print(bool(None)) # False
+print(bool(0)) # False
+print(bool("")) # False
+print(bool(())) # False
+print(bool([])) # False
+print(bool({})) # False
 
 
 
