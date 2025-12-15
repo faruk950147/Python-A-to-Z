@@ -7,28 +7,28 @@
 
 # =================== Boolean Example ===================
 is_active = True
-print(type(is_active)) # <class 'bool'>
-print(is_active) # True
+print(f"1 type: {type(is_active)}") # <class 'bool'>
+print(f"1 value: {is_active}") # True
 
 is_active = False
-print(type(is_active)) # <class 'bool'>
-print(is_active) # False
+print(f"2 type: {type(is_active)}") # <class 'bool'>
+print(f"2 value: {is_active}") # False
 
 is_active = 0
-print(type(is_active)) # <class 'bool'>
-print(is_active) # False
+print(f"3 type: {type(is_active)}") # <class 'bool'>
+print(f"3 value: {is_active}") # False
 
 is_active = 1
-print(type(is_active)) # <class 'bool'>
-print(is_active) # True
+print(f"4 type: {type(is_active)}") # <class 'bool'>
+print(f"4 value: {is_active}") # True
 
 is_active = 2
-print(type(is_active)) # <class 'bool'>
-print(is_active) # True
+print(f"5 type: {type(is_active)}") # <class 'bool'>
+print(f"5 value: {is_active}") # True
 
 is_active = 3
-print(type(is_active)) # <class 'bool'>
-print(is_active) # True
+print(f"6 type: {type(is_active)}") # <class 'bool'>
+print(f"6 value: {is_active}") # True
 
 # =================== NoneType ===================
 # NoneType type is a null type it has only one value
@@ -36,13 +36,13 @@ print(is_active) # True
 
 # =================== NoneType Example ===================
 name = None
-print(type(name)) # <class 'NoneType'>
-print(name) # None
+print(f"6 type: {type(name)}") # <class 'NoneType'>
+print(f"6 value: {name}") # None
 
 name = "John"
-print(type(name)) # <class 'str'>
-print(name) # John
+print(f"7 type: {type(name)}") # <class 'str'>
+print(f"7 value: {name}") # John
 
 name = 123
-print(type(name)) # <class 'int'>
-print(name) # 123
+print(f"8 type: {type(name)}") # <class 'int'>
+print(f"8 value: {name}") # 123
