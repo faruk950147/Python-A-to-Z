@@ -15,19 +15,19 @@ print(f"2 type: {type(is_active)}") # <class 'bool'>
 print(f"2 value: {is_active}") # False
 
 is_active = 0
-print(f"3 type: {type(is_active)}") # <class 'bool'>
+print(f"3 type: {type(is_active)}") # <class 'int'>
 print(f"3 value: {is_active}") # False
 
 is_active = 1
-print(f"4 type: {type(is_active)}") # <class 'bool'>
+print(f"4 type: {type(is_active)}") # <class 'int'>
 print(f"4 value: {is_active}") # True
 
 is_active = 2
-print(f"5 type: {type(is_active)}") # <class 'bool'>
+print(f"5 type: {type(is_active)}") # <class 'int'>
 print(f"5 value: {is_active}") # True
 
 is_active = 3
-print(f"6 type: {type(is_active)}") # <class 'bool'>
+print(f"6 type: {type(is_active)}") # <class 'int'>
 print(f"6 value: {is_active}") # True
 
 # =================== NoneType ===================
