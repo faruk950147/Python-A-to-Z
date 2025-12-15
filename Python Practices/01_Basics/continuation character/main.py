@@ -9,22 +9,24 @@ World"
 a = 2 + 3 + 4 + 5 + \
     6 + 7 + 8 + 9 + 10 \
     + 11 + 12 + 13 + 14 + 15
-print(a)
+print('a is:',a)
 
 # another example
 b = (3 * 4) + (5 * 6) + \
     (7 * 8) + (9 * 10) + \
     (11 * 12) + (13 * 14) + \
     (15 * 16)
-print(b)
+print('b is:',b)
 
 # another example
 str1 = "Hello, World!"
 str2 = "Hello, " + \
     "World!"
-print(str1 == str2)
+print('str1 is:',str1)
+print('str2 is:',str2)
+print('str1 == str2 is:',str1 == str2)
 
 # another example
 for i in \
     range(10):
-        print(i)
+        print('item',i)
