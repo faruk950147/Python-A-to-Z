@@ -6,3 +6,9 @@
 import math as m
 print(m.sqrt(16))
 print(m.ceil(16.5))
+
+
+# as _ said as Python-in "value not get/ just ignore" it is just meaning it is not important.
+
+
+# 👉 as _ = exists but not needed
