@@ -28,7 +28,7 @@ print("\n============================ 4. Set Add Functions =====================
 # ============================= 4. Set Add Functions =============================
 set1.add(4)                    # Single value add
 set2.update([5, 6])            # Multiple values add
-set3.update("def")             # String values add
+set3.update("def", "ghi")             # String values add
 set4.update(range(5, 8))       # Range values add
 set5.add(1)
 
@@ -45,7 +45,7 @@ set1.remove(4)         # if element not found error
 set2.discard(5)        # if element not found no error 
 set3.pop()             # random element remove 
 set4.clear()           # clear all elements
-set5.discard(1)
+set5.discard(1)        # if element not found no error 
 
 print("\nAfter Modify:")
 print("set1:", set1)
