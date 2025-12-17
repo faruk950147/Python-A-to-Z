@@ -11,11 +11,4 @@ def dynamic_last_element(fruits):
     return None
 
 
-"""
-fruits = [
-    "apple", "banana", "cherry", "Orange"
-]
-last = fruits[len(fruits) - 1]
-
-
-print(last)"""
+print(dynamic_last_element(["apple", "banana", "cherry", "Orange", "Mango", "Grape"]))
