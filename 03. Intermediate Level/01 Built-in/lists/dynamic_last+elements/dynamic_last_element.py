@@ -1,5 +1,7 @@
 def dynamic_last_element(fruits):
-    return fruits[len(fruits) - 1]
+    if len(fruits) > 0:
+        return fruits[len(fruits) - 1]
+    return None
 
 
 """
