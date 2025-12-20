@@ -1,23 +1,62 @@
-Variable Names
-A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
+"""
+================================
+    Python Variables - Notes
+================================
 
-Rules for Python variables:
+What is a Variable?
+------------------
+A variable is a container used to store data in memory.
 
-A variable name must start with a letter or the underscore character
-A variable name cannot start with a number
-A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
-Variable names are case-sensitive (age, Age and AGE are three different variables)
-A variable name cannot be any of the Python keywords.
+Example:
+    name = "Faruk"
+    age = 20
 
-1. Camel Case
-    - myVariableName
-    - myVariableName
-    - myVariableName
-2. Snake Case
+------------------
+Variable Naming Rules
+------------------
+
+1. Variable name must start with a letter or underscore (_)
+    - name
+    - _userName
+
+2. Variable name cannot start with a number
+    - user1   ✔
+    - 1user   ✘
+
+3. Variable name can contain only letters, numbers, and underscores
+    - total_marks   ✔
+    - total-marks   ✘
+
+4. Variable names are case-sensitive
+    - age ≠ Age ≠ AGE
+
+5. Python keywords cannot be used as variable names
+    - class   ✘
+    - for     ✘
+    - if      ✘
+
+------------------
+Variable Naming Conventions
+------------------
+
+1. Snake Case (Most Recommended in Python)
     - my_variable_name
-    - my_variable_name
-    - my_variable_name
-3. Pascal Case
+    - total_price
+    - user_email
+
+2. Camel Case (Less common, sometimes used)
+    - myVariableName
+    - totalPrice
+
+3. Pascal Case (Used for Class Names)
     - MyVariableName
-    - MyVariableName
-    - MyVariableName
+    - StudentProfile
+
+------------------
+Best Practices
+------------------
+- Always use snake_case for variables
+- Use meaningful variable names
+- Use PascalCase for class names
+- Avoid single-letter variable names except in loops
+"""
