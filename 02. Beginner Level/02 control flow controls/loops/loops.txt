@@ -7,6 +7,26 @@ Loops are a fundamental concept in programming that let you repeat a set of inst
 
 In Python, there are mainly two types of loops:
 
+Loop Rules (Very Important)
+
+Rule 1
+A loop starts with an initial value.
+
+Rule 2
+The condition is checked before every iteration.
+
+Rule 3
+If the condition is true, the loop body executes.
+
+Rule 4
+After executing the loop body, the update (increment/decrement) happens.
+
+Rule 5
+If the condition becomes false, the loop stops.
+
+Rule 6 (Interview Line ⭐)
+A loop continues to run as long as its condition remains true
+
 1. for loop
 
 A for loop is used to iterate over a sequence like a list, tuple, string, or range.

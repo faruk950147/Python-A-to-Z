@@ -1,5 +1,24 @@
 
 # 1. for loop
+# Loop Rules (Very Important)
+#
+# Rule 1
+# A loop starts with an initial value.
+#
+# Rule 2
+# The condition is checked before every iteration.
+#
+# Rule 3
+# If the condition is true, the loop body executes.
+#
+# Rule 4
+# After executing the loop body, the update (increment/decrement) happens.
+#
+# Rule 5
+# If the condition becomes false, the loop stops.
+#
+# Rule 6 (Interview Line ⭐)
+# A loop continues to run as long as its condition remains true
 
 """
              ┌───────────────┐
