@@ -8,7 +8,7 @@ class AuthApp:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Login System")
+        self.root.title("Auth System")
         self.root.geometry("300x300")
 
         self.conn = sqlite3.connect("users.db")
