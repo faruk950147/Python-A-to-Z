@@ -20,42 +20,54 @@ x = memoryview(bytes(5))             | memoryview
 
 # String
 x = str("Hello World")
-
+# output: Hello World
 # Integer
 x = int(20)
-
+# output: 20
 # Float
 x = float(20.5)
+# output: 20.5
 
 # Complex
 x = complex(1j)
+# output: 1j
 
 # List
 x = list(("apple", "banana", "cherry"))
+# output: ['apple', 'banana', 'cherry']
 
 # Tuple
 x = tuple(("apple", "banana", "cherry"))
+# output: ('apple', 'banana', 'cherry')
 
 # Range
 x = range(6)
+# output: range(0, 6)
 
 # Dictionary
 x = dict(name="John", age=36)
+# output: {'name': 'John', 'age': 36}
 
 # Set
 x = set(("apple", "banana", "cherry"))
+# output: {'banana', 'cherry', 'apple'}
 
 # Frozenset
 x = frozenset(("apple", "banana", "cherry"))
+# output: frozenset({'banana', 'cherry', 'apple'})
 
 # Boolean
 x = bool(5)
+# output: True
 
 # Bytes
 x = bytes(5)
+# output: b'\x00\x00\x00\x00\x00'
 
 # Bytearray
 x = bytearray(5)
+# output: bytearray(b'\x00\x00\x00\x00\x00')
 
 # Memoryview
 x = memoryview(bytes(5))
+# output: <memory at 0x...>
