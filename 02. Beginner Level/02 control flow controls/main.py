@@ -12,6 +12,3 @@ while (n := len(numbers)) > 0:
 squares = [x**2 for x in range(10) if (y := x**2) > 20]
 print(squares)
 
-# Another walrus example: reading input in a condition
-while (line := input("Enter a line (or 'quit' to exit): ")) != "quit":
-    print(f"You entered: {line}")
