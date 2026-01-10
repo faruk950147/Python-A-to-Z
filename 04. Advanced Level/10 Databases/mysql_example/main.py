@@ -22,18 +22,22 @@ try:
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(255) NOT NULL UNIQUE,
             email VARCHAR(255) NOT NULL UNIQUE,
-            roll INT NOT NULL UNIQUE
+            roll INT NOT NULL UNIQUE,
+            country VARCHAR(255) NULL
         )
     """)
 
     # Insert data
     cursor.execute("""
-        INSERT IGNORE INTO users (name, email, roll)
+        INSERT IGNORE INTO users (name, email, roll, country)
         VALUES 
-            ('John Doe', 'john@example.com', 101),
-            ('Jane Doe', 'jane@example.com', 102),
-            ('Bob Smith', 'bob@example.com', 103),
-            ('Alice Johnson', 'alice@example.com', 104)
+            ('Faruk', 'faruk@example.com', 101, 'Bangladesh'),
+            ('Ahmed', 'ahmed@example.com', 102, 'Bangladesh'),
+            ('Jay', 'jay@example.com', 103, 'India'),
+            ('Malin', 'malin@example.com', 104, 'India'),
+            ('Charlie Brown', 'charlie@example.com', 105, 'Germany'),
+            ('Diana Prince', 'diana@example.com', 106, 'France'),
+            ('Eve Wilson', 'eve@example.com', 107, 'Japan')
     """)
 
     # Commit the transaction
