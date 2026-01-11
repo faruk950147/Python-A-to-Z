@@ -34,7 +34,7 @@ try:
             ('Faruk', 'faruk@example.com', 101, 'Bangladesh'),
             ('Ahmed', 'ahmed@example.com', 102, 'Bangladesh'),
             ('Jay', 'jay@example.com', 103, 'India'),
-            ('Malin', 'malin@example.com', 104, 'India'),
+            ('Mina', 'mina@example.com', 104, 'India'),
             ('Charlie Brown', 'charlie@example.com', 105, 'Germany'),
             ('Diana Prince', 'diana@example.com', 106, 'France'),
             ('Eve Wilson', 'eve@example.com', 107, 'Japan')
