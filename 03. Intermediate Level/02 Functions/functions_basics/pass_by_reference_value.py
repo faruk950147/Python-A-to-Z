@@ -19,6 +19,14 @@
 #   - Immutable objects (int, str, tuple) behave like pass by value.
 #   - Mutable objects (list, dict, set) behave like pass by reference.
 
+# | Object Type | Behaviour                |
+# | ----------- | ------------------------ |
+# | int, float  | Pass by value works      |
+# | str, tuple  | Pass by value works      |
+# | list, dict  | Pass by reference works  |
+# | set         | Pass by reference works  |
+
+
 # 2. Immutable Objects Example (Behaves like pass by value)
 def modify_number(x):
     x = x + 1
