@@ -14,8 +14,6 @@
 # 6. Decorator function
 
 
-# 1. First-class function
-
 
 # 1. First-class function
 def square(x):
