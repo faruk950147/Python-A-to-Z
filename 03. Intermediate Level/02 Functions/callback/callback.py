@@ -2,6 +2,14 @@
 # callback function is a function that is passed as an argument
 # to another function and is executed inside that function.
 
+# Callback function হলো এমন একটি function, যেটাকে argument হিসেবে অন্য একটি function-এর মধ্যে পাঠানো হয়,
+# এবং ওই function-এর ভিতরেই call (execute) করা হয়।
+
+# সহজ ভাষায়
+
+# একটি function আরেকটি function-কে বলে দেয়:
+
+# “আমার কাজ শেষ হলে তুমি এই functionটা চালাবে।”
 from functools import reduce
 # Example: callback function
 def simple(a, b, callback):
