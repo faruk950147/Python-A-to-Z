@@ -17,6 +17,25 @@ if __name__ == "__main__":
 """
 # 2. Using property 
 class Employee:
+    """ 
+    প্রশ্ন: কেন দুইবার salary নাম ব্যবহার করা হয়েছে?
+
+    উত্তর:
+
+    Python property mechanics এর কারণে
+
+    প্রথমে @property দিয়ে salary নামে getter function বানানো হয়েছে।
+
+    এরপর @salary.setter দিয়ে উই একই নাম ব্যবহার করে setter attach করি।
+
+    এটা Python-এর convention: getter এবং setter এর নাম একই হতে হবে, কারণ তারা একই property কে handle করছে।
+
+    Getter = "আমি কীভাবে value পড়ব"
+
+    Setter = "আমি কীভাবে value লিখব"
+
+    দুটোই salary property এর অংশ → তাই নাম একই রাখা হয়।
+    """
     def __init__(self, name, salary):
         self.name = name
         self._salary = salary  # "_" thats means indicate it's "protected" variable
