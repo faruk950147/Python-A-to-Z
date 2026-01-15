@@ -1,93 +1,53 @@
-Got it. Let me explain the difference between Higher-Order Function and Callback Function in English with clear examples.
-# ============================= 0. Higher-Order Function (HOF) =======================================
-একটা ফাংশন যদি অন্য ফাংশনের উপর কাজ করতে পারে (যেমন: তাকে argument হিসেবে নেয় বা return করে), তখন সেই ফাংশনকে বলা হয় Higher-Order Function।
-Higher Order Function is a function that takes another function as an argument, OR returns another function as a result.
+"""
+============================= What is Higher-Order Function ==============================
+A higher-order function is a function that:
+- Takes one or more functions as arguments
+- OR returns another function as a result
 
-If a function accepts another function as an argument → it’s a Higher-Order Function.
+callback function is a function that is passed as an argument
+to another function and is executed inside that function.
 
-If a function returns another function → it’s also a Higher-Order Function.
+Callback Function
 
-Example:
+Callback function হলো এমন একটি function,
+যেটাকে argument হিসেবে অন্য একটি function-এর মধ্যে পাঠানো হয়
+এবং ওই function-এর ভিতরেই call (execute) করা হয়।
 
-def higher_order(func):   # takes another function
-    print("Inside HOF")
-    func()   # calling the function
-
-def say_hello():
-    print("Hello!")
-
-higher_order(say_hello)
-
-
-# ============================= 1. Function as Argument (pass) =======================================
-def higher_order(func, a, b):   # takes function + args
-    return func(a, b)           # calls the function
-
-def add(x, y):
-    return x + y
-
-def mul(x, y):
-    return x * y
-
-print(higher_order(add, 10, 20))   # 30
-print(higher_order(mul, 5, 6))     # 30
-
-# ============================= 2. Function Return =======================================
-def higher_order(op):     # takes a string
-    def add(x, y):
-        return x + y
-
-    def mul(x, y):
-        return x * y
-
-    if op == "add":
-        return add        # returning function (not calling)
-    else:
-        return mul
-
-# Getting functions
-f1 = higher_order("add")   # f1 = add
-f2 = higher_order("mul")   # f2 = mul
-
-print(f1(10, 20))   # 30
-print(f2(5, 6))     # 30
+সহজ ভাষায়
+একটি function আরেকটি function-কে বলে দেয়—
+"আমার কাজ শেষ হলে তুমি এই functionটা চালাবে।"
 
 
-# Here, higher_order is a Higher-Order Function.
+Higher Order Function
 
-# ============================= 3. Callback Function =======================================
-Callback মানে হলো — একটা ফাংশনকে আরেকটা ফাংশনের argument হিসেবে পাঠানো, যাতে ওই ফাংশন তার কাজ শেষ হওয়ার পর ওই দেওয়া ফাংশনটাকে আবার call করে।
+Higher Order Function হলো এমন একটি function,
+যেটা অন্য একটি function-কে argument হিসেবে নেয়
+অথবা একটি function return করে।
 
-A function that is passed as an argument to another function (HOF) and is later executed (called back).
+সহজ ভাষায়
+যে function, function নিয়ে কাজ করে
+সেটাই Higher Order Function।
 
-In the above example:
 
-higher_order = Higher-Order Function
+Callback Function vs Higher Order Function
 
-say_hello = Callback Function (because it is passed and executed later)
+| Callback Function                         | Higher Order Function                          |
+| ----------------------------------------- | ---------------------------------------------- |
+| যেই function-কে argument হিসেবে পাঠানো হয় | যেই function argument হিসেবে অন্য function নেয় |
+| পাঠানো function                           | নেওয়া function                                 |
+| Higher Order function-এর ভিতরে চলে        | Callback function-কে call করে                  |
+| Example: add()                            | Example: calculate()                           |
 
-Key Difference
-Concept	Higher-Order Function (HOF)	Callback Function
-Definition	A function that accepts another function as an argument or returns a function	A function that is passed as an argument to a HOF and executed later
-Role	Caller (controls execution)	Callee (gets executed)
-Example	doTask("Learning JS", done) → doTask is HOF	done is callback function
+simple() হলো Higher Order Function
+কারণ:
 
-Easy Way to Remember
+এটা অন্য একটি function (callback) কে argument হিসেবে নিচ্ছে
 
-HOF = The function that takes/returns another function.
+তারপর সেই function-কে call করছে
+add, sub, mul, div — এগুলো সবই Callback Function
+কারণ:
 
-Callback = The function that is passed to HOF to be executed.
+এগুলোকে simple() function-এর মধ্যে argument হিসেবে পাঠানো হয়েছে
 
-def do_task(task, callback):   # HOF (takes another function)
-    print("Doing:", task)
-    callback()   # calling the callback
-
-def done():
-    print("Task finished!")
-
-def notify():
-    print("Sending notification...")
-
-# Using different callback functions
-do_task("Learning Python", done)
-do_task("Completing Homework", notify)
+simple() এর ভিতরে এগুলো call (execute) হচ্ছে 
+"""
