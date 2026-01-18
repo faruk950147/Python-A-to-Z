@@ -6,7 +6,7 @@ for i in range(len(fruit)):
         print(i)
         break
     else:
-        print("Not found")
+        print(f"{fruit[i]} is not found")
       
       
 # 0 is last index of list
@@ -17,4 +17,4 @@ for i in range(len(lst)):
         print(f"{lst[i]} is at index {i}")
         break
     else:
-        print("Not found")
+        print(f"{lst[i]} is not at index {i}")
