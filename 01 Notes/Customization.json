@@ -14,7 +14,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "terminal.integrated.profiles.windows": {
-    "PowerShell": { "source": "PowerShell", "icon": "terminal-powershell" },
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
     "Command Prompt": {
       "path": [
         "${env:windir}\\Sysnative\\cmd.exe",
@@ -23,10 +26,15 @@
       "args": [],
       "icon": "terminal-cmd"
     },
-    "Git Bash": { "source": "Git Bash" },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
     "Cmder": {
       "path": "C:\\Windows\\System32\\cmd.exe",
-      "args": ["/K", "C:\\cmder\\vendor\\bin\\vscode_init.cmd"]
+      "args": [
+        "/K",
+        "C:\\cmder\\vendor\\bin\\vscode_init.cmd"
+      ]
     }
   },
   "terminal.integrated.defaultProfile.windows": "Cmder",
@@ -34,7 +42,9 @@
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": false,
   "editor.largeFileOptimizations": false,
-  "workbench.editorAssociations": { "*.jar": "default" },
+  "workbench.editorAssociations": {
+    "*.jar": "default"
+  },
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -50,16 +60,18 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "editor.fontSize": 21,
-  "cSpell.userWords": ["Faruk"],
+  "cSpell.userWords": [
+    "Faruk"
+  ],
   "workbench.colorTheme": "Shades of Purple",
   "workbench.colorCustomizations": {
-    "editor.foreground": "#fff", // Editor font color
-    "editor.background": "#2e2e4a", //Editor background color
-    "sideBar.background": "#2e2e4a", // Background of sidebar
-    "sideBar.foreground": "#fff", // Font color of sidebar
-    "sideBar.border": "#2e2e4a", // Border color of sidebar
-    "sideBarTitle.foreground": "#2e2e4a", // Sidebar-of section title-color
-    "sideBarSectionHeader.background": "#2e2e4a" // Section header-color
+    "editor.foreground": "#fff",
+    "editor.background": "#2e2e4a",
+    "sideBar.background": "#2e2e4a",
+    "sideBar.foreground": "#fff",
+    "sideBar.border": "#2e2e4a",
+    "sideBarTitle.foreground": "#2e2e4a",
+    "sideBarSectionHeader.background": "#2e2e4a"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#A3CB38",
