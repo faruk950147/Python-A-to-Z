@@ -1,7 +1,7 @@
 Python keyword = special reserved words in Python.
 
-👉 You cannot use them as variable names, function names, or identifiers.
-👉 They have special meaning in Python language.
+ You cannot use them as variable names, function names, or identifiers.
+ They have special meaning in Python language.
 
 Example:
 import keyword
