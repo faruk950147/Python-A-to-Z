@@ -25,6 +25,9 @@ x = int(x)
 y = int(y)
 print("x + y =", x + y)
 
+# map is a higher-order function that applies a given function to each item of an iterable (list, tuple etc.)
+# and returns a list of the results
+
 # multiple input function in one line
 # input function get input from user it's get two input 
 # return string and convert to integer
