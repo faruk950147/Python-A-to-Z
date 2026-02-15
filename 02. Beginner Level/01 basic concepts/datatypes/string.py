@@ -29,6 +29,9 @@ print(single_quoted[-4]) # e
 print(single_quoted[-5]) # H
 
 # ==================== substring ===================
+# H   e   l   l   o
+# 0   1   2   3   4
+
 substring = single_quoted[0:2]
 print(substring) # He
 
