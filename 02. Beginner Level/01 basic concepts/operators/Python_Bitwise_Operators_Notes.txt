@@ -1,0 +1,63 @@
+============================== PYTHON BITWISE OPERATORS NOTES
+==============================
+
+1) Binary Basics
+Right shift means divide by 2.
+Left shift means multiply by 2.
+
+Binary numbers use only 0 and 1.
+
+Place values (from right): 2^0 = 1 2^1 = 2 2^2 = 4 2^3 = 8 2^4 = 16
+
+Example: 100 (binary) = 1×4 + 0×2 + 0×1 = 4 110 (binary) = 1×4 + 1×2 +
+0×1 = 6 1100 (binary) = 8 + 4 = 12
+
+2) Right Shift (>>)
+
+Rule: a >> n = a / (2^n)
+
+Example: 8 >> 1 = 4 8 >> 2 = 2 8 >> 3 = 1
+
+Right shift means divide by 2.
+
+3) Left Shift (<<)
+
+Rule: a << n = a × (2^n)
+
+Example: 4 << 1 = 8 4 << 2 = 16 4 << 3 = 32
+
+Left shift means multiply by 2.
+
+4) Bitwise AND (&)
+
+Rule: 1 & 1 = 1 Otherwise = 0
+
+Example: 12 = 1100 10 = 1010
+
+1100 1010 —- 1000 = 8
+
+5) Bitwise OR (|)
+
+Rule: If any one bit is 1 → result 1
+
+1100 1010 —- 1110 = 14
+
+6) Bitwise XOR (^)
+
+Rule: Different bits → 1 Same bits → 0
+
+1100 1010 —- 0110 = 6
+
+7) Bitwise NOT (~)
+
+Rule in Python: ~n = -(n + 1)
+
+Example: ~12 = -13 ~10 = -11
+
+SHORT SUMMARY
+
+    Divide by 2 << Multiply by 2 & Both 1 হলে 1 | Any 1 হলে 1 ^
+    Different হলে 1 ~ -(n+1)
+
+============================== END OF NOTES
+==============================
