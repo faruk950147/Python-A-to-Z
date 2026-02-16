@@ -126,9 +126,9 @@ display(print_sum, 2, 3)  # output: 5
 display(print_product, 2, 3)  # output: 6
 
 # 6. Function as return value
-def make_multiplier(n):
-    def multiplier(x):
-        return x * n
+def make_multiplier(x):
+    def multiplier(y):
+        return x * y
     return multiplier
 
 times3 = make_multiplier(3)
