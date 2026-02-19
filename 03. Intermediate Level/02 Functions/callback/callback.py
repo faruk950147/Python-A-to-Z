@@ -4,13 +4,14 @@ to another function and is executed inside that function.
 
 Callback Function
 
-Callback function হলো এমন একটি function,
-যেটাকে argument হিসেবে অন্য একটি function-এর মধ্যে পাঠানো হয়
-এবং ওই function-এর ভিতরেই call (execute) করা হয়।
+Callback Function হলো এমন একটি function যেটাকে
+অন্য একটি function-এর মধ্যে argument হিসেবে পাঠানো হয়
+এবং সেই function-এর ভিতরে call করা হয়।
 
 সহজ ভাষায়
-একটি function আরেকটি function-কে বলে দেয়—
-"আমার কাজ শেষ হলে তুমি এই functionটা চালাবে।"
+একটা function আরেকটা function-কে বলে—
+
+“আমার কাজের সময় তুমি এই functionটা চালাও।”
 
 
 Higher Order Function
