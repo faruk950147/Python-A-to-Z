@@ -15,7 +15,7 @@
 
 
 
-# 1. First-class function
+# ============================= 1. First-class function =============================
 def square(x):
     return x * x
 
@@ -67,7 +67,7 @@ print(operations["sub"](10, 5))
 print(operations["mul"](10, 5))
 
 
-# 2. Pure function
+# ============================= 2. Pure function =============================
 # A pure function is one that:
 
 # Always gives the same output for the same input
