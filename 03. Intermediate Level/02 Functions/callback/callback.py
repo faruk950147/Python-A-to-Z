@@ -39,7 +39,7 @@ simple() হলো Higher Order Function
 এটা অন্য একটি function (callback) কে argument হিসেবে নিচ্ছে
 
 তারপর সেই function-কে call করছে
-👉 add, sub, mul, div — এগুলো সবই Callback Function
+add, sub, mul, div — এগুলো সবই Callback Function
 কারণ:
 
 এগুলোকে simple() function-এর মধ্যে argument হিসেবে পাঠানো হয়েছে
