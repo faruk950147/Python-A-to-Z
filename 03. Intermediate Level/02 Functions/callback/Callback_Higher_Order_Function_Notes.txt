@@ -7,13 +7,15 @@ function-এর মধ্যে argument হিসেবে পাঠানো �
 execute করা হয়।
 
 Simple Explanation: একটি function আরেকটি function-কে বলে — “আমার কাজের
-সময় তুমি এই functionটা চালাবে।”
+সময় তুমি এই functionটা চালাবে।”
 
 Example:
 
-def simple(a, b, callback): return callback(a, b)
+def simple(a, b, callback): 
+    return callback(a, b)
 
-def add(a, b): return a + b
+def add(a, b): 
+    return a + b
 
 print(simple(10, 20, add)) # 30
 
@@ -29,7 +31,8 @@ Order Function।
 
 Example:
 
-def simple(a, b, callback): return callback(a, b)
+def simple(a, b, callback): 
+    return callback(a, b)
 
 এখানে simple() হলো Higher Order Function।
 
@@ -45,8 +48,8 @@ return করতে পারে
 
 numbers = [1, 2, 3, 4]
 
-result = list(map(lambda x: x * 2, numbers)) print(result) # [2, 4, 6,
-8]
+result = list(map(lambda x: x * 2, numbers)) 
+print(result) # [2, 4, 6, 8]
 
 এখানে: map() → Higher Order Function lambda → Callback Function
 
