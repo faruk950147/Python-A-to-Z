@@ -25,22 +25,34 @@ np.array is safe
 import time
 import numpy as np
 
-# 10 lakh data create 
-data = list(range(1000000))
+# 10 million data create 
+data = range(10000000)
 
 # Python loop
+# start = time.time()
+# total = 0
+# for x in data:
+#     total += x
+# end = time.time()
+# print("Python loop sum:", total)
+# print("Python loop time:", end - start, "seconds")
+
 start = time.time()
-total = 0
-for x in data:
-    total += x
+total = sum(data)
 end = time.time()
-print("Python loop sum:", total)
-print("Python loop time:", end - start, "seconds")
+print("Python sum:", total)
+print("Python sum time:", end - start, "seconds")
 
 # NumPy sum
-arr = np.array(data)
+# arr = np.array(data)
+# start = time.time()
+# total = np.sum(arr)
+# end = time.time()
+# print("NumPy sum:", total)
+# print("NumPy sum time:", end - start, "seconds")
+
 start = time.time()
-total = np.sum(arr)
+total = np.sum(data)
 end = time.time()
 print("NumPy sum:", total)
 print("NumPy sum time:", end - start, "seconds")
