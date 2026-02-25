@@ -94,7 +94,7 @@ print(d.ndim)
 arr = np.array([1, 2, 3, 4], ndmin=5)
 print(arr)
 print('number of dimensions :', arr.ndim)
-"""
+
 
 # accessing 1D array elements
 arr = np.array([1, 2, 3, 4])
@@ -124,5 +124,7 @@ arr = np.array(
 # first row, first column, first element
 print("arr[0, 0, 0]:", arr[0, 0, 0])
 
-
-
+# reshape thats means old data to new shape
+x = np.arange(24).reshape(2, 3, 4)
+print(x)
+"""
