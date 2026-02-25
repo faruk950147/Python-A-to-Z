@@ -24,8 +24,10 @@ np.array is safe
 """
 import time
 import numpy as np
-
+import sys
+# ======================== sum of list python way ========================
 # 10 million data create 
+
 data = range(10000000)
 
 # Python loop
@@ -37,13 +39,13 @@ data = range(10000000)
 # print("Python loop sum:", total)
 # print("Python loop time:", end - start, "seconds")
 
-start = time.time()
-total = sum(data)
-end = time.time()
-print("Python sum:", total)
-print("Python sum time:", end - start, "seconds")
+# start = time.time()
+# total = sum(data)
+# end = time.time()
+# print("Python sum:", total)
+# print("Python sum time:", end - start, "seconds")
 
-# NumPy sum
+# ======================== sum of list numpy way ========================
 # arr = np.array(data)
 # start = time.time()
 # total = np.sum(arr)
@@ -51,8 +53,28 @@ print("Python sum time:", end - start, "seconds")
 # print("NumPy sum:", total)
 # print("NumPy sum time:", end - start, "seconds")
 
-start = time.time()
-total = np.sum(data)
-end = time.time()
-print("NumPy sum:", total)
-print("NumPy sum time:", end - start, "seconds")
+# start = time.time()
+# total = np.sum(data)
+# end = time.time()
+# print("NumPy sum:", total)
+# print("NumPy sum time:", end - start, "seconds")
+
+
+# ======================== sum of list numpy way ========================
+start_time = time.time()
+print(f"Time taken to create list with 10 million elements: {start_time}")
+lst = [1,2,3,4,5,6,7,8,9,10] * 1000000
+print("List length:", len(lst))
+print("List memory usage:", sys.getsizeof(lst), "bytes")
+end_time = time.time()
+print(f"Time taken to create list: {end_time - start_time} seconds")
+
+# ======================== sum of list numpy way ========================
+start_time = time.time()
+print(f"Time taken to create numpy array with 10 million elements: {start_time}")
+arr = np.array([1,2,3,4,5,6,7,8,9,10] * 1000000)
+print("Array length:", len(arr))
+print("Array memory usage:", arr.nbytes, "bytes")
+end_time = time.time()
+print(f"Time taken to create numpy array: {end_time - start_time} seconds")
+

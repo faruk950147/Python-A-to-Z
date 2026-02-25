@@ -1,0 +1,290 @@
+NumPy – All Important Methods & Functions (Beginner → Advanced)
+
+NumPy হলো Python-এর সবচেয়ে জনপ্রিয় numerical computing লাইব্রেরি। নিচে আমি গুরুত্বপূর্ণ সব methods ও functions category অনুযায়ী সাজিয়ে দিলাম (A–Z style summary) 👇
+
+1. Array Creation Methods
+import numpy as np
+Basic Creation
+np.array()
+np.zeros()
+np.ones()
+np.empty()
+np.full()
+Range Based
+np.arange()
+np.linspace()
+np.logspace()
+Identity & Diagonal
+np.eye()
+np.identity()
+np.diag()
+Random Array
+np.random.rand()
+np.random.randn()
+np.random.randint()
+np.random.choice()
+np.random.shuffle()
+2. Array Attributes (Properties)
+arr.shape
+arr.ndim
+arr.size
+arr.dtype
+arr.itemsize
+3. Reshaping & Changing Shape
+arr.reshape()
+arr.flatten()
+arr.ravel()
+arr.resize()
+np.expand_dims()
+np.squeeze()
+np.transpose()
+arr.T
+4. Mathematical Operations
+Basic Math
+np.add()
+np.subtract()
+np.multiply()
+np.divide()
+np.power()
+np.mod()
+Rounding
+np.round()
+np.floor()
+np.ceil()
+Exponential & Log
+np.exp()
+np.log()
+np.log10()
+np.sqrt()
+5. Statistical Functions
+np.mean()
+np.median()
+np.std()
+np.var()
+np.min()
+np.max()
+np.sum()
+np.prod()
+np.argmin()
+np.argmax()
+np.percentile()
+6. Searching & Sorting
+np.sort()
+np.argsort()
+np.where()
+np.searchsorted()
+np.unique()
+7. Joining & Splitting Arrays
+Join
+np.concatenate()
+np.vstack()
+np.hstack()
+np.stack()
+np.column_stack()
+Split
+np.split()
+np.vsplit()
+np.hsplit()
+np.array_split()
+8. Linear Algebra (Very Important)
+np.dot()
+np.matmul()
+np.inner()
+np.outer()
+np.linalg.inv()
+np.linalg.det()
+np.linalg.eig()
+np.linalg.solve()
+np.linalg.norm()
+9. Broadcasting & Indexing
+arr[0]
+arr[:, 1]
+arr[1:5]
+arr[arr > 5]
+10. File Handling
+np.save()
+np.load()
+np.savetxt()
+np.loadtxt()
+11. Copy & View
+arr.copy()
+arr.view()
+12. Type Conversion
+arr.astype()
+Advanced Useful Functions
+np.clip()
+np.cumsum()
+np.cumprod()
+np.diff()
+np.intersect1d()
+np.union1d()
+np.isin()
+# Extra (Universal Functions - ufunc)
+np.sin()
+np.cos()
+np.tan()
+np.abs()
+np.sign()
+np.maximum()
+np.minimum()
+# Real Example
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+
+print("Mean:", np.mean(arr))
+print("Square:", np.square(arr))
+print("Sorted:", np.sort(arr))
+# Pro Tip (For You Programmer)
+
+তুমি যেহেতু ML শিখতে চাও, NumPy ভালোভাবে না জানলে 
+Pandas
+Matplotlib
+Scikit-learn
+Deep Learning
+
+কিছুই ভালোভাবে হবে না।
+
+যদি তুমি চাও, আমি তোমাকে NumPy Complete Roadmap + Practice Problems + Mini Project বানিয়ে দিতে পারি 🔥
+
+with descriopn
+NumPy – All Important Methods with Description (Beginner → Advanced)
+
+NumPy হলো Python-এর numerical computing লাইব্রেরি। এটি মূলত ndarray (N-dimensional array) ব্যবহার করে দ্রুত গণনা করতে সাহায্য করে।
+
+নিচে category অনুযায়ী গুরুত্বপূর্ণ methods + সংক্ষিপ্ত বর্ণনা দেওয়া হলো 👇
+
+1. Array Creation Methods
+Method	Description
+np.array()	Python list/tuple থেকে array তৈরি করে
+np.zeros(shape)	নির্দিষ্ট shape এর সবগুলো মান 0
+np.ones(shape)	সব মান 1
+np.empty(shape)	random/garbage value সহ array
+np.full(shape, value)	নির্দিষ্ট value দিয়ে পূর্ণ array
+np.arange(start, stop, step)	range অনুযায়ী array
+np.linspace(start, stop, num)	সমান দূরত্বে নির্দিষ্ট সংখ্যক মান
+np.logspace()	log scale এ মান তৈরি
+np.eye(n)	identity matrix
+np.identity(n)	identity matrix (same as eye)
+np.diag()	diagonal matrix তৈরি বা বের করা
+2. Array Attributes (Properties)
+Attribute	Description
+arr.shape	array এর dimension structure
+arr.ndim	কয় dimension
+arr.size	মোট element সংখ্যা
+arr.dtype	data type
+arr.itemsize	প্রতি element এর byte size
+3. Reshaping Methods
+Method	Description
+arr.reshape()	shape পরিবর্তন
+arr.flatten()	1D array বানায় (copy তৈরি করে)
+arr.ravel()	1D বানায় (view হতে পারে)
+arr.resize()	shape inplace পরিবর্তন
+np.expand_dims()	নতুন axis যোগ করে
+np.squeeze()	extra axis সরায়
+arr.T	transpose
+np.transpose()	row ↔ column পরিবর্তন
+4. Mathematical Operations
+Basic Arithmetic
+Method	Description
+np.add()	যোগ
+np.subtract()	বিয়োগ
+np.multiply()	গুণ
+np.divide()	ভাগ
+np.power()	ঘাত
+np.mod()	ভাগশেষ
+Rounding
+Method	Description
+np.round()	রাউন্ড
+np.floor()	নিচের পূর্ণসংখ্যা
+np.ceil()	উপরের পূর্ণসংখ্যা
+Log & Exponential
+Method	Description
+np.exp()	e^x
+np.log()	natural log
+np.log10()	log base 10
+np.sqrt()	square root
+5. Statistical Functions
+Method	Description
+np.mean()	গড়
+np.median()	মধ্যম মান
+np.std()	standard deviation
+np.var()	variance
+np.min()	সর্বনিম্ন
+np.max()	সর্বোচ্চ
+np.sum()	যোগফল
+np.prod()	গুণফল
+np.argmin()	সর্বনিম্ন index
+np.argmax()	সর্বোচ্চ index
+np.percentile()	percentile নির্ণয়
+6. Searching & Sorting
+Method	Description
+np.sort()	sort করে
+np.argsort()	sort অনুযায়ী index
+np.where()	condition অনুযায়ী index
+np.searchsorted()	কোথায় insert হবে তা বের করে
+np.unique()	duplicate বাদ দেয়
+7. Joining & Splitting
+Join
+Method	Description
+np.concatenate()	array যুক্ত করে
+np.vstack()	vertical join
+np.hstack()	horizontal join
+np.stack()	নতুন axis এ join
+np.column_stack()	column wise join
+Split
+Method	Description
+np.split()	সমান ভাগ
+np.array_split()	অসমান ভাগও পারে
+np.vsplit()	vertical split
+np.hsplit()	horizontal split
+8. Linear Algebra (Machine Learning এর জন্য গুরুত্বপূর্ণ)
+Method	Description
+np.dot()	dot product
+np.matmul()	matrix multiplication
+np.inner()	inner product
+np.outer()	outer product
+np.linalg.inv()	inverse matrix
+np.linalg.det()	determinant
+np.linalg.eig()	eigenvalues & eigenvectors
+np.linalg.solve()	linear equation solve
+np.linalg.norm()	vector length
+9. Boolean & Indexing
+Expression	Description
+arr[0]	প্রথম element
+arr[1:5]	slicing
+arr[:,1]	সব row, 2nd column
+arr[arr>5]	condition filtering
+11. File Handling
+Method	Description
+np.save()	binary file save
+np.load()	load
+np.savetxt()	text file save
+np.loadtxt()	text load
+12. Copy & Type Conversion
+Method	Description
+arr.copy()	deep copy
+arr.view()	shallow copy
+arr.astype()	type change
+12. Advanced Useful Methods
+Method	Description
+np.clip()	value limit
+np.cumsum()	cumulative sum
+np.cumprod()	cumulative product
+np.diff()	difference
+np.intersect1d()	common values
+np.union1d()	সব unique
+np.isin()	membership check
+np.sin()	sine
+np.cos()	cosine
+np.abs()	absolute
+np.maximum()	বড় মান নেয়
+np.minimum()	ছোট মান নেয়
+ছোট Example
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+
+print("Mean:", np.mean(arr))
+print("Reshape:", arr.reshape(5,1))
+print("Square:", np.power(arr,2))
