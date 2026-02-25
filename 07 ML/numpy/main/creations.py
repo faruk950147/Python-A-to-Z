@@ -109,10 +109,12 @@ print("arr[0, 0]:", arr[0, 0])
 # accessing 3D array elements
 arr = np.array(
     [
+        # layer 0
         [
             [1, 2, 3], 
             [4, 5, 6]
         ], 
+        # layer 1
         [
             [1, 2, 3], 
             [4, 5, 6]
