@@ -1,5 +1,5 @@
 """
-Numpy is a library for the Python programming language, 
+Numpy is a library for the Python programming language, it is mutable
 adding support for large, multi-dimensional arrays and matrices, 
 along with a large collection of high-level mathematical functions to operate on these arrays.
 """
