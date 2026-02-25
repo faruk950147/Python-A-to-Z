@@ -27,7 +27,7 @@ print(f"range of index arr[-5:-2]",arr[-5:-2])
 # dynamic indexing
 print(len(arr) - 1)
 print(arr[len(arr) - 1])
-"""
+print(dynamic_indexing([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 def dynamic_indexing(arr):
     # dynamic indexing using numpy
@@ -40,9 +40,9 @@ def dynamic_indexing(arr):
     if len(arr) > 0:
         return arr[len(arr) - 1]
     return None
-
 print(dynamic_indexing([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
-
-
+"""
+arr = np.ndarray(shape=(10,), dtype=int)
+print(arr)
