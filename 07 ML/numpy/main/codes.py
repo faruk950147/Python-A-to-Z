@@ -25,6 +25,9 @@ axis: 0 (down rows), 1 (across columns)
 # print(arr_2d[np.newaxis, :])
 
 # Convert to column vector
+# what does it mean? It means converting a 1D array to a 2D array with one column
+# what is vector? A vector is a mathematical object that has both magnitude (Magnitude means value) and direction
+# what is scalar? A scalar is a mathematical object that has only magnitude (magnitude means value)
 # what is column vector? A column vector is a matrix with one column and multiple rows
 # example = np.array([
 #     [1], 

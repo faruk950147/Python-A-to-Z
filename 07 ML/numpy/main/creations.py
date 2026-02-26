@@ -72,7 +72,12 @@ print(f"Time taken: {time.time() - start_time:.4f} seconds")
 # array with full of specific value
 print("\nTime taken to create an array with full of specific value using full()")
 start_time = time.time()
-arr = np.full(5, 10)
+arr = np.full(5, 10) # 5 elements with value 10
+print(arr)
+print(f"Time taken: {time.time() - start_time:.4f} seconds")
+
+start_time = time.time()
+arr = np.full([2, 4], 5) # 2 rows and 4 columns
 print(arr)
 print(f"Time taken: {time.time() - start_time:.4f} seconds")
 
@@ -128,3 +133,6 @@ print("arr[0, 0, 0]:", arr[0, 0, 0])
 x = np.arange(24).reshape(2, 3, 4)
 print(x)
 """
+# arr = np.array([1, 2, 3, 4], ndmin=5)
+# print(arr)
+# print('number of dimensions :', arr.ndim)
