@@ -11,3 +11,8 @@ print(f"Matrix Row 1 to 1 \n: {matrix[0:1]}")
 print(f"Matrix Row 1 to 2 \n: {matrix[0:2]}")
 print(f"Matrix Row 1 to 3 \n: {matrix[0:3]}")
 print(f"Matrix Row 1 to 2 and Column 1 to 3 \n: {matrix[0:2, 0:3]}")
+print(f"Matrix Row 2 to 3 and Column 2 to 3 \n: {matrix[1:, 1:]}")
+
+print("================== indexing ======================")
+ind = [0, 1]
+print(f"Matrix indexing {ind} \n: {matrix[ind]}")
