@@ -1,0 +1,183 @@
+Matplotlib – Beginner to Advanced Roadmap (Python)
+
+Matplotlib হলো Python-এর সবচেয়ে জনপ্রিয় data visualization library। তুমি যেহেতু Python জানো, তাই এটা শেখা তোমার জন্য অনেক সহজ হবে।
+
+আমি এখানে Beginner → Intermediate → Advanced → Project Level পুরো roadmap দিচ্ছি।
+
+Beginner Level
+Install & Basic Setup
+
+pip install matplotlib
+import matplotlib.pyplot as plt
+
+Simple Line Plot
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+
+plt.plot(x, y)
+plt.show()
+
+Output:
+x-axis = horizontal
+
+y-axis = vertical
+
+Add Title, Labels, Grid
+plt.plot(x, y)
+plt.title("Simple Line Chart")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.grid(True)
+plt.show()
+
+Marker & Line Style
+plt.plot(x, y, marker='o', linestyle='--')
+plt.show()
+
+Marker examples:
+
+'o'
+
+'*'
+
+'s'
+
+'x'
+
+Intermediate Level
+Bar Chart
+categories = ["A", "B", "C"]
+values = [5, 7, 3]
+
+plt.bar(categories, values)
+plt.title("Bar Chart")
+plt.show()
+
+Horizontal Bar
+plt.barh(categories, values)
+plt.show()
+
+Pie Chart
+sizes = [40, 30, 20, 10]
+labels = ["A", "B", "C", "D"]
+
+plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+plt.show()
+Scatter Plot is relation
+x = [1,2,3,4,5]
+y = [5,7,8,5,6]
+
+plt.scatter(x, y)
+plt.show()
+
+Multiple Lines
+plt.plot(x, y, label="Line 1")
+plt.plot(x, [3,4,5,6,7], label="Line 2")
+plt.legend()
+plt.show()
+
+Advanced Level
+Subplots
+plt.subplot(1,2,1)
+plt.plot(x, y)
+
+plt.subplot(1,2,2)
+plt.bar(categories, values)
+
+plt.show()
+
+Figure Size
+plt.figure(figsize=(8,5))
+plt.plot(x, y)
+plt.show()
+
+Histogram
+import numpy as np
+
+data = np.random.randn(1000)
+plt.hist(data, bins=30)
+plt.show()
+
+Custom Style
+plt.style.use("ggplot")
+plt.plot(x, y)
+plt.show()
+
+Save Chart as Image
+plt.plot(x, y)
+plt.savefig("chart.png")
+plt.show()
+
+Object-Oriented Approach (Professional Way)
+
+Professional coding এ এটা ব্যবহার করা হয়।
+
+fig, ax = plt.subplots()
+
+ax.plot(x, y)
+ax.set_title("OOP Style Plot")
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+
+plt.show()
+
+Real World Example (With Pandas)
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Month": ["Jan", "Feb", "Mar"],
+    "Sales": [100, 150, 120]
+}
+
+df = pd.DataFrame(data)
+df.plot(x="Month", y="Sales", kind="line")
+plt.show()
+
+Advanced Topics (Expert Level)
+
+তুমি এগুলো শিখলে Expert হয়ে যাবে 
+
+Animation (matplotlib.animation)
+
+3D Plot (mpl_toolkits.mplot3d)
+
+Twin Axis
+
+Heatmap (with seaborn)
+
+Interactive mode
+
+Custom colormap
+
+Financial chart
+
+Real-time data plotting
+
+Integration with Tkinter / PyQt
+
+Practice Projects (Important)
+
+তুমি এগুলো বানাতে পারো:
+
+Stock Price Visualizer
+
+Loan EMI Calculator Graph
+
+Student Result Analysis
+
+Weather Data Visualization
+
+Real-time CPU Monitor
+
+Learning Plan (7 Days)
+
+Day 1 → Line, Bar
+Day 2 → Pie, Scatter
+Day 3 → Subplot
+Day 4 → Histogram
+Day 5 → Pandas Integration
+Day 6 → OOP Style
+Day 7 → Mini Project
