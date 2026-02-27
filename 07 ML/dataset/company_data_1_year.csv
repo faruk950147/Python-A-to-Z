@@ -1,4 +1,4 @@
-Employee_ID,Employee_Name,Department,Position,Salary_Per_Month,Month,Sales_Amount,Bonus
+ID,Name,Department,Position,Salary,Month,Sales,Bonus
 EMP001,John Doe,Sales,Sales Executive,30000,January,121269,6063.45
 EMP002,Jane Smith,Marketing,Marketing Manager,45000,January,150659,6026.36
 EMP003,Michael Brown,IT,Software Engineer,50000,January,0,0.0
