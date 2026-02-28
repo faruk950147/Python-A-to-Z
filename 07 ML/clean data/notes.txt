@@ -1,0 +1,16 @@
+ML বা Data Analysis করলে নিচের কাজগুলো করতে পারো:
+
+Missing Value Handle
+df.isnull().sum()
+
+Quantity fill করতে পারো:
+
+df['Quantity'] = df['Quantity'].fillna(df['Quantity'].median())
+
+Name fill করতে পারো:
+
+df['Name'] = df['Name'].fillna("Unknown")
+Date Column Convert
+df['Ordered At'] = pd.to_datetime(df['Ordered At'])
+Check Total Correct কিনা
+(df['Quantity'] * df['Unit Price'] == df['Total']).sum()
