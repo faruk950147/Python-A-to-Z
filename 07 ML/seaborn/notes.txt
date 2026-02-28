@@ -1,0 +1,527 @@
+Seaborn Complete Notes (Exam + Interview Ready)
+Seaborn কী?
+
+Seaborn হলো Python-এর একটি statistical data visualization library
+এটি matplotlib এর উপর ভিত্তি করে তৈরি।
+
+ব্যবহার করা হয়:
+
+Data Analysis
+
+Exploratory Data Analysis (EDA)
+
+Machine Learning Visualization
+
+Correlation analysis
+
+Distribution analysis
+
+Installation
+pip install seaborn
+Import
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+Built-in Dataset
+
+Seaborn-এ কিছু ready dataset আছে:
+get_dataset_names()
+tips = sns.load_dataset("tips")
+iris = sns.load_dataset("iris")
+titanic = sns.load_dataset("titanic")
+
+Practice করার জন্য খুব useful
+
+Basic Plot Types
+Line Plot
+
+Trend দেখাতে ব্যবহার হয়
+
+sns.lineplot(x="total_bill", y="tip", data=tips)
+plt.show()
+Scatter Plot
+
+দুইটি numeric variable-এর relationship
+
+sns.scatterplot(x="total_bill", y="tip", data=tips)
+plt.show()
+Bar Plot
+
+Category অনুযায়ী average value
+
+sns.barplot(x="day", y="total_bill", data=tips)
+plt.show()
+Histogram
+
+Data distribution
+
+sns.histplot(tips["total_bill"], bins=10)
+plt.show()
+KDE Plot
+
+Smooth density curve
+
+sns.kdeplot(tips["total_bill"], fill=True)
+plt.show()
+Box Plot
+
+Median, Quartile, Outlier
+
+sns.boxplot(x="day", y="total_bill", data=tips)
+plt.show()
+Violin Plot
+
+Distribution + Density
+
+sns.violinplot(x="day", y="total_bill", data=tips)
+plt.show()
+Count Plot
+
+Category count দেখাতে
+
+sns.countplot(x="day", data=tips)
+plt.show()
+Important Parameters
+hue
+
+Category অনুযায়ী color আলাদা করে
+
+sns.scatterplot(x="total_bill", y="tip", hue="sex", data=tips)
+palette
+
+Color theme পরিবর্তন
+
+sns.barplot(x="day", y="total_bill", data=tips, palette="Set2")
+
+Popular palettes:
+
+Set1
+
+Set2
+
+coolwarm
+
+viridis
+
+pastel
+
+style & context
+sns.set_style("darkgrid")
+sns.set_context("talk")
+
+Styles:
+
+darkgrid
+
+whitegrid
+
+white
+
+dark
+
+ticks
+
+Advanced Plots
+Pairplot
+
+সব numeric column-এর relation একসাথে
+
+sns.pairplot(iris, hue="species")
+plt.show()
+Heatmap
+
+Correlation matrix visualization
+
+corr = tips.corr()
+sns.heatmap(corr, annot=True, cmap="coolwarm")
+plt.show()
+Jointplot
+
+Scatter + Histogram একসাথে
+
+sns.jointplot(x="total_bill", y="tip", data=tips)
+Regression Plot
+
+Trend line সহ relationship
+
+sns.regplot(x="total_bill", y="tip", data=tips)
+FacetGrid
+
+Category অনুযায়ী multiple subplot
+
+g = sns.FacetGrid(tips, col="time")
+g.map(sns.histplot, "total_bill")
+Multiple Plot in One Figure
+fig, axes = plt.subplots(1,2, figsize=(10,4))
+
+sns.boxplot(x="day", y="total_bill", data=tips, ax=axes[0])
+sns.violinplot(x="day", y="total_bill", data=tips, ax=axes[1])
+
+plt.show()
+Seaborn in Machine Learning
+Before Model Training:
+
+Distribution check (histplot)
+
+Outlier detection (boxplot)
+
+Correlation heatmap
+
+After Model Training:
+
+Regression line
+
+Confusion matrix heatmap
+
+Prediction vs Actual graph
+
+🔷 🔟 Seaborn vs Matplotlib
+Seaborn	Matplotlib
+Statistical plotting	Basic plotting
+Beautiful default style	Manual styling লাগে
+Pandas friendly	More coding লাগে
+🔷 1️⃣1️⃣ Common Errors
+
+❌ plt.show() দিতে ভুল
+❌ Column name ভুল
+❌ Dataset load না করা
+❌ matplotlib import না করা
+
+🔷 1️⃣2️⃣ Interview Important Points
+
+✔ Seaborn built on Matplotlib
+✔ Used for EDA
+✔ Works best with Pandas
+✔ Supports heatmap, pairplot, regression
+✔ Default styling very clean
+
+🎯 Final Summary
+
+Seaborn ব্যবহার হয়:
+
+Data Analysis
+
+EDA
+
+ML Visualization
+
+Correlation analysis
+
+Distribution analysis
+
+Category comparison
+
+যদি তুমি চাও, এখন আমি দিতে পারি:
+
+🔥 Advanced Seaborn Deep Notes
+🔥 100 Practice Problems
+🔥 Full ML Visualization Project
+🔥 Interview Q&A (Job Ready)
+
+বললেই শুরু করি 🚀
+
+Advanced Seaborn Deep Notes
+🔥 100 Practice Problems
+
+দারুণ 🔥
+এবার তোমাকে দিচ্ছি Advanced Seaborn Deep Notes + 100 Practice Problems (Structured & Pro Level)
+
+🚀 PART 1: Advanced Seaborn Deep Notes
+🔷 1️⃣ Figure Level vs Axes Level Functions (Very Important)
+🔹 Axes-Level Functions
+
+একটি নির্দিষ্ট axis-এ কাজ করে
+Examples:
+
+sns.scatterplot()
+
+sns.lineplot()
+
+sns.boxplot()
+
+sns.histplot()
+
+👉 plt.subplots() এর সাথে ব্যবহার করা যায়
+
+🔹 Figure-Level Functions
+
+পুরো figure control করে
+Examples:
+
+sns.relplot()
+
+sns.catplot()
+
+sns.displot()
+
+sns.pairplot()
+
+sns.jointplot()
+
+👉 Multiple subplot automatic create করে
+
+🔷 2️⃣ relplot() – Advanced Relationship Plot
+sns.relplot(
+    x="total_bill",
+    y="tip",
+    hue="sex",
+    col="time",
+    kind="scatter",
+    data=tips
+)
+
+✔ hue = color
+✔ col = column-wise subplot
+✔ row = row-wise subplot
+
+🔷 3️⃣ catplot() – Advanced Categorical Plot
+sns.catplot(
+    x="day",
+    y="total_bill",
+    hue="sex",
+    kind="bar",
+    data=tips
+)
+
+Supported kinds:
+
+bar
+
+box
+
+violin
+
+strip
+
+swarm
+
+point
+
+🔷 4️⃣ displot() – Advanced Distribution Plot
+sns.displot(
+    data=tips,
+    x="total_bill",
+    col="time",
+    kde=True
+)
+
+✔ Histogram + KDE
+✔ Multiple subplot
+
+🔷 5️⃣ stripplot() vs swarmplot()
+🔹 stripplot
+sns.stripplot(x="day", y="total_bill", data=tips)
+🔹 swarmplot
+sns.swarmplot(x="day", y="total_bill", data=tips)
+
+✔ Swarmplot overlap avoid করে
+
+🔷 6️⃣ Advanced Heatmap Customization
+corr = tips.corr()
+
+sns.heatmap(
+    corr,
+    annot=True,
+    cmap="coolwarm",
+    linewidths=1,
+    linecolor="black",
+    fmt=".2f"
+)
+🔷 7️⃣ PairGrid (Expert Level)
+g = sns.PairGrid(iris)
+g.map_diag(sns.histplot)
+g.map_offdiag(sns.scatterplot)
+
+✔ Fully customizable pairplot
+
+🔷 8️⃣ FacetGrid Advanced
+g = sns.FacetGrid(tips, row="sex", col="time")
+g.map(sns.histplot, "total_bill")
+
+✔ Multi-dimension subplot
+
+🔷 9️⃣ Styling Advanced
+sns.set_theme(
+    style="darkgrid",
+    palette="deep",
+    context="talk"
+)
+🔷 🔟 Statistical Estimation Control
+
+Barplot default mean দেখায়
+
+sns.barplot(x="day", y="total_bill", estimator=sum, data=tips)
+
+✔ estimator change করা যায়
+
+🔷 1️⃣1️⃣ Log Scale
+sns.histplot(tips["total_bill"], log_scale=True)
+🔷 1️⃣2️⃣ KDE Multiple Distribution
+sns.kdeplot(data=tips, x="total_bill", hue="sex", fill=True)
+🔷 1️⃣3️⃣ Custom Subplots with Seaborn
+fig, ax = plt.subplots(2,2, figsize=(10,8))
+
+sns.histplot(tips["total_bill"], ax=ax[0,0])
+sns.boxplot(x="day", y="total_bill", data=tips, ax=ax[0,1])
+sns.violinplot(x="day", y="tip", data=tips, ax=ax[1,0])
+sns.scatterplot(x="total_bill", y="tip", data=tips, ax=ax[1,1])
+
+plt.tight_layout()
+plt.show()
+🔷 1️⃣4️⃣ Seaborn in ML Workflow (Advanced)
+🔹 Feature Selection
+
+Correlation Heatmap
+
+Pairplot
+
+🔹 Outlier Detection
+
+Boxplot
+
+Violinplot
+
+🔹 Class Imbalance
+
+Countplot
+
+🔹 Model Evaluation
+
+Confusion matrix heatmap
+
+Regression plot
+
+Residual plot
+
+🧠 Interview Advanced Points
+
+✔ Difference between relplot & scatterplot
+✔ Difference between catplot & barplot
+✔ Figure-level vs Axes-level
+✔ KDE vs Histogram
+✔ When to use swarmplot
+
+🚀 PART 2: 100 Practice Problems (Beginner → Advanced)
+🟢 Level 1 (1–20) Basic
+
+Create lineplot using tips dataset
+
+Scatterplot between total_bill & tip
+
+Barplot average bill by day
+
+Histogram with 20 bins
+
+KDE plot
+
+Boxplot by day
+
+Violinplot by day
+
+Countplot for gender
+
+Change palette
+
+Change style
+
+Add title
+
+Change figure size
+
+Use hue parameter
+
+Create heatmap
+
+Create pairplot
+
+Create jointplot
+
+Create regression plot
+
+Use bins parameter
+
+Add grid
+
+Change context
+
+🟡 Level 2 (21–50) Intermediate
+
+relplot with hue
+
+relplot with col
+
+catplot bar
+
+catplot box
+
+catplot violin
+
+displot with kde
+
+displot with col
+
+stripplot
+
+swarmplot
+
+FacetGrid
+
+PairGrid
+
+Heatmap with fmt
+
+Custom linewidth
+
+Use estimator=sum
+
+Multiple subplot
+
+Add legend
+
+Customize color
+
+Log scale
+
+Multiple KDE
+
+Change alpha
+
+Rotate x label
+
+Save figure
+
+Add annotation
+
+Use row + col
+
+Combine hue + style
+
+Regression with confidence interval
+
+Custom marker
+
+Different palette
+
+Subplot 2x2
+
+Tight layout
+
+🔴 Level 3 (51–100) Advanced + ML
+
+51–60: Titanic dataset full EDA
+61–70: Iris dataset full visualization
+71–75: Correlation analysis project
+76–80: Feature importance visualization
+81–85: Classification result heatmap
+86–90: Regression prediction vs actual
+91–95: Residual plot
+96–100: Complete ML visualization pipeline
+
+🎯 Final Goal
+
+তুমি যদি এই 100 problem solve করতে পারো, তাহলে তুমি:
+
+✔ ML Visualization Ready
+✔ Interview Ready
+✔ Data Analyst Level
+✔ Advanced Seaborn Expert

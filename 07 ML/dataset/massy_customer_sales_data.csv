@@ -1,0 +1,6 @@
+Customer_ID,Customer_Name,Gender,Age,City,Product_Category,Product_Name,Quantity,Unit_Price,Total_Amount,Payment_Method,Purchase_Date
+C001,Rahim,Male,25,Dhaka,Beverages,Coca Cola,2,50,100,Cash,2026-02-01
+C002,Karim,Male,32,Chittagong,Snacks,Lays Chips,3,30,90,Card,2026-02-02
+C003,Ayesha,Female,28,Rajshahi,Dairy,Milk,1,60,60,Cash,2026-02-03
+C004,Nusrat,Female,22,Khulna,Bakery,Bread,4,40,160,bKash,2026-02-04
+C005,Hasan,Male,35,Sylhet,Household,Detergent,2,150,300,Card,2026-02-05
