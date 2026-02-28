@@ -1,16 +1,137 @@
-ML বা Data Analysis করলে নিচের কাজগুলো করতে পারো:
+Pandas Notes with Description (Bangla)
+1️⃣ Import
+import pandas as pd
 
-Missing Value Handle
-df.isnull().sum()
+Description: Pandas ব্যবহার করার জন্য প্রথমে import করতে হবে। pd নামটা standard convention।
 
-Quantity fill করতে পারো:
+2️⃣ Data Creation
+Function	Description	Example
+pd.DataFrame()	Dictionary/List থেকে DataFrame তৈরি	df = pd.DataFrame({"Name":["Ali","Hasan"], "Age":[20,22]})
+pd.Series()	1-Dimensional array তৈরি	s = pd.Series([1,2,3])
+pd.concat()	একাধিক DataFrame/Series জোড়া	pd.concat([df1, df2])
+pd.merge()	SQL style join	pd.merge(df1, df2, on="id")
+pd.get_dummies()	Categorical → One Hot Encoding	pd.get_dummies(df["Category"])
+pd.cut()	Continuous data কে bins এ ভাগ করা	pd.cut(df["Age"], bins=3)
+pd.qcut()	Quantile ভিত্তিক bins	pd.qcut(df["Age"], q=4)
+3️⃣ Data Reading (লোড করা)
+Function	Description	Example
+pd.read_csv()	CSV ফাইল থেকে DataFrame তৈরি	df = pd.read_csv("file.csv")
+pd.read_excel()	Excel ফাইল থেকে DataFrame	df = pd.read_excel("file.xlsx", sheet_name="Sheet1")
+pd.read_json()	JSON ফাইল থেকে DataFrame	df = pd.read_json("file.json")
+pd.read_html()	HTML table scrape করে	dfs = pd.read_html("file.html")
+pd.read_sql()	SQL query থেকে DataFrame	df = pd.read_sql(query, conn)
+pd.read_parquet()	Parquet file পড়া (efficient)	df = pd.read_parquet("file.parquet")
+pd.read_pickle()	Pickle file পড়া	df = pd.read_pickle("file.pkl")
+4️⃣ Data Writing (সংরক্ষণ)
+Function	Description	Example
+df.to_csv()	CSV file save	df.to_csv("file.csv", index=False)
+df.to_excel()	Excel file save	df.to_excel("file.xlsx", index=False)
+df.to_json()	JSON format save	df.to_json("file.json")
+df.to_sql()	Database save	df.to_sql("table_name", conn)
+df.to_parquet()	Parquet file save	df.to_parquet("file.parquet")
+5️⃣ Data Inspection
+Function / Attribute	Description	Example
+df.head()	প্রথম ৫ row দেখায়	df.head()
+df.tail()	শেষ ৫ row	df.tail()
+df.shape	(rows, columns) সংখ্যা	df.shape
+df.columns	Column নাম list	df.columns
+df.index	Row index	df.index
+df.dtypes	Column data type	df.dtypes
+df.size	Total elements	df.size
+df.values	NumPy array আকারে data	df.values
+df.ndim	Dimension সংখ্যা	df.ndim
+df.empty	খালি কিনা	df.empty
+df.info()	Data type + null count	df.info()
+df.describe()	Statistical summary	df.describe()
+df.sample(n=3)	Random row	df.sample(3)
+df.memory_usage()	Memory usage	df.memory_usage()
+6️⃣ Data Cleaning
+Function	Description	Example
+df.isnull()	Null value check	df.isnull().sum()
+df.notnull()	Null নেই check	df.notnull()
+df.dropna()	Null row drop	df.dropna()
+df.fillna()	Null fill	df["Age"].fillna(df["Age"].mean())
+df.replace()	Value replace	df.replace("old","new")
+df.duplicated()	Duplicate check	df.duplicated()
+df.drop_duplicates()	Duplicate drop	df.drop_duplicates()
+df.astype()	Data type change	df["Age"].astype("int")
+7️⃣ Selection & Filtering
+Function	Description	Example
+df.loc[]	Label-based selection	df.loc[2,"Name"]
+df.iloc[]	Index-based selection	df.iloc[2,1]
+df.at[]	Single value access	df.at[2,"Name"]
+df.iat[]	Fast single value access	df.iat[2,1]
+df.query()	SQL style filtering	df.query("Age>20")
+df.filter()	Column/row filter	df.filter(items=["Name","Age"])
+8️⃣ Sorting
+Function	Description	Example
+df.sort_values()	Column অনুযায়ী sort	df.sort_values("Age")
+df.sort_index()	Index অনুযায়ী sort	df.sort_index()
+df.nlargest()	বড় n value	df.nlargest(3,"Age")
+df.nsmallest()	ছোট n value	df.nsmallest(3,"Age")
+9️⃣ Column Operations
+Function	Description	Example
+df.insert()	নতুন column insert	df.insert(2,"NewCol",[1,2])
+df.assign()	নতুন column তৈরি	df.assign(NewCol=lambda x:x.Age+1)
+df.drop()	Column/row drop	df.drop("NewCol", axis=1)
+df.rename()	Column rename	df.rename(columns={"Name":"FullName"})
+df.set_index()	Column → index	df.set_index("Name")
+df.reset_index()	Index reset	df.reset_index()
+🔟 GroupBy & Aggregation
+Function	Description	Example
+df.groupby()	Group তৈরি	df.groupby("Dept")["Salary"].mean()
+df.agg()	Aggregate function	df.agg({"Salary":"sum","Age":"mean"})
+df.transform()	Groupwise transformation	df.groupby("Dept")["Salary"].transform("mean")
+df.apply()	Custom function apply	df.apply(lambda x:x*2)
+1️⃣1️⃣ Reshaping
+Function	Description	Example
+df.pivot()	Table reshape	df.pivot(index="Dept", columns="Year", values="Salary")
+df.pivot_table()	Aggregated pivot	df.pivot_table(index="Dept", values="Salary", aggfunc="mean")
+df.melt()	Wide → Long	df.melt(id_vars=["Dept"], value_vars=["Salary","Bonus"])
+df.stack()	Column → Row	df.stack()
+df.unstack()	Row → Column	df.unstack()
+1️⃣2️⃣ Statistical Functions
+Function	Description	Example
+df.mean()	গড়	df["Age"].mean()
+df.median()	মধ্যম মান	df["Age"].median()
+df.mode()	সবচেয়ে common value	df["Age"].mode()
+df.std()	Standard deviation	df["Age"].std()
+df.var()	Variance	df["Age"].var()
+df.min()	Minimum	df["Age"].min()
+df.max()	Maximum	df["Age"].max()
+df.sum()	যোগফল	df["Age"].sum()
+df.count()	Non-null count	df["Age"].count()
+df.corr()	Correlation	df.corr()
+1️⃣3️⃣ Series Functions
+Function	Description	Example
+s.unique()	Unique value	s.unique()
+s.nunique()	Unique count	s.nunique()
+s.value_counts()	Frequency count	s.value_counts()
+s.map()	Mapping function	s.map(lambda x:x*2)
+s.apply()	Custom function	s.apply(lambda x:x+1)
+1️⃣4️⃣ String Operations
+Function	Description	Example
+.str.lower()	ছোট হাতের অক্ষর	df["Name"].str.lower()
+.str.upper()	বড় হাতের অক্ষর	df["Name"].str.upper()
+.str.strip()	Extra space remove	df["Name"].str.strip()
+.str.contains()	Text search	df["Name"].str.contains("Ali")
+.str.replace()	Text replace	df["Name"].str.replace("Ali","Kazi")
+.str.split()	Split string	df["Name"].str.split(" ")
+1️⃣5️⃣ DateTime Operations
+Function	Description	Example
+.dt.year	বছর	df["date"].dt.year
+.dt.month	মাস	df["date"].dt.month
+.dt.day	দিন	df["date"].dt.day
+.dt.weekday	0=Mon → 6=Sun	df["date"].dt.weekday
+.dt.day_name()	দিনের নাম	df["date"].dt.day_name()
+1️⃣6️⃣ Tips & Rules
 
-df['Quantity'] = df['Quantity'].fillna(df['Quantity'].median())
+বড় dataset → vectorized operation, avoid loops
 
-Name fill করতে পারো:
+Missing value → numeric: mean/median, categorical: mode
 
-df['Name'] = df['Name'].fillna("Unknown")
-Date Column Convert
-df['Ordered At'] = pd.to_datetime(df['Ordered At'])
-Check Total Correct কিনা
-(df['Quantity'] * df['Unit Price'] == df['Total']).sum()
+apply() vs transform() → groupwise calculation use transform
+
+Parquet → faster & memory-efficient
+
+সবসময় df.info() + df.describe() + null check দিয়ে শুরু করো
