@@ -1,101 +1,101 @@
-Customer_ID,Customer_Name,Email,Ordered_At,Product,Category,Quantity,Unit_Price,Total,Payment
-C001,Omar Faruk,omarfaruk@gmail.com,12/5/2025,Coffee Maker,,,505,1515,Cash
-C002,Annette Anderson,christianangela@johnston.com,1/18/2026,Coffee Maker,Home,1,1098,1098,Cash
-C003,Angel Scott,kjennings@gmail.com,1/23/2026,Laptop,Electronics,1,736,736,PayPal
-C004,Julie Freeman,vlittle@yahoo.com,3/5/2025,Tablet,Electronics,4,1178,4712,Cash
-C005,MEGAN MARTIN,james95@riley.net,8/19/2025,Headphones,Electronics,4,710,2840,Cash
-C006,scott jordan,marywillis@benjamin.com,4/10/2025,Book,Education,5,566,2830,PayPal
-C007,Troy Jackson,ksmith@yahoo.com,4/7/2025,Smartphone,Electronics,5,NaN,325,Card
-C008,Alec Mayer,denniswarren@yahoo.com,6/21/2025,Smartphone,Electronics,4,550,2200,Cash
-C009,NaN,reevesanthony@yahoo.com,8/24/2025,T-Shirt,Fashion,1,62,62,Card
-C010,Richard Brown,thomas68@gmail.com,11/19/2025,Coffee Maker,Home,3,132,396,Card
-C011,William Austin,heidi66@gmail.com,5/29/2025,Blender,Home,1,147,147,PayPal
-C012,Tracy Clayton,oneillchristina@davis.net,6/29/2025,Jacket,Fashion,2,500,1000,Cash
-C013,Donna Morton,nortonerica@edwards.com,10/20/2025,Laptop,Electronics,2,1083,2166,Cash
-C014,Sabrina Peterson,dquinn@gmail.com,6/3/2025,Smartphone,Electronics,2,955,1910,PayPal
-C015,Tiffany Medina,millerchristopher@gmail.com,4/16/2025,Tablet,Electronics,4,659,2636,Cash
-C016,Wendy Mitchell,christopherwalters@hotmail.com,6/20/2025,Coffee Maker,Home,5,638,3190,PayPal
-C017,Megan Owens,olsonmary@gmail.com,3/25/2025,Headphones,Electronics,2,550,1100,PayPal
-C018,William Miller,bhaas@cunningham.com,5/15/2025,Coffee Maker,Home,4,649,2596,PayPal
-C019,Patricia Murphy,murphydavid@hotmail.com,1/20/2026,Tablet,Electronics,3,300,900,Card
-C020,Mindy Owen,williamdiaz@yahoo.com,2/11/2026,Book,Education,3,1046,3138,Card
-C021,Luis David,amanda18@hotmail.com,7/20/2025,Coffee Maker,Home,3,378,1134,Cash
-C022,Timothy Lopez,michaelmcclain@hotmail.com,4/17/2025,Blender,Home,1,31,31,Cash
-C023,Carol Jackson,gabriel11@hotmail.com,3/21/2025,T-Shirt,Fashion,5,1016,5080,PayPal
-C024,Scott Carr,jeannewilson@hotmail.com,6/29/2025,Smartphone,Electronics,1,663,663,Cash
-C025,Julie Ball,roycastillo@gmail.com,5/2/2025,Laptop,Electronics,5,1194,5970,PayPal
-C026,Grace Richards,christinereeves@miller.com,10/30/2025,laptop,Electronics,5,343,1715,Card
-C027,Christine Carroll,johnjacobs@boyle.com,11/21/2025,Smartphone,Electronics,4,154,616,PayPal
-C028,Kim Powers,acameron@fields-washington.com,9/13/2025,Coffee Maker,Home,2,87,174,PayPal
-C029,Bailey Perry,sabrina94@yahoo.com,3/28/2025,Book,Education,4,629,2516,PayPal
-C030,Dustin Hernandez,tcurtis@gmail.com,12/20/2025,T-Shirt,Fashion,3,120,360,Cash
-C031,Lance Bailey,darleneperry@yahoo.com,2/5/2026,Coffee Maker,Home,3,73,219,Card
-C032,Lance Cannon,derek00@gray-carney.biz,3/4/2025,Tablet,Electronics,2,1035,2070,Card
-C033,Steven Ward,larry43@bryant.net,11/8/2025,T-Shirt,Fashion,3,520,1560,Card
-C034,Mrs. Ashley Villanueva,robbinsanthony@gmail.com,8/7/2025,Tablet,Electronics,5,789,3945,Card
-C035,Thomas Henderson,swebb@yahoo.com,6/3/2025,Book,Education,1,410,410,Card
-C036,Jason Terrell,alexandermolly@gmail.com,2/13/2026,Blender,Home,4,1087,4348,PayPal
-C037,John Strickland,hartlaura@gmail.com,6/23/2025,Coffee Maker,Home,3,893,2679,PayPal
-C038,Madison Rogers,davidpayne@hotmail.com,1/12/2026,Smartphone,Electronics,1,409,409,Card
-C039,Nicholas Thompson,jennifer87@hotmail.com,1/27/2026,Laptop,Electronics,2,54,108,Cash
-C040,Anna Hughes,claudiapruitt@yahoo.com,8/2/2025,Blender,Home,5,769,3845,Card
-C041,Kelly Mills,theresa56@hotmail.com,8/28/2025,T-Shirt,Fashion,1,754,754,Cash
-C042,John Smith,samantha92@bennett-wright.com,5/18/2025,Smartphone,Electronics,5,944,4720,Cash
-C043,Sergio Oconnor,lorimyers@dominguez.net,9/4/2025,Laptop,Electronics,1,1066,1066,Cash
-C044,Derek Jones,wprice@sweeney.net,6/2/2025,Tablet,Electronics,2,929,1858,Cash
-C045,Diane Williams,jose36@marquez-morgan.info,1/23/2026,Book,Education,2,907,1814,PayPal
-C046,Christopher Martinez,robertfritz@bailey.com,3/20/2025,Book,Education,1,1029,1029,PayPal
-C047,Penny Ramsey,simstimothy@hall.com,5/3/2025,Coffee Maker,Home,5,625,3125,Cash
-C048,Danny Richards,ashley55@gmail.com,8/14/2025,Tablet,Electronics,2,651,1302,Cash
-C049,Ms. Jennifer Jordan,iandrews@yahoo.com,8/3/2025,Smartphone,Electronics,5,738,3690,Card
-C050,Jonathan Nelson,michael97@miller.com,1/12/2026,Laptop,Electronics,2,174,348,Cash
-C051,Tiffany Hughes,kevin05@hotmail.com,1/21/2026,Jacket,Fashion,4,1143,4572,PayPal
-C052,Michelle Clark,samanthajenkins@yahoo.com,6/24/2025,Tablet,Electronics,1,808,808,Cash
-C053,Anthony Medina PhD,bradleyyolanda@peterson.com,3/25/2025,Headphones,Electronics,3,239,717,Card
-C054,Shane Bishop,vazquezlaura@gmail.com,6/16/2025,Coffee Maker,Home,2,181,362,Cash
-C055,Jordan Williams,nataliejohnson@davis.net,8/7/2025,Book,Education,1,477,477,Card
-C056,Theresa Mcfarland,pcollier@hotmail.com,6/9/2025,Jacket,Fashion,3,640,1920,PayPal
-C057,Jordan Brown,jnelson@hotmail.com,9/26/2025,Laptop,Electronics,1,339,339,PayPal
-C058,Donna Mcclain,codydavenport@davis.info,5/29/2025,Tablet,Electronics,3,736,2208,Card
-C059,Erika Evans,jamesbarnett@bridges.net,10/20/2025,Tablet,Electronics,4,51,204,Card
-C060,Gregory Fernandez,roberto69@gmail.com,1/16/2026,Tablet,Electronics,2,391,782,Card
-C061,Kim Wagner,zmoore@austin.com,1/13/2026,Smartphone,Electronics,3,1082,3246,PayPal
-C062,Deborah Jackson,ashleymiddleton@grant-collins.com,1/14/2026,Blender,Home,5,503,2515,Cash
-C063,Connor Melton,meaganpatterson@yahoo.com,4/11/2025,Tablet,Electronics,3,566,1698,Cash
-C064,Samuel Hess,briana47@yahoo.com,6/4/2025,Book,Education,5,764,3820,Card
-C065,Anna Meyers,ccollins@delgado.com,6/2/2025,Coffee Maker,Home,4,525,2100,Card
-C066,Jason Smith,evanevans@gmail.com,9/24/2025,Blender,Home,2,31,62,Cash
-C067,Rebecca Moon,joshuaarmstrong@griffin.com,1/28/2026,Book,Education,4,376,1504,PayPal
-C068,Paula Castillo,rushkevin@gmail.com,2/20/2026,Headphones,Electronics,3,396,1188,PayPal
-C069,Kylie Costa,kanelaura@mills-turner.org,4/23/2025,T-Shirt,Fashion,4,316,1264,Card
-C070,John Nguyen,richard46@hotmail.com,10/21/2025,Book,Education,2,1081,2162,PayPal
-C071,Tiffany Brooks,mirandawalker@smith.info,2/4/2026,Laptop,Electronics,3,1115,3345,PayPal
-C072,Roger Skinner,staciebuchanan@yahoo.com,5/20/2025,Jacket,Fashion,3,458,1374,Cash
-C073,James Barajas,gregorylewis@chapman.info,9/21/2025,Tablet,Electronics,1,1159,1159,Card
-C074,Robert Morgan,xpatterson@hotmail.com,6/3/2025,T-Shirt,Fashion,1,318,318,Card
-C075,Seth Wilson,shelleyvaldez@andrews-henderson.biz,1/24/2026,Laptop,Electronics,3,204,612,PayPal
-C076,Michael Novak,justinwhite@gmail.com,2/2/2026,Smartphone,Electronics,3,935,2805,Cash
-C077,Craig Sheppard,patricia51@grant-gillespie.com,7/15/2025,T-Shirt,Fashion,4,913,3652,Card
-C078,Ryan Taylor,msellers@hotmail.com,1/1/2026,Coffee Maker,Home,5,649,3245,Cash
-C079,Victoria Haynes,grantlaura@barker.com,5/17/2025,Laptop,Electronics,3,561,1683,Card
-C080,Cynthia King,amber09@yu.net,10/27/2025,Smartphone,Electronics,4,1127,4508,PayPal
-C081,Randy French,hsmith@crosby-chapman.org,5/24/2025,Smartphone,Electronics,3,583,1749,Card
-C082,Rebecca Stevens,uphillips@richards-ortiz.com,2/13/2026,Book,Education,4,393,1572,PayPal
-C083,Curtis Winters,xhart@george.org,12/17/2025,T-Shirt,Fashion,1,684,684,Cash
-C084,Christine Solomon,nwest@yahoo.com,2/6/2026,Tablet,Electronics,3,164,492,Card
-C085,Anna Campbell,marilyn57@yahoo.com,2/3/2026,Headphones,Electronics,3,62,186,PayPal
-C086,Angela Garcia,michael75@perkins.info,3/28/2025,T-Shirt,Fashion,2,809,1618,PayPal
-C087,Ryan Casey,cbutler@gmail.com,11/12/2025,Sneakers,Fashion,3,724,2172,Card
-C088,David Reyes,angela59@yahoo.com,4/24/2025,Book,Education,3,647,1941,PayPal
-C089,Richard Daniels,itaylor@gmail.com,5/2/2025,Smartphone,Electronics,1,716,716,Card
-C090,Fred Frank,erik47@harrison.info,2/27/2026,Tablet,Electronics,4,938,3752,Card
-C091,Melissa Sanders,jacobsonemily@yahoo.com,7/19/2025,Headphones,Electronics,4,89,356,PayPal
-C092,Edward Castro,kaufmantammy@delacruz-prince.com,5/5/2025,Sneakers,Fashion,3,375,1125,PayPal
-C093,Oscar Le,ycollins@campos.com,7/17/2025,Smartphone,Electronics,4,124,496,Card
-C094,Mark Harrison,chavezmichael@rich-washington.info,6/3/2025,Headphones,Electronics,1,272,272,PayPal
-C095,Sandra West,howardronald@wyatt-moreno.com,3/3/2025,Book,Education,3,541,1623,PayPal
-C096,Heather Williams,parkerkendra@gmail.com,12/14/2025,Sneakers,Fashion,5,1200,6000,Cash
-C097,Jason Jimenez,michelleevans@king.org,9/18/2025,Blender,Home,1,824,824,Cash
-C098,Pamela Hayes,claudia26@lewis-hartman.net,3/18/2025,Sneakers,Fashion,4,884,3536,Cash
-C099,Nicholas Duncan,allison27@gmail.com,10/17/2025,Book,Education,4,352,1408,Card
-C100,Judith Rojas,jennafoster@stone.org,8/9/2025,Headphones,Electronics,2,644,1288,Card
+Customer_ID,Age,Customer_Name,Email,Ordered_At,Product,Category,Quantity,Unit_Price,Total,Payment,
+C001,15,Omar Faruk,omarfaruk@gmail.com,,12/5/2025,Coffee Maker,,,505,1515,Cash
+C002,16 Years,Annette Anderson,christianangela@johnston.com,,1/18/2026,Coffee Maker,Home,1,1098,1098,Cash
+C003,17,Angel Scott,kjennings@gmail.com,,1/23/2026,Laptop,Electronics,1,736,736,PayPal
+C004,18,Julie Freeman,vlittle@yahoo.com,,3/5/2025,Tablet,Electronics,4,1178,4712,Cash
+C005,19,MEGAN MARTIN,james95@riley.net,,8/19/2025,Headphones,Electronics,4,710,2840,Cash
+C006,20,scott jordan,marywillis@benjamin.com,,4/10/2025,Book,Education,5,566,2830,PayPal
+C007,21 Year,Troy Jackson,ksmith@yahoo.com,,4/7/2025,Smartphone,Electronics,5,NaN,325,Card
+C008,22,Alec Mayer,denniswarren@yahoo.com,,6/21/2025,Smartphone,Electronics,4,550,2200,Cash
+C009,23,NaN,reevesanthony@yahoo.com,,8/24/2025,T-Shirt,Fashion,1,62,62,Card
+C010,24,Richard Brown,thomas68@gmail.com,,11/19/2025,Coffee Maker,Home,3,132,396,Card
+C011,25,William Austin,heidi66@gmail.com,,5/29/2025,Blender,Home,1,147,147,PayPal
+C012,26,Tracy Clayton,oneillchristina@davis.net,,6/29/2025,Jacket,Fashion,2,500,1000,Cash
+C013,27,Donna Morton,nortonerica@edwards.com,,10/20/2025,Laptop,Electronics,2,1083,2166,Cash
+C014,28,Sabrina Peterson,dquinn@gmail.com,,6/3/2025,Smartphone,Electronics,2,955,1910,PayPal
+C015,29,Tiffany Medina,millerchristopher@gmail.com,,4/16/2025,Tablet,Electronics,4,659,2636,Cash
+C016,30,Wendy Mitchell,christopherwalters@hotmail.com,,6/20/2025,Coffee Maker,Home,5,638,3190,PayPal
+C017,31,Megan Owens,olsonmary@gmail.com,,3/25/2025,Headphones,Electronics,2,550,1100,PayPal
+C018,32,William Miller,bhaas@cunningham.com,,5/15/2025,Coffee Maker,Home,4,649,2596,PayPal
+C019,33,Patricia Murphy,murphydavid@hotmail.com,,1/20/2026,Tablet,Electronics,3,300,900,Card
+C020,34,Mindy Owen,williamdiaz@yahoo.com,,2/11/2026,Book,Education,3,1046,3138,Card
+C021,35,Luis David,amanda18@hotmail.com,,7/20/2025,Coffee Maker,Home,3,378,1134,Cash
+C022,36,Timothy Lopez,michaelmcclain@hotmail.com,,4/17/2025,Blender,Home,1,31,31,Cash
+C023,37,Carol Jackson,gabriel11@hotmail.com,,3/21/2025,T-Shirt,Fashion,5,1016,5080,PayPal
+C024,38,Scott Carr,jeannewilson@hotmail.com,,6/29/2025,Smartphone,Electronics,1,663,663,Cash
+C025,39,Julie Ball,roycastillo@gmail.com,,5/2/2025,Laptop,Electronics,5,1194,5970,PayPal
+C026,40,Grace Richards,christinereeves@miller.com,,10/30/2025,laptop,Electronics,5,343,1715,Card
+C027,41,Christine Carroll,johnjacobs@boyle.com,,11/21/2025,Smartphone,Electronics,4,154,616,PayPal
+C028,42,Kim Powers,acameron@fields-washington.com,,9/13/2025,Coffee Maker,Home,2,87,174,PayPal
+C029,43,Bailey Perry,sabrina94@yahoo.com,,3/28/2025,Book,Education,4,629,2516,PayPal
+C030,44,Dustin Hernandez,tcurtis@gmail.com,,12/20/2025,T-Shirt,Fashion,3,120,360,Cash
+C031,45,Lance Bailey,darleneperry@yahoo.com,,2/5/2026,Coffee Maker,Home,3,73,219,Card
+C032,46,Lance Cannon,derek00@gray-carney.biz,,3/4/2025,Tablet,Electronics,2,1035,2070,Card
+C033,47,Steven Ward,larry43@bryant.net,,11/8/2025,T-Shirt,Fashion,3,520,1560,Card
+C034,48,Mrs. Ashley Villanueva,robbinsanthony@gmail.com,,8/7/2025,Tablet,Electronics,5,789,3945,Card
+C035,49,Thomas Henderson,swebb@yahoo.com,,6/3/2025,Book,Education,1,410,410,Card
+C036,50,Jason Terrell,alexandermolly@gmail.com,,2/13/2026,Blender,Home,4,1087,4348,PayPal
+C037,51,John Strickland,hartlaura@gmail.com,,6/23/2025,Coffee Maker,Home,3,893,2679,PayPal
+C038,52,Madison Rogers,davidpayne@hotmail.com,,1/12/2026,Smartphone,Electronics,1,409,409,Card
+C039,53,Nicholas Thompson,jennifer87@hotmail.com,,1/27/2026,Laptop,Electronics,2,54,108,Cash
+C040,54,Anna Hughes,claudiapruitt@yahoo.com,,8/2/2025,Blender,Home,5,769,3845,Card
+C041,55,Kelly Mills,theresa56@hotmail.com,,8/28/2025,T-Shirt,Fashion,1,754,754,Cash
+C042,56,John Smith,samantha92@bennett-wright.com,,5/18/2025,Smartphone,Electronics,5,944,4720,Cash
+C043,57,Sergio Oconnor,lorimyers@dominguez.net,,9/4/2025,Laptop,Electronics,1,1066,1066,Cash
+C044,58,Derek Jones,wprice@sweeney.net,,6/2/2025,Tablet,Electronics,2,929,1858,Cash
+C045,59,Diane Williams,jose36@marquez-morgan.info,,1/23/2026,Book,Education,2,907,1814,PayPal
+C046,60,Christopher Martinez,robertfritz@bailey.com,,3/20/2025,Book,Education,1,1029,1029,PayPal
+C047,61,Penny Ramsey,simstimothy@hall.com,,5/3/2025,Coffee Maker,Home,5,625,3125,Cash
+C048,62,Danny Richards,ashley55@gmail.com,,8/14/2025,Tablet,Electronics,2,651,1302,Cash
+C049,63,Ms. Jennifer Jordan,iandrews@yahoo.com,,8/3/2025,Smartphone,Electronics,5,738,3690,Card
+C050,64,Jonathan Nelson,michael97@miller.com,,1/12/2026,Laptop,Electronics,2,174,348,Cash
+C051,65,Tiffany Hughes,kevin05@hotmail.com,,1/21/2026,Jacket,Fashion,4,1143,4572,PayPal
+C052,66,Michelle Clark,samanthajenkins@yahoo.com,,6/24/2025,Tablet,Electronics,1,808,808,Cash
+C053,67,Anthony Medina PhD,bradleyyolanda@peterson.com,,3/25/2025,Headphones,Electronics,3,239,717,Card
+C054,68,Shane Bishop,vazquezlaura@gmail.com,,6/16/2025,Coffee Maker,Home,2,181,362,Cash
+C055,69,Jordan Williams,nataliejohnson@davis.net,,8/7/2025,Book,Education,1,477,477,Card
+C056,70,Theresa Mcfarland,pcollier@hotmail.com,,6/9/2025,Jacket,Fashion,3,640,1920,PayPal
+C057,71,Jordan Brown,jnelson@hotmail.com,,9/26/2025,Laptop,Electronics,1,339,339,PayPal
+C058,72,Donna Mcclain,codydavenport@davis.info,,5/29/2025,Tablet,Electronics,3,736,2208,Card
+C059,73,Erika Evans,jamesbarnett@bridges.net,,10/20/2025,Tablet,Electronics,4,51,204,Card
+C060,74,Gregory Fernandez,roberto69@gmail.com,,1/16/2026,Tablet,Electronics,2,391,782,Card
+C061,75,Kim Wagner,zmoore@austin.com,,1/13/2026,Smartphone,Electronics,3,1082,3246,PayPal
+C062,76,Deborah Jackson,ashleymiddleton@grant-collins.com,,1/14/2026,Blender,Home,5,503,2515,Cash
+C063,77,Connor Melton,meaganpatterson@yahoo.com,,4/11/2025,Tablet,Electronics,3,566,1698,Cash
+C064,78,Samuel Hess,briana47@yahoo.com,,6/4/2025,Book,Education,5,764,3820,Card
+C065,79,Anna Meyers,ccollins@delgado.com,,6/2/2025,Coffee Maker,Home,4,525,2100,Card
+C066,80,Jason Smith,evanevans@gmail.com,,9/24/2025,Blender,Home,2,31,62,Cash
+C067,81,Rebecca Moon,joshuaarmstrong@griffin.com,,1/28/2026,Book,Education,4,376,1504,PayPal
+C068,82,Paula Castillo,rushkevin@gmail.com,,2/20/2026,Headphones,Electronics,3,396,1188,PayPal
+C069,83,Kylie Costa,kanelaura@mills-turner.org,,4/23/2025,T-Shirt,Fashion,4,316,1264,Card
+C070,84,John Nguyen,richard46@hotmail.com,,10/21/2025,Book,Education,2,1081,2162,PayPal
+C071,85,Tiffany Brooks,mirandawalker@smith.info,,2/4/2026,Laptop,Electronics,3,1115,3345,PayPal
+C072,86,Roger Skinner,staciebuchanan@yahoo.com,,5/20/2025,Jacket,Fashion,3,458,1374,Cash
+C073,87,James Barajas,gregorylewis@chapman.info,,9/21/2025,Tablet,Electronics,1,1159,1159,Card
+C074,88,Robert Morgan,xpatterson@hotmail.com,,6/3/2025,T-Shirt,Fashion,1,318,318,Card
+C075,89,Seth Wilson,shelleyvaldez@andrews-henderson.biz,,1/24/2026,Laptop,Electronics,3,204,612,PayPal
+C076,90,Michael Novak,justinwhite@gmail.com,,2/2/2026,Smartphone,Electronics,3,935,2805,Cash
+C077,91,Craig Sheppard,patricia51@grant-gillespie.com,,7/15/2025,T-Shirt,Fashion,4,913,3652,Card
+C078,92,Ryan Taylor,msellers@hotmail.com,,1/1/2026,Coffee Maker,Home,5,649,3245,Cash
+C079,93,Victoria Haynes,grantlaura@barker.com,,5/17/2025,Laptop,Electronics,3,561,1683,Card
+C080,94,Cynthia King,amber09@yu.net,,10/27/2025,Smartphone,Electronics,4,1127,4508,PayPal
+C081,95,Randy French,hsmith@crosby-chapman.org,,5/24/2025,Smartphone,Electronics,3,583,1749,Card
+C082,96,Rebecca Stevens,uphillips@richards-ortiz.com,,2/13/2026,Book,Education,4,393,1572,PayPal
+C083,97,Curtis Winters,xhart@george.org,,12/17/2025,T-Shirt,Fashion,1,684,684,Cash
+C084,98,Christine Solomon,nwest@yahoo.com,,2/6/2026,Tablet,Electronics,3,164,492,Card
+C085,99,Anna Campbell,marilyn57@yahoo.com,,2/3/2026,Headphones,Electronics,3,62,186,PayPal
+C086,100,Angela Garcia,michael75@perkins.info,,3/28/2025,T-Shirt,Fashion,2,809,1618,PayPal
+C087,101,Ryan Casey,cbutler@gmail.com,,11/12/2025,Sneakers,Fashion,3,724,2172,Card
+C088,102,David Reyes,angela59@yahoo.com,,4/24/2025,Book,Education,3,647,1941,PayPal
+C089,103,Richard Daniels,itaylor@gmail.com,,5/2/2025,Smartphone,Electronics,1,716,716,Card
+C090,104,Fred Frank,erik47@harrison.info,,2/27/2026,Tablet,Electronics,4,938,3752,Card
+C091,105,Melissa Sanders,jacobsonemily@yahoo.com,,7/19/2025,Headphones,Electronics,4,89,356,PayPal
+C092,106,Edward Castro,kaufmantammy@delacruz-prince.com,,5/5/2025,Sneakers,Fashion,3,375,1125,PayPal
+C093,107,Oscar Le,ycollins@campos.com,,7/17/2025,Smartphone,Electronics,4,124,496,Card
+C094,108,Mark Harrison,chavezmichael@rich-washington.info,,6/3/2025,Headphones,Electronics,1,272,272,PayPal
+C095,109,Sandra West,howardronald@wyatt-moreno.com,,3/3/2025,Book,Education,3,541,1623,PayPal
+C096,110,Heather Williams,parkerkendra@gmail.com,,12/14/2025,Sneakers,Fashion,5,1200,6000,Cash
+C097,111,Jason Jimenez,michelleevans@king.org,,9/18/2025,Blender,Home,1,824,824,Cash
+C098,112,Pamela Hayes,claudia26@lewis-hartman.net,,3/18/2025,Sneakers,Fashion,4,884,3536,Cash
+C099,113,Nicholas Duncan,allison27@gmail.com,,10/17/2025,Book,Education,4,352,1408,Card
+C100,114,Judith Rojas,jennafoster@stone.org,,8/9/2025,Headphones,Electronics,2,644,1288,Card
