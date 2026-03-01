@@ -1,0 +1,49 @@
+Titanic dataset এর মতো। আমরা দেখছি categorical এবং numeric data মিক্সড আছে। এখন আমরা categorical data clean করতে পারি step-by-step:
+
+1. Identify Categorical Columns
+
+Categorical columns সাধারণত string type এবং কিছু numeric যা category হিসেবে ব্যবহার হয়।
+এখানে categorical columnগুলো হলো:
+
+Sex → Male/Female
+
+Embarked → C/Q/S (Port of Embarkation)
+
+Cabin → Cabin number (optional, অনেক missing value)
+
+Ticket → Ticket number (usually less useful for ML)
+
+Name → Passenger name (usually not needed directly for ML)
+
+2. Handle Missing Values
+
+Age → numeric, missing value আছে → later fill or drop
+
+Cabin → অনেক missing → আমরা drop করতে পারি বা simplify করতে পারি (like first letter of cabin)
+
+Embarked → 2 missing → fill with most frequent value
+
+# Fill Embarked missing values with mode
+df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
+
+# Optionally drop Cabin if too many missing
+df = df.drop(columns=['Cabin'])
+3. Standardize Sex
+# lowercase and map to 0/1
+df['Sex'] = df['Sex'].str.lower().map({'male':0, 'female':1})
+4. Encode Embarked (One-Hot Encoding)
+df = pd.get_dummies(df, columns=['Embarked'], drop_first=True)
+
+drop_first=True রাখলে multicollinearity কমে যায় ML-এর জন্য।
+
+5. Optional: Simplify Ticket / Name
+
+Ticket ও Name সাধারণত ML model এ সরাসরি ব্যবহার করা হয় না।
+
+আপনি চাইলে Name থেকে title extract করতে পারেন (Mr, Mrs, Miss) → useful feature.
+
+df['Title'] = df['Name'].str.extract(' ([A-Za-z]+)\.', expand=False)
+df['Title'] = df['Title'].replace(['Mlle','Ms'],'Miss')
+df['Title'] = df['Title'].replace('Mme','Mrs')
+df = pd.get_dummies(df, columns=['Title'], drop_first=True)
+df = df.drop(columns=['Name','Ticket'])
