@@ -13,6 +13,16 @@ import matplotlib.pyplot as plt
 Simple Line Plot
 import matplotlib.pyplot as plt
 
+figure is a canvas
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+
+plot.figure(figsize=(6, 4))
+plt.plot(x, y)
+plt.show()
+
+
 x = [1, 2, 3, 4]
 y = [10, 20, 25, 30]
 
