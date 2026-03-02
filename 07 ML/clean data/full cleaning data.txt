@@ -51,51 +51,94 @@ print(df.info())
 print(df.head())
 
 =================================== code ===============================
+STEP 1: Load & Basic Info
 import pandas as pd
+import numpy as np
 
-# 1. Load original Titanic dataset
-df = pd.read_csv('titanic.csv')
-
-# ----------------------------
-# 2. Handle Missing Values
-# ----------------------------
+df = pd.read_csv("titanic.csv")
+print(df.info())
+print(df.describe())
+STEP 2: Data Cleaning
+2.1 Drop ID Column
+df = df.drop(columns=['PassengerId'])
+2.2 Handle Missing Values
+Age (fill with median)
 df['Age'] = df['Age'].fillna(df['Age'].median())
+Embarked (fill with mode)
 df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
+Cabin (Drop)
 df = df.drop(columns=['Cabin'])
-
-# ----------------------------
-# 3. Standardize Sex
-# ----------------------------
-df['Sex'] = df['Sex'].str.lower().map({'male':0, 'female':1})
-
-# ----------------------------
-# 4. One-Hot Encode Embarked
-# ----------------------------
-df = pd.get_dummies(df, columns=['Embarked'], drop_first=True)
-
-# ----------------------------
-# 5. Extract Title from Name
-# ----------------------------
+STEP 3: Feature Engineering
+3.1 Extract Title from Name
 df['Title'] = df['Name'].str.extract(' ([A-Za-z]+)\.', expand=False)
+
 df['Title'] = df['Title'].replace(['Mlle','Ms'],'Miss')
 df['Title'] = df['Title'].replace('Mme','Mrs')
-df['Title'] = df['Title'].replace(['Lady','Countess','Capt','Col','Don','Dr','Major',
-                                   'Rev','Sir','Jonkheer','Dona'],'Rare')
-df = pd.get_dummies(df, columns=['Title'], drop_first=True)
-
-# ----------------------------
-# 6. Optional Feature: FamilySize
-# ----------------------------
+3.2 Create Family Size
 df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
 
-# ----------------------------
-# 7. Drop unnecessary columns
-# ----------------------------
-df = df.drop(columns=['Name','Ticket','PassengerId'])
+Drop unused:
 
-# ----------------------------
-# 8. Save cleaned dataset
-# ----------------------------
-df.to_csv('titanic_cleaned.csv', index=False)
+df = df.drop(columns=['Name','Ticket'])
+STEP 4: Encoding
+Encode Sex
+df['Sex'] = df['Sex'].map({'male':0, 'female':1})
+One-Hot Encoding
+df = pd.get_dummies(df, columns=['Embarked','Title','Pclass'], drop_first=True)
+STEP 5: Split Data
+from sklearn.model_selection import train_test_split
 
-print("Titanic dataset cleaned and saved as 'titanic_cleaned.csv'")
+X = df.drop('Survived', axis=1)
+y = df['Survived']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+STEP 6: Feature Scaling
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+STEP 7: Model Training (Logistic Regression)
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+STEP 8: Evaluation
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+y_pred = model.predict(X_test)
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
+
+Expected accuracy: ~80%
+
+STEP 9: Decision Tree (Compare)
+from sklearn.tree import DecisionTreeClassifier
+
+tree = DecisionTreeClassifier(max_depth=5)
+tree.fit(X_train, y_train)
+
+y_pred_tree = tree.predict(X_test)
+print("Tree Accuracy:", accuracy_score(y_test, y_pred_tree))
+ Final ML Pipeline Summary
+Step	What We Did
+Cleaning	Missing handle + drop useless
+Feature Engineering	Title + FamilySize
+Encoding	Convert categorical → numeric
+Scaling	Normalize features
+Model	Logistic Regression
+Accuracy	~80%
+Why Logistic Works Well?
+
+কারণ Titanic survival mostly linear separation:
+
+Female → high survival
+
+1st class → high survival
+
+Higher fare → high survival
