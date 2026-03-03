@@ -1,0 +1,69 @@
+Data Cleaning মানে কি?
+
+ডেটা ক্লিনিং মানে হচ্ছে নোংরা / ভুল / অসম্পূর্ণ ডেটা ঠিক করা।
+যাতে analysis বা machine learning করলে ভুল result না আসে।
+
+ধরো তোমার কাছে একটা Student ডেটা আছে:
+
+id	name	age	city
+1	Rahim	20	Dhaka
+2	Karim		Dhaka
+2	Karim		Dhaka
+3	Salma	200	dhaka
+
+এখানে সমস্যা আছে
+
+age খালি আছে
+
+duplicate row আছে
+
+age = 200 (ভুল)
+
+Dhaka / dhaka আলাদা লেখা
+
+এগুলো ঠিক করাই হলো Data Cleaning।
+
+এখন Step by Step সহজ নিয়ম
+Step 1: Missing Value ঠিক করা
+
+যেখানে কিছু খালি আছে (যেমন age নেই)
+
+✔ ভরাট করো (mean / median দিয়ে)
+অথবা
+✔ পুরো row delete করো
+
+Step 2: Duplicate delete করো
+
+একই row বারবার থাকলে remove করতে হবে।
+
+Step 3: ভুল Data ঠিক করো
+
+age = 200 
+এটা বাস্তবসম্মত না। তাই remove বা correct করতে হবে।
+
+Step 4: একরকম বানাও (Standardize)
+
+Dhaka
+dhaka
+DHAKA
+
+সব একরকম করে দাও → Dhaka
+
+Step 5: Data type ঠিক করো
+
+Age যদি string হয় → number বানাও
+Date যদি text হয় → datetime বানাও
+
+এক লাইনে মনে রাখো
+
+Data Cleaning =
+
+Missing ঠিক করা
+
+Duplicate মুছা
+
+ভুল মান ঠিক করা
+
+একরকম format করা
+
+Data type ঠিক করা
