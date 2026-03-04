@@ -1,3 +1,190 @@
+Data Cleaning কী?
+
+Data Cleaning মানে হলো —
+    Raw ডাটা থেকে ভুল, ফাঁকা, duplicate, inconsistent জিনিসগুলো ঠিক করা।
+
+কারণ:
+Dirty Data = Wrong Model
+Clean Data = Better Accuracy
+
+Data Cleaning এর Main Step গুলো
+1. Missing Value Handle করা
+Problem:
+    কিছু কলামে value নাই (NaN / NULL)
+
+Solution:
+import pandas as pd
+
+df.isnull().sum()
+Fix করার উপায়:
+Drop করা:
+df.dropna(inplace=True)
+
+Mean দিয়ে fill করা:
+df["age"].fillna(df["age"].mean(), inplace=True)
+
+Mode দিয়ে:
+df["city"].fillna(df["city"].mode()[0], inplace=True)
+
+2. Duplicate Data Remove করা
+df.duplicated().sum()
+df.drop_duplicates(inplace=True)
+
+3. Wrong Data Type Fix করা
+df.dtypes
+
+Example:
+
+df["date"] = pd.to_datetime(df["date"])
+df["price"] = df["price"].astype(float)
+
+4. Outlier Detect করা
+import matplotlib.pyplot as plt
+
+plt.boxplot(df["salary"])
+plt.show()
+
+Outlier remove:
+
+Q1 = df["salary"].quantile(0.25)
+Q3 = df["salary"].quantile(0.75)
+
+IQR = Q3 - Q1
+
+df = df[(df["salary"] >= Q1 - 1.5*IQR) & 
+        (df["salary"] <= Q3 + 1.5*IQR)]
+
+5. String Data Clean করা
+df["name"] = df["name"].str.lower()
+df["name"] = df["name"].str.strip()
+
+====================================== Basic Cleaning Example ===================================
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+# Missing value
+df["age"].fillna(df["age"].mean(), inplace=True)
+
+# Duplicate remove
+df.drop_duplicates(inplace=True)
+
+# Data type fix
+df["date"] = pd.to_datetime(df["date"])
+
+# String clean
+df["city"] = df["city"].str.lower().str.strip()
+
+print(df.head())
+
+# Pro Tip (ML এর জন্য)
+Model train করার আগে সবসময়:
+
+df.info()
+df.describe()
+
+============================================= Strategy for Missing Value =============================================
+Data Cleaning এ এটা খুব common decision। কত % Missing হলে Row বা Column Delete করবো?
+
+এটার fixed rule নাই, কিন্তু practical industry guideline আছে
+
+1. Column Delete করার Rule
+Missing %	Decision
+0-5%	Keep (fill করা ভালো)
+5-20%	Imputation (mean/median/mode)
+20-40%	Careful decision (feature importance দেখো)
+40-50%	সাধারণত Column drop
+60-70%	সাধারণত Column drop
+
+যদি 50% এর বেশি data missing থাকে, সাধারণত column remove করা হয়
+কারণ ওই feature reliable না।
+
+2. Row Delete করার Rule
+Missing per Row	Decision
+1-2 field missing	Fill করা ভালো
+অনেক column missing	Row drop করা যায়
+50%+ field missing	Row drop safe
+
+Small Dataset হলে
+→ Row delete করলে data কমে যাবে
+→ তাই fill করা ভালো
+Large Dataset হলে
+→ Row delete safe
+
+Real Example
+ধরো dataset এ 10,000 row আছে
+একটা column এ 6,500 missing value আছে
+
+6500 / 10000 = 65%
+এটা drop করাই ভালো।
+
+Pandas দিয়ে Missing % বের করার Code
+missing_percent = df.isnull().mean() * 100
+print(missing_percent)
+
+Advanced Tip (ML এর জন্য)
+যদি feature খুব important হয় (যেমন salary, age)
+তাহলে 40% missing হলেও:
+✔ Model based imputation
+✔ KNN imputer
+✔ Predictive filling
+
+ব্যবহার করা যায়।
+
+Final Short Rule
+
+Column > 50% missing → Drop
+Row > 50% missing → Drop
+Otherwise → Fill
+
+Column এ 50% এর বেশি missing থাকলে drop করা safe
+
+3. Row Delete করার Rule
+Condition	Decision
+1-2 field missing	Fill করা ভালো
+অনেক column missing	Row drop করা যায়
+Row এর 50%+ field missing	Drop safe
+
+
+Short Rule:
+Row এর অর্ধেকের বেশি value missing হলে row delete করা যায়
+
+4. Dataset Size Important
+Small Dataset হলে:
+Row delete করলে data কমে যাবে তাই fill করা ভালো
+Large Dataset হলে:
+Row delete safe
+
+5. Missing % বের করার Pandas Code
+missing_percent = df.isnull().mean() * 100
+print(missing_percent)
+
+6. Fill করার Common Method
+6.1 Numerical Column:
+df["age"].fillna(df["age"].mean(), inplace=True)
+6.2 Categorical Column:
+df["city"].fillna(df["city"].mode()[0], inplace=True)
+
+7. Important ML Tip
+যদি feature খুব important হয় (যেমন: salary, age)
+তাহলে 40% missing হলেও drop না করে:
+
+Model based imputation
+
+KNN imputer
+
+Predictive filling
+
+ব্যবহার করা যায়।
+
+Final Exam Shortcut
+
+Column > 50% missing → Drop
+Row > 50% missing → Drop
+Otherwise → Fill
+
+=================================== steps of cleaning data ==========================================
+
 # Correct way to load a CSV file
 
 # 1st: see the data
@@ -17,6 +204,8 @@
 # 7th: remove duplicate rows and cols
 
 # 8th: save the cleaned data
+
+=========================================== Worked Example ==========================================
 
 '''
 # Drop unnecessary columns
