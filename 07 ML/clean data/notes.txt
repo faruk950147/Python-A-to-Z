@@ -1,13 +1,10 @@
-import pandas as pd
-
 # Correct way to load a CSV file
-df = pd.read_csv('messy_sales_data.csv')
 
 # 1st: see the data
-# df.info()
+
 
 # 2nd: see the null values
-# df.isnull().sum()
+
 
 # 3rd: romeved missing data
 
@@ -21,6 +18,46 @@ df = pd.read_csv('messy_sales_data.csv')
 
 # 8th: save the cleaned data
 
+'''
+# Drop unnecessary columns
+df.drop(columns=['Notes', 'Salesperson'], inplace=True, errors='ignore')
+
+# Drop rows missing essential info
+df.dropna(subset=['Order ID', 'Customer Name', 'Product'], inplace=True)
+
+# Keep only alphabetic City names
+df = df[df['City'].str.isalpha()]
+df['City'] = df['City'].str.capitalize()
+
+# Convert numeric columns and fill NaNs with median
+numeric_cols = ['Quantity', 'Unit Price', 'Total Amount']
+for col in numeric_cols:
+    df[col] = pd.to_numeric(df[col], errors='coerce')
+    df[col] = df[col].fillna(df[col].median())
+
+# Fill text columns with 'Unknown' and strip spaces
+text_cols = ['Payment Method', 'Status', 'Category', 'City']
+for col in text_cols:
+    df[col] = df[col].fillna('Unknown').astype(str).str.strip()
+
+# Convert Order Date safely
+df['Order Date'] = pd.to_datetime(df['Order Date'], errors='coerce')
+
+# Check null
+if df['Order Date'].isna().any():
+    df['Order Date'] = df['Order Date'].fillna(df['Order Date'].mode()[0])
+
+# Remove duplicates based on Order ID
+df.drop_duplicates(subset='Order ID', inplace=True)
+
+# Check cleaned DataFrame
+print(df.head())
+
+# Save cleaned dataset
+df.to_csv('messy_sales_data_cleaned.csv', index=False)
+print("Cleaned dataset saved as 'messy_sales_data_cleaned.csv'")
+
+'''
 
 
 
