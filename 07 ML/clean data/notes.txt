@@ -1,0 +1,93 @@
+import pandas as pd
+
+# Correct way to load a CSV file
+df = pd.read_csv('messy_sales_data.csv')
+
+# 1st: see the data
+# df.info()
+
+# 2nd: see the null values
+# df.isnull().sum()
+
+# 3rd: romeved missing data
+
+# 4rd: fill the null values
+
+# 5rd: convert the data types
+
+# 6th: check duplicate rows and cols
+
+# 7th: remove duplicate rows and cols
+
+# 8th: save the cleaned data
+
+
+
+
+
+
+import pandas as pd
+
+# Load dataset
+df = pd.read_csv('messy_sales_data.csv')
+
+# 1st: See basic info
+# print(df.info())
+
+# 2nd: Check null values
+# print(df.isnull().sum())
+
+# 3rd Remove rows where critical fields missing
+df.dropna(subset=['Order ID', 'Salesperson', 'Notes'], inplace=True)
+
+# 4rd Fill remaining null values
+df['Customer Name'] = df['Customer Name'].fillna('Unknown')
+df['City'] = df['City'].fillna('Unknown')
+df['Payment Method'] = df['Payment Method'].fillna('Unknown')
+df['Status'] = df['Status'].fillna('Pending')
+
+# 5rd Convert data types
+numeric_cols = ['Quantity', 'Unit Price', 'Total Amount']
+
+for col in numeric_cols:
+    df[col] = pd.to_numeric(df[col], errors='coerce')
+
+df['Order Date'] = pd.to_datetime(df['Order Date'], errors='coerce')
+# change to date format
+df['Order Date'] = df['Order Date'].dt.strftime('%d-%m-%Y')
+
+# Remove rows where numeric conversion failed
+df.dropna(subset=numeric_cols, inplace=True)
+
+# Remove negative values
+df = df[(df['Quantity'] > 0) & (df['Unit Price'] > 0)]
+
+# Recalculate Total Amount
+df['Total Amount'] = df['Quantity'] * df['Unit Price']
+
+# 6rd Check duplicate rows & columns
+# Duplicate rows
+# print(df.duplicated().sum())
+
+# Duplicate Order ID
+# print(df['Order ID'].duplicated().sum())
+
+# 7rd Remove duplicate rows
+df.drop_duplicates(inplace=True)
+df.drop_duplicates(subset='Order ID', inplace=True)
+
+# 8rd Standardize text formatting
+df['Customer Name'] = df['Customer Name'].str.strip().str.title()
+df['Category'] = df['Category'].str.strip().str.upper()
+df['Product'] = df['Product'].str.strip().str.title()
+df['City'] = df['City'].str.strip().str.title()
+df['Payment Method'] = df['Payment Method'].str.strip().str.title()
+df['Status'] = df['Status'].str.strip().str.title()
+
+# 9rd Save cleaned data
+df.reset_index(drop=True, inplace=True)
+df.to_csv('cleaned_sales_data.csv', index=False)
+
+# Final check
+print("Cleaning Completed Successfully")
+df.info()
