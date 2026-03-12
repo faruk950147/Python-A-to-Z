@@ -20,6 +20,20 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
+def twoSum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        need = target - num
+        if need in seen:
+            return [seen[need], i]
+        seen[num] = i
+
+nums = [2,7,11,15]
+target = 9
+
+print(twoSum(nums, target))
+
+
 from typing import List
 class Solution:
     # using Type Hinting
