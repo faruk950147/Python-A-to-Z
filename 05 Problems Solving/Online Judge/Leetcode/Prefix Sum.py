@@ -1,4 +1,4 @@
-'''🔹 Prefix Sum কি?
+'''Prefix Sum কি?
 
 Prefix Sum হলো একটি array এর running sum বা cumulative sum।
 মানে, array এর প্রতিটি index পর্যন্ত সব elements এর যোগফল।
@@ -20,7 +20,7 @@ Index 4: 1+2+3+4+5 = 15
 Prefix Sum Array:
 
 prefix = [1, 3, 6, 10, 15]
-🔹 কেন Prefix Sum ব্যবহার করি?
+ কেন Prefix Sum ব্যবহার করি?
 
 সাধারণভাবে:
 যদি array এর subarray sum বার বার বের করতে চাই, direct sum করলে O(n) লাগে।
@@ -37,8 +37,8 @@ arr = [1,2,3,4,5]
 prefix = [1,3,6,10,15]
 
 # sum of arr[1..3] = 2+3+4 = 9
-# formula দিয়ে: prefix[3] - prefix[0] = 10 - 1 = 9 ✅
-🔹 Python কোড উদাহরণ
+# formula দিয়ে: prefix[3] - prefix[0] = 10 - 1 = 9
+ Python কোড উদাহরণ
 def prefix_sum(arr):
     n = len(arr)
     prefix = [0]*n
@@ -62,7 +62,7 @@ Output:
 
 Prefix Sum: [1, 3, 6, 10, 15]
 Subarray sum arr[1..3]: 9
-🔹 Common Problems যেখানে Prefix Sum ব্যবহার হয়
+Common Problems যেখানে Prefix Sum ব্যবহার হয়
 
 Subarray sum queries
 যেমন, একটি array থেকে বিভিন্ন index এর sum বারবার খুঁজতে হবে।
@@ -80,7 +80,7 @@ Subarray Sum Equals K
 Range Sum Query
 
 Maximum Subarray Sum variations
-🔹 Problem: Subarray Sum Equals K
+Problem: Subarray Sum Equals K
 
 Problem:
 
@@ -96,7 +96,7 @@ Subarrays যেগুলোর sum = 2 → [1,1], [1,1]
 
 Output = 2
 
-🔹 Approach: Prefix Sum + HashMap
+Approach: Prefix Sum + HashMap
 
 Idea:
 
@@ -107,7 +107,7 @@ Dictionary ব্যবহার করে প্রতি prefix sum এর fre
 
 O(n) time এ সব solve করা যায়।
 
-🔹 Python কোড
+Python কোড
 def subarraySum(nums, k):
     prefix_count = {0: 1}  # sum 0 একবার আছে
     total = 0              # running prefix sum
@@ -131,7 +131,7 @@ print("Number of subarrays:", subarraySum(nums, k))
 Output:
 
 Number of subarrays: 2
-🔹 Step by Step (Bangla)
+Step by Step (Bangla)
 
 prefix_count = {0: 1} → sum 0 একবার আছে (empty subarray এর জন্য)।
 
@@ -143,8 +143,8 @@ total দিয়ে চলমান sum রাখি।
 
 শেষে সব গোনা subarrays count করি।
 
-✅ Time Complexity: O(n)
-✅ Space Complexity: O(n) (dictionary এর জন্য)
+Time Complexity: O(n)
+Space Complexity: O(n) (dictionary এর জন্য)
 '''
 
 
