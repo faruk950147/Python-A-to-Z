@@ -186,3 +186,141 @@ List  = Dynamic Array
 Dict  = Hash Table
 Set   = Hash Table (keys only)
 Tuple = Fixed Array
+
+=============================================================
+1. List = Dynamic Array
+
+ধরো তোমার কাছে একটা array box আছে 
+
+ভিতরে data রাখো: [10, 20, 30]
+
+এটা ordered → sequence ঠিক থাকে
+
+mutable → change করা যায়
+
+ভিতরে কী হয়?
+
+Python আগে থেকেই extra জায়গা রাখে:
+
+Example:
+
+[10, 20, _ , _ , _]
+
+তুমি append করলে:
+
+lst.append(30)
+
+নতুন memory লাগেনা → তাই fast 🚀
+
+সমস্যা কোথায়?
+lst.insert(1, 99)
+
+সব element shift করতে হয়:
+
+[10, 20, 30]
+→ [10, 99, 20, 30]
+
+তাই slow (O(n))
+
+2. Dict = Hash Table
+
+এটা key → value store করে
+
+d = {"name": "Faruk"}
+ভিতরে কী হয়?
+
+Step by step:
+
+"name" → hash বানায়
+
+hash → index বের করে
+
+সেই index-এ value রাখে
+
+Real Example
+
+ধরো:
+
+"name" → hash → index 5
+
+memory slot 5-এ value store
+
+Collision কী?
+
+দুইটা key same index এ গেলে 
+
+Python handle করে:
+
+probing (next empty slot খোঁজা)
+
+কেন fast?
+
+direct index access → O(1)
+
+3. Set = Dict without value
+s = {1, 2, 3}
+
+আসলে এটা internally:
+
+{1: None, 2: None, 3: None}
+কাজ কী?
+
+duplicate remove
+
+fast search
+
+if 5 in s:
+
+instantly check (O(1))
+
+4. Tuple = Fixed Array
+t = (10, 20, 30)
+কেন fast?
+
+change করা যায় না 
+
+size fix
+
+তাই Python optimize করতে পারে
+
+Use case
+
+dict key হিসেবে use করা যায়
+
+constant data
+
+সবচেয়ে গুরুত্বপূর্ণ পার্থক্য
+Type	সহজভাবে বুঝো
+List	changeable array
+Tuple	fixed array
+Dict	smart lookup table
+Set	unique checker
+Real Life Example
+
+ধরো:
+
+List
+
+Shopping list:
+
+["apple", "banana", "milk"]
+Dict
+
+Student info:
+
+{"name": "Faruk", "age": 20}
+Set
+
+Unique ID:
+
+{101, 102, 103}
+Tuple
+
+Coordinates:
+
+(23.7, 90.4)
+Short Memory Trick
+List  → changeable list
+Tuple → fixed list
+Dict  → key-value brain
+Set   → unique filter
