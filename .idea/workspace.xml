@@ -17,10 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3Aqn5knKvfG2zIfAtSaph1AQ4ky" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,6 +31,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Prefix Sum.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "git-widget-placeholder": "main",
@@ -54,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773328794431</updated>
       <workItem from="1773328795839" duration="1646000" />
+      <workItem from="1773847470115" duration="12000" />
     </task>
     <servers />
   </component>

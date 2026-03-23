@@ -12,6 +12,9 @@
 # It is a way to create a new list by applying an expression to each element of a set.
 # It is a way to create a new list by applying an expression to each element of a dictionary.
 
+# syntax list comprehensions
+# [expression for item in iterable]
+
 # 1. Example
 list = [i for i in range(10)] # it's a list of numbers from 0 to 9
 print(list)
