@@ -82,3 +82,39 @@ Crawling = ওয়েবের মানচিত্র তৈরি করা।
 Scraping = ওয়েবের তথ্য সংগ্রহ করা।
 
 Crawling প্রায়ই Scraping এর জন্য একটি স্টেপ হিসেবে ব্যবহৃত হয়।
+
+Web Crawling / Scraping এর জন্য সবচেয়ে বেশি ব্যবহৃত Python libraries list এক জায়গায় দিলাম 👇
+
+Basic Libraries
+Requests
+BeautifulSoup
+lxml
+
+Browser Automation (Dynamic Website)
+Selenium
+Playwright
+
+Crawling Framework (Advanced)
+Scrapy
+Data Handling
+pandas
+csv
+json
+Helper Libraries
+fake-useragent
+time
+re
+urllib
+Short Summary
+
+Minimum setup:
+
+Requests + BeautifulSoup
+
+Dynamic site:
+
+Selenium / Playwright
+
+Large project:
+
+Scrapy
