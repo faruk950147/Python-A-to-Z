@@ -39,5 +39,12 @@ class Crawler:
         
         return path
 
+    def crawl(self):
+        folder_path = self.create_folder()
+        response = requests.get(self.url)
+        with open(os.path.join(folder_path, "index.html"), "w") as f:
+            f.write(response.text)
+        return response.text
+
 crawler = Crawler("https://www.geeksforgeeks.org/")
-print(crawler.create_folder())
+print(crawler.crawl())
