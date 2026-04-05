@@ -1,6 +1,8 @@
 import requests
-url = "https://www.google.com"
 
-response = requests.get(url)
+response = requests.get("https://www.geeksforgeeks.org/")
 
-print(response.ok)
+print("Status Code:", response.status_code)
+
+print("\nResponse Content:")
+print(response.text)
