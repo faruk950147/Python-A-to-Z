@@ -31,9 +31,13 @@ class Crawler:
         # url: www.geeksforgeeks.org
         # folder_name: www.geeksforgeeks.org
         '''
-        folder_name = self.url.split("//")[-1].split("/")[0] + "_" + datetime.now().strftime("%Y%m%d%H%M%S")
+        folder_name = self.url.split("//")[-1].split("/")[0]
         
-        path = r"L:\Programming\Programming\All-Main-Problem-Solving\Python-A-to-Z\04. Advanced Level\07 Web Crawling\\" + folder_name
+        path = os.path.join(
+            "L:\\Programming\\Programming\\All-Main-Problem-Solving\\Python-A-to-Z\\04. Advanced Level",
+            "07 Web Crawling\\websites",
+            folder_name
+        )
         
         os.makedirs(path, exist_ok=True)  # already handles exists
         
@@ -42,9 +46,9 @@ class Crawler:
     def crawl(self):
         folder_path = self.create_folder()
         response = requests.get(self.url)
-        with open(os.path.join(folder_path, "index.html"), "w") as f:
+        with open(os.path.join(folder_path, "index.html"), "w", encoding="utf-8") as f:
             f.write(response.text)
         return response.text
 
-crawler = Crawler("https://www.geeksforgeeks.org/")
+crawler = Crawler("https://www.python.org/")
 print(crawler.crawl())
