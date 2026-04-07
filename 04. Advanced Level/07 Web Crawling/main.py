@@ -1,23 +1,22 @@
 import os
 from datetime import datetime
 import requests
-'''
+
 response = requests.get("https://www.geeksforgeeks.org/")
 
 print("Status Code:", response.status_code)
 
 print("\nResponse Content:")
 print(response.text)
+
+
 '''
-
-
-
 class Crawler:
     def __init__(self, url):
         self.url = url
         
     def create_folder(self):
-        '''
+    
         # url: https://www.geeksforgeeks.org/
         print(self.url)
         # url: ['https:', '', 'www.geeksforgeeks.org', '']
@@ -30,7 +29,7 @@ class Crawler:
         print(self.url.split("//")[-1].split("/")[0])
         # url: www.geeksforgeeks.org
         # folder_name: www.geeksforgeeks.org
-        '''
+
         folder_name = self.url.split("//")[-1].split("/")[0]
         
         path = os.path.join(
@@ -52,3 +51,4 @@ class Crawler:
 
 crawler = Crawler("https://www.python.org/")
 print(crawler.crawl())
+'''
