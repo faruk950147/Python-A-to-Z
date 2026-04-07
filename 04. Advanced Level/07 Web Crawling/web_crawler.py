@@ -1,4 +1,5 @@
 
+""" 
 import os
 import requests
 
@@ -36,12 +37,13 @@ class Crawler:
 
 # usage
 crawler = Crawler("https://www.python.org/")
-crawler.crawl_website()
+crawler.crawl_website() 
 
-'''
+"""
+
 class Crawler:
     def __init__(self, url, visited=None):
-        self.url = url  # remove comma here!
+        self.url = url
         self.visited = set() if visited is None else set(visited)
 
     def create_directory(self):
@@ -76,7 +78,7 @@ class Crawler:
 crawler = Crawler("https://www.python.org/")
 crawler.crawl_website()
 
-
+'''
 import os
 import requests
 from bs4 import BeautifulSoup
