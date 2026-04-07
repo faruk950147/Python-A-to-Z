@@ -29,7 +29,7 @@ class Crawler:
         file_path = os.path.join(folder_path, "index.html")
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(response.text)
-            print(response.text)
+            # print(response.text)
 
         print(f"Downloaded HTML to: {file_path}")
         return file_path
