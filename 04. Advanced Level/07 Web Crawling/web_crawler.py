@@ -34,5 +34,5 @@ class Crawler:
             f.write(response.text)
         return response.text
 
-crawler = Crawler("https://www.python.org/")
+crawler = Crawler("https://www.geeksforgeeks.org/")
 print(crawler.crawl())
