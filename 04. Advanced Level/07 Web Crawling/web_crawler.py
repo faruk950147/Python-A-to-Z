@@ -1,4 +1,4 @@
-'''
+
 import os
 import requests
 
@@ -29,6 +29,7 @@ class Crawler:
         file_path = os.path.join(folder_path, "index.html")
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(response.text)
+            print(response.text)
 
         print(f"Downloaded HTML to: {file_path}")
         return file_path
@@ -37,6 +38,7 @@ class Crawler:
 crawler = Crawler("https://www.python.org/")
 crawler.crawl_website()
 
+'''
 class Crawler:
     def __init__(self, url, visited=None):
         self.url = url  # remove comma here!
@@ -73,7 +75,7 @@ class Crawler:
 # usage
 crawler = Crawler("https://www.python.org/")
 crawler.crawl_website()
-'''
+
 
 import os
 import requests
@@ -130,3 +132,6 @@ crawler = Crawler("https://www.python.org/")
 crawler.crawl_website()
 
 
+
+
+'''
