@@ -19,9 +19,10 @@ import requests
 from bs4 import BeautifulSoup
 res = requests.get('https://www.youtube.com/watch?v=VIksvMzIS0g')
 
-print("Without beautyful soup" + res.content)
 
-# soup = BeautifulSoup(res.content, 'html.parser')
+
+soup = BeautifulSoup(res.text, 'lxml')
+print(soup)
 
 # create a file
 # with open('text.html', 'w', encoding='utf-8') as f:
