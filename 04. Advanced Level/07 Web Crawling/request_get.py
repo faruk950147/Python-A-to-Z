@@ -46,3 +46,4 @@ response = requests.get(url)
 # using loop
 for key, value in response.headers.items():
     print(f"Key: {key}, <-------> Value: {value}")
+    
