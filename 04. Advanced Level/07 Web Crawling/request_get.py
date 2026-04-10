@@ -1,7 +1,7 @@
 import requests
-url = "https://www.cricbuzz.com/"
+from fake_useragent import UserAgent
 
-response = requests.get(url)
+response = requests.get("https://www.cricbuzz.com/", headers={'User-Agent': UserAgent().random})
 
 # get request with status code
 # print(response.status_code)
