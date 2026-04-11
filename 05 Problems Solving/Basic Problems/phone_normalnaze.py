@@ -24,3 +24,5 @@ m = Managers()
 result = m.normalize_phone("01712345678")
 
 print(result)
+
+# +8801712345678

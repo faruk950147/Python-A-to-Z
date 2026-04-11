@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61865b13-6698-4aaa-bafe-62bcfd8f864d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Python-A-to-Z.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-A-to-Z.iml" afterDir="false" />
-    </list>
+    <list default="true" id="61865b13-6698-4aaa-bafe-62bcfd8f864d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +61,7 @@
       <workItem from="1775567104580" duration="58000" />
       <workItem from="1775802693686" duration="1736000" />
       <workItem from="1775804960918" duration="259000" />
+      <workItem from="1775919715301" duration="113000" />
     </task>
     <servers />
   </component>
