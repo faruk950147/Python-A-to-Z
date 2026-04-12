@@ -54,20 +54,47 @@ $ matches the end of the string
 \.: The dot character (escaped with a backslash because it has a special meaning in regular expressions).
 [a-zA-Z]{2,}: Two or more letters.
 '''
+import re
+
 with open(r"L:/Programming/Programming/All-Main-Problem-Solving/Python-A-to-Z/04. Advanced Level/06 Concurrency/Regex/email search/email.txt", "r") as file:
     data = file.read()
 
-emails = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", data)
+emails = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}", data)
 
 gmail = []
 yahoo = []
+others = []
 
 for email in emails:
-    if "@gmail.com" in email:
+    domain = email.split("@")[1]
+
+    if domain == "gmail.com":
         gmail.append(email)
-    elif "@yahoo.com" in email:
+    elif domain == "yahoo.com":
         yahoo.append(email)
+    else:
+        others.append(email)
 
 print("All Emails:", emails)
 print("Gmail Emails:", gmail)
 print("Yahoo Emails:", yahoo)
+print("Others:", others)
+
+'''
+import re
+
+with open(r"L:/Programming/Programming/All-Main-Problem-Solving/Python-A-to-Z/04. Advanced Level/06 Concurrency/Regex/email search/email.txt", "r") as file:
+    data = file.read()
+
+emails = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}", data)
+
+gmail = re.findall(r"[a-zA-Z0-9_.+-]+@gmail\.com", data)
+yahoo = re.findall(r"[a-zA-Z0-9_.+-]+@yahoo\.com", data)
+
+others = [e for e in emails if not re.search(r"@(gmail\.com|yahoo\.com)$", e)]
+
+print("All Emails:", emails)
+print("Gmail Emails:", gmail)
+print("Yahoo Emails:", yahoo)
+print("Others:", others)
+'''
