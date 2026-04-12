@@ -181,96 +181,59 @@ DEFAULT	কোনো ভ্যালু না দিলে ডিফল্ট �
 🔹 1. NOT NULL
 কাজ: কলাম ফাঁকা (NULL) থাকতে পারবে না।
 
-SQL
-
-sql
-Copy
-Edit
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL
 );
-Django
 
-python
-Copy
-Edit
+Django
 class User(models.Model):
     name = models.CharField(max_length=100, null=False)
 🔹 2. UNIQUE
 কাজ: কলামের ভ্যালু অবশ্যই ইউনিক হতে হবে।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE users (
     email VARCHAR(100) UNIQUE
 );
 Django
 
-python
-Copy
-Edit
 class User(models.Model):
     email = models.EmailField(unique=True)
 🔹 3. PRIMARY KEY
 কাজ: প্রতিটি রো ইউনিকভাবে চিহ্নিত করে (NOT NULL + UNIQUE একসাথে)।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100)
 );
 Django
 
-python
-Copy
-Edit
 class User(models.Model):
     id = models.AutoField(primary_key=True)
 🔹 4. FOREIGN KEY
 কাজ: এক টেবিলের কলামকে অন্য টেবিলের সাথে রিলেট করে (Referential Integrity)।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE orders (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
-Django
-
-python
-Copy
-Edit
+django
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 🔹 5. CHECK
 কাজ: শর্ত পূরণ না হলে ইনসার্ট/আপডেট হবে না।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE products (
     id INT PRIMARY KEY AUTO_INCREMENT,
     price DECIMAL(10, 2) CHECK (price > 0)
 );
 Django
 
-python
-Copy
-Edit
 from django.core.validators import MinValueValidator
 
 class Product(models.Model):
@@ -280,53 +243,30 @@ class Product(models.Model):
 
 SQL
 
-sql
-Copy
-Edit
 CREATE TABLE users (
     status VARCHAR(20) DEFAULT 'active'
 );
 Django
-
-python
-Copy
-Edit
 class User(models.Model):
     status = models.CharField(max_length=20, default='active')
 🔹 7. AUTO_INCREMENT (MySQL) / SERIAL (PostgreSQL)
 কাজ: ভ্যালু অটো ইনক্রিমেন্ট হবে।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT
 );
 Django
-
-python
-Copy
-Edit
 class User(models.Model):
     id = models.AutoField(primary_key=True)
 🔹 8. Composite Key (Multiple Columns Primary Key/Unique)
 SQL
-
-sql
-Copy
-Edit
 CREATE TABLE enrollments (
     student_id INT,
     course_id INT,
     PRIMARY KEY (student_id, course_id)
 );
 Django
-
-python
-Copy
-Edit
 class Enrollment(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
@@ -337,16 +277,9 @@ class Enrollment(models.Model):
 কাজ: সার্চ পারফরম্যান্স বাড়ায়।
 
 SQL
-
-sql
-Copy
-Edit
 CREATE INDEX idx_email ON users(email);
 Django
 
-python
-Copy
-Edit
 class User(models.Model):
     email = models.EmailField(unique=True)
 
@@ -357,19 +290,11 @@ class User(models.Model):
 🔹 10. ENUM (MySQL Specific)
 কাজ: নির্দিষ্ট কিছু ভ্যালুর বাইরে কিছু ঢুকতে পারবে না।
 
-SQL
-
-sql
-Copy
-Edit
 CREATE TABLE users (
     role ENUM('admin', 'editor', 'viewer') DEFAULT 'viewer'
 );
 Django
 
-python
-Copy
-Edit
 class User(models.Model):
     ROLE_CHOICES = [
         ('admin', 'Admin'),
