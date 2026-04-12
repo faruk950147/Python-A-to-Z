@@ -18,41 +18,16 @@ Zip Extract করো
 Nginx চালানো
 Command Prompt (cmd) বা PowerShell খুলে:
 
-bash
-Copy
-Edit
+
 cd C:\nginx
 start nginx
-অথবা:
 
-bash
-Copy
-Edit
-nginx
-Nginx বন্ধ করা
-
-bash
-Copy
-Edit
 nginx -s stop
-অথবা graceful shutdown এর জন্য:
 
-bash
-Copy
-Edit
 nginx -s quit
-Nginx রিলোড করা (config পরিবর্তন করলে)
 
-bash
-Copy
-Edit
 nginx -s reload
-চেক করা যে Nginx চলছে কিনা
-ব্রাউজারে গিয়ে:
 
-arduino
-Copy
-Edit
 http://localhost
 ডিফল্ট Nginx ওয়েলকাম পেজ আসবে।
 
@@ -77,9 +52,6 @@ ZIP ফাইল ডাউনলোড করে extract করো।
 3. সার্ভিস বানানো
 Command Prompt (Admin) খুলে:
 
-bash
-Copy
-Edit
 C:\nssm\win64\nssm.exe install nginx
 একটা GUI আসবে:
 
@@ -90,14 +62,10 @@ Startup directory: C:\nginx
 OK চাপো।
 
 4. সার্ভিস চালানো
-bash
-Copy
-Edit
+
 net start nginx
 5. সার্ভিস বন্ধ করা
-bash
-Copy
-Edit
+
 net stop nginx
 এখন থেকে Nginx Windows Services-এ থাকবে এবং অটো-স্টার্ট করতে পারবে।
 
@@ -112,36 +80,26 @@ net stop nginx
 Start Menu → "cmd" লিখে সার্চ → Run as Administrator।
 
 2. nssm দিয়ে Nginx ইনস্টল করো
-cmd
-Copy
-Edit
+
 C:\nssm-2.24\win64\nssm.exe install nginx
 3. GUI-তে সেটিংস দাও
 Path:
 
-makefile
-Copy
-Edit
+
 C:\nginx-1.28.0\nginx.exe
 Startup directory:
 
-makefile
-Copy
-Edit
+
 C:\nginx-1.28.0
 Arguments: ফাঁকা রাখো।
 
 তারপর Install service বাটনে ক্লিক করো।
 
 4. Nginx সার্ভিস চালাও
-cmd
-Copy
-Edit
+
 net start nginx
 5. সার্ভিস বন্ধ করতে
-cmd
-Copy
-Edit
+
 net stop nginx
 এভাবে সেটআপ করলে Nginx Windows Services-এ চলে যাবে, আর চাইলে "Automatic" করে রাখলে Windows চালু হলেই Nginx অটো-স্টার্ট হবে।
 
@@ -154,15 +112,9 @@ net stop nginx
 
 Path:
 
-makefile
-Copy
-Edit
 C:\nginx-1.28.0\nginx.exe
 Startup directory:
 
-makefile
-Copy
-Edit
 C:\nginx-1.28.0
 Arguments:
 ফাঁকা রাখো।
@@ -171,9 +123,7 @@ Arguments:
 
 ইনস্টল হয়ে গেলে Command Prompt (Admin) এ গিয়ে চালাও:
 
-cmd
-Copy
-Edit
+
 net start nginx
 এবার ব্রাউজারে গিয়ে http://localhost লিখলে Nginx ওয়েলকাম পেজ আসা উচিত।
 
@@ -210,9 +160,6 @@ Right-click → Run as administrator।
 
 Nginx সার্ভিস ইনস্টল করো
 
-cmd
-Copy
-Edit
 C:\nssm-2.24\win64\nssm.exe install nginx
 GUI আসবে
 Path: C:\nginx-1.28.0\nginx.exe
@@ -221,15 +168,10 @@ Arguments ফাঁকা রাখো → Install Service।
 
 Nginx সার্ভিস চালাও
 
-cmd
-Copy
-Edit
+
 net start nginx
 ব্রাউজারে গিয়ে চেক করো:
 
-arduino
-Copy
-Edit
 http://localhost
 যদি চাও আমি এখনই তোমাকে একটা ব্যাচ ফাইল বানিয়ে দিতে পারি, যেটা শুধু ডাবল-ক্লিক করলেই অ্যাডমিন হিসেবে রান হয়ে Nginx সার্ভিস ইনস্টল+স্টার্ট করে দেবে।
 তাহলে আর ম্যানুয়ালি কিছু করতে হবে না।
@@ -241,9 +183,6 @@ Install service বাটনে ক্লিক করো।
 
 তারপর Command Prompt (Admin) এ গিয়ে চালাও:
 
-cmd
-Copy
-Edit
 net start nginx
 ব্রাউজারে গিয়ে http://localhost লিখে দেখো Nginx ওয়েলকাম পেজ আসে কিনা।
 
@@ -266,21 +205,12 @@ Right click → Run as administrator
 
 উপরে টাইটেল বার-এ দেখতে পাবে:
 
-makefile
-Copy
-Edit
 Administrator: Command Prompt
 এবার কমান্ড দাও:
 
-cmd
-Copy
-Edit
 net start nginx
 চেক করো:
 
-arduino
-Copy
-Edit
 http://localhost
 যদি তুমি চাও, আমি তোমাকে এমন একটা ডাবল-ক্লিক ব্যাচ ফাইল বানিয়ে দিতে পারি যা স্বয়ংক্রিয়ভাবে Admin mode-এ রান হয়ে Nginx চালু করবে—তাহলে আর বারবার ম্যানুয়ালি Admin mode ওপেন করতে হবে না।
 তুমি কি সেই ব্যাচ ফাইলটা চাও?
