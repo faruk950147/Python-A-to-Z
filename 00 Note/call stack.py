@@ -64,15 +64,105 @@ print("Program ended")
 #     [Call Stack: empty]
 #
 # Program ends.
-# ==================================== bangla =========================================
 ## ======================== WHAT IS CALL STACK ========================
 
-# Call Stack হলো একটি data structure (বিশেষত stack) যা প্রোগ্রামে বর্তমানে
-# চলমান এবং সক্রিয় ফাংশনগুলোর তথ্য সংরক্ষণ করে।
-#
-# এটি function call এবং return ট্র্যাক করার জন্য ব্যবহৃত হয়।
-# মূলত Python (এবং অন্য ভাষাগুলিও) call stack ব্যবহার করে
-# প্রোগ্রামের execution order নিয়ন্ত্রণ করে।
+CALL STACK – FULL NOTES
+🔹 Definition
+
+Call Stack হলো একটি data structure (Stack), যা program execution এর সময়
+active (চলমান) function গুলোর information store করে।
+
+🔹 Purpose (কাজ কী?)
+কোন function এখন চলছে → track করে
+function call হলে কোথায় return করবে → manage করে
+program execution flow control করে
+🔹 Basic Principle
+ LIFO (Last In First Out)
+
+শেষ যে function call হয় → আগে শেষ হয়
+🔹 How Call Stack Works
+Function call হলে → Push হয়
+Function execute হয়
+কাজ শেষ হলে → Pop হয়
+Previous function এ control ফিরে যায়
+🔹 Example
+def a():
+    print("A start")
+    b()
+    print("A end")
+
+def b():
+    print("B start")
+    c()
+    print("B end")
+
+def c():
+    print("C running")
+
+a()
+🔹 Execution Flow
+Start → a() → b() → c()
+              ↓
+        c() finished
+              ↓
+        b() finished
+              ↓
+        a() finished
+🔹 Stack Visualization
+[ a() ]
+[ b() ]
+[ c() ]   ← Top (last called)
+
+Then:
+
+[ a() ]
+[ b() ]
+
+Then:
+
+[ a() ]
+
+Then:
+
+[ empty ]
+🔹 Key Terms
+Push → Stack এ ঢোকানো
+Pop → Stack থেকে বের করা
+Top → Stack এর উপরের element
+🔹 Advantages
+Function call manage করে
+Nested function call সহজ করে
+Recursion support করে
+🔹 Disadvantages
+বেশি recursive call হলে → memory overflow হতে পারে
+Stack overflow error হতে পারে
+🔹 Stack Overflow
+
+যখন call stack limit exceed করে
+
+Example:
+def loop():
+    loop()
+
+loop()
+
+➡ Infinite recursion → stack full → crash ❌
+
+🔹 Real Life Example
+
+ Plate stack:
+
+Last plate → first remove
+➡ Same as call stack
+🔹 Important Points (Exam Tips)
+Call Stack = execution context storage
+Works on LIFO
+Every function call → new stack frame
+Return হলে → frame remove হয়
+Recursion heavily uses call stack
+One Line Summary
+
+Call Stack হলো program এর function execution track করার system (LIFO based)
 
 # ====================================================================
 
