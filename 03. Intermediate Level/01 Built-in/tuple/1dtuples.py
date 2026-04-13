@@ -1,125 +1,135 @@
-    # ============================= 1. What is Tuple =============================
+# ============================= 1. What is Tuple =============================
 # Ordered Collection: Elements in a tuple maintain a specific order.
-
 # Indexed: Each element has a fixed index.
-
-# Immutable: Once created, a tuple cannot be changed. → Methods like sort(), reverse(), pop(), remove() do not work.
-
+# Immutable: Once created, a tuple cannot be changed.
 # Iterable: Tuples can be iterated using loops (for, while).
+# Duplicates Allowed: Tuples can contain identical values.
+# Faster than Lists: More memory-efficient and faster for access.
+# Heterogeneous Data: Can store different data types together.
+# Fixed Data: Useful for fixed-size data.
+# Reference type, dynamic type
+# Hashable: Can be used as dictionary keys (if all elements are hashable)
 
-# Duplicates Allowed: Tuples can contain multiple identical values.
-
-# Faster than Lists: Tuples are more memory-efficient and faster for access than lists.
-
-# Heterogeneous Data: A tuple can store different types of data together (e.g., int, str, float).
-
-# Fixed Data: Useful for storing fixed-size data.
-
-# Reference & Dynamic Type: Tuples are reference types and dynamically typed in Python.
-
-# Hashable: Because tuples are immutable, they can be used as keys in dictionaries or elements in sets.
-
-# Note: The immutability of tuples makes them safer to use when you don’t want data to change.
 # =================== What is Tuple ===================
+# Tuple is an ordered, immutable collection.
+# Written with round brackets ().
+# Allows duplicate values.
+# Items cannot be changed after creation.
 
-# Tuple is a collection of items. 
-# Tuple is ordered, unchangeable, and allows duplicate values.
-# Tuple is written with round brackets.
-# when the run output show ordered, unchangeable, and allows duplicate values, it means that the tuple is ordered, unchangeable, and allows duplicate values.
-# Tuple is immutable (change not possible) but its items are immutable only if they themselves are immutable.
-# Tuple is iterable (loop possible).
-tuple = (1,2,3, [4,5,6]) # itq is mutable (change possible) because its item is mutable.
 
 # ============================= 2. Basic Tuple =============================
+
 tuple1 = (1, 2, 3)
 tuple2 = tuple([1, 2, 3])
 tuple3 = tuple("abc")
 tuple4 = tuple(range(1, 5))
 tuple5 = tuple()
-tuple_single = (1,)  # Single element tuple
+tuple_single = (1,)   # single element tuple
 
 print("\n================ Basic Tuples ================")
-print("tuple1:", tuple1)
-print("tuple2:", tuple2)
-print("tuple3:", tuple3)
-print("tuple4:", tuple4)
-print("tuple5:", tuple5)
-print("tuple_single:", tuple_single)
+print(tuple1)
+print(tuple2)
+print(tuple3)
+print(tuple4)
+print(tuple5)
+print(tuple_single)
+
 
 # ============================= 3. Tuple Access & Slicing =============================
-tuple_str = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd')
+
+t = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd')
+
 print("\n================ Tuple Slicing ================")
-print("tuple_str[1:3]:", tuple_str[1:3])
-print("tuple_str[:3]:", tuple_str[:3])
-print("tuple_str[0:]:", tuple_str[0:])
-print("tuple_str[:]:", tuple_str[:])
-print("tuple_str[::]:", tuple_str[::])
-print("tuple_str[::2]:", tuple_str[::2])
-print("tuple_str[::3]:", tuple_str[::3])
+
+print(t[1:3])
+print(t[:3])
+print(t[0:])
+print(t[:])
+print(t[::2])
+print(t[::3])
+
 
 # ============================= Negative Indexing =============================
+
 print("\n================ Negative Indexing ================")
-print("tuple_str[-1]:", tuple_str[-1])
-print("tuple_str[-2:]:", tuple_str[-2:])
-print("tuple_str[:-2]:", tuple_str[:-2])
-print("tuple_str[-2:-1]:", tuple_str[-2:-1])
-print("tuple_str[-2:-3]:", tuple_str[-2:-3])  # empty tuple
+
+print(t[-1])
+print(t[-2:])
+print(t[:-2])
+print(t[-2:-1])
+print(t[-2:-3])
+
 
 # ============================= Tuple Reverse =============================
+
 print("\n================ Tuple Reverse ================")
-print("tuple_str[::-1]:", tuple_str[::-1])
-print("tuple_str[::-2]:", tuple_str[::-2])
-print("tuple_str[::-3]:", tuple_str[::-3])
-print("tuple_str[::-4]:", tuple_str[::-4])
+
+print(t[::-1])
+print(t[::-2])
+print(t[::-3])
+print(t[::-4])
+
 
 # ============================= 4. Tuple "Add" Functions =============================
+
 print("\n================ Tuple Add Functions ================")
-tuple_num = (1, 2, 3)
-tuple_num = tuple_num + (4, 5)      # New tuple
-tuple_num = (0,) + tuple_num        # Prepend
-tuple_num = tuple_num + (6,)        # Append single element
-tuple_num = tuple_num + tuple([7,8,9])  # Add multiple elements
-print("tuple_num (after additions):", tuple_num)
+
+t_num = (1, 2, 3)
+
+t_num = t_num + (4, 5)
+t_num = (0,) + t_num
+t_num = t_num + (6,)
+t_num = t_num + tuple([7, 8, 9])
+
+print(t_num)
+
 
 # ============================= 5. Tuple Modify Functions =============================
+
 print("\n================ Tuple Modify Functions ================")
-# Tuple immutable → cannot sort, reverse, pop, remove
-# But we can create new tuple using sorted or reversed
-tuple_mod = (3, 1, 2)
-tuple_mod_sorted = tuple(sorted(tuple_mod))
-tuple_mod_reversed = tuple(reversed(tuple_mod))
-tuple_mod_copy = tuple(tuple_mod)  # Shallow copy
-print("Original tuple:", tuple_mod)
-print("Sorted tuple:", tuple_mod_sorted)
-print("Reversed tuple:", tuple_mod_reversed)
-print("Copied tuple:", tuple_mod_copy)
+
+t_mod = (3, 1, 2)
+
+t_sorted = tuple(sorted(t_mod))
+t_reversed = tuple(reversed(t_mod))
+t_copy = tuple(t_mod)
+
+print(t_mod)
+print(t_sorted)
+print(t_reversed)
+print(t_copy)
+
 
 # ============================= 6. Tuple Delete Functions =============================
+
 print("\n================ Tuple Delete Functions ================")
-# Tuple immutable → cannot pop, remove, clear
-# Only deletion is possible
-tuple_del = (1, 2, 3, 4, 5)
-del tuple_del
-# print(tuple_del)  # This will raise NameError because tuple is deleted
+
+t_del = (1, 2, 3, 4, 5)
+del t_del
+# tuple is completely deleted (no methods like remove/pop/clear exist)
+
 
 # ============================= 7. Looping Tuple =============================
+
 print("\n================ Looping Tuple ================")
-tuple_loop = (1, 2, 3, 4, 5)
-for i in range(len(tuple_loop)):
-    print("Index loop:", tuple_loop[i])
 
-for val in tuple_loop:
-    print("Direct loop:", val)
+t_loop = (1, 2, 3, 4, 5)
 
-# ============================= 8. Tuple "Comprehension" =============================
+for i in range(len(t_loop)):
+    print(t_loop[i])
+
+for v in t_loop:
+    print(v)
+
+
+# ============================= 8. Tuple Comprehension =============================
+
 print("\n================ Tuple Comprehension ================")
-# Generator expression → convert to tuple
+
 squares = tuple(x**2 for x in range(10))
 even = tuple(x for x in range(10) if x % 2 == 0)
 chars = tuple(c.upper() for c in "python")
-print("Squares:", squares)
-print("Even numbers:", even)
-print("Chars:", chars)
 
-
-
+print(squares)
+print(even)
+print(chars)

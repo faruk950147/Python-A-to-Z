@@ -12,157 +12,117 @@
 # append()   → add element at end
 # extend()   → add multiple elements at end
 # insert()   → add element at specific index
-# remove()   → remove element
-# pop()      → remove element at specific index
+# remove()   → remove element by value
+# pop()      → remove element by index (default last)
 # clear()    → remove all elements
-# index()    → index of element
-# count()    → count of element
-# sort()     → sort list
-# reverse()  → reverse list
+# index()    → find index of element
+# count()    → count occurrences
+# sort()     → sort list (in-place)
+# reverse()  → reverse list (in-place)
 # copy()     → shallow copy
 # len(list)  → length of list
-# max(list, key)  → maximum element key that means length of element depends on key
-# min(list, key)  → minimum element key that means length of element depends on key
-# sum(list)  → sum of elements (if numbers)
+# max(list)  → maximum value
+# min(list)  → minimum value
+# sum(list)  → sum of numeric elements
 # sorted(list) → returns new sorted list
 # any(list)  → True if any element is True
 # all(list)  → True if all elements are True
-# enumerate(list) → index+value pairs
-# zip(list1, list2) → merge multiple lists
-# list(iterable)   → iterable to list
+# enumerate(list) → index + value pairs
+# zip(list1, list2) → combine multiple lists
+# list(iterable) → convert iterable to list
 
 
-# ============================= 2. Basic List 1d =============================
+# ============================= 2. Basic List 1D =============================
 list1d = [1, 2, 3, 4, 5]
 list1d = list(range(1, 6))
-list1d = list("12345")   # ['1','2','3','4','5']
+list1d = list("12345")
 
 
-# ============================= 3. List Access Functions =============================
-print("\n============================ List Access Functions =============================")
-print(f"First element: {list1d[0]}")        # first element
-print(f"Last element: {list1d[-1]}")       # last element
+# ============================= 3. List Access & Slicing =============================
 
-print("\n============================ List Slicing =============================")
 list1 = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']
 
-print(f"Slice list1 [1:3]: {list1[1:3]}")   
-# ['e', 'l'] → starts from index 1, stops before index 3
+print(list1[0])     # first element
+print(list1[-1])    # last element
 
-print(f"Slice list1 [:3]: {list1[:3]}")     
-# ['H', 'e', 'l'] → start missing (default 0), stops before index 3
+# slicing
+print(list1[1:3])    # ['e', 'l']
+print(list1[:3])     # ['H','e','l']
+print(list1[0:])     # full list
+print(list1[:])      # copy of list
+print(list1[::2])    # step slicing
+print(list1[::-1])   # reverse list
 
-print(f"Slice list1 [0:]: {list1[0:]}")     
-# ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'] → full list
-
-print(f"Slice list1 [:]: {list1[:]}")       
-# full list (copy)
-
-print(f"Slice list1 [::]: {list1[::]}")     
-# full list (step default = 1)
-
-print(f"Slice list1 [::2]: {list1[::2]}")   
-# ['H', 'l', 'o', 'r', 'd'] → every 2nd element
-
-print(f"Slice list1 [::3]: {list1[::3]}")   
-# ['H', 'l', ' ', 'r'] → every 3rd element
-
-
-# =============================== Negative Indexing ===============================
-print("\n============================ Negative Indexing =============================")
-print(f"Slice list1 [-1]: {list1[-1]}")   
-# 'd' → last element
-
-print(f"Slice list1 [-2:]: {list1[-2:]}")   
-# ['l', 'd'] → last 2 elements
-
-print(f"Slice list1 [:-2]: {list1[:-2]}")   
-# ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r'] → all except last 2
-
-print(f"Slice list1 [-2:-1]: {list1[-2:-1]}")   
-# ['l'] → only the second last element
-
-print(f"Slice list1 [-2:-3]: {list1[-2:-3]}")   
-# [] → empty list (because stop < start in forward slicing)
-
-
-# ============================= List Reverse =============================
-print("\n============================ List Reverse =============================")
-print(f"Slice list1 [::-1]: {list1[::-1]}")   
-# ['d', 'l', 'r', 'o', 'W', ' ', 'o', 'l', 'l', 'e', 'H']
-
-print(f"Slice list1 [::-2]: {list1[::-2]}")   
-# ['d', 'r', 'W', 'l', 'H'] → every 2nd element in reverse
-
-print(f"Slice list1 [::-3]: {list1[::-3]}")   
-# ['d', 'o', 'o', 'H'] → every 3rd element in reverse
-
-print(f"Slice list1 [::-4]: {list1[::-4]}")   
-# ['d', 'W', 'l'] → every 4th element in reverse
-
+# negative indexing
+print(list1[-1])     # last element
+print(list1[-2:])    # last 2 elements
+print(list1[:-2])    # all except last 2
 
 
 # ============================= 4. List Add Functions =============================
-print("\n============================ List Add Functions =============================")
-list1 = [1, 2, 3]
-# append()   → add element at end
-# extend()   → add multiple elements at end
-# insert()   → add element at specific index
-list1.append(6)        # add element at end
-list1.extend([7, 8, 9]) # add multiple elements at end
-list1.insert(0, 0)     # add element at specific index
 
-print(f"list1: {list1}")
+list1 = [1, 2, 3]
+
+list1.append(6)          # add at end
+list1.extend([7, 8, 9])  # add multiple elements
+list1.insert(0, 0)       # add at index
+
+print(list1)
 
 
 # ============================= 5. List Modify Functions =============================
-print("\n============================ List Modify Functions =============================")
-list1d = [1, 2, 3]
-# sort()     → sort list
-# reverse()  → reverse list
-# copy()     → shallow copy
-list1d.sort()        # sort list
-list1d.reverse()     # reverse list
-copy_list = list1d.copy() # shallow copy
 
-print(f"list1d: {list1d}")
-print(f"copy_list: {copy_list}")
+list1 = [3, 1, 4, 2]
+
+list1.sort()      # ascending
+list1.reverse()   # reverse order
+
+copy_list = list1.copy()  # shallow copy
+
+print(list1)
+print(copy_list)
 
 
 # ============================= 6. List Delete Functions =============================
-print("\n============================ List Delete Functions =============================")
-list1d = [1, 2, 3, 4, 5, 6]
-list1d.remove(2)
-list1d.pop(3)
-list1d.clear()
+
+list1 = [1, 2, 3, 4, 5]
+
+list1.remove(3)   # remove by value
+list1.pop()       # remove last element
+list1.pop(1)      # remove index
+# list1.clear()    # remove all elements
 
 
 # ============================= 7. Looping List =============================
-print("\n============================ Looping List =============================")
-list1d = [1, 2, 3, 4, 5]
-for i in range(len(list1d)):
-    print(list1d[i])
 
-for i in list1d:
-    print(i)
+list1 = [1, 2, 3, 4, 5]
+
+# by index
+for i in range(len(list1)):
+    print(list1[i])
+
+# direct iteration
+for item in list1:
+    print(item)
 
 
 # ============================= 8. List Comprehension =============================
-print("\n============================ List Comprehension =============================")
-squares = [x**2 for x in range(10)]           # [0,1,4,9,...,81]
-even = [x for x in range(10) if x % 2 == 0]   # [0,2,4,6,8]
-chars = [c.upper() for c in "python"]         # ['P','Y','T','H','O','N']
 
-print(f"squares: {squares}")
-print(f"even: {even}")
-print(f"chars: {chars}")
+squares = [x**2 for x in range(10)]
+even = [x for x in range(10) if x % 2 == 0]
+chars = [c.upper() for c in "python"]
+
+print(squares)
+print(even)
+print(chars)
 
 
 # ============================= 9. List Condition Functions =============================
-print("\n============================ List Condition Functions =============================")
-list1d = [1, 2, 3, 4, 5]
-print(f"any(x > 3 for x in list1d): {any(x > 3 for x in list1d)}")   # True
-print(f"all(x > 0 for x in list1d): {all(x > 0 for x in list1d)}")   # True
-print(f"max(list1d): {max(list1d)}")                  # 5
-print(f"min(list1d): {min(list1d)}")                  # 1
-print(f"sum(list1d): {sum(list1d)}")                  # 15
+
+list1 = [1, 2, 3, 4, 5]
+
+print(any(x > 3 for x in list1))   # True
+print(all(x > 0 for x in list1))   # True
+print(max(list1))                  # 5
+print(min(list1))                  # 1
+print(sum(list1))                  # 15

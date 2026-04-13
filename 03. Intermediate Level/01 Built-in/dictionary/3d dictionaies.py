@@ -3,11 +3,11 @@
 # collection means it can store multiple items.
 # dictionary is ordered (as of Python 3.7)
 # dictionary is mutable (change possible), but its keys must be immutable.
-# dictionary does not allow duplicates
-# dictionary is indexed (each item has a key-value pair)
-# dictionary is iterable (can use loop)
-# dictionary is reference type, dynamic type
-# dictionary is stored in contiguous memory (not hash table)
+# dictionary does not allow duplicate KEYS (values can be duplicate).
+# dictionary is indexed (each item has a key-value pair).
+# dictionary is iterable (can use loop).
+# dictionary is reference type, dynamic type.
+# dictionary is implemented using HASH TABLE (NOT contiguous memory).
 
 # ============================= 2. Basic Dictionary =============================
 
@@ -40,12 +40,13 @@ list1 = [
 # ============================= 3. Dictionary Access Functions =============================
 
 print(dict1["dept1"]["person1"]["name"])  # John
-print(dict1["dept1"]["person2"]["age"])   # 25
+print(dict1["dept1"]["person2"]["age"])    # 25
 
 print(list1[0]["dept1"]["person1"]["name"])  # John
 print(list1[0]["dept1"]["person2"]["age"])   # 25
 
 # ============================= 4. Dictionary Add Functions =============================
+
 dict1["dept1"]["person3"] = {"name": "Alice", "age": 28, "city": "London"}
 dict1["dept2"]["person4"] = {"name": "Bob", "age": 35, "city": "Paris"}
 
@@ -56,8 +57,9 @@ print(dict1)
 print(list1)
 
 # ============================= 5. Dictionary Modify Functions =============================
+
 dict1["dept1"]["person1"]["age"] = 32
-dict1["dept2"]["person4"]["age"] = 36   
+dict1["dept2"]["person4"]["age"] = 36
 
 list1[0]["dept1"]["person1"]["age"] = 32
 list1[0]["dept2"]["person4"]["age"] = 36
@@ -66,8 +68,9 @@ print(dict1)
 print(list1)
 
 # ============================= 6. Dictionary Delete Functions =============================
-dict1["dept1"].pop("person3")   # Delete specific key
-dict1.pop("dept2")              # Delete entire department
+
+dict1["dept1"].pop("person3")   # delete specific key
+dict1.pop("dept2")              # delete entire department
 
 list1[0]["dept1"].pop("person3")
 list1[0].pop("dept2")
@@ -76,29 +79,32 @@ print(dict1)
 print(list1)
 
 # ============================= 7. Looping Dictionary =============================
-for key, value in dict1.items():
-    print(f"Department: {key}")
-    for inner_key, inner_value in value.items():
-        print(f"  Person: {inner_key}")
-        for inner_inner_key, inner_inner_value in inner_value.items():
-            print(f"    {inner_inner_key} → {inner_inner_value}")
+
+for dept, persons in dict1.items():
+    print(f"Department: {dept}")
+    for person, data in persons.items():
+        print(f"  Person: {person}")
+        for k, v in data.items():
+            print(f"    {k} → {v}")
 
 for dic in list1:
-    for key, value in dic.items():
-        print(f"Department: {key}")
-        for inner_key, inner_value in value.items():
-            print(f"  Person: {inner_key}")
-            for inner_inner_key, inner_inner_value in inner_value.items():
-                print(f"    {inner_inner_key} → {inner_inner_value}")
+    for dept, persons in dic.items():
+        print(f"Department: {dept}")
+        for person, data in persons.items():
+            print(f"  Person: {person}")
+            for k, v in data.items():
+                print(f"    {k} → {v}")
 
 # ============================= 8. Dictionary Comprehension =============================
+
 squares = {x: x**2 for x in range(1, 6)}
-print(squares)  
+print(squares)
 
 even_squares = {x: x**2 for x in range(1, 11) if x % 2 == 0}
 print(even_squares)
 
 # ============================= 9. Dictionary Condition Functions =============================
+
 dictA = {"a": 1, "b": 2, "c": 3}
 dictB = {"a": 1, "b": 2, "c": 3}
 dictC = {"a": 1, "b": 5, "d": 9}

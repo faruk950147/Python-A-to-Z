@@ -3,21 +3,15 @@
 # collection means it can store multiple items.
 # dictionary is ordered (as of Python 3.7)
 # dictionary is mutable (change possible), but its keys must be immutable.
-# dictionary does not allow duplicates
-# dictionary is indexed (each item has a key-value pair)
-# dictionary is iterable (can use loop)
-# dictionary is reference type, dynamic type
-# dictionary is stored in contiguous memory (not hash table)
+# dictionary does not allow duplicate KEYS (values can be duplicate).
+# dictionary is indexed (each item has a key-value pair).
+# dictionary is iterable (can use loop).
+# dictionary is reference type, dynamic type.
+# dictionary is implemented using HASH TABLE (NOT contiguous memory).
 
 # ============================= 2. Basic Dictionary =============================
 
-# Dictionary of Dictionaries 2d
-# → loop is iterable
-# → reference type, dynamic type, hash table based
-
-# ============================= 2. Basic Dictionary =============================
-
-# Dictionary of Dictionaries 2d
+# Dictionary of Dictionaries (2D)
 dict1 = {
     "person1": {
         "name": "John",
@@ -31,7 +25,7 @@ dict1 = {
     }
 }
 
-# List of Dictionaries 2d
+# List of Dictionaries (2D)
 dict_list = [
     {
         "name": "John",
@@ -47,45 +41,53 @@ dict_list = [
 
 # ============================= 3. Dictionary Access Functions =============================
 
-# Dictionary Of Dictionary Access
-# direct access
+# Dictionary of Dictionary access
 print(dict1["person1"]["name"])   # John
 print(dict_list[1]["city"])       # Los Angeles
 
-# List Of Dictionary Access
+# List of Dictionary access
 print(dict_list[0]["name"])       # John
 print(dict_list[1]["city"])       # Los Angeles
 
-# get() → key not found, return None or default value
-print(dict1.get("person3"))                  # None
-print(dict1.get("person3", "Not Found"))     # Not Found
+# get() safe access
+print(dict1.get("person3"))                 # None
+print(dict1.get("person3", "Not Found"))    # Not Found
 
-# keys(), values(), items()
-print(dict1.keys())    
-print(dict1.values())  
-print(dict1.items())   
+# keys, values, items
+print(dict1.keys())
+print(dict1.values())
+print(dict1.items())
 
 # ============================= 4. Dictionary Add Functions =============================
-dict1["person1"]["age"] = 31   # modify
-dict1.update({"person3": {"name": "Alice", "age": 28, "city": "Chicago"}})
+
+dict1["person1"]["age"] = 31
+dict1.update({
+    "person3": {"name": "Alice", "age": 28, "city": "Chicago"}
+})
 dict1.setdefault("person4", {"name": "Bob", "age": 22, "city": "Miami"})
+
 print(dict1)
 
 # ============================= 5. Dictionary Modify Functions =============================
-dict1["person1"]["age"] = 31   # modify
-dict1.update({"person3": {"name": "Alice", "age": 28, "city": "Chicago"}})
+
+dict1["person1"]["age"] = 31
+dict1.update({
+    "person3": {"name": "Alice", "age": 28, "city": "Chicago"}
+})
 dict1.setdefault("person4", {"name": "Bob", "age": 22, "city": "Miami"})
+
 print(dict1)
 
 # ============================= 6. Dictionary Delete Functions =============================
+
 # delete specific key
 del dict1["person2"]
 
-# pop() → delete specific key and return value
+# pop() → remove and return value
 removed = dict1.pop("person3")
 print("Removed:", removed)
 
-# popitem() → delete last inserted key-value
+# popitem() → remove last inserted item
 last_item = dict1.popitem()
 print("Last item:", last_item)
 
@@ -94,43 +96,39 @@ dict1.clear()
 print(dict1)
 
 # ============================= 7. Looping Dictionary =============================
-# loop through dictionary of dictionaries
-for key, value in dict1.items(): # key = person1, value = {name: John, age: 30, city: New York}
-    print(key)   # person1, person2
-    for inner_key, inner_value in value.items(): # inner_key = name, inner_value = John
-        print(f"   {inner_key} → {inner_value}")
 
+# loop through dictionary of dictionaries
+for key, value in dict1.items():
+    print(key)
+    for inner_key, inner_value in value.items():
+        print("   ", inner_key, "→", inner_value)
 
 # loop through list of dictionaries
-for key, value in dict_list[0].items():
-    print(f"{key} → {value}")
-    
+for item in dict_list:
+    for key, value in item.items():
+        print(key, "→", value)
 
 # ============================= 8. Dictionary Comprehension =============================
-# create a dictionary with squares
+
 squares = {x: x*x for x in range(1, 6)}
 print(squares)
 
-# filter only even numbers
 evens = {x: x for x in range(10) if x % 2 == 0}
 print(evens)
 
-# ============================= 9. Dictionary condition Functions =============================
+# ============================= 9. Dictionary Condition Functions =============================
+
 dict2 = {
     "person1": {"name": "John", "age": 31, "city": "New York"},
     "person2": {"name": "Jane", "age": 25, "city": "Los Angeles"}
 }
 
-# Find keys with specific value (if age is 25 or 31)
 values = [25, 31]
 result = {k: v for k, v in dict2.items() if v["age"] in values}
 print(result)
-# {'person1': {'name': 'John', 'age': 31, 'city': 'New York'},
-#  'person2': {'name': 'Jane', 'age': 25, 'city': 'Los Angeles'}}
 
-# Search key
 key = "person1"
 if key in dict2:
-    print(dict2[key])   # {'name': 'John', 'age': 31, 'city': 'New York'}
+    print(dict2[key])
 else:
     print("Key not found")
