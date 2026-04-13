@@ -1,0 +1,57 @@
+loop কিভাবে কমে যায়, এটা পরিষ্কার বুঝলেই concept একদম clear 
+
+আগে (না ব্যবহার করলে)
+for i in range(2, n):
+
+ধরো n = 100
+
+loop চলবে:
+
+2 → 3 → 4 → ... → 99
+
+মোট loop = 98 বার (অনেক বেশি)
+
+এখন (square root ব্যবহার করলে)
+for i in range(2, int(n**0.5) + 1):
+
+√100 = 10
+
+loop চলবে:
+
+2 → 3 → 4 → ... → 10
+
+মোট loop = 9 বার (অনেক কম)
+
+Comparison
+Method	Loop count
+n পর্যন্ত	98 বার 
+√n পর্যন্ত	9 বার
+
+দেখো difference
+
+কেন এমন হয়?
+
+কারণ divisor pair থাকে:
+
+100 = 2 × 50
+100 = 4 × 25
+
+তুমি যদি 50 check করো, তাহলে 2 already check হয়ে গেছে
+
+তাই বড় সংখ্যাগুলো check করার দরকারই নাই
+
+Real impact
+
+বড় number হলে difference আরো huge হয়
+
+ধরো n = 1,000,000
+
+n পর্যন্ত loop → ~999,998 বার 
+√n পর্যন্ত loop → ~1000 বার 
+
+প্রায় 1000 গুণ faster
+
+Final line
+
+√n ব্যবহার করলে loop ছোট হয় কারণ divisor সবসময় pair এ থাকে, 
+তাই অর্ধেকেরও কম check করলেই কাজ হয়ে যায়।
