@@ -45,6 +45,6 @@ dict1 = {"name": "Faruk", "age": 22, "city": "Dhaka"}
 # for k, v in dict1.items():
 #     print("Key:", k, "Value:", v)
     
-for index, key in enumerate(dict1):
+for index, key in enumerate(dict1, start=0):
     print("Index:", index, "Key:", key)
 
