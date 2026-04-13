@@ -5,8 +5,8 @@ for i in range(len(fruit)):
     if fruit[i] == target:
         print(i)
         break
-    else:
-        print(f"{fruit[i]} is not found")
+else:
+    print("Target not found")
       
       
 # 0 is last index of list
