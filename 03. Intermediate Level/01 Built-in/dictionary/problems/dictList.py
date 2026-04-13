@@ -8,18 +8,18 @@ students = {
     "cgpa": 3.5,
     "courses": ["CSE", "EEE", "BBA"]
 }
-names = list(students.keys())
-print(f"{names[-1]}: {students[names[-1]]}")
+# names = list(students.keys())
+# print(f"{names[-1]}: {students[names[-1]]}")
 # print(names[-1]) # access the last key
 # print(students[names[-1]]) # access the last value
 
 # 2. write a program to count the number of items having list as value.
 
-count = 0
-for value in students.values():
-    if isinstance(value, list):
-        count += 1
-print(count)
+# count = 0
+# for value in students.values():
+#     if isinstance(value, list):
+#         count += 1
+# print(count)
 
 # names = list(students.keys())
 # if isinstance(names, list):
@@ -35,5 +35,11 @@ print(count)
 if isinstance(students["courses"], list):
     for course in students["courses"]:
         print(course)
+else:
+    print("courses is not a list")
+    
+if isinstance(students["courses"], list):
+    for course in range(len(students["courses"])):
+        print(students["courses"][course])
 else:
     print("courses is not a list")
