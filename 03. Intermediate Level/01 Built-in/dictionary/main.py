@@ -32,5 +32,17 @@ dict1 = {"name": "Faruk", "age": 22, "city": "Dhaka"}
 # for k, v in dict1.items():
 #     print("Key:", k, "Value:", v)
 
+# del dict1["name"]
+# print(dict1)
 
+# print(dict1.pop("name"))
+# print(dict1)
+
+# print(dict1.popitem())
+# print(dict1)
+
+# print(dict1.clear())
+# print(dict1)
+
+print(dict1.__getitem__("name"))
 
