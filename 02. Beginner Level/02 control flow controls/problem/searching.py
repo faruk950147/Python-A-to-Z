@@ -3,7 +3,7 @@ target = 'banana'
 
 for i in range(len(fruit)):
     if fruit[i] == target:
-        print(i)
+        print(f"Target is found index of {i} {target}")
         break
 else:
     print("Target not found")
