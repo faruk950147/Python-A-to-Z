@@ -1,32 +1,34 @@
-# studentsMarks = {
-#     "faruk": {
-#         "details":
-#             {
-#                 "roll": 101, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
-#             }
-#         },
-#     "tom": {
-#         "details":
-#             {
-#                 "roll": 102, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
-#             }
-#         },
-#     "jerry": {
-#         "details":
-#             {
-#                 "roll": 103, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
-#             }
-#         }
-# }
-# for student in studentsMarks:
-#     # printed the name of the student
-#     # print(student)
-#     # printed the details of the student
-#     # print(studentsMarks[student])
-#     # printed the marks of the student
-#     length = len(studentsMarks[student]["details"]["marks"])
-#     percentage = sum(studentsMarks[student]["details"]["marks"].values()) / length
-#     print(f"{student} : {percentage:.2f} %")
+studentsMarks = {
+    "faruk": {
+        "details":
+            {
+                "roll": 101, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
+            }
+        },
+    "tom": {
+        "details":
+            {
+                "roll": 102, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
+            }
+        },
+    "jerry": {
+        "details":
+            {
+                "roll": 103, "dept": "CSE", "marks": {"C": 85, "C++": 80, "Python": 85, "DS": 90, "DBMS": 88, "OS": 92, "CN": 95}
+            }
+        }
+}
+for student in studentsMarks:
+    # printed the name of the student
+    # print(student)
+    # printed the details of the student
+    # print(studentsMarks[student])
+    # printed the marks of the student
+    length = len(studentsMarks[student]["details"]["marks"])
+    percentage = sum(studentsMarks[student]["details"]["marks"].values()) / length
+    print(f"{student} : {percentage:.2f} %")
+
+
 ''' 
 def calculate_percentages(students):
     for student in students:
