@@ -1,25 +1,40 @@
 students = {}
 
 while True:
-    try:
-        roll, marks = input("Enter roll number and marks: ").split()
-        roll = int(roll)
-        marks = float(marks)
-        if roll not in students:
-            students[roll] = marks
-        else:
-            print("Roll already exists. Please enter a different roll.")
-            continue
+    data = input("Enter roll number and marks: ").split()
 
-        choice = input("Do you want to add more students? (y/n): ").strip().lower()
-        if choice == 'n':
-            print('You have already exit the program.')
-            break
-        elif choice == 'y':
-            continue
-        else:
-            print('Invalid choice. Please enter y or n.')
-            continue
-    except Exception as e:
-        print(f"Please enter valid integer values (roll marks). Error: {e}")
+    if len(data) != 2:
+        print("Please enter exactly 2 values (roll marks).")
         continue
+
+    roll_input, marks_input = data
+
+    if not roll_input.isdigit():
+        print("Roll must be an integer.")
+        continue
+
+    try:
+        roll = int(roll_input)
+        marks = float(marks_input)
+    except:
+        print("Marks must be a number.")
+        continue
+
+    if roll in students:
+        print("Roll already exists. Try a different roll.")
+        continue
+
+    students[roll] = marks
+
+    choice = input("Do you want to add more students? (y/n): ").strip().lower()
+
+    if choice == 'n':
+        print("Program exited successfully.")
+        break
+    elif choice != 'y':
+        print("Invalid choice. Please enter y or n.")
+
+
+print("\nStudent List:")
+for roll, marks in students.items():
+    print(f"Roll: {roll}, Marks: {marks}")     
