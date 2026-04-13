@@ -1,28 +1,34 @@
 students = {}
-# num = int(input("How many students: "))
-# while len(students) < num:
-#     roll = int(input(f"Enter roll of student {i+1}: ")) 
-#     marks = float(input(f"Enter marks of student roll {roll}: "))
-#     if roll not in students:
-#         students[roll] = marks
-#     else:
-#         print("Roll already exists.")
-#         continue
-# print(f"All students marks: {students}")
-
-students = {}
 
 num = int(input("How many students: "))
 
-for i in range(num):
-    roll, marks = input(f"Enter roll and marks of student {i+1}: ").split()
-    roll = int(roll)
-    marks = float(marks)
+i = 0
+while i < num:
+    data = input(f"Enter roll and marks of student {i+1}: ").split()
 
-    if roll not in students:
-        students[roll] = marks
-    else:
-        print("Roll already exists.")
+    if len(data) != 2:
+        print("Please enter exactly 2 values (roll marks).")
         continue
 
-print(f"All students marks: {students}")
+    roll_input, marks_input = data
+
+    if not roll_input.isdigit():
+        print("Roll must be integer.")
+        continue
+
+    roll = int(roll_input)
+
+    try:
+        marks = float(marks_input)
+    except:
+        print("Marks must be a number.")
+        continue
+
+    if roll in students:
+        print("Roll already exists. Try different roll.")
+        continue
+
+    students[roll] = marks
+    i += 1   # only valid input হলে count বাড়বে
+
+print("All students marks:", students)
