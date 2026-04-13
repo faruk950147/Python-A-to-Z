@@ -14,17 +14,26 @@ print(f"{names[-1]}: {students[names[-1]]}")
 # print(students[names[-1]]) # access the last value
 
 # 2. write a program to count the number of items having list as value.
-students = {
-    "name": "Faruk",
-    "age": 21,
-    "gender": "Male",
-    "course": "BSc in CSE",
-    "cgpa": 3.5,
-    "courses": ["CSE", "EEE", "BBA"],
-    "fees": [750000, 1500000, 2500000]
-}
+
 count = 0
 for value in students.values():
     if isinstance(value, list):
         count += 1
 print(count)
+
+# names = list(students.keys())
+# if isinstance(names, list):
+#     for name in names:
+#         print(name)
+# else:
+#     print("names is not a list")
+
+# print the list of elements in courses
+
+
+# Check if courses is a list
+if isinstance(students["courses"], list):
+    for course in students["courses"]:
+        print(course)
+else:
+    print("courses is not a list")
