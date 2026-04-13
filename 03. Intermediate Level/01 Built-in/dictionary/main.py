@@ -47,4 +47,11 @@ dict1 = {"name": "Faruk", "age": 22, "city": "Dhaka"}
     
 for index, key in enumerate(dict1, start=0):
     print("Index:", index, "Key:", key)
+    
+    
+if "name" in dict1:
+    print("Yes, 'name' is one of the keys in the dict1 dictionary")
+else:
+    print("No, 'name' is not one of the keys in the dict1 dictionary")
+
 
