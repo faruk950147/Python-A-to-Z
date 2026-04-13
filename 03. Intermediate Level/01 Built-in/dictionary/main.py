@@ -22,3 +22,13 @@ dict1 = {"name": "Faruk", "age": 22, "city": "Dhaka"}
 # print(dict1.values())
 # dict1.update({"Country": "Asia"})
 # print(dict1)
+
+for k in dict1.keys():
+    print("Key:", k)
+
+for v in dict1.values():
+    print("Value:", v)
+
+for k, v in dict1.items():
+    print("Key:", k, "Value:", v)
+
