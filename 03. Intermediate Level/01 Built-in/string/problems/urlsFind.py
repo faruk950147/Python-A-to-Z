@@ -7,3 +7,15 @@ def urlsFind(url):
     return domain
 
 print(urlsFind("https://www.example.com/"))
+
+from urllib.parse import urlparse
+
+def urlsFind(url):
+    parsed = urlparse(url)
+    return parsed.netloc
+
+print(urlsFind("https://www.example.com/"))
+
+
+print(urlsFind("http://example.com/path"))
+# Output: example.com
