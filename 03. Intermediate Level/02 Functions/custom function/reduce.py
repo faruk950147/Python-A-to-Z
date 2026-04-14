@@ -20,3 +20,71 @@ def add(prev, curr): # just value send if we want to send index and list then us
 
 lst = [1, 2, 3, 4, 5]
 print(reduceFind(lst, add, 0))
+
+'''
+Step by Step বুঝি
+lst = [1, 2, 3, 4, 5]
+print(reduceFind(lst, add, 0))
+start:
+result = initial = 0
+Iteration 1:
+prev = 0
+curr = 1
+result = 0 + 1 = 1
+Iteration 2:
+prev = 1
+curr = 2
+result = 1 + 2 = 3
+Iteration 3:
+prev = 3
+curr = 3
+result = 3 + 3 = 6
+Iteration 4:
+prev = 6
+curr = 4
+result = 6 + 4 = 10
+Iteration 5:
+prev = 10
+curr = 5
+result = 10 + 5 = 15
+Final Output:
+15
+সহজ ভাষায়
+
+reduceFind() মানে:
+
+"একটা result নিয়ে list-এর প্রতিটা element দিয়ে বারবার update করা"
+
+Built-in reduce এর সাথে মিল
+
+Python-এ already এটা আছে 
+
+from functools import reduce
+
+reduce(add, lst, 0)
+
+তুমি basically নিজের হাতে এটা বানিয়েছো 
+
+Bonus (Different Example)
+Multiplication:
+def mul(prev, curr):
+    return prev * curr
+
+print(reduceFind([1,2,3,4], mul, 1))
+
+Output:
+
+24
+Pro Tip
+
+তুমি চাইলে এটা আরও powerful করতে পারো 
+
+result = callback(result, lst[i], i, lst)
+
+তাহলে callback function এ:
+
+index
+পুরো list
+
+দুটাই access করতে পারবে
+'''
