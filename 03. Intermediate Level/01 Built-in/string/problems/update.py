@@ -1,5 +1,3 @@
-from turtle import update
-
 
 def update_string(string, index, char):
     return string[:index] + char + string[index + 1:]
