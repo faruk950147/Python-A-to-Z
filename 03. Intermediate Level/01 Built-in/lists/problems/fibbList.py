@@ -5,6 +5,9 @@ def fibList(n):
     fibPrev, fibCurr = 1, 1
     for i in range(3, n + 1):
         # swap and calculate next
+        # 1 → 1 + 1 = 2
+        # 1 → 1 + 2 = 3
+        # 2 → 2 + 3 = 5
         fibPrev, fibCurr = fibCurr, fibPrev + fibCurr
         fibList += [fibCurr]  # inefficient but works
     return fibList
@@ -19,6 +22,9 @@ def fibList(n):
     fibPrev, fibCurr = 1, 1    # previous and current values
     for i in range(3, n + 1):  # from 3 to n
         # swap and calculate next
+        # 1 → 1 + 1 = 2
+        # 1 → 1 + 2 = 3
+        # 2 → 2 + 3 = 5
         fibPrev, fibCurr = fibCurr, fibPrev + fibCurr
         fibList.append(fibCurr)   # add to list
     return fibList
@@ -32,6 +38,9 @@ def fibList(n):
     for i in range(2, n):
         # i starts from 2, so we can use fibList[-1] and fibList[-2]
         # fibList[-1] and fibList[-2] add
+        # 1 → 1 + 1 = 2
+        # 1 → 1 + 2 = 3
+        # 2 → 2 + 3 = 5
         fibList += [fibList[-1] + fibList[-2]]
     return fibList
 
@@ -45,6 +54,9 @@ def fibList(n):
         return fibList[:n]
     for i in range(2, n):
         # fibList[-1] and fibList[-2] add
+        # 1 → 1 + 1 = 2
+        # 1 → 1 + 2 = 3
+        # 2 → 2 + 3 = 5
         fibList.append(fibList[-1] + fibList[-2])
     return fibList
 
