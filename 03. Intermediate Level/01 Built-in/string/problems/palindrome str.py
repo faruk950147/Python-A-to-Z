@@ -4,7 +4,7 @@ def isPalindrome(word):
     return word == word[::-1]
 
 print(isPalindrome("A man, a plan, a canal: Panama"))
-
+'''
 def isPalindrome1(word):
     return word == word[::-1]
 
@@ -33,3 +33,6 @@ def isPalindrome3(word):
     return isPalindrome
 
 print(isPalindrome3("mam"))
+'''
+
+
