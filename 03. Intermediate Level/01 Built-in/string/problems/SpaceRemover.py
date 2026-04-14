@@ -1,23 +1,25 @@
-def remove_space0(word):
+def remove_space_0(word):
     if len(word) == 0:
         return ""
     if word[0] == " ":
-        return remove_space0(word[1:])
-    return word[0] + remove_space0(word[1:])
+        return remove_space_0(word[1:])
+    return word[0] + remove_space_0(word[1:])
 
-print(f"remove_space0: {remove_space0('Hello World')}")
+print(f"remove_space_0: {remove_space_0(' H e l l o   W o r l d ')}")
 
-def remove_space1(word):
+
+'''
+def remove_space_1(word):
     if len(word) == 0:
         return ""
     else:
         return word.replace(" ", "")
 
-print(f"remove_space1: {remove_space1('Hello World')}")
+print(f"remove_space_1: {remove_space_1('Hello World')}")
 
-def remove_space(word):
+def remove_space_2(word):
     return word.replace(" ", "")
 
-print(f"remove_space: {remove_space('Hello World')}")
+print(f"remove_space_2: {remove_space_2('Hello World')}")
 
-
+'''
