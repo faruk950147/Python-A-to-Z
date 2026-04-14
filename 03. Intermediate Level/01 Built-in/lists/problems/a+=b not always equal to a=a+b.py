@@ -79,3 +79,18 @@ print('ID of a first line:', id(a))
 a = a + 20  
 print('Value of a second line:', a)
 print('ID of a second line:', id(a))
+
+
+a = [1, 2, 3]
+print('Value of a list:', a)
+print('ID of a list:', id(a))
+
+# always create new object and assign to a
+a = a + [4, 5, 6]  
+print('Value of a list:', a)
+print('ID of a list:', id(a))
+
+# modify same object (mutable behavior)
+a += [4, 5, 6]
+print('Value of a list:', a)
+print('ID of a list:', id(a))
