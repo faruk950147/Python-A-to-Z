@@ -11,7 +11,7 @@ def factList(n):
 
 print(factList(10))
 
-
+'''
 
 # Using append
 def factList(n):
@@ -46,3 +46,4 @@ def factList(n):
 
 print(factList(10))
 
+'''
