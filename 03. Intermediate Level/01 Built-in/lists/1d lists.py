@@ -58,6 +58,11 @@ list[:len(list)] that means case missing stop, so it will go to end (full list)
 list[1:4:2] that means case missing step, so it will go with step 1
 
 
+negative indexing
+list[-1] that means last element
+list[-2:] that means last 2 elements
+list[:-2] that means all except last 2 elements (missing last 2)
+
 
 '''
 
