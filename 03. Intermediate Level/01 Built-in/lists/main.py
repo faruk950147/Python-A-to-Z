@@ -45,3 +45,12 @@ list3d = [
 # print(list3d[1][1])
 print(list3d[0][0][0])
 
+# first loop is a row
+# second loop is a column
+# third loop is a character (element)
+for row in list3d:
+    print("Row:", row)
+    for col in row:
+        # for char in col:
+        #     print(char)
+        print("Column:", col)
