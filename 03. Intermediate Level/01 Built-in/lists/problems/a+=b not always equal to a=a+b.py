@@ -39,8 +39,6 @@ a += [4, 5, 6]
 এটা একটা Python practice code যা দেখায়:
 কখন নতুন object তৈরি হয় আর কখন same object modify হয়
 
-'''
-
 # =================== memory address deference ===================
 # always create new object and assign to a
 a = 10
@@ -78,3 +76,9 @@ print('ID of a list:', id(a))
 a += [4, 5, 6]
 print('Value of a list:', a)
 print('ID of a list:', id(a))
+
+'''
+# always create new object and assign to a
+a = 10
+print('Value of a first line:', a)
+print('ID of a first line:', id(a))
