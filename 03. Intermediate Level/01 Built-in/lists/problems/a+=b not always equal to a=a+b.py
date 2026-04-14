@@ -1,3 +1,46 @@
+'''
+এটা কী করছে?
+
+এই কোডটা দেখাচ্ছে:
+
+1. Integer (immutable) কিভাবে কাজ করে
+a = 10
+a = a + 20
+
+এখানে প্রতিবার:
+
+নতুন value তৈরি হয়
+পুরানোটা change হয় না
+
+তাই id() বদলে যায়
+
+2. আরেকটা integer
+b = 10
+b += 20
+
+এটাও একই:
+
+নতুন object তৈরি হয়
+id change হয়
+3. List (mutable) কিভাবে কাজ করে
+a = [1, 2, 3]
+Case 1:
+a = a + [4, 5, 6]
+
+নতুন list তৈরি হয় → id change
+
+Case 2:
+a += [4, 5, 6]
+
+আগের list-এর ভিতরেই update হয় → id same থাকে
+
+এক লাইনে উত্তর:
+
+এটা একটা Python practice code যা দেখায়:
+কখন নতুন object তৈরি হয় আর কখন same object modify হয়
+
+'''
+
 # =================== memory address deference ===================
 # always create new object and assign to a
 a = 10
