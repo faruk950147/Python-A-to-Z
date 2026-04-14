@@ -33,6 +33,9 @@
 
 
 # ============================= 2. Basic List 1D =============================
+from telnetlib import LINEMODE
+
+
 list1d = [1, 2, 3, 4, 5]
 list1d = list(range(1, 6))
 list1d = list("12345")
@@ -46,6 +49,18 @@ print(list1[0])     # first element
 print(list1[-1])    # last element
 
 # slicing
+'''
+# syntax: list[start:stop:step]
+list[:3] that means case missing start, so it will start from index 
+list[3:] that means case missing stop, so it will go to end
+list[:] that means case missing both start and stop, so it will go from start to end (full list)
+list[:len(list)] that means case missing stop, so it will go to end (full list)
+list[1:4:2] that means case missing step, so it will go with step 1
+
+
+
+'''
+
 print(list1[1:3])    # ['e', 'l']
 print(list1[:3])     # ['H','e','l']
 print(list1[0:])     # full list
