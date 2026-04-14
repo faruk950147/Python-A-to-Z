@@ -82,3 +82,8 @@ print('ID of a list:', id(a))
 a = 10
 print('Value of a first line:', a)
 print('ID of a first line:', id(a))
+
+# create new object and assign to a
+a = a + 20  
+print('Value of a second line:', a)
+print('ID of a second line:', id(a))
