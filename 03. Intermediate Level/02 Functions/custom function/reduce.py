@@ -22,7 +22,7 @@ lst = [1, 2, 3, 4, 5]
 print(reduceFind(lst, add, 0))
 
 '''
-Step by Step বুঝি
+Step by Step 
 lst = [1, 2, 3, 4, 5]
 print(reduceFind(lst, add, 0))
 start:
