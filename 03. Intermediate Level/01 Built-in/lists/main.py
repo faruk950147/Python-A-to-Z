@@ -22,6 +22,26 @@ list2d = [
 # print(list2d[1][1])
 
 
-for row in list2d:
-    for col in row:
-        print(col)
+# for row in list2d:
+#     for col in row:
+#         print(col)
+
+list3d = [
+    [
+        ['H', 'e', 'l', 'l', 'o'],
+        ['W', 'o', 'r', 'l', 'd']
+    ],
+    [
+        ['H', 'e', 'l', 'l', 'o'],
+        ['W', 'o', 'r', 'l', 'd']
+    ]
+]
+
+# print(list3d[0])
+# print(list3d[1])
+# print(list3d[0][0])
+# print(list3d[0][1])
+# print(list3d[1][0])
+# print(list3d[1][1])
+print(list3d[0][0][0])
+

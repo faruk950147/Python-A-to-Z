@@ -60,6 +60,11 @@ print(list3d[1])
 print(list3d[0][1])
 print(list3d[1][0])
 print(list3d[1][2])
+print(list3d[0][0][0])
+print(list3d[0][1][0])
+print(list3d[1][0][0])
+print(list3d[1][1][0])
+
 
 
 # ============================= 4. Row Slicing =============================
