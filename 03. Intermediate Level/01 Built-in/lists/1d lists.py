@@ -141,8 +141,8 @@ print(chars)
 
 list1 = [1, 2, 3, 4, 5]
 
-print(any(x > 3 for x in list1))   # True
-print(all(x > 0 for x in list1))   # True
-print(max(list1))                  # 5
-print(min(list1))                  # 1
-print(sum(list1))                  # 15
+print(any(x > 3 for x in list1))   # True (at least one element is greater than 3)
+print(all(x > 0 for x in list1))   # True (all elements are greater than 0)
+print(max(list1))                  # 5 (maximum value in the list)
+print(min(list1))                  # 1 (minimum value in the list)
+print(sum(list1))                  # 15 (sum of all elements)
