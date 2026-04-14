@@ -10,6 +10,7 @@ def fibList(n):
 
 print(fibList(10))
 
+'''
 def fibList(n):
     fibList = [1, 1]           # first two values
     if n <= 2:
@@ -44,3 +45,4 @@ def fibList(n):
 
 print(fibList(10))
 
+'''
