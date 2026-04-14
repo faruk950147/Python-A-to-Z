@@ -1,3 +1,57 @@
+'''
+lst = [1, 2, 3, 4, 5]
+print(reduceFind(lst, add, 0))
+# Initial Setup
+lst = [1,2,3,4,5]
+initial = 0
+result = initial = 0
+# Loop Execution Flow
+# Iteration 1 (i = 0)
+current = 1
+prev = result = 0
+result = add(0, 1) = 1
+# Iteration 2 (i = 1)
+current = 2
+prev = result = 1
+result = add(1, 2) = 3
+# Iteration 3 (i = 2)
+current = 3
+prev = result = 3
+result = add(3, 3) = 6
+# Iteration 4 (i = 3)
+current = 4
+prev = result = 6
+result = add(6, 4) = 10
+# Iteration 5 (i = 4)
+current = 5
+prev = result = 10
+result = add(10, 5) = 15
+# Final Output
+15
+# Visualization (Super Simple)
+0 + 1 = 1
+1 + 2 = 3
+3 + 3 = 6
+6 + 4 = 10
+10 + 5 = 15
+# Key Concept
+result বারবার update হচ্ছে
+
+প্রতিবার:
+
+result = callback(previous_result, current_value)
+তাই এটাকে বলে accumulator pattern
+Bonus (Real reduce analogy)
+
+Python built-in:
+
+from functools import reduce
+reduce(add, lst, 0)
+
+তোমার function = custom reduce
+
+'''
+
 def reduceFind(lst, callback, initial):
     # list iteration work in all elements
     # callback function work in updated result and current element
