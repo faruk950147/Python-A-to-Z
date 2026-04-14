@@ -1,3 +1,22 @@
+"""
+en(fruits) - 1 means:
+
+Take the total number of items in the fruits list, then minus 1.
+
+Why is it used?
+
+In Python, indexing starts from 0, so:
+
+First item → index 0
+Last item → index len(fruits) - 1
+
+Here:
+
+len(fruits) = 4
+Last index = 3
+len(fruits) - 1 = 4 - 1 = 3 # this is the last index of the list
+"""
+
 def dynamic_last_element(fruits):
     # fruits[index] thats mean list of index?
     # fruits → list
