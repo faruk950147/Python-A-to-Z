@@ -1,4 +1,4 @@
-list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(list1[:3])
 # print(list1[3:])
 # print(list1[:len(list1)])
@@ -8,4 +8,20 @@ list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(list1[-2:])    
 # print(list1[:-2])    
 
-print(any(x > 3 for x in list1))
+# print(any(x > 3 for x in list1))
+
+list2d = [
+    [1, 2],
+    [3, 4]
+]
+# print(list2d[0])
+# print(list2d[1])
+# print(list2d[0][0])
+# print(list2d[0][1])
+# print(list2d[1][0])
+# print(list2d[1][1])
+
+
+for row in list2d:
+    for col in row:
+        print(col)
