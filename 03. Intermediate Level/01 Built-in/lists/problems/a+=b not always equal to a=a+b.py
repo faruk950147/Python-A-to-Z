@@ -1,43 +1,35 @@
 '''
-এটা কী করছে?
-
-এই কোডটা দেখাচ্ছে:
-
-1. Integer (immutable) কিভাবে কাজ করে
+1. Integer (Immutable behavior)
 a = 10
 a = a + 20
+A new value is created each time
+The original value is not modified
+So the memory address (id) changes
 
-এখানে প্রতিবার:
-
-নতুন value তৈরি হয়
-পুরানোটা change হয় না
-
-তাই id() বদলে যায়
-
-2. আরেকটা integer
+2. Another Integer example
 b = 10
 b += 20
+A new object is created again
+The variable b now points to a new memory location
+So the id changes
 
-এটাও একই:
-
-নতুন object তৈরি হয়
-id change হয়
-3. List (mutable) কিভাবে কাজ করে
+3. List (Mutable behavior)
 a = [1, 2, 3]
 Case 1:
 a = a + [4, 5, 6]
-
-নতুন list তৈরি হয় → id change
+A new list is created
+The old list is not modified
+So id changes
 
 Case 2:
 a += [4, 5, 6]
+The existing list is modified in-place
+No new object is created
+So id stays the same
 
-আগের list-এর ভিতরেই update হয় → id same থাকে
+One-line summary:
 
-এক লাইনে উত্তর:
-
-এটা একটা Python practice code যা দেখায়:
-কখন নতুন object তৈরি হয় আর কখন same object modify হয়
+This is a Python practice code that shows when a new object is created vs when the same object is modified in memory.
 
 # =================== memory address deference ===================
 # always create new object and assign to a
