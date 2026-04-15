@@ -1,5 +1,6 @@
 
-# Python Decorator হলো এমন একটা feature যা দিয়ে তুমি কোনো function-এর behavior modify করতে পারো — function-এর code না বদলিয়েই 
+# Python Decorator হলো এমন একটা feature যা দিয়ে তুমি কোনো function-এর
+# behavior modify করতে পারো — function-এর code না বদলিয়েই 
 
 # সহজভাবে:
 # Function-এর উপর extra feature add করা
