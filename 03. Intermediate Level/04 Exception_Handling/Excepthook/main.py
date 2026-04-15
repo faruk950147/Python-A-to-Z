@@ -1,3 +1,8 @@
+# ============================= what is exception handling =============================
+# Exception handling is a mechanism in Python to handle runtime errors.
+# It allows the program to continue running even if an error occurs.
+
+
 # ============================= what is except hook =============================
 # Exception hook (sys.excepthook) is a global exception handler in Python.
 # It is a function that is automatically called when an exception is not handled.
