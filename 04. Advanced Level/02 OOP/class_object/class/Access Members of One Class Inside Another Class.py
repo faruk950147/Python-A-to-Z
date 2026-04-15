@@ -10,12 +10,12 @@ class Employee:
 class Company:
     def __init__(self, name):
         self.name = name
-        # Accessing Employee class inside Company class
+        # Accessing Employee class inside Company class (this is called composition)
         self.employee = Employee(123, "John", 5000)
 
     def display(self):
         print(self.name)
-        # Accessing Employee class inside Company class
+        # Accessing Employee class inside Company class (this is called composition)
         self.employee.display() 
 if __name__ == "__main__":        
     # Creating Company class object
