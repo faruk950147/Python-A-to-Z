@@ -1,0 +1,70 @@
+OOP (Object Oriented Programming) এর 3টা গুরুত্বপূর্ণ method type দেখিয়েছে: Instance method,
+Class method, Static method 
+আমি তোমাকে একদম সহজভাবে বুঝিয়ে দিচ্ছি কেন @classmethod আর @staticmethod ব্যবহার করা হয়।
+
+1. Instance Method (self)
+def showName(self):
+কেন ব্যবহার করি?
+এটা object-specific data নিয়ে কাজ করে
+প্রতিটা object-এর আলাদা data থাকে
+উদাহরণ:
+human = Human("Faruk", 22)
+human.showName()
+
+এখানে self.name → শুধু ওই object-এর name
+
+2. Class Method (@classmethod)
+@classmethod
+def showClassName(cls):
+কেন ব্যবহার করি?
+এটা class নিজেকে represent করে
+সব object-এর জন্য common data access করে
+class variable modify করতে পারে
+গুরুত্বপূর্ণ point:
+self → object
+cls → class
+উদাহরণ:
+Human.showClassName()
+
+output:
+
+Class Name: Human
+Species: Homo sapiens
+ কখন ব্যবহার করব?
+
+✔ যখন class-level data দরকার
+✔ যখন object ছাড়াই কাজ করতে চাই
+✔ যখন class variable modify করতে চাই
+
+3. Static Method (@staticmethod)
+@staticmethod
+def showClassInfo():
+কেন ব্যবহার করি?
+এটা না class use করে, না object use করে
+শুধু utility function
+উদাহরণ:
+Human.showClassInfo()
+কখন ব্যবহার করব?
+
+✔ যখন function শুধু কাজ করবে
+✔ কোনো self বা cls দরকার নেই
+✔ helper function বানাতে চাই
+
+সহজ comparison
+Type	Access	Uses
+Instance	self (object)	object data
+Class	cls (class)	class data
+Static	nothing	utility function
+তোমার কোডের logic summary
+Human class
+│
+├── instance method → person-specific info (name, age)
+├── class method → class info (Human, Homo sapiens)
+└── static method → general info (description)
+ছোট tip (important)
+
+তুমি চাইলে class method দিয়ে object createও করতে পারো:
+
+@classmethod
+def create_anonymous(cls):
+    return cls("Unknown", 0)
