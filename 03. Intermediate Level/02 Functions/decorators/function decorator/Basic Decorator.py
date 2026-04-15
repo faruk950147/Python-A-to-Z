@@ -8,8 +8,10 @@
 # word = "World"
 # decorator2(say_hello)
 # ============================= Basic Decorator =================================
-def decorator1(func): # <-- decorator function takes ONE argument (the function)
-    def wrapper(): # <-- real actual wrapper function takes ONE argument (the function)
+# 1. Decorator takes a function as an argument and returns a function with some added functionality
+def decorator1(func): 
+    # 2. Wrapper function that adds functionality and calls the original function
+    def wrapper(): 
         print("Before function call")
         func()
         print("After function call")
