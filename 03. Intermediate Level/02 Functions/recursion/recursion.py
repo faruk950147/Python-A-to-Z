@@ -8,6 +8,7 @@ import sys
 # Simple examples of recursive functions
 
 max_recursion_depth = sys.getrecursionlimit() - 1
+print("Max recursion depth:", max_recursion_depth)
 
 def demo(n):
     if n == 0:
