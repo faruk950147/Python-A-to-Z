@@ -39,3 +39,8 @@ class B:
         print(self.age)
         self.a.display()
     
+# Bonus (important interview point)
+# composition is a "has-a" relationship
+# ✔ Composition = flexible (recommended)
+# ✔ Inheritance = tight coupling
+# composition is better than inheritance
