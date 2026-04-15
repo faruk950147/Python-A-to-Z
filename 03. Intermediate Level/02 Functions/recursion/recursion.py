@@ -6,12 +6,16 @@ import sys
 
 # ============================= Basic Recursion ===============================
 # Simple examples of recursive functions
-max_recursion_depth = sys.getrecursionlimit() - 1
-def demo():
-    print("demo")
-    demo(max_recursion_depth)
 
-demo()
+max_recursion_depth = sys.getrecursionlimit() - 1
+
+def demo(n):
+    if n == 0:
+        return
+    print("demo", n)
+    demo(n - 1)
+
+demo(5)
 
 # Countdown example
 '''
