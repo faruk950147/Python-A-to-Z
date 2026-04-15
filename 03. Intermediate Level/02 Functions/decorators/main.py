@@ -107,6 +107,103 @@ def timer(func):
 # *args, **kwargs দিলে সব ধরনের argument handle করা যায়
 # Real project-এ খুব important (auth, logging, caching)
 
+# Python decorator-এর rules (নিয়ম) খুব clearভাবে বুঝে নিলে আর কখনো ভুল হবে না 
+# চল সহজভাবে সব important rules দেখি 
+
+# Rule 1: Decorator সবসময় function return করে
+
+# Decorator একটা function নেয় এবং আরেকটা function return করে
+
+def my_decorator(func):
+    def wrapper():
+        func()
+    return wrapper
+# Rule 2: @decorator = function replace হয়
+@my_decorator
+def test():
+    pass
+
+# আসলে এটা হয়:
+
+test = my_decorator(test)
+# Rule 3: wrapper function দরকার
+
+# Decorator-এর ভিতরে সবসময় wrapper থাকে
+
+def my_decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
+
+# Rule 4: Arguments handle করতে *args, **kwargs ব্যবহার করো
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+# এতে সব ধরনের function handle করা যায়
+
+# Rule 5: Decorator যদি argument নেয় → nested function লাগবে
+def my_decorator(arg):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            print(arg)
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+# ব্যবহার:
+
+@my_decorator("Hello")
+# Rule 6: Execution order (Multiple decorator)
+@A
+@B
+def test():
+    pass
+
+# এটা হয়:
+
+test = A(B(test))
+
+# execution:
+
+# A → B → function
+# Rule 7: Return value return করতে হবে
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+# না করলে function result হারিয়ে যাবে
+
+# Rule 8: functools.wraps ব্যবহার করা ভালো practice
+from functools import wraps
+
+def my_decorator(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+# এতে function name, doc ঠিক থাকে
+
+# Final Shortcut (সব একসাথে)
+from functools import wraps
+
+def decorator(arg):
+    def real_decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            print("Decorator arg:", arg)
+            return func(*args, **kwargs)
+        return wrapper
+    return real_decorator
+# Summary (1 লাইনে)
+
+# Decorator = function modify করার tool without changing original code   
+
 
 # Python decorator-এ কতগুলো arguments দেওয়া যায়—এর উত্তর হলো: যত খুশি দেওয়া যায়
 # কিন্তু সেটা depend করে decorator কীভাবে define করা হয়েছে তার উপর।
