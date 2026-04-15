@@ -1,3 +1,70 @@
+
+1 ====================================================================================
+Python (OOP)-এ তিন ধরনের method আছে: Instance Method, Class Method, Static Method — এগুলোর কাজ আলাদা আলাদা।
+
+1. Instance Method (ইনস্ট্যান্স মেথড)
+
+এটা সবচেয়ে common method
+
+বৈশিষ্ট্য:
+প্রথম parameter হয় self
+object (instance) দিয়ে call করা হয়
+object-এর data (instance variable) access করতে পারে
+উদাহরণ:
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):   # instance method
+        print(self.name)
+
+s1 = Student("Faruk")
+s1.show()
+
+এখানে show() instance method কারণ এটা object-এর data ব্যবহার করছে।
+
+2. Class Method (ক্লাস মেথড)
+
+class level method
+
+বৈশিষ্ট্য:
+প্রথম parameter হয় cls
+@classmethod decorator লাগে
+class variable access/change করতে পারে
+object ছাড়াও class দিয়ে call করা যায়
+উদাহরণ:
+class Student:
+    school = "TMSS"
+
+    @classmethod
+    def change_school(cls, name):
+        cls.school = name
+
+Student.change_school("ABC School")
+print(Student.school)
+3. Static Method (স্ট্যাটিক মেথড)
+
+সবচেয়ে independent method
+
+বৈশিষ্ট্য:
+self বা cls কিছুই লাগে না
+@staticmethod decorator লাগে
+class বা object data access করতে পারে না
+শুধু utility কাজের জন্য
+উদাহরণ:
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(Math.add(5, 3))
+সহজভাবে মনে রাখো:
+Type	কী ব্যবহার করে	কাজ
+Instance Method	self	object data
+Class Method	cls	class data
+Static Method	কিছু না	সাধারণ কাজ
+
+2 ====================================================================================
 OOP (Object Oriented Programming) এর 3টা গুরুত্বপূর্ণ method type দেখিয়েছে: Instance method,
 Class method, Static method 
 আমি তোমাকে একদম সহজভাবে বুঝিয়ে দিচ্ছি কেন @classmethod আর @staticmethod ব্যবহার করা হয়।
