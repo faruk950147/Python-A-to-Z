@@ -14,7 +14,7 @@ def demo():
 demo()
 
 # Countdown example
-
+'''
 def count_down(n):
     if n == 0:          # Base case
         return
@@ -61,7 +61,6 @@ def tail_factorial(n, acc=1):
 
 print("Tail Recursion Factorial of 5:", tail_factorial(5))
 print("===============")
-
 
 # ============================= Tail vs Normal Recursion ======================
 # | Aspect           | Normal Recursion     | Tail Recursion         |
@@ -148,3 +147,4 @@ print("===============")
 # Every recursive function must have a base case to stop it.
 # Tail recursion is memory efficient, but Python does NOT support TCO (Tail Call Optimization).
 # Common uses: Tree/Graph traversal, Backtracking, Divide & Conquer algorithms.
+'''
