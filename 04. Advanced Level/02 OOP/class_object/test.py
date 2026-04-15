@@ -14,7 +14,7 @@ class Student:
     @classmethod
     def change_school(cls, name): # class method
         cls.school = name
-
+        print(cls)
 Student.change_school("ABC School")
 print(Student.school)
 
