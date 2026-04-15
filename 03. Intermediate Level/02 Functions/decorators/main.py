@@ -187,3 +187,101 @@ test()
 # Fixed limit নেই
 # *args, **kwargs দিলে unlimited arguments
 # decorator নিজেও multiple arguments নিতে পারে
+
+def decorator_with_args(arg1, arg2, arg3):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            print(f"Decorator args: {arg1}, {arg2}, {arg3}")
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@decorator_with_args("Hello", "World", "!")
+def greet(name):
+    print(f"Hello, {name}")
+
+greet("Alice") 
+'''
+codeটা একদম perfect এখন আমি step-by-step বুঝিয়ে দিচ্ছি কোন function কী কাজ করছে 
+
+Main Structure
+def decorator_with_args(arg1, arg2, arg3):
+
+এটা হলো decorator factory function
+মানে: এটা সরাসরি decorator না, বরং decorator তৈরি করে
+
+Step 1: decorator_with_args
+def decorator_with_args(arg1, arg2, arg3):
+
+এখানে:
+
+arg1 = "Hello"
+arg2 = "World"
+arg3 = "!"
+
+যখন তুমি লিখো:
+
+@decorator_with_args("Hello", "World", "!")
+
+তখন এটা run হয়:
+
+decorator = decorator_with_args("Hello", "World", "!") 
+Step 2: decorator
+def decorator(func):
+
+এটা আসল decorator function
+
+এখানে:
+
+func = greet
+
+মানে:
+
+greet = decorator(greet)
+Step 3: wrapper
+def wrapper(*args, **kwargs):
+
+এটা function call intercept করে
+
+এখানে:
+
+args = ("Alice",)
+Full Flow (Very Important)
+যখন Python এইটা দেখে:
+@decorator_with_args("Hello", "World", "!")
+def greet(name):
+
+এটা internally হয়ে যায়:
+
+greet = decorator_with_args("Hello", "World", "!")(greet)
+Execution Time
+greet("Alice")
+
+Actually call হয়:
+
+wrapper("Alice")
+Inside wrapper
+print(f"Decorator args: {arg1}, {arg2}, {arg3}")
+
+Output:
+
+Decorator args: Hello, World, !
+
+তারপর:
+
+return func(*args, **kwargs)
+
+মানে:
+
+greet("Alice")
+Final Output
+Decorator args: Hello, World, !
+Hello, Alice
+Short Summary
+Function	কাজ
+decorator_with_args	decorator তৈরি করে (arguments নেয়)
+decorator	function কে wrap করে
+wrapper	actual execution control করে
+
+'''
+
