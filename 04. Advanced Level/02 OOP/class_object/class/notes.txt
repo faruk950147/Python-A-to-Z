@@ -21,8 +21,8 @@ def showClassName(cls):
 সব object-এর জন্য common data access করে
 class variable modify করতে পারে
 গুরুত্বপূর্ণ point:
-self → object
-cls → class
+self → object -> instance
+cls → class -> classmethod
 উদাহরণ:
 Human.showClassName()
 
