@@ -22,6 +22,7 @@ demo(5)
 '''
 def count_down(n):
     if n == 0:          # Base case
+        # unnecessary to return anything here
         return
     print(n)
     count_down(n - 1)   # Recursive case
