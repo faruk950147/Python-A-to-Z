@@ -23,8 +23,10 @@ def say_hello():
 
 say_hello()
 
-# def decorator2(func): # <-- decorator function takes ONE argument (the function)
-#     def wrapper(word): # <-- real actual wrapper function takes ONE argument (the function)
+# def decorator2(func): 
+    # 1. Decorator function takes ONE argument (the function)
+#     def wrapper(word): 
+    # 2. Wrapper function takes ONE argument (the function)
 #         print("Before function call")
 #         func(word)
 #         print("After function call")
