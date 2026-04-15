@@ -1,11 +1,11 @@
-OOP (Object Oriented Programming) এর 3টা গুরুত্বপূর্ণ method type দেখিয়েছে: Instance method,
+OOP (Object Oriented Programming) এর 3টা গুরুত্বপূর্ণ method type দেখিয়েছে: Instance method,
 Class method, Static method 
-আমি তোমাকে একদম সহজভাবে বুঝিয়ে দিচ্ছি কেন @classmethod আর @staticmethod ব্যবহার করা হয়।
+আমি তোমাকে একদম সহজভাবে বুঝিয়ে দিচ্ছি কেন @classmethod আর @staticmethod ব্যবহার করা হয়।
 
 1. Instance Method (self)
 def showName(self):
 কেন ব্যবহার করি?
-এটা object-specific data নিয়ে কাজ করে
+এটা object-specific data নিয়ে কাজ করে
 প্রতিটা object-এর আলাদা data থাকে
 উদাহরণ:
 human = Human("Faruk", 22)
