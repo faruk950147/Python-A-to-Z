@@ -21,3 +21,21 @@ if __name__ == "__main__":
     # Creating Company class object
     company = Company("ABC")
     company.display()
+    
+class A:
+    def __init__(self, name):
+        self.name = name
+    
+    def display(self):
+        print(self.name)
+        
+class B:
+    def __init__(self, age):
+        self.age = age
+        # this is called composition
+        self.a = A("John")
+        
+    def display(self):
+        print(self.age)
+        self.a.display()
+    
