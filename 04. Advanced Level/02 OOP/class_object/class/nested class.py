@@ -5,7 +5,7 @@ class University:
         
     def display(self):
         print(self.name)
-
+    # Nested class for Department
     class Department:
         def __init__(self, name):
             self.name = name
