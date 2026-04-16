@@ -3,7 +3,6 @@
 # It cannot access or modify class or instance state directly.
 # It is defined using the @staticmethod decorator.
 
-
 # 1. Instance Method Example:
 # Changing the name through an instance (object)
 # will NOT change the class variable.
