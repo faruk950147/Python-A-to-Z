@@ -6,6 +6,9 @@
 # 1. Instance Method Example:
 # Changing the name through an instance (object)
 # will NOT change the class variable.
+from ast import If
+
+
 class Person:
     name = "John"
 
@@ -26,20 +29,24 @@ if __name__ == "__main__":
 # 2. Class Method Example:
 # Changing the name using a class reference will modify
 # the class variable for all instances.
+# Directly modifying the class variable using the class name
 class Person2:
     name = "John"
 
-    def changeName(self, name):
-        # Directly modifying the class variable using the class name
-        Person2.name = name
-
+    @classmethod
+    def changeName(cls, name):
+        # cls refers to the class itself (Person2)
+        # This modifies the class variable for all instances
+        # Person2.name = name (alternative way)
+        cls.name = name
 
 if __name__ == "__main__":
+    # Now:
     p1 = Person2()
     p1.changeName("Doe")
 
-    print(p1.name)        # Output: Doe
-    print(Person2.name)   # Output: Doe
+    print(p1.name)        # Doe
+    print(Person2.name)   # Doe
 
 
 # 3. Static Method Example:
