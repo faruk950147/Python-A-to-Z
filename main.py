@@ -1,3 +1,4 @@
+'''
 car = {
 "brand": "Ford",
 "model": "Mustang",
@@ -5,3 +6,10 @@ car = {
 }
 x = car.values()
 print(type(x))
+'''
+
+n = 25
+for i in range(int(n) + 1):
+    print(i)
+    
+# print(n**0.5)
