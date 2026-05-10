@@ -1,14 +1,5 @@
 from datetime import datetime
-
-ONLINE_TIMEOUT_SECONDS = 60  # 60 seconds
-EMAIL_TOKEN_EXPIRE_SECONDS = 60 * 60 * 24  # 24 hours
-RESET_TOKEN_EXPIRE_SECONDS = 60 * 60 * 2  # 2 hours
-ACCOUNT_LOCK_MINUTES = 15  # 15 minutes
-MAX_FAILED_ATTEMPTS = 5  # 5 attempts
-ATTEMPT_TIMEOUT = 60 * 60  # 1 hour
-
-now = datetime.now()
-
+'''
 # total_seconds = now.timestamp()
 total_seconds = (now.hour * 3600 + now.minute * 60 + now.second)
 minutes = total_seconds // 60
@@ -18,3 +9,14 @@ print(f"Total seconds: {int(total_seconds)}")
 print(f"Total minutes: {int(minutes)}")
 print(f"Total hours: {int(hours)}")
 print(f"Total days: {int(days)}")
+'''
+
+ONLINE_TIMEOUT_SECONDS = 60  # 60 seconds
+
+last_seen = datetime(2025, 10, 14, 12, 0, 0)
+
+is_online = (
+    datetime.now() - last_seen
+).total_seconds() < ONLINE_TIMEOUT_SECONDS
+
+print(f"Is online: {is_online}")
