@@ -28,10 +28,35 @@ RESET_TOKEN_EXPIRE_HOURS = 1
 
 
 # =========================================================
+# PHONE NORMALIZER
+# =========================================================
+def normalize_bangladeshi_phone_number(phone):
+    if not phone:
+        return None
+
+    phone = str(phone).strip()
+    phone = re.sub(r"\D", "", phone)
+
+    # 01XXXXXXXXX → +8801XXXXXXXXX
+    if phone.startswith("01") and len(phone) == 11:
+        return "+880" + phone[1:]
+
+    # 8801XXXXXXXXX → +8801XXXXXXXXX
+    if phone.startswith("880") and len(phone) == 13:
+        return "+" + phone
+
+    # already correct format
+    if phone.startswith("+8801"):
+        return phone
+
+    return None
+
+
+# =========================================================
 # VALIDATORS
 # =========================================================
 phone_validator = RegexValidator(
-    regex=r"^\+8801[3-9]\d{8}$",
+    regex=r"^(?:\+8801|01)[3-9]\d{8}$",
     message="Enter a valid Bangladeshi phone number"
 )
 
@@ -42,34 +67,10 @@ username_validator = RegexValidator(
 
 
 # =========================================================
-# NORMALIZER
-# =========================================================
-def normalize_bangladeshi_phone_number(phone):
-    if not phone:
-        return None
-
-    phone = str(phone).strip()
-    phone = re.sub(r"\D", "", phone)
-
-    # 01XXXXXXXXX
-    if phone.startswith("01") and len(phone) == 11:
-        return "+880" + phone[1:]
-
-    # 8801XXXXXXXXX
-    if phone.startswith("880") and len(phone) == 13:
-        return "+" + phone
-
-    # +8801XXXXXXXXX already clean
-    if phone.startswith("+8801"):
-        return phone
-
-    return None
-
-
-# =========================================================
 # USER MANAGER
 # =========================================================
 class UserManager(BaseUserManager):
+
     def create_user(self, username, email, phone, password=None, **extra_fields):
 
         if not username:
@@ -180,11 +181,16 @@ class User(AbstractBaseUser, PermissionsMixin):
             self.phone = normalize_bangladeshi_phone_number(self.phone)
 
     # =====================================================
-    # SAVE (FIXED)
+    # SAVE (SAFE)
     # =====================================================
     def save(self, *args, **kwargs):
         if self.phone:
-            self.phone = normalize_bangladeshi_phone_number(self.phone)
+            normalized = normalize_bangladeshi_phone_number(self.phone)
+
+            if not normalized:
+                raise ValueError("Invalid Bangladeshi phone number")
+
+            self.phone = normalized
 
         super().save(*args, **kwargs)
 
@@ -213,7 +219,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return bool(self.account_locked_until and timezone.now() < self.account_locked_until)
 
     # =====================================================
-    # LOGIN ATTEMPTS
+    # LOGIN SECURITY
     # =====================================================
     def record_failed_login_attempt(self):
         now = timezone.now()
@@ -240,17 +246,15 @@ class User(AbstractBaseUser, PermissionsMixin):
             user.save()
 
     # =====================================================
-    # EMAIL TOKEN
+    # EMAIL VERIFICATION
     # =====================================================
     def generate_email_verification_token(self):
         self.email_verification_token = uuid.uuid4()
         self.email_token_created_at = timezone.now()
-        self.save()
 
     def has_valid_email_verification_token(self):
         if not self.email_verification_token:
             return False
-
         if not self.email_token_created_at:
             return False
 
@@ -261,7 +265,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         self.is_active = True
         self.email_verification_token = None
         self.email_token_created_at = None
-        self.save()
 
     # =====================================================
     # PASSWORD RESET
@@ -269,12 +272,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     def generate_password_reset_token(self):
         self.password_reset_token = uuid.uuid4()
         self.password_reset_token_created_at = timezone.now()
-        self.save()
 
     def has_valid_password_reset_token(self):
         if not self.password_reset_token:
             return False
-
         if not self.password_reset_token_created_at:
             return False
 
@@ -283,7 +284,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     def remove_password_reset_token(self):
         self.password_reset_token = None
         self.password_reset_token_created_at = None
-        self.save()
 
     # =====================================================
     # DISPLAY
