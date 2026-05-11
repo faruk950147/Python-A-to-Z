@@ -42,7 +42,7 @@ username_validator = RegexValidator(
 
 
 # =========================================================
-# UTILS
+# NORMALIZER
 # =========================================================
 def normalize_bangladeshi_phone_number(phone):
     if not phone:
@@ -51,11 +51,17 @@ def normalize_bangladeshi_phone_number(phone):
     phone = str(phone).strip()
     phone = re.sub(r"\D", "", phone)
 
-    if phone.startswith("880") and len(phone) >= 13:
-        return f"+{phone}"
-
+    # 01XXXXXXXXX
     if phone.startswith("01") and len(phone) == 11:
-        return f"+880{phone[1:]}"
+        return "+880" + phone[1:]
+
+    # 8801XXXXXXXXX
+    if phone.startswith("880") and len(phone) == 13:
+        return "+" + phone
+
+    # +8801XXXXXXXXX already clean
+    if phone.startswith("+8801"):
+        return phone
 
     return None
 
@@ -68,17 +74,17 @@ class UserManager(BaseUserManager):
 
         if not username:
             raise ValueError("Username is required")
-
         if not email:
             raise ValueError("Email is required")
-
         if not phone:
             raise ValueError("Phone is required")
+
+        phone = normalize_bangladeshi_phone_number(phone)
 
         user = self.model(
             username=username.strip().lower(),
             email=self.normalize_email(email).strip().lower(),
-            phone=normalize_bangladeshi_phone_number(phone),
+            phone=phone,
             **extra_fields
         )
 
@@ -96,19 +102,14 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault("is_active", True)
         extra_fields.setdefault("is_verified", True)
 
-        return self.create_user(
-            username=username,
-            email=email,
-            phone=phone,
-            password=password,
-            **extra_fields
-        )
+        return self.create_user(username, email, phone, password, **extra_fields)
 
 
 # =========================================================
 # USER MODEL
 # =========================================================
 class User(AbstractBaseUser, PermissionsMixin):
+
     # ---------------- BASIC ----------------
     username = models.CharField(
         max_length=150,
@@ -116,12 +117,14 @@ class User(AbstractBaseUser, PermissionsMixin):
         db_index=True,
         validators=[username_validator]
     )
+
     email = models.EmailField(unique=True, db_index=True)
+
     phone = models.CharField(
         max_length=14,
         unique=True,
-        validators=[phone_validator],
-        db_index=True
+        db_index=True,
+        validators=[phone_validator]
     )
 
     image = models.ImageField(upload_to="users/", blank=True, null=True)
@@ -138,7 +141,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_verified = models.BooleanField(default=False, db_index=True)
 
-    # ---------------- EMAIL VERIFY ----------------
+    # ---------------- EMAIL TOKEN ----------------
     email_verification_token = models.UUIDField(blank=True, null=True, db_index=True)
     email_token_created_at = models.DateTimeField(blank=True, null=True)
 
@@ -164,7 +167,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ["email", "phone"]
 
     # =====================================================
-    # CLEAN / SAVE
+    # CLEAN
     # =====================================================
     def clean(self):
         if self.username:
@@ -176,8 +179,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         if self.phone:
             self.phone = normalize_bangladeshi_phone_number(self.phone)
 
+    # =====================================================
+    # SAVE (FIXED)
+    # =====================================================
     def save(self, *args, **kwargs):
-        self.full_clean()
+        if self.phone:
+            self.phone = normalize_bangladeshi_phone_number(self.phone)
+
         super().save(*args, **kwargs)
 
     # =====================================================
@@ -198,26 +206,14 @@ class User(AbstractBaseUser, PermissionsMixin):
             self.last_seen = now
 
     # =====================================================
-    # LOCK SYSTEM
+    # ACCOUNT LOCK
     # =====================================================
     @property
     def is_locked(self):
         return bool(self.account_locked_until and timezone.now() < self.account_locked_until)
 
-    def unlock_account_if_expired(self):
-        if self.account_locked_until and timezone.now() >= self.account_locked_until:
-            self.failed_login_attempts = 0
-            self.last_failed_login = None
-            self.account_locked_until = None
-
-            self.save(update_fields=[
-                "failed_login_attempts",
-                "last_failed_login",
-                "account_locked_until"
-            ])
-
     # =====================================================
-    # FAILED LOGIN (ATOMIC SAFE)
+    # LOGIN ATTEMPTS
     # =====================================================
     def record_failed_login_attempt(self):
         now = timezone.now()
@@ -231,11 +227,7 @@ class User(AbstractBaseUser, PermissionsMixin):
             if user.failed_login_attempts >= MAX_FAILED_ATTEMPTS:
                 user.account_locked_until = now + timedelta(minutes=ACCOUNT_LOCK_MINUTES)
 
-            user.save(update_fields=[
-                "failed_login_attempts",
-                "last_failed_login",
-                "account_locked_until"
-            ])
+            user.save()
 
     def reset_login_attempts(self):
         with transaction.atomic():
@@ -245,72 +237,53 @@ class User(AbstractBaseUser, PermissionsMixin):
             user.last_failed_login = None
             user.account_locked_until = None
 
-            user.save(update_fields=[
-                "failed_login_attempts",
-                "last_failed_login",
-                "account_locked_until"
-            ])
+            user.save()
 
     # =====================================================
-    # TOKEN CORE (DRY FIXED)
-    # =====================================================
-    def _generate_token(self, token_field, time_field):
-        setattr(self, token_field, uuid.uuid4())
-        setattr(self, time_field, timezone.now())
-        self.save(update_fields=[token_field, time_field])
-
-    def _clear_token(self, token_field, time_field):
-        setattr(self, token_field, None)
-        setattr(self, time_field, None)
-        self.save(update_fields=[token_field, time_field])
-
-    def _token_valid(self, time_field, hours):
-        created = getattr(self, time_field)
-        if not created:
-            return False
-
-        return timezone.now() <= created + timedelta(hours=hours)
-
-    # =====================================================
-    # EMAIL VERIFY
+    # EMAIL TOKEN
     # =====================================================
     def generate_email_verification_token(self):
-        self._generate_token("email_verification_token", "email_token_created_at")
+        self.email_verification_token = uuid.uuid4()
+        self.email_token_created_at = timezone.now()
+        self.save()
 
     def has_valid_email_verification_token(self):
-        return bool(self.email_verification_token) and self._token_valid(
-            "email_token_created_at",
-            EMAIL_TOKEN_EXPIRE_HOURS
-        )
+        if not self.email_verification_token:
+            return False
+
+        if not self.email_token_created_at:
+            return False
+
+        return timezone.now() <= self.email_token_created_at + timedelta(hours=EMAIL_TOKEN_EXPIRE_HOURS)
 
     def mark_email_as_verified(self):
         self.is_verified = True
         self.is_active = True
-        self._clear_token("email_verification_token", "email_token_created_at")
+        self.email_verification_token = None
+        self.email_token_created_at = None
+        self.save()
 
     # =====================================================
     # PASSWORD RESET
     # =====================================================
     def generate_password_reset_token(self):
-        self._generate_token("password_reset_token", "password_reset_token_created_at")
+        self.password_reset_token = uuid.uuid4()
+        self.password_reset_token_created_at = timezone.now()
+        self.save()
 
     def has_valid_password_reset_token(self):
-        return bool(self.password_reset_token) and self._token_valid(
-            "password_reset_token_created_at",
-            RESET_TOKEN_EXPIRE_HOURS
-        )
+        if not self.password_reset_token:
+            return False
+
+        if not self.password_reset_token_created_at:
+            return False
+
+        return timezone.now() <= self.password_reset_token_created_at + timedelta(hours=RESET_TOKEN_EXPIRE_HOURS)
 
     def remove_password_reset_token(self):
-        self._clear_token("password_reset_token", "password_reset_token_created_at")
-
-    # =====================================================
-    # PASSWORD SAFE
-    # =====================================================
-    def set_password(self, raw_password):
-        super().set_password(raw_password)
-
         self.password_reset_token = None
         self.password_reset_token_created_at = None
+        self.save()
 
     # =====================================================
     # DISPLAY
@@ -329,7 +302,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     # META
     # =====================================================
     class Meta:
-        verbose_name_plural = "Users"
         db_table = "account_users"
         ordering = ["-id"]
 
