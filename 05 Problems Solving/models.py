@@ -140,151 +140,57 @@ class User(AbstractBaseUser, PermissionsMixin):
     # =====================================================
     # BASIC
     # =====================================================
-    username = models.CharField(
-        max_length=150,
-        unique=True,
-        db_index=True,
-        validators=[username_validator]
-    )
-
-    email = models.EmailField(
-        unique=True,
-        db_index=True
-    )
-
-    phone = models.CharField(
-        max_length=14,
-        unique=True,
-        db_index=True,
-        validators=[phone_validator]
-    )
-
-    image = models.ImageField(
-        upload_to="users/",
-        blank=True,
-        null=True
-    )
+    username = models.CharField(max_length=150, unique=True, db_index=True, validators=[username_validator])
+    email = models.EmailField(unique=True, db_index=True)
+    phone = models.CharField(max_length=14, unique=True, db_index=True, validators=[phone_validator])
+    image = models.ImageField(upload_to="users/", blank=True, null=True)
 
     # =====================================================
     # ADDRESS
     # =====================================================
-    country = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True
-    )
-
-    city = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True
-    )
-
-    home_city = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True
-    )
-
-    zip_code = models.CharField(
-        max_length=20,
-        blank=True,
-        null=True
-    )
-
-    address = models.TextField(
-        blank=True,
-        null=True
-    )
+    country = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+    home_city = models.CharField(max_length=100, blank=True, null=True)
+    zip_code = models.CharField(max_length=20, blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
 
     # =====================================================
     # STATUS
     # =====================================================
-    is_active = models.BooleanField(
-        default=False,
-        db_index=True
-    )
-
-    is_staff = models.BooleanField(
-        default=False
-    )
-
-    is_verified = models.BooleanField(
-        default=False,
-        db_index=True
-    )
+    is_active = models.BooleanField(default=False, db_index=True)
+    is_staff = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False, db_index=True)
 
     # =====================================================
     # EMAIL VERIFICATION
     # =====================================================
-    email_verification_token = models.UUIDField(
-        blank=True,
-        null=True,
-        db_index=True
-    )
-
-    email_token_created_at = models.DateTimeField(
-        blank=True,
-        null=True
-    )
+    email_verification_token = models.UUIDField(blank=True, null=True, db_index=True)
+    email_token_created_at = models.DateTimeField(blank=True, null=True)
 
     # =====================================================
     # PASSWORD RESET
     # =====================================================
-    password_reset_token = models.UUIDField(
-        blank=True,
-        null=True,
-        db_index=True
-    )
-
-    password_reset_token_created_at = models.DateTimeField(
-        blank=True,
-        null=True
-    )
+    password_reset_token = models.UUIDField(blank=True, null=True, db_index=True)
+    password_reset_token_created_at = models.DateTimeField(blank=True, null=True)
 
     # =====================================================
     # ONLINE STATUS
     # =====================================================
-    last_seen = models.DateTimeField(
-        blank=True,
-        null=True,
-        db_index=True
-    )
+    last_seen = models.DateTimeField(blank=True, null=True, db_index=True)
 
     # =====================================================
     # SECURITY
     # =====================================================
-    failed_login_attempts = models.PositiveIntegerField(
-        default=0
-    )
-
-    last_failed_login = models.DateTimeField(
-        blank=True,
-        null=True
-    )
-
-    account_locked_until = models.DateTimeField(
-        blank=True,
-        null=True,
-        db_index=True
-    )
-
-    last_login_ip = models.GenericIPAddressField(
-        blank=True,
-        null=True
-    )
+    failed_login_attempts = models.PositiveIntegerField(default=0)
+    last_failed_login = models.DateTimeField(blank=True, null=True)
+    account_locked_until = models.DateTimeField(blank=True, null=True, db_index=True)
+    last_login_ip = models.GenericIPAddressField(blank=True, null=True)
 
     # =====================================================
     # TIMESTAMPS
     # =====================================================
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        db_index=True
-    )
-
-    updated_at = models.DateTimeField(
-        auto_now=True
-    )
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     # =====================================================
     # MANAGER
@@ -506,7 +412,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     # STRING
     # =====================================================
     def __str__(self):
-
         return f"{self.username} ({self.email})"
 
     # =====================================================
