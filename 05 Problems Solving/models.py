@@ -35,21 +35,26 @@ def normalize_bangladeshi_phone_number(phone):
     if not phone:
         return None
 
-    phone = str(phone).strip()
+    phone = re.sub(r"\s+", "", phone)
 
-    # remove all non digit
-    phone = re.sub(r"\D", "", phone)
+    if phone.startswith("+880"):
+        normalized = phone
 
-    # 01XXXXXXXXX
-    if phone.startswith("01") and len(phone) == 11:
-        return "+880" + phone[1:]
+    elif phone.startswith("880"):
+        normalized = "+" + phone
 
-    # 8801XXXXXXXXX
-    if phone.startswith("8801") and len(phone) == 13:
-        return "+" + phone
+    elif phone.startswith("01"):
+        normalized = "+880" + phone[1:]
+
+    else:
+        return None
+
+    pattern = r"^\+8801[3-9]\d{8}$"
+
+    if re.match(pattern, normalized):
+        return normalized
 
     return None
-
 
 # =========================================================
 # VALIDATORS
