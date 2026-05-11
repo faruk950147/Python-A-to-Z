@@ -169,7 +169,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     failed_login_attempts = models.PositiveIntegerField(default=0)
     last_failed_login = models.DateTimeField(blank=True, null=True)
     account_locked_until = models.DateTimeField(blank=True, null=True, db_index=True)
-    last_login_ip = models.GenericIPAddressField(blank=True, null=True)
 
     # =====================================================
     # TIMESTAMPS
