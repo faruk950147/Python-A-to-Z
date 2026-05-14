@@ -19,6 +19,9 @@ print(reverseString("Sky is blue"))
 # output [1, 4]
 
 def removeDuplicates(lst):
+    '''
+    Remove duplicates from a list and return the result
+    '''
     result = []
     for i in lst:
         if lst.count(i) >= 1 and i not in result:
@@ -52,6 +55,9 @@ print(count_characters(str1))
 # strs = ["flower", "flow", "flight"]
 # output = "fl"
 def longestCommonPrefix(strs):
+    '''
+    Find the longest common prefix among an array of strings
+    '''
     if not strs:
         return ""
     
