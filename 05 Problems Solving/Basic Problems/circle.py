@@ -1,3 +1,12 @@
+"""
+circle is a round shape
+ pi = 3.14 is a constant value
+ radius is the distance from the center to the edge
+ diameter is the distance across the circle
+ circumference is the distance around the circle
+ area is the space inside the circle
+"""
+
 def circle_area(radius):
     return 3.14 * radius * radius
 
