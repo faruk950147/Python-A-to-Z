@@ -1,38 +1,58 @@
 import random
 
-numbers = list(range(1, 11))  
+class Chooser:
+    """
+    A class to randomly select numbers from a list without repetition.
+    """
+    def __init__(self, numbers):
+        self.numbers = numbers
+        self.choosen = []
+    
+    def choose(self, count):
+        """
+        Randomly select 'count' numbers from the list without repetition.
+        
+        Args:
+            count (int): Number of items to select
+            
+        Returns:
+            list: List of selected numbers
+        """
+        while len(self.choosen) < count:
+            number = random.choice(self.numbers)
+            # TODO: Implement the logic to using remove and append
+            # self.numbers.remove(number)
+            # self.numbers.append(number)
+            if number not in self.choosen:
+                self.choosen.append(number)
+        return self.choosen
+    
+    
+    def reset(self):
+        """
+        Reset the selected numbers list.
+        """
+        self.choosen = []
+    
+    def __str__(self):
+        """
+        Return a string representation of the selected numbers.
+        """
+        return str(self.choosen)
+    
+    def __repr__(self):
+        """
+        Return a string representation of the Chooser object.
+        """
+        return f"Chooser({self.numbers})"
 
-choosen = []
-winers = 3
-while len(choosen) < winers:
-    number = random.choice(numbers)
-    if number not in choosen:
-        choosen.append(number)
-print(choosen)
-
-''' 
-# Method 1: Using random.choice with list removal
-choosen = []
-while len(choosen) < 5:
-    number = random.choice(numbers)
-    if number not in choosen:
-        choosen.append(number)
-print(choosen)
-
-# Method 2: Using random.choice with list removal
-choosen = []
-while len(choosen) < 5:
-    number = random.choice(numbers)
-    numbers.remove(number)
-    choosen.append(number)
-
-choosen.sort()
-print("Choosen:", choosen)
-
-print("Sample from remaining:", random.sample(numbers, 3))
-
-'''
-
-
-
+if __name__ == "__main__":
+    chooser = Chooser([1, 2, 3, 4, 5])
+    print(chooser.choose(3))
+    print(chooser)
+    print(repr(chooser))
+    chooser.reset()
+    print(chooser.choose(2))
+    print(chooser)
+    print(repr(chooser))
 
