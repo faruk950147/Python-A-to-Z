@@ -1,6 +1,8 @@
 import random
 
+
 class WordGuessingGame:
+
     def __init__(self):
         self.words = ["apple", "banana", "cherry", "date", "elderberry"]
         self.word = random.choice(self.words)
@@ -8,9 +10,11 @@ class WordGuessingGame:
         self.attempts = 6
 
     def display_word(self):
+
         display = ""
 
         for letter in self.word:
+
             if letter in self.guessed:
                 display += letter + " "
             else:
@@ -19,6 +23,7 @@ class WordGuessingGame:
         return display
 
     def play(self):
+
         while self.attempts > 0:
 
             print("\nWord:", self.display_word())
@@ -27,17 +32,30 @@ class WordGuessingGame:
 
             guess = input("Guess a letter: ").lower()
 
+            # validation
+            if len(guess) != 1 or not guess.isalpha():
+                print("Please enter only one letter!")
+                continue
+
+            # already guessed
+            if guess in self.guessed:
+                print("You already guessed this letter!")
+                continue
+
+            # correct guess
             if guess in self.word:
                 print("Correct!")
                 self.guessed.add(guess)
+
             else:
                 print("Wrong!")
                 self.attempts -= 1
 
-            # all letter guessing check
+            # win check
             won = True
 
             for letter in self.word:
+
                 if letter not in self.guessed:
                     won = False
 
@@ -49,5 +67,6 @@ class WordGuessingGame:
 
 
 if __name__ == "__main__":
+
     game = WordGuessingGame()
     game.play()
