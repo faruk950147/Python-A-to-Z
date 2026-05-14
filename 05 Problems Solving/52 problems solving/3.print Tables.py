@@ -1,3 +1,5 @@
+# Bismillahir Rahmanir Rahim
+
 count = 0 
 for num in range(1000, 0, -2):  # 1000 to 2 (odd numbers)
     print(num, end="\t")  # print number with tab

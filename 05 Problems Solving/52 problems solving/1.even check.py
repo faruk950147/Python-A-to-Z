@@ -1,3 +1,6 @@
+
+# Bismillahir Rahmanir Rahim
+
 t = int(input("Enter a number for test cases: "))  # first input: how many times to check
 
 for _ in range(t):
