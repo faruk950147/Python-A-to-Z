@@ -5,4 +5,6 @@ def water_melon(w):
         return "NO"
 
 print(water_melon(4))
-    
+print(water_melon(3))
+print(water_melon(8))
+print(water_melon(11))
