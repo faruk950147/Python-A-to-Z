@@ -2,6 +2,14 @@ import random
 
 numbers = list(range(1, 11))  
 
+choosen = []
+winers = 3
+while len(choosen) < winers:
+    number = random.choice(numbers)
+    if number not in choosen:
+        choosen.append(number)
+print(choosen)
+
 ''' 
 # Method 1: Using random.choice with list removal
 choosen = []
