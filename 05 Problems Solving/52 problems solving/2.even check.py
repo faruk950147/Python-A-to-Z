@@ -1,11 +1,17 @@
-t = int(input("Enter a number for test cases: "))  # first input: how many times to check
+# Bismillahir Rahmanir Rahim
 
-for _ in range(t):
-    n = input("Enter a number: ").strip()  # input as string
-    last_digit = int(n[-1])  # get last digit that means last index of string and convert to int
-    
+n = int(input())
+
+for _ in range(n):
+
+    # Large number handle using string
+    num = input()
+
+    # Get last digit
+    last_digit = int(num[-1])
+
+    # even / odd check
     if last_digit % 2 == 0:
-        print("Even")  # if last digit is even
+        print("even")
     else:
-        print("Odd")   # if last digit is odd
-                
+        print("odd")
