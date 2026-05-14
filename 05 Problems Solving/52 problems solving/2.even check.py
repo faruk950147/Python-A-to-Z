@@ -1,6 +1,6 @@
-T = int(input("Enter a number for test cases: "))  # first input: how many times to check
+t = int(input("Enter a number for test cases: "))  # first input: how many times to check
 
-for _ in range(T):
+for _ in range(t):
     n = input("Enter a number: ").strip()  # input as string
     last_digit = int(n[-1])  # get last digit that means last index of string and convert to int
     
