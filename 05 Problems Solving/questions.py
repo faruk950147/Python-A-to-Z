@@ -9,23 +9,6 @@
 # 128*2 = 256
 # 256*2 = 512
 
-# Get input from user
-# get_input = list(map(int, input("Enter two numbers separated by space: ").split()))
-# num1, num2 = get_input  # unpack the list
-
-# result = num1
-# count = 0
-
-# while True:
-#     result *= 2
-#     count += 1
-#     if result == num2:
-#         print(count)
-#         break
-#     elif result > num2:  # safety check if target can't be reached exactly
-#         print("It is not possible to reach the target by multiplying by 2 from the starting number.")
-#         break
-
 def get_number(num1, num2):
     result = num1
     count = 0
