@@ -1,4 +1,3 @@
-"""
 class VotingSystem:
     def __init__(self):
         self.candidate_1, self.candidate_2 = input("Enter 2 candidates name: ").split()
@@ -70,67 +69,6 @@ class VotingSystem:
         self.result()
 
 if __name__ == "__main__":
-    obj = VotingSystem()
-    obj.start_voting()
-"""
+    v = VotingSystem()
+    v.start_voting()
 
-candidate_1, candidate_2 = list(map(str, input("Enter 2 candidates name: ").split()))
-
-candidates1_votes = 0
-candidates2_votes = 0
-
-voters_id = [101, 102, 103, 104]
-
-no_of_voters = len(voters_id)
-
-print(f"Total number of voters: {no_of_voters}")
-
-voted_voters = set()
-
-while True:
-
-    # voting complete
-    if len(voted_voters) == no_of_voters:
-
-        print("\nVoting completed.")
-
-        if candidates1_votes > candidates2_votes:
-            print(f"{candidate_1} won with {candidates1_votes} votes.")
-
-        elif candidates2_votes > candidates1_votes:
-            print(f"{candidate_2} won with {candidates2_votes} votes.")
-
-        else:
-            print(f"It's a tie between {candidate_1} and {candidate_2}")
-
-        break
-
-    voter_id = int(input("\nEnter your voter ID: "))
-
-    # invalid voter
-    if voter_id not in voters_id:
-        print("Invalid voter ID.")
-        continue
-
-    # already voted
-    if voter_id in voted_voters:
-        print("You have already voted.")
-        continue
-
-    print(f"\n1. {candidate_1}")
-    print(f"2. {candidate_2}")
-
-    choice = int(input("Enter your choice: "))
-
-    if choice == 1:
-        candidates1_votes += 1
-        voted_voters.add(voter_id)
-        print(f"Your vote for '{candidate_1}' has been recorded.")
-
-    elif choice == 2:
-        candidates2_votes += 1
-        voted_voters.add(voter_id)
-        print(f"Your vote for '{candidate_2}' has been recorded.")
-
-    else:
-        print("Invalid choice.")
