@@ -13,22 +13,20 @@ class TemperatureConverter:
             68 * 5 = 340
             340 / 9 = 37.78
         """
-        return (fahrenheit - 32) * 5/9
+        return round((fahrenheit - 32) * 5/9, 2)
     
     def celsius_to_fahrenheit(self, celsius):
         """
             Convert Celsius to Fahrenheit
             Formula: (C * 9/5) + 32
-            0 * 9/5 = 0
-            0 + 32 = 32
+            30 * 9/5 = 54
+            54 + 32 = 86
         """
-        return (celsius * 9/5) + 32
+        return round((celsius * 9/5) + 32, 2)
 
 # Test the class
 
 if __name__ == "__main__":
     converter = TemperatureConverter()
-    print(converter.fahrenheit_to_celsius(90))  # Expected: 32.22
-    print(converter.fahrenheit_to_celsius(100))  # Expected: 37.78
-    print(converter.celsius_to_fahrenheit(0))  # Expected: 32.0
-    print(converter.celsius_to_fahrenheit(100))  # Expected: 212.0
+    print(converter.fahrenheit_to_celsius(90.00))  # Expected: 32.22
+    print(converter.celsius_to_fahrenheit(32.22))  # Expected: 89.6
