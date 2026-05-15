@@ -1,11 +1,14 @@
-# nums = int(input("How many numbers you want to operations: "))
-# sum = 0
-# for i in range(nums):
-#     num = int(input("Enter a number: "))
-#     sum += num
-# print("The sum of the numbers is: ", sum)
-
 def sumOfNNum(nums, elements):
+    """
+    Calculate the sum of n numbers.
+    
+    Args:
+        nums (int): Number of elements.
+        elements (list): List of elements.
+        
+    Returns:
+        int: Sum of the elements.
+    """
     sum = 0
     for i in range(nums):
         sum += elements[i]
