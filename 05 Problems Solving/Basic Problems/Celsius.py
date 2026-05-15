@@ -19,7 +19,8 @@ class TemperatureConverter:
         """
             Convert Celsius to Fahrenheit
             Formula: (C * 9/5) + 32
-            30 * 9/5 = 54
+            30 * 9 = 270
+            270 / 5 = 54
             54 + 32 = 86
         """
         return round((celsius * 9/5) + 32, 2)
