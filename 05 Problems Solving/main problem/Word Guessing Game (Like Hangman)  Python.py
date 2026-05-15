@@ -2,15 +2,28 @@ import random
 
 
 class WordGuessingGame:
-
+    """
+    A simple word guessing game similar to Hangman.
+    """
     def __init__(self):
+        """
+        Initialize the game with a list of words and set up game state.
+        
+        Attributes:
+            words (list): List of words to choose from.
+            word (str): The word to be guessed.
+            guessed (set): Set of letters that have been guessed.
+            attempts (int): Number of attempts left.
+        """
         self.words = ["apple", "banana", "cherry", "date", "elderberry"]
         self.word = random.choice(self.words)
         self.guessed = set()
         self.attempts = 6
 
     def display_word(self):
-
+        """
+        Display the current state of the word with guessed letters revealed.
+        """
         display = ""
 
         for letter in self.word:
@@ -23,6 +36,9 @@ class WordGuessingGame:
         return display
 
     def play(self):
+        """
+        Main game loop.
+        """
 
         while self.attempts > 0:
 
