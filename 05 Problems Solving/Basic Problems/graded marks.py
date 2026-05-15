@@ -1,5 +1,21 @@
 
-class CGPA:
+'''
+# Grade Point Average
+marks = {
+    "Programming": 3.37,
+    "Data Structure": 3.37,
+    "Database": 3.37,
+    "Web Development": 3.37,
+    "Software Engineering": 3.61,
+    "Computer Network": 3.50,
+}
+
+total = sum(marks.values())
+print("Total GPA:", round(total/len(marks), 2))
+
+'''
+
+class GradeCalculator:
     def __init__(self):
         pass
     
@@ -27,11 +43,11 @@ class CGPA:
     
     def result_display(self, marks):
         self.cgpa_display(marks)
-        self.print_grade(self.calculate_cgpa(marks))
+        self.grade_display(self.calculate_cgpa(marks))
 
 if __name__ == "__main__":
-    cgpa = CGPA()
-    cgpa.result_display({
+    grade_calculator = GradeCalculator()
+    grade_calculator.result_display({
         "1st Semester": 3.37,
         "2nd Semester": 3.37,
         "3rd Semester": 3.37,
