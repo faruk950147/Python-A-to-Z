@@ -14,11 +14,14 @@ class WordGuessingGame:
             word (str): The word to be guessed.
             guessed (set): Set of letters that have been guessed.
             attempts (int): Number of attempts left.
+            logic (str): Game logic explanation.
+            if_win (bool): Whether the player has won.
         """
         self.words = ["apple", "banana", "cherry", "date", "elderberry"]
         self.word = random.choice(self.words)
         self.guessed = set()
         self.attempts = 6
+        self.logic = "If the word length is even and greater than 2, it can always be divided into two even parts."
 
     def display_word(self):
         """
@@ -38,7 +41,9 @@ class WordGuessingGame:
     def play(self):
         """
         Main game loop.
+        logic: {}
         """
+        print(self.logic)
 
         while self.attempts > 0:
 
