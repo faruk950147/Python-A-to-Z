@@ -9,9 +9,9 @@ class TemperatureConverter:
         """
             Convert Fahrenheit to Celsius
             Formula: (F - 32) * 5/9
-            100 - 32 = 68 
-            68 * 5 = 340
-            340 / 9 = 37.78
+            90.00 - 32 = 58 
+            58 * 5 = 290
+            290 / 9 = 32.22
         """
         return round((fahrenheit - 32) * 5/9, 2)
     
@@ -19,9 +19,9 @@ class TemperatureConverter:
         """
             Convert Celsius to Fahrenheit
             Formula: (C * 9/5) + 32
-            30 * 9 = 270
-            270 / 5 = 54
-            54 + 32 = 86
+            32.22 * 9 = 289.98
+            289.98 / 5 = 57.996
+            57.996 + 32 = 89.996
         """
         return round((celsius * 9/5) + 32, 2)
 
@@ -30,4 +30,4 @@ class TemperatureConverter:
 if __name__ == "__main__":
     converter = TemperatureConverter()
     print(converter.fahrenheit_to_celsius(90.00))  # Expected: 32.22
-    print(converter.celsius_to_fahrenheit(32.22))  # Expected: 89.6
+    print(converter.celsius_to_fahrenheit(32.22))  # Expected: 90.00
