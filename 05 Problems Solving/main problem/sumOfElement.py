@@ -50,5 +50,5 @@ def sumOfElement(data):
 
 # Test examples
 print(sumOfElement([1, 2, (3, 4), {5, 6}, 7]))                # Output: 28
-print(sumOfElement([1, 2.5, "hello", {"a":1}, (3, 2), {1,2,3}, 3]))  # Output: 17.5
+print(sumOfElement([1, 2.5, "hello", {"a":1, "b":2}, (3, 2), {1,2,3}, 3]))  # Output: 17.5
 
