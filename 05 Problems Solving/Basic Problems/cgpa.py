@@ -26,7 +26,7 @@ class CGPA:
         self.grade_display(cgpa)
     
     def result_display(self, marks):
-        self.print_cgpa(marks)
+        self.cgpa_display(marks)
         self.print_grade(self.calculate_cgpa(marks))
 
 if __name__ == "__main__":
