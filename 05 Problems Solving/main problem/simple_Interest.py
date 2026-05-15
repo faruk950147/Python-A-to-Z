@@ -8,7 +8,10 @@ def simpleInterest(principal, rate, time):
         time (float): Time in years.
         
         logic: (principal * rate * time) / 100
-        100 * 10 * 1 / 100 = 10
+        formula: P * R * T / 100 -> 100 * 10 * 1 / 100 
+        calculation:
+        100 * 10 * 1 = 1000
+        1000 / 100 = 10
         
     Returns:
         float: Simple interest.
