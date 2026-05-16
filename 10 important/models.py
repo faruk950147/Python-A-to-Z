@@ -121,7 +121,7 @@ class UserManager(BaseUserManager):
             **extra_fields
         )
 
-#       Password validation
+        #Password validation
         if password:
             validate_password_strength(password)
             user.set_password(password)
