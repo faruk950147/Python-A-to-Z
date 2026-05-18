@@ -267,9 +267,6 @@ class User(AbstractBaseUser, PermissionsMixin, CommonMixins):
     # =====================================================
     @property
     def is_online(self):
-        if not self.last_seen:
-            return False
-        
         return bool(
             self.last_seen and
             timezone.now() <= self.last_seen + timedelta(seconds=ONLINE_TIMEOUT_SECONDS)
