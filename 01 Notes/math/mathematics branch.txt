@@ -1,0 +1,47 @@
+গণিতের (Mathematics) প্রধান শাখাগুলোর নাম নিচে দেওয়া হলোঃ
+
+পাটিগণিত (Arithmetic)
+সংখ্যা নিয়ে সাধারণ হিসাব — যোগ, বিয়োগ, গুণ, ভাগ।
+বীজগণিত (Algebra)
+অক্ষর ও চলক (x, y) ব্যবহার করে সমীকরণ সমাধান।
+জ্যামিতি (Geometry)
+বিন্দু, রেখা, কোণ, ত্রিভুজ, বৃত্ত ইত্যাদি আকৃতি নিয়ে আলোচনা।
+Geometry
+ত্রিকোণমিতি (Trigonometry)
+ত্রিভুজের কোণ ও বাহুর সম্পর্ক নিয়ে আলোচনা।
+Trigonometry
+ক্যালকুলাস (Calculus)
+পরিবর্তন, গতি, ডেরিভেটিভ ও ইন্টেগ্রাল নিয়ে আলোচনা।
+Calculus
+পরিসংখ্যান (Statistics)
+তথ্য সংগ্রহ, বিশ্লেষণ ও উপস্থাপন।
+Statistics
+সম্ভাবনা (Probability)
+কোনো ঘটনার সম্ভাবনা নির্ণয়।
+Probability
+সংখ্যাতত্ত্ব (Number Theory)
+সংখ্যার বৈশিষ্ট্য ও সম্পর্ক নিয়ে আলোচনা।
+Number Theory
+সেট তত্ত্ব (Set Theory)
+সেট ও subset সম্পর্কিত আলোচনা।
+Set Theory
+রৈখিক বীজগণিত (Linear Algebra)
+Matrix, vector ও linear equation নিয়ে আলোচনা।
+Linear Algebra
+ডিসক্রিট গণিত (Discrete Mathematics)
+Logic, graph, algorithm ইত্যাদি নিয়ে আলোচনা।
+Discrete Mathematics
+টপোলজি (Topology)
+আকৃতির গঠন ও ধারাবাহিকতা নিয়ে উচ্চতর গণিত।
+Topology
+ডিফারেনশিয়াল সমীকরণ (Differential Equations)
+পরিবর্তনের সমীকরণ সমাধান।
+Differential Equations
+গাণিতিক যুক্তিবিদ্যা (Mathematical Logic)
+যুক্তি ও প্রমাণের নিয়ম নিয়ে আলোচনা।
+Mathematical Logic
+প্রয়োগিক গণিত (Applied Mathematics)
+বিজ্ঞান, ইঞ্জিনিয়ারিং ও প্রযুক্তিতে গণিতের ব্যবহার।
+Applied Mathematics
+
+এগুলো গণিতের প্রধান শাখা। আরও অনেক উপ-শাখা রয়েছে।
