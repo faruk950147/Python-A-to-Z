@@ -1,4 +1,6 @@
-# polymorphism is a core concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to represent different underlying forms (data types). 
+# polymorphism is a core concept in object-oriented programming (OOP) 
+# polymorphism means allows different classes to use the same method name +
+# with different behaviors
 
 class Animal:
     def speak(self):
