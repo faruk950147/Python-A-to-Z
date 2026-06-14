@@ -1,3 +1,4 @@
+'''
 def get_variant_data(product):
     variants_qs = VariantOption.objects.filter(
         product=product,
@@ -31,3 +32,29 @@ def get_variant_data(product):
                     "code": v.color.title
                 })
                 seen_colors.add(v.color_id)
+'''               
+class User:
+    def __init__(self, name, age=None):
+        # age is optional parameter
+        self.name = name
+        self.age = age
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
