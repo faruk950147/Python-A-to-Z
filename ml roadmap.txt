@@ -1,8 +1,6 @@
 Machine Learning (ML) Roadmap – Beginner to Advanced
 
-তুমি যেহেতু প্রোগ্রামিং জানো (Python + Web Dev), তাই তোমার জন্য একটা structured roadmap দিলাম 👇
-
-Phase 1: Foundation (Basic Strong করো)
+Phase 1: Foundation (Basic Strong)
 1 Programming (Python Advanced Level)
 OOP
 List, Dict, Tuple
@@ -15,7 +13,7 @@ Focus:
 Data cleaning
 CSV handling
 Basic visualization
-2 Mathematics for ML (খুব গুরুত্বপূর্ণ)
+2 Mathematics for ML (very important)
 Linear Algebra
 Matrix
 Vector
@@ -36,7 +34,7 @@ Types of ML:
 Supervised Learning
 Unsupervised Learning
 Reinforcement Learning
-2 Algorithms শেখা শুরু করো
+2 Algorithms (learn step by step)
 Supervised Learning
 Linear Regression
 Logistic Regression
@@ -68,7 +66,7 @@ RNN / LSTM (Text)
 
 Phase 4: Specialization
 
-তুমি যেটা পছন্দ করো সেটা বেছে নাও 
+you can choose any one of them:
 
 Computer Vision
 Image Classification
@@ -82,7 +80,7 @@ EDA
 Dashboard
 Business Analysis
 
-Phase 5: Real Projects (খুব গুরুত্বপূর্ণ)
+Phase 5: Real Projects (do projects while learning)
 Beginner Projects
 House Price Prediction
 Student Result Prediction
@@ -94,12 +92,12 @@ Stock Price Prediction
 
 Phase 6: Deployment (Very Important)
 
-তুমি যেহেতু Django জানো 
+since you know Django 
 
 ML Model → Save with pickle
-Django project এ integrate
-API তৈরি করা
-Frontend form দিয়ে prediction দেখানো
+Django project integrate
+Create API 
+Frontend form show prediction
 
 Deployment:
 
