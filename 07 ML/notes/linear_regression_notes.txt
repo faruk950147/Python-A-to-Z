@@ -1,53 +1,61 @@
+Linear Regression - Full Explanation
 
-Linear Regression: Closed Form & Gradient Descent
-
-1) Closed Form Solution (Least Squares Method)
-
-Slope (m):
-m = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)
-
-Intercept (c):
-c = (Σy - mΣx) / n
-
-This method gives exact solution in one step.
-Best for small datasets.
-
-----------------------------------------
-
-2) Gradient Descent (Machine Learning)
-
-Cost Function:
-J(m,c) = (1/n) Σ (y - (mx + c))²
-
-Update Rules:
-m = m - α * (1/n) Σ -2x(y - (mx + c))
-c = c - α * (1/n) Σ -2(y - (mx + c))
+Model:
+y = mx + c
 
 Where:
-α = learning rate
-
-Idea:
-- Start with random m, c
-- Predict output
-- Calculate error
-- Update parameters to reduce error
-- Repeat many times until convergence
+m = slope
+c = intercept
 
 ----------------------------------------
-
-Intuition:
-m = slope (steepness of line)
-c = intercept (starting point on y-axis)
+Given Data:
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
 
 ----------------------------------------
+Table:
+x | y | x^2 | xy
+1 | 2 | 1   | 2
+2 | 4 | 4   | 8
+3 | 6 | 9   | 18
+4 | 8 | 16  | 32
+5 | 10| 25  | 50
 
-Example Result:
-Dataset:
-(1,2), (2,3), (3,5), (4,4)
+Sum:
+Σx = 15
+Σy = 30
+Σx^2 = 55
+Σxy = 110
+n = 5
 
+----------------------------------------
+Slope (m):
+m = (nΣxy - ΣxΣy) / (nΣx^2 - (Σx)^2)
+
+m = (5*110 - 15*30) / (5*55 - 15^2)
+m = (550 - 450) / (275 - 225)
+m = 100 / 50
+m = 2
+
+----------------------------------------
+Intercept (c):
+c = ȳ - m x̄
+
+x̄ = 15/5 = 3
+ȳ = 30/5 = 6
+
+c = 6 - (2*3)
+c = 0
+
+----------------------------------------
 Final Equation:
-y = 0.8x + 1.5
+y = 2x
 
-Meaning:
-- If x increases by 1, y increases by ~0.8
-- Line crosses y-axis at 1.5
+----------------------------------------
+Prediction Example:
+If x = 6:
+y = 2*6 = 12
+
+----------------------------------------
+Conclusion:
+This is a perfect linear relationship where all points lie on a straight line.
