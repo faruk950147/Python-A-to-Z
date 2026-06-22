@@ -59,3 +59,5 @@ y = 2*6 = 12
 ----------------------------------------
 Conclusion:
 This is a perfect linear relationship where all points lie on a straight line.
+
+
