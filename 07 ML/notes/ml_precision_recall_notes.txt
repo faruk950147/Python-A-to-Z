@@ -1,0 +1,23 @@
+ML-এ Precision, Recall ইত্যাদি
+
+১. Precision মডেল যেগুলোকে Positive বলেছে, তার মধ্যে কতগুলো আসলেই Positive।
+
+Formula: Precision = TP / (TP + FP)
+
+২. Recall আসল Positive-এর মধ্যে কতগুলো মডেল ধরতে পেরেছে।
+
+Formula: Recall = TP / (TP + FN)
+
+৩. Accuracy সব prediction-এর মধ্যে কতগুলো ঠিক।
+
+Formula: Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+৪. F1 Score Precision এবং Recall-এর balance।
+
+Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+কখন কোনটা: - Precision → False alarm কমাতে - Recall → কিছু miss করা যাবে
+না - F1 → Precision ও Recall দুটোই গুরুত্বপূর্ণ
+
+Python: from sklearn.metrics import accuracy_score, precision_score,
+recall_score, f1_score
