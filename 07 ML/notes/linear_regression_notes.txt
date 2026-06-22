@@ -1,0 +1,53 @@
+
+Linear Regression: Closed Form & Gradient Descent
+
+1) Closed Form Solution (Least Squares Method)
+
+Slope (m):
+m = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)
+
+Intercept (c):
+c = (Σy - mΣx) / n
+
+This method gives exact solution in one step.
+Best for small datasets.
+
+----------------------------------------
+
+2) Gradient Descent (Machine Learning)
+
+Cost Function:
+J(m,c) = (1/n) Σ (y - (mx + c))²
+
+Update Rules:
+m = m - α * (1/n) Σ -2x(y - (mx + c))
+c = c - α * (1/n) Σ -2(y - (mx + c))
+
+Where:
+α = learning rate
+
+Idea:
+- Start with random m, c
+- Predict output
+- Calculate error
+- Update parameters to reduce error
+- Repeat many times until convergence
+
+----------------------------------------
+
+Intuition:
+m = slope (steepness of line)
+c = intercept (starting point on y-axis)
+
+----------------------------------------
+
+Example Result:
+Dataset:
+(1,2), (2,3), (3,5), (4,4)
+
+Final Equation:
+y = 0.8x + 1.5
+
+Meaning:
+- If x increases by 1, y increases by ~0.8
+- Line crosses y-axis at 1.5
