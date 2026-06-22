@@ -60,4 +60,74 @@ y = 2*6 = 12
 Conclusion:
 This is a perfect linear relationship where all points lie on a straight line.
 
+Linear Regression Model
+y = mx + c
 
+Where:
+
+m = slope
+c = intercept
+Real Linear Regression (Noisy Data Example)
+
+Data:
+
+x	y
+1	2
+2	3
+3	5
+4	4
+5	6
+
+Data is not a perfect straight line (real world case)
+
+Step 1: Calculate needed sums
+x	y	x²	xy
+1	2	1	2
+2	3	4	6
+3	5	9	15
+4	4	16	16
+5	6	25	30
+Sum:
+Σx = 15
+Σy = 20
+Σx² = 55
+Σxy = 69
+n = 5
+Step 2: Slope (m)
+m = n∑x² - (∑x)² / n∑xy - ∑x∑y
+
+m = 5*55 - 15² / 5*69 - 15*20
+
+m = 275 - 225 / 345 - 300
+
+m = 50 / 45
+
+m = 0.9
+Step 3: Intercept (c)
+x̄ = 15/5 = 3
+ȳ = 20/5 = 4
+
+c = ȳ - m x̄
+c = 4 - (0.9 * 3)
+c = 4 - 2.7 = 1.3
+Final Equation:
+y = 0.9x + 1.3
+Meaning:
+For every 1 unit increase in x, y increases by approximately 0.9
+When x=0, y is approximately 1.3
+Difference (your previous example vs this one)
+Type	Result
+Perfect data	y = 2x
+Real data	y = 0.9x + 1.3
+m = 0.9
+x̄ = 3
+c = 4 - (0.9 * 3) = 1.3
+Final Equation:
+y = 0.9x + 1.3
+Meaning:
+For every 1 unit increase in x, y increases by approximately 0.9
+When x=0, y is approximately 1.3
+Difference (your previous example vs this one)
+Type	Result
+Perfect data	y = 2x
+Real data	y = 0.9x + 1.3
