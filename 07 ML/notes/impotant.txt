@@ -8,13 +8,13 @@ Salary: 10k, 12k, 11k, 500k
 Problem: model ভুলভাবে learn করতে পারে
 
 Linear Relationship
-যখন দুইটা variable-এর মধ্যে সরল সম্পর্ক থাকে (একটা বাড়লে/কমলে অন্যটাও নিয়মিতভাবে বাড়ে/কমে)।
+যখন দুইটা variable-এর মধ্যে সরল সম্পর্ক থাকে (একটা বাড়লে/কমলে অন্যটাও নিয়মিতভাবে বাড়ে/কমে)।
 
 Example:
-Study time বাড়লে marks বাড়ে
+Study time বাড়লে marks বাড়ে
 
 Multicollinearity (Feature problem)
-যখন একাধিক feature একে অপরের সাথে খুব বেশি correlated থাকে।
+যখন একাধিক feature একে অপরের সাথে খুব বেশি সম্পর্কিত (correlated) থাকে।
 
 Example:
 Height in cm এবং height in inch
