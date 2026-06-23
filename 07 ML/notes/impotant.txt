@@ -44,3 +44,87 @@ Example:
 Data সব এক পাশে জমে আছে (right skewed)
 
 Problem: model ঠিকভাবে pattern শিখতে পারে না
+
+=========================================== Checkpoint ===========================================
+
+
+এই গ্রাফ দেখে যা বোঝা যাচ্ছে:
+
+1. Distribution Problem (আছে)
+
+Diagonal histogram-এ দেখো:
+
+Fare → ডানদিকে লম্বা tail গেছে
+SibSp, Parch → বেশিরভাগ মান 0–1 এ জমা
+
+এটার মানে:
+
+Data skewed
+Normal distribution না
+
+সমাধান (optional):
+
+df['Fare'] = np.log1p(df['Fare'])
+2. Outlier (আছে)
+
+Fare সম্পর্কিত scatter-এ দেখো:
+
+বেশিরভাগ value নিচে
+কয়েকটা point অনেক উপরে (২০০–৫০০)
+
+এগুলো outlier হতে পারে।
+
+চেক:
+
+sns.boxplot(df['Fare'])
+plt.show()
+3. Class Imbalance (মাঝারি)
+
+Survived histogram দেখো:
+
+0 বেশি
+1 কম
+
+মানে class পুরো equal না।
+
+চেক:
+
+sns.countplot(x='Survived', data=df)
+plt.show()
+4. Strong Linear Relationship (খুব বেশি দেখা যাচ্ছে না)
+
+Scatter গুলোতে:
+
+পরিষ্কার সোজা line নাই
+মানে feature গুলা খুব strong linear না
+5. Multicollinearity (এখনো নিশ্চিত না)
+
+Pairplot দিয়ে একটু বোঝা যায়, কিন্তু Heatmap ভালো।
+
+চালাও:
+
+plt.figure(figsize=(10,6))
+
+sns.heatmap(
+    df.corr(),
+    annot=True,
+    cmap='coolwarm'
+)
+
+plt.show()
+
+দেখবে:
+
+0.90+ → সমস্যা
+0.70+ → খেয়াল করা লাগবে
+
+তোমার screenshot দেখে আমার verdict:
+
+Problem	Status
+Outlier	আছে
+Distribution	আছে
+Class imbalance	অল্প আছে
+Linear relationship	কম
+Multicollinearity	Heatmap লাগবে
+
+এখন heatmap-এর screenshot দাও, আমি বলে দেব কোন column problem করছে।
