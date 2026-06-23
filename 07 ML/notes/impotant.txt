@@ -1,0 +1,46 @@
+Outlier
+Dataset-এর মধ্যে এমন কিছু value যা অন্য সব data point থেকে অনেক দূরে থাকে।
+
+Example:
+Salary: 10k, 12k, 11k, 500k
+এখানে 500k outlier
+
+Problem: model ভুলভাবে learn করতে পারে
+
+Linear Relationship
+যখন দুইটা variable-এর মধ্যে সরল সম্পর্ক থাকে (একটা বাড়লে/কমলে অন্যটাও নিয়মিতভাবে বাড়ে/কমে)।
+
+Example:
+Study time বাড়লে marks বাড়ে
+
+Multicollinearity (Feature problem)
+যখন একাধিক feature একে অপরের সাথে খুব বেশি correlated থাকে।
+
+Example:
+Height in cm এবং height in inch
+
+Problem: model বুঝতে পারে না কোন feature বেশি important
+
+Class Imbalance (Classification)
+যখন এক class-এর data অনেক বেশি এবং অন্য class-এর data খুব কম থাকে।
+
+Example:
+99% Not Fraud, 1% Fraud
+
+Problem: model majority class-ই predict করে
+
+Overlapping Classes
+যখন different class-এর data একই জায়গায় overlap করে যায়, আলাদা করা কঠিন হয়।
+
+Example:
+Cat vs Dog features কিছু ক্ষেত্রে similar
+
+Problem: decision boundary ঠিকভাবে তৈরি হয় না
+
+Distribution Problem (Diagonal plots)
+যখন data-এর distribution skewed বা uneven থাকে। Pairplot-এর diagonal plot দিয়ে এটা দেখা হয়।
+
+Example:
+Data সব এক পাশে জমে আছে (right skewed)
+
+Problem: model ঠিকভাবে pattern শিখতে পারে না
