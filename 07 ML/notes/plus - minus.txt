@@ -1,3 +1,26 @@
+Place value: 
+Tenths (0.1)
+Adjustment:  0.1 / 2 = 0.05
+Lower Boundary: 8.4 - 0.05 = 8.35
+Upper Boundary: 8.4 + 0.05 = 8.45
+Answer: 8.35 - 8.45 quarts
+b. 138 mmHg
+Place value: Whole units (1)
+Adjustment: 1 / 2 = 0.5
+Lower Boundary: 138 - 0.5 = 137.5
+Upper Boundary: 138 + 0.5 = 138.5
+Answer: 137.5 - 138.5 mmHg
+c. 137.63 mg/dL
+Place value: Hundredths (0.01)
+Adjustment: 0.01 / 2 = 0.005
+Lower Boundary: 137.63 - 0.005 = 137.625
+Upper Boundary: 137.63 + 0.005 = 137.635
+Answer: 137.625 - 137.635 mg/dL
+
+
+
+
+
 8.40 ± 0.05
 
 এখানে ± (প্লাস-মাইনাস) মানে হলো = মানটি 8.40 থেকে 0.05 বেশি বা কম হতে পারে
