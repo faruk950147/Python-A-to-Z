@@ -1,0 +1,150 @@
+ম্যাট্রিক্সের গুরুত্বপূর্ণ ধারণা
+
+1. অনুরাশি (Minor)
+
+কোনো Matrix-এর একটি উপাদানের Minor হলো— ঐ উপাদান যে সারি (row) ও স্তম্ভ
+(column)-এ আছে, তা বাদ দিয়ে যে নতুন ম্যাট্রিক্স পাওয়া যায় তার Determinant।
+
+A = [10 20 30
+    40 50 60
+    70 80 90]
+
+D = [50 60
+    80 90]
+
+|D| = (50 * 90) - (60 * 80) = 4500 - 4800 = -300
+
+Determinant of A: |A| = 10(-300) - 20(-600) + 30(-300) = -3000 + 12000 
+- 9000 = 0
+
+প্রথম row ও column বাদ দিলে: [
+                              5 6
+                              8 9
+                            ]
+
+M11 = (5*9) - (6*8) = -3
+
+2. Matrix এর অনুরূপ সহগুণক (Cofactor) কী?
+
+কোনো উপাদানের Cofactor পাওয়া যায় Minor-এর সাথে চিহ্ন যোগ করে।
+
+সূত্র: Cij = (-1)^(i+j) * Mij
+
+যেখানে,
+
+Mij = Minor
+i = Row নম্বর
+j = Column নম্বর
+
+চিহ্নের প্যাটার্ন:
+
+উদাহরণ: M12 = 7 হলে, C12 = -7
+[+ - +]
+[- + -]
+[+ - +]
+
+
+উদাহরণ:
+
+যদি M12 = 7
+
+তাহলে
+
+C12 = (-1)^(1+2) * 7 = -7
+
+
+3. Matrix এর Adjoint / Adjugate কী?
+
+কোনো Matrix-এর সব Cofactor নিয়ে নতুন Matrix তৈরি করে তারপর সেটির Transpose করলে তাকে Adjoint (Adjugate) বলে।
+
+সূত্র:
+
+Adj(A)=[Cij]T
+
+অর্থাৎ:
+
+Adj(A)=Transpose of Cofactor Matrix
+
+ধাপ:
+
+Minor বের করো
+Cofactor বের করো
+Cofactor Matrix বানাও
+Transpose করো
+
+উদাহরণ:
+
+A=[a c
+  b d]
+
+তাহলে,
+
+Adj(A)=[d -c
+      -b a]
+
+4. Matrix এর Determinant কী?
+
+Determinant হলো একটি সংখ্যা (scalar value) যা একটি Square Matrix থেকে বের করা হয়।
+
+2*2 Matrix:
+
+A=[a c
+  b d]
+
+Determinant: |A| = ad - bc
+
+উদাহরণ: [2 4
+         3 5]
+
+|A| = (2*5) - (3*4)
+= 10-12=-2
+
+ব্যবহার:
+
+Matrix inverse বের করতে
+সমীকরণ সমাধান করতে
+Linear algebra-তে
+
+5. Matrix Multiplication (গুণন) কী?
+
+দুইটি Matrix গুণ করা যায় যদি—
+
+প্রথম Matrix-এর Column সংখ্যা = দ্বিতীয় Matrix-এর Row সংখ্যা
+
+শর্ত: প্রথম Matrix-এর Column = দ্বিতীয় Matrix-এর Row
+
+সূত্র: (AB)ij = Σ(aik * bkj)
+
+শর্টকাট: Minor → Row + Column বাদ দিয়ে Determinant Cofactor → Minor * (-1)^(i+j) Adjoint → Cofactor Matrix-এর Transpose Determinant →
+Matrix-এর মান Multiplication → Row * Column
+
+6. Matrix এর Inverse কী?
+
+কোনো Matrix-এর Inverse বের করার জন্য প্রথমে Determinant বের করতে হয়। যদি Determinant = 0 হয় 
+তাহলে Matrix-এর Inverse বের করা যায় না।
+
+সূত্র:
+
+A^(-1) = (1/|A|) * Adj(A)
+
+যেখানে,
+|A| = Determinant
+Adj(A) = Adjoint
+
+
+
+A = [10 20 30
+    40 50 60
+    70 80 90]
+
+D = [50 60
+    80 90]
+
+|D| = (50 * 90) - (60 * 80) = 4500 - 4800 = -300
+
+Determinant of A: |A| = 10(-300) - 20(-600) + 30(-300) = -3000 + 12000 -
+9000 = 0
+
+Formula: A^(-1) = (1/|A|) × Adj(A)
+
+Since |A| = 0, A^(-1) does not exist. This matrix is a Singular Matrix.
