@@ -1,345 +1,585 @@
-# Matrix (ম্যাট্রিক্স) – Full Notes
+# MATRIX — ALL TOPICS (Complete Roadmap)
+
+=========================
+PART-1 : INTRODUCTION
+=====================
+
+1. Matrix is a square or rectangular array of numbers, symbols, or expressions, arranged in rows and columns.
+
+2. Order / Dimension of Matrix is the number of rows and columns in a matrix, denoted as m × n.
+
+3. Element of Matrix is each individual item in a matrix, denoted as aᵢⱼ.
+
+4. Matrix Notation is the way to represent a matrix, denoted as A or [aᵢⱼ].
+
+Types of Matrix:
+5. Row Matrix
+     A matrix with only one row, denoted as 1 × n.
+     A = [a₁, a₂, ..., aₙ]
+6. Column Matrix
+     A matrix with only one column, denoted as m × 1.
+     A = [a₁, a₂, ..., aₘ]ᵀ
+
+7. Rectangular Matrix
+     A matrix with different number of rows and columns, denoted as m × n where m ≠ n.
+     A = [aᵢⱼ]ₘₓₙ
+
+8. Square Matrix
+     A matrix with equal number of rows and columns, denoted as n × n.
+     A = [aᵢⱼ]ₙₓₙ
+
+9. Zero (Null) Matrix
+     A matrix with all elements equal to zero, denoted as O or 0.
+     O = [0]ₘₓₙ
+     O = [
+          0, 0, 0
+          0, 0, 0
+          0, 0, 0
+          ]
+
+
+10. Diagonal Matrix
+     A square matrix with all non-diagonal elements equal to zero, denoted as D.
+     D = [dᵢⱼ]ₙₓₙ where dᵢⱼ = 0 for i ≠ j.
+     D = [
+          d₁, 0, 0
+          0, d₂, 0
+          0, 0, d₃
+          ]
+     
+11. Scalar Matrix
+     A diagonal matrix with all diagonal elements equal to a scalar k, denoted as kI.
+     kI = [kδᵢⱼ]ₙₓₙ where δᵢⱼ is the Kronecker delta.
+     kI = [
+          k, 0, 0
+          0, k, 0
+          0, 0, k
+          ]
+     
+12. Identity (Unit) Matrix
+     A scalar matrix with all diagonal elements equal to 1, denoted as I.
+     I = [δᵢⱼ]ₙₓₙ where δᵢⱼ is the Kronecker delta.
+     I = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
+     
+13. Upper Triangular Matrix:
+     is a square matrix where all the elements below the main diagonal are zero.
+     U = [
+          1, 2, 3
+          0, 4, 5
+          0, 0, 6
+     ]     
+
+14. Lower Triangular Matrix:
+     is a square matrix where all the elements above the main diagonal are zero.
+     L = [
+          1, 0, 0
+          2, 3, 0
+          4, 5, 6
+     ]     
+
+15. Singular Matrix:
+     A square matrix that does not have an inverse.
+     det(A) = 0
+     A = [
+          1, 2
+          2, 4
+          ]
+     det(A) = 1*4 - 2*2 = 0
+
+16. Non-Singular Matrix:
+     A square matrix that has an inverse.
+     det(A) ≠ 0
+     A = [
+          1, 2
+          3, 4
+          ]
+     det(A) = 1*4 - 2*3 = -2 ≠ 0
+
 
-## ১. Minor (অনুরাশি)
-
-কোনো Matrix-এর একটি উপাদানের Minor হলো— ঐ উপাদানের Row এবং Column বাদ দিয়ে যে নতুন Matrix পাওয়া যায় তার Determinant।
-
-সূত্র:
-
-Mij = Determinant of submatrix after removing row i and column j
-
-উদাহরণ:
-
-A = [
-[10, 20, 30]
-[40, 50, 60]
-[70, 80, 90]
-]
-
-M11 বের করতে:
-
-D = [
-[50, 60]
-[80, 90]
-]
-
-|D| = (50×90) − (60×80)
-
-= 4500 − 4800
-
-= -300
-
-অতএব,
-
-M11 = -300
-
----
-
-## ২. Cofactor (অনুরূপ সহগুণক)
-
-Minor-এর সাথে চিহ্ন যোগ করলে Cofactor পাওয়া যায়।
-
-সূত্র:
-
-Cij = (-1)^(i+j) × Mij
-
-Sign Pattern:
-
-[ +  -  + ]
-[ -  +  - ]
-[ +  -  + ]
-
-উদাহরণ:
-
-যদি M12 = 7
-
-তাহলে
-
-C12 = (-1)^(1+2) × 7
-
-= -7
-
----
-
-## ৩. Adjoint / Adjugate
-
-সব Cofactor নিয়ে Matrix তৈরি করে সেটির Transpose নিলে Adjoint পাওয়া যায়।
-
-সূত্র:
-
-Adj(A) = (Cofactor Matrix)^T
-
-2×2 উদাহরণ:
-
-A = [
-[a, b]
-[c, d]
-]
-
-Adj(A) = [
-[d, -b]
-[-c, a]
-]
-
----
-
-## ৪. Determinant
-
-Determinant হলো Square Matrix থেকে পাওয়া Scalar মান।
-
-2×2 সূত্র:
-
-|A| = ad − bc
-
-উদাহরণ:
-
-A = [
-[2, 4]
-[3, 5]
-]
-
-|A| = (2×5) − (3×4)
-
-= -2
-
-3×3 সূত্র:
-
-|A| = a(ei−fh) − b(di−fg) + c(dh−eg)
-
-উদাহরণ:
-
-A = [
-[10,20,30]
-[40,50,60]
-[70,80,90]
-]
-
-|A|
-
-= 10(-300)
-
-−20(-600)
-
-+30(-300)
-
-= 0
-
-Determinant Rules:
-
-1. দুই Row/Column একই হলে:
-
-|A| = 0
-
-2. Row/Column proportional হলে:
-
-|A| = 0
-
-3. কোনো Row/Column পুরো Zero হলে:
-
-|A| = 0
-
-4. দুই Row swap করলে:
-
-|B| = -|A|
-
----
-
-## ৫. Matrix Multiplication
-
-শর্ত:
-
-প্রথম Matrix-এর Column সংখ্যা = দ্বিতীয় Matrix-এর Row সংখ্যা
-
-সূত্র:
-
-(AB)ij = Σ(aik × bkj)
-
-উদাহরণ:
-
-A = [
-[1,2]
-[3,4]
-]
-
-B = [
-[5,6]
-[7,8]
-]
-
-AB = [
-[19,22]
-[43,50]
-]
-
----
-
-## ৬. Matrix Inverse
-
-শর্ত:
-
-|A| ≠ 0
-
-সূত্র:
-
-A^(-1) = (1/|A|) × Adj(A)
-
-উদাহরণ:
-
-A = [
-[2,1]
-[5,3]
-]
-
-|A| = 1
-
-A^(-1) = [
-[3,-1]
-[-5,2]
-]
-
-যদি |A| = 0 হয়,
-
-তাহলে Inverse নেই।
-
-এটাকে Singular Matrix বলে।
-
----
-
-## ৭. Transpose
-
-Row → Column
-
-Column → Row
-
-উদাহরণ:
-
-A = [
-[1,2]
-[3,4]
-]
-
-A^T = [
-[1,3]
-[2,4]
-]
-
----
-
-## ৮. Trace
-
-Main Diagonal-এর উপাদানের যোগফল।
-
-সূত্র:
-
-Trace(A) = a11 + a22 + ...
-
-উদাহরণ:
-
-A = [
-[1,2,3]
-[4,5,6]
-[7,8,9]
-]
-
-Trace = 1 + 5 + 9
-
-= 15
-
----
-
-## ৯. Eigenvalues
-
-যে মানগুলো নিচের সমীকরণ পূরণ করে:
-
-Ax = λx
-
-সূত্র:
-
-det(A − λI) = 0
-
-উদাহরণ:
-
-A = [
-[1,2]
-[3,4]
-]
-
-λ² − 5λ − 2 = 0
-
-λ = (5 ± √33)/2
-
----
-
-## ১০. Rank
-
-Matrix-এর সবচেয়ে বেশি সংখ্যক Linearly Independent Rows বা Columns।
-
-উদাহরণ:
-
-A = [
-[1,2,3]
-[4,5,6]
-[7,8,9]
-]
-
-Rank(A) = 2
-
-B = [
-[2,3]
-[4,5]
-]
-
-Rank(B) = 2
-
----
-
-## ১১. Condition Number
-
-Matrix কতটা sensitive তা নির্দেশ করে।
-
-সূত্র:
-
-Cond(A) = ||A|| × ||A^(-1)||
-
-যদি Inverse না থাকে:
-
-Cond(A) = ∞
-
----
-
-শর্টকাট:
-
-Minor
-→ Row + Column বাদ → Determinant
-
-↓
-
-Cofactor
-→ Minor × (-1)^(i+j)
-
-↓
-
-Adjoint
-→ Cofactor Matrix → Transpose
-
-↓
-
-Inverse
-→ (1/|A|) × Adj(A)
-
-↓
-
-Trace
-→ Diagonal Sum
-
-↓
-
-Eigenvalue
-→ det(A − λI)
-
-↓
-
-Rank
-→ Independent Rows সংখ্যা
-
-
+17. Symmetric Matrix:
+     A square matrix that is equal to its transpose.
+     A = Aᵀ
+     A = [
+          1, 2, 3
+          2, 4, 5
+          3, 5, 6
+          ]
+
+18. Skew Symmetric Matrix:
+     A square matrix that is equal to the negative of its transpose.
+     A = -Aᵀ
+     A = [
+          0, 1, 2
+          -1, 0, 3
+          -2, -3, 0
+          ]
+
+19. Orthogonal Matrix:
+     A square matrix whose transpose is equal to its inverse.
+     Aᵀ = A⁻¹
+     A = [
+          cos(θ), -sin(θ)
+          sin(θ), cos(θ)
+          ]
+     Aᵀ = A⁻¹
+     B = [
+          cos(θ), sin(θ)
+          -sin(θ), cos(θ)
+          ]
+
+=========================
+PART-2 : BASIC OPERATIONS     
+=========================
+
+20. Matrix Equality
+     Two matrices are equal if they have the same dimensions and corresponding elements are equal.
+     A = B if and only if aᵢⱼ = bᵢⱼ for all i and j.
+     A = [
+          1, 2
+          3, 4
+          ]
+     B = [
+          1, 2
+          3, 4
+          ]
+     A = B
+
+21. Matrix Addition
+     Matrix addition is defined for two matrices of the same dimensions.
+     A + B = [
+          a₁₁ + b₁₁, a₁₂ + b₁₂
+          a₂₁ + b₂₁, a₂₂ + b₂₂
+          ]
+     A = [
+          1, 2
+          3, 4
+          ]
+     B = [
+          5, 6
+          7, 8
+          ]
+     A + B = [
+          6, 8
+          10, 12
+          ]
+
+22. Matrix Subtraction
+     Matrix subtraction is defined for two matrices of the same dimensions.
+     A - B = [
+          a₁₁ - b₁₁, a₁₂ - b₁₂
+          a₂₁ - b₂₁, a₂₂ - b₂₂
+          ]
+     A = [
+          1, 2
+          3, 4
+          ]
+     B = [
+          5, 6
+          7, 8
+          ]
+     A - B = [
+          -4, -4
+          -4, -4
+          ]
+
+23. Scalar Multiplication
+     Scalar multiplication is defined for a matrix and a scalar.
+     kA = [
+          ka₁₁, ka₁₂
+          ka₂₁, ka₂₂
+          ]
+     k = 2
+     A = [
+          1, 2
+          3, 4
+          ]
+     kA = [
+          2, 4
+          6, 8
+          ]
+
+24. Matrix Multiplication
+     Matrix multiplication is defined for two matrices where the number of columns in the first matrix equals the number of rows in the second matrix.
+     A × B = [
+          a₁₁*b₁₁ + a₁₂*b₂₁, a₁₁*b₁₂ + a₁₂*b₂₂
+          a₂₁*b₁₁ + a₂₂*b₂₁, a₂₁*b₁₂ + a₂₂*b₂₂
+          ]
+     A = [
+          1, 2
+          3, 4
+          ]
+     B = [
+          5, 6
+          7, 8
+          ]
+     A × B = [
+          1*5 + 2*7, 1*6 + 2*8
+          3*5 + 4*7, 3*6 + 4*8
+          ]
+     A × B = [
+          19, 22
+          43, 50
+          ]
+
+25. Transpose of Matrix
+     The transpose of a matrix is obtained by swapping rows with columns.
+     Aᵀ = [
+          a₁₁, a₂₁
+          a₁₂, a₂₂
+          ]
+     A = [
+          1, 2
+          3, 4
+          ]
+     Aᵀ = [
+          1, 3
+          2, 4
+          ]
+
+26. Properties of Transpose
+     (Aᵀ)ᵀ = A
+     (A + B)ᵀ = Aᵀ + Bᵀ
+     (kA)ᵀ = kAᵀ
+     (AB)ᵀ = BᵀAᵀ
+
+=========================
+PART-3 : DETERMINANT
+====================
+
+27. Determinant
+     The determinant of a square matrix is a scalar value that provides important information about the matrix.
+     For a 2x2 matrix:
+     det(A) = ad - bc
+     For a 3x3 matrix:
+     det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     det(A) = 1*(5*9 - 6*8) - 2*(4*9 - 6*7) + 3*(4*8 - 5*7)
+     det(A) = 1*(45 - 48) - 2*(36 - 42) + 3*(32 - 35)
+     det(A) = 1*(-3) - 2*(-6) + 3*(-3)
+     det(A) = -3 + 12 - 9
+     det(A) = 0
+
+28. Determinant Expansion
+     The determinant can be expanded along any row or column.
+     For a 2x2 matrix:
+     det(A) = a₁₁*a₂₂ - a₁₂*a₂₁
+     For a 3x3 matrix:
+     det(A) = a₁₁*C₁₁ + a₁₂*C₁₂ + a₁₃*C₁₃
+     where Cᵢⱼ is the cofactor of element aᵢⱼ.
+
+29. Minor
+     The minor of an element is the determinant of the submatrix obtained by deleting the row and column containing that element.
+     For a 3x3 matrix:
+     M₁₁ = det([
+          a₂₂, a₂₃
+          a₃₂, a₃₃
+          ])
+     M₁₂ = det([
+          a₂₁, a₂₃
+          a₃₁, a₃₃
+          ])
+     M₁₃ = det([
+          a₂₁, a₂₂
+          a₃₁, a₃₂
+          ])
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     M₁₁ = det([
+          5, 6
+          8, 9
+          ])
+     M₁₁ = 5*9 - 6*8 = 45 - 48 = -3
+
+30. Cofactor
+     The cofactor of an element is the minor multiplied by (-1)^(i+j).
+     Cᵢⱼ = (-1)^(i+j) * Mᵢⱼ
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     C₁₁ = (-1)^(1+1) * M₁₁ = 1 * (-3) = -3
+     C₁₂ = (-1)^(1+2) * M₁₂ = -1 * (-6) = 6
+     C₁₃ = (-1)^(1+3) * M₁₃ = 1 * (-3) = -3
+
+31. Cofactor Matrix
+     The cofactor matrix is formed by replacing each element with its cofactor.
+     C = [
+          C₁₁, C₁₂, C₁₃
+          C₂₁, C₂₂, C₂₃
+          C₃₁, C₃₂, C₃₃
+          ]
+     C₁₁ = (-1)^(1+1) * M₁₁ = 1 * (-3) = -3
+     C₁₂ = (-1)^(1+2) * M₁₂ = -1 * (-6) = 6
+     C₁₃ = (-1)^(1+3) * M₁₃ = 1 * (-3) = -3
+
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     C = [
+          -3, 6, -3
+          6, -12, 6
+          -3, 6, -3
+          ]
+
+32. Adjoint / Adjugate
+     The adjoint (or adjugate) of a matrix is the transpose of the cofactor matrix.
+     adj(A) = Cᵀ
+
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     C = [
+          -3, 6, -3
+          6, -12, 6
+          -3, 6, -3
+          ]
+     adj(A) = Cᵀ = [
+          -3, 6, -3
+          6, -12, 6
+          -3, 6, -3
+          ]
+
+33. Determinant Properties
+     det(A) = det(Aᵀ)
+     det(AB) = det(A) * det(B)
+     det(kA) = kⁿ * det(A) for an n×n matrix
+     det(A⁻¹) = 1/det(A)
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     det(A) = 1*(5*9 - 6*8) - 2*(4*9 - 6*7) + 3*(4*8 - 5*7)
+     det(A) = 1*(45 - 48) - 2*(36 - 42) + 3*(32 - 35)
+     det(A) = 1*(-3) - 2*(-6) + 3*(-3)
+     det(A) = -3 + 12 - 9 = 0
+
+     B = [
+          1, 2
+          3, 4
+          ]
+     det(B) = 1*4 - 2*3 = 4 - 6 = -2
+
+34. Laplace Expansion
+     A Laplace expansion (also known as cofactor expansion) 
+     is a method for computing the determinant of a matrix by expanding along a row or column.
+
+     A = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+     det(A) = 1 * det([
+          5, 6
+          8, 9
+          ]) - 2 * det([
+          4, 6
+          7, 9
+          ]) + 3 * det([
+          4, 5
+          7, 8
+          ])
+     det(A) = 1 * (5*9 - 6*8) - 2 * (4*9 - 6*7) + 3 * (4*8 - 5*7)
+     det(A) = 1 * (45 - 48) - 2 * (36 - 42) + 3 * (32 - 35)
+     det(A) = 1 * (-3) - 2 * (-6) + 3 * (-3)
+     det(A) = -3 + 12 - 9 = 0
+
+35. Cramer's Rule
+     Cramer's rule is a method for solving systems of linear equations using determinants.
+     A system of linear equations can be written as AX = B, where A is the coefficient matrix, 
+     X is the variable vector, and B is the constant vector.
+     A = [
+          1, 2
+          3, 4
+          ]
+     X = [
+          x
+          y
+          ]
+     B = [
+          b1
+          b2
+          ]
+     
+
+
+=========================
+PART-4 : MATRIX INVERSE
+=======================
+
+36. Inverse of Matrix
+     The inverse of a matrix A is a matrix A⁻¹ such that A * A⁻¹ = I, where I is the identity matrix.
+     A⁻¹ = (1/det(A)) * adj(A)
+     A⁻¹ = (1/(ad-bc)) * [d, -b
+                         -c, a]
+     A = [
+          1, 2
+          3, 4
+          ]
+     A⁻¹ = (1/(1*4 - 2*3)) * [4, -2
+                            -3, 1]
+     A⁻¹ = (1/(-2)) * [4, -2
+                     -3, 1]
+     A⁻¹ = [-2, 1
+           1.5, -0.5]
+     
+
+
+37. Singular Matrix
+38. Non-Singular Matrix
+39. Adjoint Method
+40. Elementary Method
+
+=========================
+PART-5 : ELEMENTARY TRANSFORMATION 
+==================================
+
+41. Row Operation
+42. Column Operation
+43. Elementary Matrix
+44. Row Echelon Form (REF)
+45. Reduced Row Echelon Form (RREF)
+
+=========================
+PART-6 : MATRIX RANK
+====================
+
+46. Rank of Matrix
+47. Rank using Row Reduction
+48. Rank using Determinant
+
+=========================
+PART-7 : LINEAR EQUATIONS     
+=========================
+
+49. System of Linear Equations
+50. Matrix Representation
+
+AX = B
+
+51. Gaussian Elimination
+52. Gauss-Jordan Elimination
+53. LU Decomposition
+
+=========================
+PART-8 : EIGEN CONCEPTS
+=======================
+
+54. Characteristic Equation
+
+|A - λI| = 0
+
+55. Eigenvalue
+56. Eigenvector
+57. Characteristic Polynomial
+58. Diagonalization
+
+=========================
+PART-9 : SPECIAL MATRIX TOPICS
+==============================
+
+59. Trace
+60. Matrix Norm
+61. Condition Number
+62. Positive Definite Matrix
+63. Sparse Matrix
+64. Dense Matrix
+65. Block Matrix
+
+=========================
+PART-10 : ADVANCED LINEAR ALGEBRA
+=================================
+
+66. Vector Space
+67. Basis
+68. Dimension
+69. Linear Independence
+70. Orthogonality
+71. Orthogonal Projection
+72. Gram-Schmidt Process
+73. QR Decomposition
+74. Singular Value Decomposition (SVD)
+75. Spectral Decomposition
+
+=========================
+PART-11 : NUMERICAL MATRIX
+==========================
+
+76. Iterative Method
+77. Power Method
+78. Jacobi Method
+79. Gauss-Seidel Method
+80. Numerical Stability
+
+=========================
+PART-12 : MATRIX IN PROGRAMMING
+===============================
+
+81. Array vs Matrix
+82. NumPy Matrix
+83. Matrix in Python
+84. Matrix in C
+85. Matrix in C++
+86. Matrix in Java
+87. Matrix in Kotlin
+88. Matrix Time Complexity
+
+=========================
+PART-13 : MATRIX IN MACHINE LEARNING
+====================================
+
+89. Feature Matrix
+90. Covariance Matrix
+91. Weight Matrix
+92. Transformation Matrix
+93. PCA
+94. Neural Network Matrix
+95. Embedding Matrix
+96. Recommendation Matrix
+
+=========================
+PART-14 : IMPORTANT THEOREMS
+============================
+
+97. Cayley-Hamilton Theorem
+98. Rank-Nullity Theorem
+99. Invertible Matrix Theorem
+100. Spectral Theorem
+
+=========================
+EXAM SHORT LIST
+===============
+
+✓ Matrix Types
+✓ Addition
+✓ Multiplication
+✓ Transpose
+✓ Determinant
+✓ Minor
+✓ Cofactor
+✓ Adjoint
+✓ Inverse
+✓ Rank
+✓ Trace
+✓ Eigenvalue
+✓ Eigenvector
+✓ Linear Equation
+✓ Condition Number
+
+END
