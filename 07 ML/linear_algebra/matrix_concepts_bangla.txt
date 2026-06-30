@@ -846,14 +846,87 @@ PART-7 : LINEAR EQUATIONS
 =========================
 
 49. System of Linear Equations
-50. Matrix Representation
+     A system of linear equations is a set of two or more linear equations involving the same set of variables.
 
-AX = B
+     Example:
+     x + 2y + 3z = 6
+     4x + 5y + 6z = 15
+     7x + 8y + 9z = 24
+     
+
+
+50. Matrix Representation
+     A MATRIX REPRESENTATION OF A SYSTEM OF LINEAR EQUATIONS IS A WAY TO EXPRESS THE SYSTEM IN MATRIX FORM.
+     Matrix Form:
+     [1 2 3] [x]   [6]
+     [4 5 6] [y] = [15]
+     [7 8 9] [z]   [24]
+     
+     AX = B
 
 51. Gaussian Elimination
-52. Gauss-Jordan Elimination
-53. LU Decomposition
+     Gaussian elimination is a method for solving systems of linear equations by transforming the coefficient matrix into row echelon form.
 
+     Example:
+     x + 2y + 3z = 6
+     4x + 5y + 6z = 15
+     7x + 8y + 9z = 24
+     
+     Matrix Form:
+     [1 2 3] [x]   [6]
+     [4 5 6] [y] = [15]
+     [7 8 9] [z]   [24]
+     
+     After Gaussian elimination, we get:
+     [1 2 3] [x]   [6]
+     [0 -3 -6] [y] = [3]
+     [0 0 0] [z]   [0]
+     
+     This is called row echelon form.
+     
+
+
+52. Gauss-Jordan Elimination
+     Gauss-Jordan elimination is a method for solving systems of linear equations by transforming the coefficient matrix into reduced row echelon form.
+
+
+     Example:
+     x + 2y + 3z = 6
+     4x + 5y + 6z = 15
+     7x + 8y + 9z = 24
+     
+     Matrix Form:
+     [1 2 3] [x]   [6]
+     [4 5 6] [y] = [15]
+     [7 8 9] [z]   [24]
+     
+     After Gauss-Jordan elimination, we get:
+     [1 0 0] [x]   [1]
+     [0 1 0] [y] = [2]
+     [0 0 1] [z]   [3]
+     
+     This is called reduced row echelon form.
+     
+53. LU Decomposition
+     LU decomposition is a method for solving systems of linear equations by decomposing the coefficient matrix into a lower triangular matrix and an upper triangular matrix.
+
+     Example:
+     x + 2y + 3z = 6
+     4x + 5y + 6z = 15
+     7x + 8y + 9z = 24
+     
+     Matrix Form:
+     [1 2 3] [x]   [6]
+     [4 5 6] [y] = [15]
+     [7 8 9] [z]   [24]
+     
+     After LU decomposition, we get:
+     L = [1 0 0]    U = [1 2 3]
+         [4 1 0]        [0 -3 -6]
+         [7 2 1]        [0 0 0]
+     
+     This is called LU decomposition.
+     
 =========================
 PART-8 : EIGEN CONCEPTS
 =======================
@@ -863,21 +936,41 @@ PART-8 : EIGEN CONCEPTS
 |A - λI| = 0
 
 55. Eigenvalue
+     An eigenvalue is a scalar that represents the factor by which a linear transformation scales a vector.
+
 56. Eigenvector
+     An eigenvector is a non-zero vector that, when multiplied by a matrix, results in a scalar multiple of itself.
+
 57. Characteristic Polynomial
+     The characteristic polynomial of a matrix is the polynomial obtained by taking the determinant of the matrix minus a scalar multiple of the identity matrix.
+
 58. Diagonalization
+     Diagonalization is the process of finding a diagonal matrix that is similar to a given matrix.
 
 =========================
 PART-9 : SPECIAL MATRIX TOPICS
 ==============================
 
 59. Trace
+     The trace of a square matrix is the sum of the elements on its main diagonal.
+
 60. Matrix Norm
+     A matrix norm is a function that assigns a strictly positive length or size to each matrix.
+
 61. Condition Number
+     The condition number of a matrix is a measure of how sensitive the solution of a system of linear equations is to small changes in the data.
+
 62. Positive Definite Matrix
+     A positive definite matrix is a symmetric matrix that has all positive eigenvalues.
+
 63. Sparse Matrix
+     A sparse matrix is a matrix in which most of the elements are zero.
+
 64. Dense Matrix
+     A dense matrix is a matrix in which most of the elements are non-zero.
+
 65. Block Matrix
+     A block matrix is a matrix that is partitioned into submatrices, or blocks.
 
 =========================
 PART-10 : ADVANCED LINEAR ALGEBRA
