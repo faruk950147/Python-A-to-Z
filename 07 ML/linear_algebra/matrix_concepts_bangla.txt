@@ -101,6 +101,50 @@ Matrix inverse বের করতে
 সমীকরণ সমাধান করতে
 Linear algebra-তে
 
+================= tip =================
+1. দুইটি Row বা দুইটি Column একই (Identical / Proportional) হলে
+
+যদি কোনো determinant-এর দুইটা row বা দুইটা column একদম একই হয়, তাহলে determinant-এর মান 0 হয়।
+
+Δ=0
+A = [[1, 2],
+     [1, 2]]
+
+|A| = 0
+
+B = [[1, 2, 3],
+     [4, 5, 6],
+     [1, 2, 3]]
+
+|B| = 0
+
+2. কোনো Row বা Column-এর সব element যদি 0 হয়
+
+যদি কোনো একটি row বা column পুরোটা zero হয়, তাহলে determinant:
+
+A = [[1, 2, 3],
+     [0, 0, 0],
+     [7, 8, 9]]
+
+|A| = 0
+
+3. দুইটি Row বা Column অদলবদল (Interchange) করলে
+
+যদি দুইটি row বা দুইটি column swap করা হয়, তাহলে determinant-এর শুধু sign পরিবর্তন হয়.
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+B = [[1, 2, 3],
+     [7, 8, 9],
+     [4, 5, 6]]
+
+|A| = 0
+|B| = -|A| = -0 = 0
+
+
+
 5. Matrix Multiplication (গুণন) কী?
 
 দুইটি Matrix গুণ করা যায় যদি—
@@ -118,14 +162,14 @@ Matrix-এর মান Multiplication → Row * Column
 
 কোনো Matrix-এর Inverse বের করার জন্য প্রথমে Determinant বের করতে হয়। যদি Determinant = 0 হয় 
 তাহলে Matrix-এর Inverse বের করা যায় না।
-
+Adj = Adjoint that is transpose of cofactor matrix
 সূত্র:
 
 A^(-1) = (1/|A|) * Adj(A)
 
 যেখানে,
 |A| = Determinant
-Adj(A) = Adjoint
+Adj(A) = Adjoint that is transpose of cofactor matrix
 
 
 
