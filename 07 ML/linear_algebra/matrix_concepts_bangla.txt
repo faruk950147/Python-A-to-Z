@@ -618,24 +618,228 @@ PART-5 : ELEMENTARY TRANSFORMATION
 44. Row Echelon Form (REF)
      A Row Echelon Form is a matrix that satisfies the following conditions:
      1. All non-zero rows are above all zero rows.
+     
+     A = [
+          1, 2, 3
+          0, 4, 5
+          0, 0, 6
+          ]
+
      2. Each leading entry of a row is in a column to the right of the leading entry of the row above it.
+
+     A = [
+          1, 2, 3
+          0, 4, 5
+          0, 0, 6
+          ]
+
      3. All entries in a column below a leading entry are zeros.
+     
+     A = [
+          1, 2, 3
+          0, 4, 5
+          0, 0, 6
+          ]
 
 45. Reduced Row Echelon Form (RREF)
      A Reduced Row Echelon Form is a matrix that satisfies the following conditions:
      1. All non-zero rows are above all zero rows.
+     A = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
+
      2. Each leading entry of a row is in a column to the right of the leading entry of the row above it.
+     A = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
+
      3. All entries in a column below a leading entry are zeros.
+     A = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
+
      4. The leading entry in each non-zero row is 1.
+     A = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
+
      5. Each leading 1 is the only non-zero entry in its column.
+     A = [
+          1, 0, 0
+          0, 1, 0
+          0, 0, 1
+          ]
 
 =========================
 PART-6 : MATRIX RANK
 ====================
 
 46. Rank of Matrix
+     A Matrix Rank is the maximum number of linearly independent rows or columns in a matrix.
+     When the determinant is not zero, the matrix is said to be full rank.
+     But when the determinant is zero, the matrix is said to be rank deficient.
+
+     A = [
+          1, 2
+          3, 4
+          ]
+
+     The rank of this matrix is 2.
+     Because all rows are linearly independent.
+     
+     B = [
+          1, 2, 3
+          4, 5, 6
+          7, 8, 9
+          ]
+
+     The rank of this matrix is 2.
+     Because the second row is a linear combination of the first row.
+
+     C = [
+          1, 2, 3
+          0, 4, 5
+          0, 0, 6
+          ]
+
+     The rank of this matrix is 3.
+     Because all rows are linearly independent.
+
 47. Rank using Row Reduction
+     To find the rank of a matrix using row reduction, we need to reduce the matrix to row echelon form and count the number of non-zero rows.
+
+     A = [ 1, 2, 3 4, 5, 6 7, 8, 9]
+
+     Step 1: R₂ → R₂ - 4R₁ 
+     R₂ = [4 5 6] - 4[1 2 3] = [0 -3 -6]
+
+     Step 2: R₃ → R₃ - 7R₁ 
+     R₃ = [7 8 9] - 7[1 2 3] = [0 -6 -12]
+
+     Matrix: [ 1 2 3 0 -3 -6 0 -6 -12]
+
+     Step 3: R₃ → R₃ - 2R₂
+
+     R₃ = [0 -6 -12] - 2[0 -3 -6] = [0 0 0]
+
+     Final Matrix: [ 1 2 3 0 -3 -6 0 0 0]
+
+     Non-zero row = 2
+
+     Therefore, Rank(A) = 2
+
 48. Rank using Determinant
+     A = [ 1, 2, 3 4, 5, 6 7, 8, 9]
+
+     Step 1: Calculate the determinant of the matrix.
+     det(A) = 1(5*9 - 6*8) - 2(4*9 - 6*7) + 3(4*8 - 5*7)
+     det(A) = 1(45 - 48) - 2(36 - 42) + 3(32 - 35)
+     det(A) = 1(-3) - 2(-6) + 3(-3)
+     det(A) = -3 + 12 - 9
+     det(A) = 0
+
+     Since the determinant is 0, the matrix is rank deficient.
+     Therefore, Rank(A) = 2
+
+
+=========================
+PART-7 : LINEAR EQUATIONS     
+=========================
+
+49. System of Linear Equations
+
+A system of linear equations is a set of two or more linear equations involving the same set of variables.
+
+General Form:
+
+a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ = b₁
+
+a₂₁x₁ + a₂₂x₂ + ... + a₂ₙx₂ = b₂
+
+...
+
+aₘ₁x₁ + aₘ₂x₂ + ... + aₘₙxₙ = bₘ
+
+Matrix Form:
+
+AX = B
+
+where,
+
+A = Coefficient Matrix
+
+X = Variable Matrix
+
+B = Constant Matrix
+
+
+x + 2y + 3z = 6
+
+4x + 5y + 6z = 15
+
+7x + 8y + 9z = 24
+
+Coefficient Matrix:
+
+A = [
+     1  2  3
+     4  5  6
+     7  8  9
+]
+
+Variable Matrix:
+
+X = [
+     x
+     y
+     z
+]
+
+Constant Matrix:
+
+B = [
+     6
+     15
+     24
+]
+
+Matrix Form:
+
+AX = B
+
+where,
+A = [
+     1 2 3
+     4 5 6
+     7 8 9
+]
+
+where,
+X = [
+     x
+     y
+     z
+]
+
+where,
+B = [
+     6
+     15
+     24
+]
+
+Solution:
+     All equations together:
+     A * X = B
+
 
 =========================
 PART-7 : LINEAR EQUATIONS     
