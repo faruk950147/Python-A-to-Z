@@ -1,49 +1,107 @@
-Outlier
-Dataset-এর মধ্যে এমন কিছু value যা অন্য সব data point থেকে অনেক দূরে থাকে।
+1. Outlier
+
+Dataset-এর এমন data point যা অন্য data point থেকে অস্বাভাবিকভাবে দূরে থাকে।
 
 Example:
-Salary: 10k, 12k, 11k, 500k
-এখানে 500k outlier
+Salary = 10k, 12k, 11k, 500k → এখানে 500k হলো outlier।
 
-Problem: model ভুলভাবে learn করতে পারে
+Problem:
 
-Linear Relationship
-যখন দুইটা variable-এর মধ্যে সরল সম্পর্ক থাকে (একটা বাড়লে/কমলে অন্যটাও নিয়মিতভাবে বাড়ে/কমে)।
+Mean ও variance distort করতে পারে
+কিছু model (যেমন Linear Regression) ভুল trend শিখতে পারে
 
-Example:
-Study time বাড়লে marks বাড়ে
+Common handling:
+Remove, clipping, transformation, robust scaling
 
-Multicollinearity (Feature problem)
-যখন একাধিক feature একে অপরের সাথে খুব বেশি সম্পর্কিত (correlated) থাকে।
+2. Linear Relationship
 
-Example:
-Height in cm এবং height in inch
-
-Problem: model বুঝতে পারে না কোন feature বেশি important
-
-Class Imbalance (Classification)
-যখন এক class-এর data অনেক বেশি এবং অন্য class-এর data খুব কম থাকে।
+যখন দুইটি variable-এর মধ্যে প্রায় সরলরেখার মতো সম্পর্ক থাকে।
 
 Example:
-99% Not Fraud, 1% Fraud
+Study Time ↑ → Marks ↑
 
-Problem: model majority class-ই predict করে
+এটা হতে পারে:
 
-Overlapping Classes
-যখন different class-এর data একই জায়গায় overlap করে যায়, আলাদা করা কঠিন হয়।
+Positive Linear → একসাথে বাড়ে
+Negative Linear → একটা বাড়লে অন্যটা কমে
+
+Problem (যদি না থাকে):
+Linear model (যেমন Linear Regression) ভালো perform নাও করতে পারে।
+
+3. Multicollinearity (Feature Problem)
+
+যখন দুই বা ততোধিক feature নিজেদের মধ্যে খুব বেশি correlated থাকে।
 
 Example:
-Cat vs Dog features কিছু ক্ষেত্রে similar
 
-Problem: decision boundary ঠিকভাবে তৈরি হয় না
+Height (cm)
+Height (inch)
 
-Distribution Problem (Diagonal plots)
-যখন data-এর distribution skewed বা uneven থাকে। Pairplot-এর diagonal plot দিয়ে এটা দেখা হয়।
+Problem:
+
+Feature importance unstable হয়
+Coefficient interpret করা কঠিন হয়
+Regression model-এর performance খারাপ হতে পারে
+
+Detection:
+Correlation Matrix, VIF
+
+4. Class Imbalance (Classification)
+
+যখন dataset-এ কিছু class অনেক বেশি এবং কিছু class খুব কম থাকে।
 
 Example:
-Data সব এক পাশে জমে আছে (right skewed)
+99% Not Fraud
+1% Fraud
 
-Problem: model ঠিকভাবে pattern শিখতে পারে না
+Problem:
+Model সবসময় majority class predict করতে পারে।
+
+Solution:
+
+Oversampling
+Undersampling
+SMOTE
+Class Weight
+5. Overlapping Classes
+
+যখন বিভিন্ন class-এর feature space একে অপরের সাথে মিশে যায়।
+
+Example:
+কিছু Cat এবং Dog image-এর feature অনেক similar।
+
+Problem:
+Decision boundary clear হয় না → accuracy কমে।
+
+Solution:
+
+Better features
+More data
+Complex model (Random Forest, Neural Network)
+6. Distribution Problem (Diagonal Plot / Feature Distribution)
+
+যখন data normal distribution follow না করে skewed বা uneven হয়।
+
+Example:
+Income data → অনেক low income, কম high income → Right Skew
+
+Problem:
+কিছু model distribution sensitive হতে পারে।
+
+Detection:
+
+Histogram
+Pairplot diagonal
+KDE Plot
+
+Solution:
+
+Log Transform
+Standardization
+Normalization
+
+এগুলো ML-এর EDA (Exploratory Data Analysis)-এ খুব common concepts।
+
 
 =========================================== Checkpoint ===========================================
 
