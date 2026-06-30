@@ -978,6 +978,7 @@ PART-8 : EIGEN CONCEPTS
 
 55. Eigenvalue
      An eigenvalue is a scalar that represents the factor by which a linear transformation scales a vector.
+     
 
 56. Eigenvector
      An eigenvector is a non-zero vector that, when multiplied by a matrix, results in a scalar multiple of itself.
