@@ -932,8 +932,49 @@ PART-8 : EIGEN CONCEPTS
 =======================
 
 54. Characteristic Equation
+     A characteristic equation is an equation that is used to find the eigenvalues of a matrix.
+     |A - λI| = 0
 
-|A - λI| = 0
+     A = Given Square Matrix
+
+     λ = Eigenvalue
+
+     I = Identity Matrix
+
+     A = [a b]
+         [c d]
+
+     I = [1 0]
+         [0 1]
+     
+     So:
+          A - λI = [a-λ b]
+                   [c d-λ]
+     
+     Now:
+          |A - λI| = (a-λ)(d-λ) - bc = 0
+     
+     This is the characteristic equation.
+     
+     Solving this equation gives us the eigenvalues.
+     A = [
+          2 1
+          1 2
+          ]
+
+     |A-λI| = |2-λ 1| |1 2-λ|
+
+          ⇒ (2-λ)(2-λ) - 1 = 0
+
+          ⇒ 4 - 4λ + λ² - 1 = 0
+
+          ⇒ λ² - 4λ + 3 = 0
+
+          ⇒ (λ-1)(λ-3)=0
+
+          Eigenvalues:
+
+          λ = 1, 3
 
 55. Eigenvalue
      An eigenvalue is a scalar that represents the factor by which a linear transformation scales a vector.
