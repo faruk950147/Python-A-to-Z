@@ -1102,17 +1102,156 @@ PART-7 : LINEAR EQUATIONS
 
      Matrix Form
 
-     [1 2 3 | 6]
-     [4 5 6 |15]
-     [7 8 9 |24]
+     Given Matrix:
 
-     After Gaussian Elimination
+     ```
+     [ 1   2   0  -1 ]
+     [ 3   4   1   2 ]
+     [ -2  3   2   5 ]
+     ```
 
-     [1  2  3 |  6]
-     [0 -3 -6 | -9]
-     [0  0  0 |  0]
+     ### Step 1
 
-     This is called Row Echelon Form (REF).
+     Take the first element **(1)** as the pivot.
+
+     **Goal:**
+
+     Make all numbers below the pivot equal to **0**.
+
+     The first column is:
+
+     ```
+     1
+     3
+     -2
+     ```
+
+     We first make **3** equal to **0**.
+
+     Row operation:
+
+     ```
+     R2 → R2 − 3R1
+     ```
+
+     or equivalently,
+
+     ```
+     R2 → (−3)R1 + R2
+     ```
+
+     Multiply Row 1 by 3:
+
+     ```
+     3R1 = [3  6  0  -3]
+     ```
+
+     Subtract from Row 2:
+
+     ```
+     R2 = [3  4  1   2]
+          -
+          [3  6  0  -3]
+          --------------
+          [0 -2  1   5]
+     ```
+
+     So the new Row 2 is:
+
+     ```
+     [0  -2  1   5]
+     ```
+
+     The matrix becomes:
+
+     ```
+     [ 1   2   0  -1 ]
+     [ 0  -2   1   5 ]
+     [ -2  3   2   5 ]
+     ```
+
+     Now make **−2** equal to **0**.
+
+     Row operation:
+
+     ```
+     R3 → R3 + 2R1
+     ```
+
+     Multiply Row 1 by 2:
+
+     ```
+     2R1 = [2  4  0  -2]
+     ```
+
+     Add it to Row 3:
+
+     ```
+     R3 = [-2  3  2   5]
+          +
+          [ 2  4  0  -2]
+          ----------------
+          [ 0  7  2   3]
+     ```
+
+     So the new Row 3 is:
+
+     ```
+     [0  7  2  3]
+     ```
+
+     The matrix becomes:
+
+     ```
+     [1   2   0  -1]
+     [0  -2   1   5]
+     [0   7   2   3]
+     ```
+
+     ### Step 2
+
+     The next pivot is **−2** (Row 2, Column 2).
+
+     Goal:
+
+     Make the number below it (**7**) equal to **0**.
+
+     Row operation:
+
+     ```
+     R3 → R3 + (7/2)R2
+     ```
+
+     Multiply Row 2 by **7/2**:
+
+     ```
+     (7/2)R2 = [0  -7  7/2  35/2]
+     ```
+
+     Add it to Row 3:
+
+     ```
+     R3 = [0   7    2    3]
+          +
+          [0  -7  7/2  35/2]
+          -------------------
+          [0   0  11/2 41/2]
+     ```
+
+     So the final matrix is:
+
+     ```
+     [1   2    0    -1]
+     [0  -2    1     5]
+     [0   0  11/2  41/2]
+     ```
+
+     This is called the **Upper Triangular Matrix** or **Row Echelon Form (REF)**.
+
+     **Purpose:**
+
+     Gaussian Elimination uses elementary row operations to transform a matrix into an upper triangular (row echelon) form, making it easier to solve a system of linear equations using back substitution.
+
 
 52. Gauss-Jordan Elimination
 
