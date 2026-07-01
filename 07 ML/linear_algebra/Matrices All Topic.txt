@@ -833,7 +833,8 @@ PART-4 : MATRIX INVERSE
 PART-6 : MATRIX RANK
 =========================
      """
-     Independent 
+     Independent rows are those rows that cannot be created from other rows.
+     Dependent rows are those rows that can be created from other rows.
 
 
      [1 2]
