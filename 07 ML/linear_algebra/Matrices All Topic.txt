@@ -1448,7 +1448,10 @@ PART-7 : LINEAR EQUATIONS
      A Characteristic Equation is used to find the eigenvalues of a square matrix.
 
      Formula:
-     |A - λI| = 0
+     Characteristic Equation: |A - λI| = 0
+     Eigenvalues: Roots of the characteristic equation.
+     Eigenvector: Non-zero vector satisfying A*x = λ*x
+     To find Eigenvector: First find λ, then solve (A - λI)x = 0
 
      Where:
      A = Given square matrix
@@ -1461,6 +1464,7 @@ PART-7 : LINEAR EQUATIONS
           1  2 ]
 
      Step 1:
+
      I = [ 1  0
           0  1 ]
 
@@ -1468,6 +1472,7 @@ PART-7 : LINEAR EQUATIONS
                1   2-λ ]
 
      Step 2:
+
      |A - λI| = (2-λ)(2-λ) - (1*1)
 
      = (2-λ)² - 1
@@ -1477,11 +1482,13 @@ PART-7 : LINEAR EQUATIONS
      = λ² - 4λ + 3
 
      Step 3:
+
      Characteristic Equation:
 
      λ² - 4λ + 3 = 0
 
      Step 4:
+
      Factorize:
 
      (λ - 1)(λ - 3) = 0
@@ -1492,81 +1499,170 @@ PART-7 : LINEAR EQUATIONS
      λ = 3
 
      Answer:
+
      Characteristic Equation = λ² - 4λ + 3 = 0
+
      Eigenvalues = 1, 3
 
 
 55. Eigenvalue
+     Formula:
+     Characteristic Equation: |A - λI| = 0
+     Eigenvalues: Roots of the characteristic equation.
+     Eigenvector: Non-zero vector satisfying A*x = λ*x
+     To find Eigenvector: First find λ, then solve (A - λI)x = 0
 
-     An eigenvalue is a scalar λ such that
+     An Eigenvalue is a scalar λ such that
 
      Ax = λx
 
      for some non-zero vector x.
 
-     Given a matrix A, the eigenvalues λ are the roots of the characteristic equation.
+     The eigenvalues of a matrix are the roots of the characteristic equation.
 
-     Example: Verify that X̄ is an Eigenvector
+     |A - λI| = 0
 
-          Given,
+     Example: Verify that X is an Eigenvector
 
-          A = [ 3   2
-               -1   0 ]
+     Given,
 
-          X̄ = [  2
-               -1 ]
+     A = [ 3   2
+          -1   0 ]
 
-          λ = 2
+     X = [  2
+          -1 ]
 
-          Verify:
+     λ = 2
 
-          AX̄ = λX̄
+     Verify:
 
-          Step 1: Find AX̄
+     AX = λX
 
-          [ 3   2 ]   [ 2 ]
-          [ -1  0 ] * [ -1 ]
+     Step 1: Find AX
 
-          = [ (3*2) + (2*-1) ]
-          [ (-1*2) + (0*-1) ]
+     [ 3   2 ]   [  2 ]
+     [ -1  0 ] * [ -1 ]
 
-          = [ 6 - 2 ]
-          [ -2 + 0 ]
+     = [ (3*2) + (2*-1) ]
+     [ (-1*2) + (0*-1) ]
 
-          = [ 4 ]
-            [ -2 ]
+     = [ 6 - 2 ]
+     [ -2 + 0 ]
 
-          Step 2: Find λX̄
+     = [ 4 ]
+     [ -2 ]
 
-          2 * [ 2 ]
-              [ -1 ]
+     Step 2: Find λX
 
-          = [ 4 ]
-            [ -2 ]
+     2 * [  2 ]
+     [ -1 ]
 
-          Since,
+     = [ 4 ]
+     [ -2 ]
 
-          AX̄ = [ 4 ]
-               [ -2 ]
+     Since,
 
-          and
+     AX = [ 4 ]
+          [ -2 ]
 
-          λX̄ = [ 4 ]
-               [ -2 ]
+     and
 
-          Therefore,
+     λX = [ 4 ]
+          [ -2 ]
 
-          AX̄ = λX̄
+     Therefore,
 
-          Hence, X̄ = [2, -1]ᵀ is an Eigenvector of A corresponding to the Eigenvalue λ = 2.
+     AX = λX
+
+     Hence,
+
+     X = [ 2
+          -1 ]
+
+     is an Eigenvector of A corresponding to the Eigenvalue λ = 2.
+
 
 56. Eigenvector
-
-     An eigenvector is a non-zero vector x that satisfies
+     Formula:
+     Characteristic Equation: |A - λI| = 0
+     Eigenvalues: Roots of the characteristic equation.
+     Eigenvector: Non-zero vector satisfying A*x = λ*x
+     To find Eigenvector: First find λ, then solve (A - λI)x = 0
+     An Eigenvector is a non-zero vector x that satisfies
 
      Ax = λx
 
-     where λ is an eigenvalue.
+     or equivalently,
+
+     (A - λI)X = 0
+
+     Where:
+     A = Square matrix
+     λ = Eigenvalue
+     X = Eigenvector
+     X ≠ 0
+
+     Example:
+
+     Given,
+
+     A = [ 2  1
+          1  2 ]
+
+     Eigenvalues:
+
+     λ = 1, 3
+
+     For λ = 3,
+
+     (A - 3I)X = 0
+
+     [ -1   1 ]
+     [  1  -1 ] [ x ] = [ 0 ]
+               [ y ]   [ 0 ]
+
+     This gives,
+
+     x = y
+
+     One Eigenvector is
+
+     X = [ 1
+          1 ]
+
+     For λ = 1,
+
+     (A - I)X = 0
+
+     [ 1  1 ]
+     [ 1  1 ] [ x ] = [ 0 ]
+               [ y ]   [ 0 ]
+
+     This gives,
+
+     x = -y
+
+     One Eigenvector is
+
+     X = [ 1
+          -1 ]
+
+     Summary:
+
+     Characteristic Equation:
+     |A - λI| = 0
+
+     Eigenvalues:
+     Roots of the characteristic equation.
+
+     Eigenvector:
+     Non-zero vector satisfying
+
+     Ax = λx
+
+     To find an Eigenvector:
+     1. Find the eigenvalues using |A - λI| = 0.
+     2. Solve (A - λI)X = 0 for each eigenvalue.
 
 57. Characteristic Polynomial
 
