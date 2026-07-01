@@ -109,6 +109,14 @@ Types of Matrix:
           3, 5, 6
           ]
 
+     Aᵀ = [
+          1, 2, 3
+          2, 4, 5
+          3, 5, 6
+          ]
+
+     A = Aᵀ
+
 18. Skew Symmetric Matrix:
      A square matrix that is equal to the negative of its transpose.
      A = -Aᵀ
@@ -117,6 +125,14 @@ Types of Matrix:
           -1, 0, 3
           -2, -3, 0
           ]
+
+     Aᵀ = [
+          0, -1, -2
+          1, 0, -3
+          2, 3, 0
+          ]
+
+     A = -Aᵀ
 
 19. Orthogonal Matrix:
      A square matrix whose transpose is equal to its inverse.
