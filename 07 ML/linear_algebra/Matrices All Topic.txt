@@ -832,6 +832,74 @@ PART-4 : MATRIX INVERSE
 =========================
 PART-6 : MATRIX RANK
 =========================
+     """
+     Independent 
+
+
+     [1 2]
+     [3 4]
+
+     Row1 = (1, 2)
+     Row2 = (3, 4)
+
+     Row2 create from Row1-of multiple?
+
+     1 * 3 = 3 ✔
+     2 * 3 = 6 ≠ 4 ✘
+
+     so Row2, Row1 from different multiple.
+
+     so both Row are Independent.
+
+     Rank = 2
+
+     ---------------------------------------
+
+     [1 2]
+     [2 4]
+
+     Row1 = (1, 2)
+     Row2 = (2, 4)
+     
+     1 * 2 = 2 ✔
+     2 * 2 = 4 ✔
+
+
+     so Row2 create from Row1-of multiple.
+
+     so both Row are dependent.
+
+     Rank = 1
+
+     ----------------------------------------
+
+     [1 2 3]
+     [4 5 6]
+     [7 8 9]
+
+     Row3 = 2 * Row2 - Row1
+     
+     4 * 2 = 8 ✔
+     5 * 2 = 10 ≠ 8 ✘
+     
+
+     so Row3 create from Row2-of multiple and Row1-of multiple.
+
+     so both Row are dependent.
+
+     Rank = 2
+
+     ----------------------------------------
+
+     Reminder:
+
+     Independent = not create from other rows
+     Dependent = create from other rows
+
+     The most important formula:
+
+     Rank = The number of independent rows (or columns) in the matrix.
+     """
      46. Rank of Matrix
 
      Definition:
@@ -873,7 +941,7 @@ PART-6 : MATRIX RANK
 
      The correct relation is:
 
-     Row3 = 2 × Row2 − Row1
+     Row3 = 2 * Row2 - Row1
 
      Therefore, only two rows are linearly independent.
 
