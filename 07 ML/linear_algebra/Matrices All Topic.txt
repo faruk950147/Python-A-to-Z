@@ -1157,6 +1157,7 @@ PART-7 : LINEAR EQUATIONS
      [7 8 9] [z]   [24]
 
      AX = B
+     
 51. Gaussian Elimination
      Gaussian Elimination is a method for solving systems of linear equations by using elementary row operations to transform an augmented matrix into an **Upper Triangular Matrix** or **Row Echelon Form (REF)**.
 
