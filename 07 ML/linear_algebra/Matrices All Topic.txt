@@ -1236,12 +1236,15 @@ PART-7 : LINEAR EQUATIONS
      - Index 2: (-3 * 0) + 1 = 0 + 1 = 1
      - Index 3: (-3 * -1) + 2 = 3 + 2 = 5
 
-     R2 → (-3)R1 + R2   // R2 = (-3 × R1) + R2
+     R2 → (-3)R1 + R2   // R2 = (-3 * R1) + R2
      Example: R2 = (-3) * [1, 2, 0, -1] + [3, 4, 1, 2]
      Result: [-3+3, -6+4, 0+1, 3+2] = [0, -2, 1, 5]
      ```
 
      Multiply Row 1 by 3:
+     R1 = [1, 2, 0, -1]
+     R2 = [3, 4, 1, 2]
+     R3 = [-2, 3, 2, 5]
 
      ```text
      3R1 = [3   6   0  -3]
@@ -1276,10 +1279,20 @@ PART-7 : LINEAR EQUATIONS
      Row operation:
 
      ```text
-     R3 → R3 + 2R1      // R3 = R3 + (2 × R1)
+     R1 = [1, 2, 0, -1]
+     R2 = [3, 4, 1, 2]
+     R3 = [-2, 3, 2, 5]
+
+     R3 → R3 + 2R1      // R3 = R3 + (2 * R1)
      Example: R3 = [-2, 3, 2, 5] + 2 * [1, 2, 0, -1]
      Result: [-2+2, 3+4, 2+0, 5+(-2)] = [0, 7, 2, 3]
      ```
+
+     Each index of the resulting row is calculated as:
+     - Index 0: (-2) + (2 * 1) = -2 + 2 = 0
+     - Index 1: 3 + (2 * 2) = 3 + 4 = 7
+     - Index 2: 2 + (2 * 0) = 2 + 0 = 2
+     - Index 3: 5 + (2 * -1) = 5 + (-2) = 3
 
      Multiply Row 1 by 2:
 
@@ -1322,10 +1335,20 @@ PART-7 : LINEAR EQUATIONS
      Row operation:
 
      ```text
-     R3 → R3 + (7/2)R2      // R3 = R3 + (7/2 × R2)
+     R1 = [1, 2, 0, -1]
+     R2 = [0, -2, 1, 5]
+     R3 = [0, 7, 2, 3]
+     
+     R3 → R3 + (7/2)R2      // R3 = R3 + (7/2 * R2)
      Example: R3 = [0, 7, 2, 3] + (7/2) * [0, -2, 1, 5]
      Result: [0+0, 7+(-7), 2+(7/2), 3+(35/2)] = [0, 0, 11/2, 41/2]
      ```
+
+     Each index of the resulting row is calculated as:
+     - Index 0: 0 + (7/2 * 0) = 0 + 0 = 0
+     - Index 1: 7 + (7/2 * -2) = 7 + (-7) = 0
+     - Index 2: 2 + (7/2 * 1) = 2 + 7/2 = 11/2
+     - Index 3: 3 + (7/2 * 5) = 3 + 35/2 = 41/2
 
      Multiply Row 2 by **7/2**:
 
@@ -1381,7 +1404,7 @@ PART-7 : LINEAR EQUATIONS
 
      x = z
 
-     y = 3 − 2z
+     y = 3 - 2z
 
      Hence, the system has infinitely many solutions.
 
@@ -1423,7 +1446,7 @@ PART-7 : LINEAR EQUATIONS
 
      A characteristic equation is used to find the eigenvalues of a square matrix.
 
-     |A − λI| = 0
+     |A - λI| = 0
 
      where
 
@@ -1439,19 +1462,18 @@ PART-7 : LINEAR EQUATIONS
           2 1
           1 2
      ]
-     A − λI =
+     A - λI =
      [
-     2−λ   1
-     1    2−λ
+     2-λ   1
+     1    2-λ
      ]
-     |A−λI|
-     = (2−λ)(2−λ) − 1
+     |A-λI| = (2-λ)(2-λ) - 1
 
-     = 4 − 4λ + λ² − 1
+     = 4 - 4λ + λ² - 1
 
-     = λ² − 4λ + 3
+     = λ² - 4λ + 3
 
-     = (λ−1)(λ−3) = 0
+     = (λ-1)(λ-3) = 0
 
      Eigenvalues
 
@@ -1478,7 +1500,7 @@ PART-7 : LINEAR EQUATIONS
 
      The characteristic polynomial of a square matrix is
 
-     p(λ) = |A − λI|
+     p(λ) = |A - λI|
      58. Diagonalization
 
      Diagonalization is the process of expressing a matrix as
