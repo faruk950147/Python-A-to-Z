@@ -1131,11 +1131,6 @@ PART-7 : LINEAR EQUATIONS
      
      We need to make the element in the second row, first column (which is 3) become 0.
      To do this, we can subtract 3 times the first row from the second row.
-     
-     This is equivalent to:
-     R2 → R2 - 3 * R1 + 0 * R2
-
-     
 
 
      ```text
