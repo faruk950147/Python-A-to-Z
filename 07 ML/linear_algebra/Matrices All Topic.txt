@@ -1442,43 +1442,60 @@ PART-7 : LINEAR EQUATIONS
 
      this is called LU Decomposition.
 
+
 54. Characteristic Equation
 
-     A characteristic equation is used to find the eigenvalues of a square matrix.
+     A Characteristic Equation is used to find the eigenvalues of a square matrix.
 
+     Formula:
      |A - λI| = 0
 
-     where
-
-     A = Given Square Matrix
-
+     Where:
+     A = Given square matrix
      λ = Eigenvalue
+     I = Identity matrix
 
-     I = Identity Matrix
+     Example:
 
-     Example
+     A = [ 2  1
+          1  2 ]
 
-     A = [
-          2 1
-          1 2
-     ]
-     A - λI = [
-          2-λ   1
-          1    2-λ
-     ]
-     |A-λI| = (2-λ)(2-λ) - 1
+     Step 1:
+     I = [ 1  0
+          0  1 ]
 
-     = 4 - 4λ + λ² - 1
+     A - λI = [ 2-λ   1
+               1   2-λ ]
+
+     Step 2:
+     |A - λI| = (2-λ)(2-λ) - (1*1)
+
+     = (2-λ)² - 1
+
+     = (4 - 4λ + λ²) - 1
 
      = λ² - 4λ + 3
 
-     = (λ-1)(λ-3) = 0
+     Step 3:
+     Characteristic Equation:
 
-     Eigenvalues
+     λ² - 4λ + 3 = 0
+
+     Step 4:
+     Factorize:
+
+     (λ - 1)(λ - 3) = 0
+
+     Eigenvalues:
 
      λ = 1
-
      λ = 3
+
+     Answer:
+     Characteristic Equation = λ² - 4λ + 3 = 0
+     Eigenvalues = 1, 3
+
+
 55. Eigenvalue
 
      An eigenvalue is a scalar λ such that
@@ -1486,6 +1503,62 @@ PART-7 : LINEAR EQUATIONS
      Ax = λx
 
      for some non-zero vector x.
+
+     Given a matrix A, the eigenvalues λ are the roots of the characteristic equation.
+
+     Example: Verify that X̄ is an Eigenvector
+
+          Given,
+
+          A = [ 3   2
+               -1   0 ]
+
+          X̄ = [  2
+               -1 ]
+
+          λ = 2
+
+          Verify:
+
+          AX̄ = λX̄
+
+          Step 1: Find AX̄
+
+          [ 3   2 ]   [ 2 ]
+          [ -1  0 ] * [ -1 ]
+
+          = [ (3*2) + (2*-1) ]
+          [ (-1*2) + (0*-1) ]
+
+          = [ 6 - 2 ]
+          [ -2 + 0 ]
+
+          = [ 4 ]
+            [ -2 ]
+
+          Step 2: Find λX̄
+
+          2 * [ 2 ]
+              [ -1 ]
+
+          = [ 4 ]
+            [ -2 ]
+
+          Since,
+
+          AX̄ = [ 4 ]
+               [ -2 ]
+
+          and
+
+          λX̄ = [ 4 ]
+               [ -2 ]
+
+          Therefore,
+
+          AX̄ = λX̄
+
+          Hence, X̄ = [2, -1]ᵀ is an Eigenvector of A corresponding to the Eigenvalue λ = 2.
 
 56. Eigenvector
 
@@ -1500,6 +1573,7 @@ PART-7 : LINEAR EQUATIONS
      The characteristic polynomial of a square matrix is
 
      p(λ) = |A - λI|
+     
      58. Diagonalization
 
      Diagonalization is the process of expressing a matrix as
