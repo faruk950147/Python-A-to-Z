@@ -1379,7 +1379,18 @@ PART-7 : LINEAR EQUATIONS
      **Purpose:**
 
      Gaussian Elimination uses elementary row operations to transform an augmented matrix into row echelon form, making it easier to solve a system of linear equations using **back substitution**.
+     B = [
+          1 -1 3 6
+          1 8 -3 -4
+          5 3 3  11
+     ]
+     R2 → R2 - 1R1
 
+     Each index of the resulting row is calculated as:
+     Index 0: 1-(1*1) = 1−1 = 0
+     Index 1: 8-(1*-1) = 8-(-1) = 9
+     Index 2: -3-(1*3) = -3-3 = -6
+     Index 3: -4-(1*6) = -4-6 = -10
 
 
 52. Gauss-Jordan Elimination
