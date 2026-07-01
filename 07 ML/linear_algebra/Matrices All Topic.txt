@@ -1061,7 +1061,7 @@ PART-6 : MATRIX RANK
 
      det(A) = 0 does NOT always mean Rank = 2.
 
-     For a 3×3 matrix:
+     For a 3*3 matrix:
 
      • If det ≠ 0 → Rank = 3
      • If det = 0 → Use Row Reduction (or Minors) to determine whether Rank is 2, 1, or 0.
@@ -1076,7 +1076,7 @@ PART-6 : MATRIX RANK
 
 Important Exam Rules
 
-     For a 2×2 Matrix
+     For a 2*2 Matrix
 
      • det ≠ 0  → Rank = 2
      • det = 0 and matrix is not zero → Rank = 1
@@ -1084,7 +1084,7 @@ Important Exam Rules
 
      --------------------------------------------------
 
-     For a 3×3 Matrix
+     For a 3*3 Matrix
 
      • det ≠ 0 → Rank = 3
      • det = 0 → Perform Row Reduction (or use Minors)
@@ -1161,22 +1161,16 @@ PART-7 : LINEAR EQUATIONS
      Gaussian Elimination is a method for solving systems of linear equations by using elementary row operations to transform an augmented matrix into an **Upper Triangular Matrix** or **Row Echelon Form (REF)**.
 
      ### System of Linear Equations
-
-     ```text
      x + 2y + 0z = -1
 
      3x + 4y + z = 2
 
      -2x + 3y + 2z = 5
-     ```
 
      ### Augmented Matrix
-
-     ```text
-     [ 1   2   0  -1 ]
-     [ 3   4   1   2 ]
-     [-2   3   2   5 ]
-     ```
+     [ 1   2   0 | -1 ]
+     [ 3   4   1 | 2 ]
+     [-2   3   2 | 5 ]
 
      ### Step 1
 
@@ -1186,14 +1180,6 @@ PART-7 : LINEAR EQUATIONS
 
      Make all numbers below the pivot equal to **0**.
 
-     The first column is:
-
-     ```text
-     1
-     3
-     -2
-     ```
-
      We first make **3** equal to **0**.
 
      Row operation:
@@ -1201,8 +1187,6 @@ PART-7 : LINEAR EQUATIONS
      We need to make the element in the second row, first column (which is 3) become 0.
      To do this, we can subtract 3 times the first row from the second row.
 
-
-     ```text
      R1 = [1, 2, 0, -1]
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
@@ -1216,11 +1200,8 @@ PART-7 : LINEAR EQUATIONS
      - Index 1: 4 - (3 * 2) = 4 - 6 = -2
      - Index 2: 1 - (3 * 0) = 1 - 0 = 1
      - Index 3: 2 - (3 * -1) = 2 - (-3) = 5
-     ```
 
      or equivalently,
-
-     ```text
      R1 = [1, 2, 0, -1]
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
@@ -1228,7 +1209,7 @@ PART-7 : LINEAR EQUATIONS
      R2 → (-3)R1 + R2   // R2 = (-3 * R1) + R2    
      Example: R2 = (-3) * [1, 2, 0, -1] + [3, 4, 1, 2]
      Result: [-3+3, -6+4, 0+1, 3+2] = [0, -2, 1, 5]
-     ```
+
 
      Each index of the resulting row is calculated as:
      - Index 0: (-3 * 1) + 3 = -3 + 3 = 0
@@ -1239,32 +1220,22 @@ PART-7 : LINEAR EQUATIONS
      R2 → (-3)R1 + R2   // R2 = (-3 * R1) + R2
      Example: R2 = (-3) * [1, 2, 0, -1] + [3, 4, 1, 2]
      Result: [-3+3, -6+4, 0+1, 3+2] = [0, -2, 1, 5]
-     ```
+
 
      Multiply Row 1 by 3:
      R1 = [1, 2, 0, -1]
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
 
-     ```text
-     3R1 = [3   6   0  -3]
-     ```
-
      Subtract from Row 2:
-
-     ```text
-     R2 = [3   4   1   2]
+     R2 = [3   4   1 | 2]
           -
-          [3   6   0  -3]
+          [3   6   0 | -3]
           -----------------
-          [0  -2   1   5]
-     ```
+          [0  -2   1 | 5]
 
      So the new Row 2 is:
-
-     ```text
      [0  -2   1   5]
-     ```
 
      The matrix becomes:
 
@@ -1277,8 +1248,6 @@ PART-7 : LINEAR EQUATIONS
      Now make **-2** equal to **0**.
 
      Row operation:
-
-     ```text
      R1 = [1, 2, 0, -1]
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
@@ -1286,7 +1255,6 @@ PART-7 : LINEAR EQUATIONS
      R3 → R3 + 2R1      // R3 = R3 + (2 * R1)
      Example: R3 = [-2, 3, 2, 5] + 2 * [1, 2, 0, -1]
      Result: [-2+2, 3+4, 2+0, 5+(-2)] = [0, 7, 2, 3]
-     ```
 
      Each index of the resulting row is calculated as:
      - Index 0: (-2) + (2 * 1) = -2 + 2 = 0
@@ -1294,35 +1262,24 @@ PART-7 : LINEAR EQUATIONS
      - Index 2: 2 + (2 * 0) = 2 + 0 = 2
      - Index 3: 5 + (2 * -1) = 5 + (-2) = 3
 
-     Multiply Row 1 by 2:
-
-     ```text
-     2R1 = [2   4   0   -2]
-     ```
+     Multiply Row 1 by 2: [2   4   0   -2]
 
      Add it to Row 3:
 
-     ```text
      R3 = [-2   3   2   5]
           +
           [ 2   4   0  -2]
           ------------------
           [ 0   7   2   3]
-     ```
 
      So the new Row 3 is:
 
-     ```text
      [0   7   2   3]
-     ```
 
      The matrix becomes:
-
-     ```text
      [1   2   0  -1]
      [0  -2   1   5]
      [0   7   2   3]
-     ```
 
      ### Step 2
 
@@ -1334,7 +1291,6 @@ PART-7 : LINEAR EQUATIONS
 
      Row operation:
 
-     ```text
      R1 = [1, 2, 0, -1]
      R2 = [0, -2, 1, 5]
      R3 = [0, 7, 2, 3]
@@ -1342,7 +1298,7 @@ PART-7 : LINEAR EQUATIONS
      R3 → R3 + (7/2)R2      // R3 = R3 + (7/2 * R2)
      Example: R3 = [0, 7, 2, 3] + (7/2) * [0, -2, 1, 5]
      Result: [0+0, 7+(-7), 2+(7/2), 3+(35/2)] = [0, 0, 11/2, 41/2]
-     ```
+
 
      Each index of the resulting row is calculated as:
      - Index 0: 0 + (7/2 * 0) = 0 + 0 = 0
@@ -1351,28 +1307,20 @@ PART-7 : LINEAR EQUATIONS
      - Index 3: 3 + (7/2 * 5) = 3 + 35/2 = 41/2
 
      Multiply Row 2 by **7/2**:
-
-     ```text
      (7/2)R2 = [0  -7  7/2  35/2]
      ```
 
      Add it to Row 3:
-
-     ```text
      R3 = [0   7    2   3]
           +
           [0  -7  7/2  35/2]
           --------------------
           [0   0 11/2 41/2]
-     ```
 
      The final matrix is:
-
-     ```text
      [1   2    0   -1]
      [0  -2    1    5]
      [0   0 11/2 41/2]
-     ```
 
      This is called the **Upper Triangular Matrix** or **Row Echelon Form (REF)**.
 
@@ -1387,7 +1335,7 @@ PART-7 : LINEAR EQUATIONS
      R2 → R2 - 1R1
 
      Each index of the resulting row is calculated as:
-     Index 0: 1-(1*1) = 1−1 = 0
+     Index 0: 1-(1*1) = 1-1 = 0
      Index 1: 8-(1*-1) = 8-(-1) = 9
      Index 2: -3-(1*3) = -3-3 = -6
      Index 3: -4-(1*6) = -4-6 = -10
