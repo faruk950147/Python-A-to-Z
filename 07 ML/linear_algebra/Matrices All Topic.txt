@@ -1138,15 +1138,15 @@ PART-7 : LINEAR EQUATIONS
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
 
-     R2 → R2 − 3R1      // R2 = R2 − (3 × R1)
+     R2 → R2 - 3R1      // R2 = R2 - (3 * R1)
      Example: R2 = [3, 4, 1, 2] - 3 * [1, 2, 0, -1]  
      Result: [3-3, 4-6, 1-0, 2-(-3)] = [0, -2, 1, 5] 
 
      Each index of the resulting row is calculated as:
-     - Index 0: 3 - (3 * 1) = 0
-     - Index 1: 4 - (3 * 2) = -2
-     - Index 2: 1 - (3 * 0) = 1
-     - Index 3: 2 - (3 * -1) = 5
+     - Index 0: 3 - (3 * 1) = 3 - 3 = 0
+     - Index 1: 4 - (3 * 2) = 4 - 6 = -2
+     - Index 2: 1 - (3 * 0) = 1 - 0 = 1
+     - Index 3: 2 - (3 * -1) = 2 - (-3) = 5
      ```
 
      or equivalently,
@@ -1156,19 +1156,19 @@ PART-7 : LINEAR EQUATIONS
      R2 = [3, 4, 1, 2]
      R3 = [-2, 3, 2, 5]
 
-     R2 → (−3)R1 + R2   // R2 = (−3 × R1) + R2
-     Example: R2 = (−3) * [1, 2, 0, -1] + [3, 4, 1, 2]
+     R2 → (-3)R1 + R2   // R2 = (-3 * R1) + R2    
+     Example: R2 = (-3) * [1, 2, 0, -1] + [3, 4, 1, 2]
      Result: [-3+3, -6+4, 0+1, 3+2] = [0, -2, 1, 5]
      ```
 
      Each index of the resulting row is calculated as:
-     - Index 0: (−3 * 1) + 3 = 0
-     - Index 1: (−3 * 2) + 4 = -2
-     - Index 2: (−3 * 0) + 1 = 1
-     - Index 3: (−3 * -1) + 2 = 5
+     - Index 0: (-3 * 1) + 3 = -3 + 3 = 0
+     - Index 1: (-3 * 2) + 4 = -6 + 4 = -2
+     - Index 2: (-3 * 0) + 1 = 0 + 1 = 1
+     - Index 3: (-3 * -1) + 2 = 3 + 2 = 5
 
-     R2 → (−3)R1 + R2   // R2 = (−3 × R1) + R2
-     Example: R2 = (−3) * [1, 2, 0, -1] + [3, 4, 1, 2]
+     R2 → (-3)R1 + R2   // R2 = (-3 × R1) + R2
+     Example: R2 = (-3) * [1, 2, 0, -1] + [3, 4, 1, 2]
      Result: [-3+3, -6+4, 0+1, 3+2] = [0, -2, 1, 5]
      ```
 
@@ -1202,7 +1202,7 @@ PART-7 : LINEAR EQUATIONS
      [-2   3   2   5 ]
      ```
 
-     Now make **−2** equal to **0**.
+     Now make **-2** equal to **0**.
 
      Row operation:
 
@@ -1244,7 +1244,7 @@ PART-7 : LINEAR EQUATIONS
 
      ### Step 2
 
-     Take the second element **(−2)** as the pivot.
+     Take the second element **(-2)** as the pivot.
 
      **Goal:**
 
