@@ -1545,7 +1545,120 @@ PART-7 : LINEAR EQUATIONS
      Eigenvalues = 1, 3
 
 
-55. Eigenvalue
+55. Homogeneous System of Linear Equations
+
+    Definition:
+    A system of linear equations is called a Homogeneous System if all constant terms are zero.
+
+    Matrix Form:
+
+    AX = 0
+
+    Example:
+
+    x + 2y = 0
+    3x + 4y = 0
+
+    Coefficient Matrix
+
+    A = [
+        1  2
+        3  4
+    ]
+
+    Variable Matrix
+
+    X = [
+        x
+        y
+    ]
+
+    Constant Matrix
+
+    B = [
+        0
+        0
+    ]
+
+    Therefore,
+
+    AX = 0
+
+    Solution:
+
+    • Every homogeneous system has at least one solution called the Trivial Solution.
+
+    Trivial Solution:
+
+    x = 0
+    y = 0
+
+    If det(A) = 0, the system may also have infinitely many Non-Trivial Solutions.
+
+    If det(A) ≠ 0, only the Trivial Solution exists.
+
+56. Non-Homogeneous System of Linear Equations
+
+    Definition:
+    A system of linear equations is called a Non-Homogeneous System if at least one constant term is non-zero.
+
+    Matrix Form:
+
+    AX = B
+
+    where B ≠ 0
+
+    Example:
+
+    x + 2y = 5
+    3x + 4y = 7
+
+    Coefficient Matrix
+
+    A = [
+        1  2
+        3  4
+    ]
+
+    Variable Matrix
+
+    X = [
+        x
+        y
+    ]
+
+    Constant Matrix
+
+    B = [
+        5
+        7
+    ]
+
+    Therefore,
+
+    AX = B
+
+    Possible Solutions:
+
+    1. Unique Solution
+    If Rank(A) = Rank([A|B]) = Number of Variables
+
+    2. Infinitely Many Solutions
+    If Rank(A) = Rank([A|B]) < Number of Variables
+
+    3. No Solution (Inconsistent System)
+    If Rank(A) ≠ Rank([A|B])
+
+    Summary:
+
+    Homogeneous:
+    AX = 0
+
+    Non-Homogeneous:
+    AX = B, where B ≠ 0
+
+
+57. Eigenvalue
      Formula:
      Characteristic Equation: |A - λI| = 0
      Eigenvalues: Roots of the characteristic equation.
@@ -1622,7 +1735,7 @@ PART-7 : LINEAR EQUATIONS
      is an Eigenvector of A corresponding to the Eigenvalue λ = 2.
 
 
-56. Eigenvector
+58. Eigenvector
      Formula:
      Characteristic Equation: |A - λI| = 0
      Eigenvalues: Roots of the characteristic equation.
@@ -1704,13 +1817,13 @@ PART-7 : LINEAR EQUATIONS
      1. Find the eigenvalues using |A - λI| = 0.
      2. Solve (A - λI)X = 0 for each eigenvalue.
 
-57. Characteristic Polynomial
+59. Characteristic Polynomial
 
      The characteristic polynomial of a square matrix is
 
      p(λ) = |A - λI|
      
-     58. Diagonalization
+60. Diagonalization
 
      Diagonalization is the process of expressing a matrix as
 
@@ -1721,7 +1834,9 @@ PART-7 : LINEAR EQUATIONS
      P = Matrix of eigenvectors
 
      D = Diagonal matrix of eigenvalues
-62. Positive Definite Matrix
+
+
+61. Positive Definite Matrix
 
      A positive definite matrix is a symmetric matrix that satisfies
 
@@ -1729,15 +1844,15 @@ PART-7 : LINEAR EQUATIONS
 
      for every non-zero vector x. Equivalently, all of its eigenvalues are positive.
 
-63. Sparse Matrix
+62. Sparse Matrix
 
      A sparse matrix is a matrix in which most of the elements are zero.
 
-64. Dense Matrix
+63. Dense Matrix
 
      A dense matrix is a matrix in which most of the elements are non-zero.
 
-65. Block Matrix
+64. Block Matrix
 
      A block matrix is a matrix that is partitioned into submatrices, or blocks.
 
@@ -1745,7 +1860,7 @@ PART-7 : LINEAR EQUATIONS
 PART-10 : ADVANCED LINEAR ALGEBRA
 =================================
 
-66. Vector Space
+65. Vector Space
      A vector space (or linear space) is a collection of objects called vectors, 
      which may be added together and multiplied ("scaled") by numbers, called scalars.
      
@@ -1764,80 +1879,80 @@ PART-10 : ADVANCED LINEAR ALGEBRA
      - Multiplicative identity: 1u = u
      
 
-67. Basis
+66. Basis
      A basis of a vector space V is a set of vectors that:
      - Spans V (every vector in V can be written as a linear combination of the basis vectors)
      - Is linearly independent (no vector in the set can be written as a linear combination of the others)
      
 
-68. Dimension
+67. Dimension
      The dimension of a vector space is the number of vectors in any basis for that space.
      
-69. Linear Independence
+68. Linear Independence
      A set of vectors is linearly independent if no vector in the set can be written as a linear 
      combination of the others.
      
-70. Orthogonality
+69. Orthogonality
      Two vectors are orthogonal if their dot product is zero.
      
-71. Orthogonal Projection
+70. Orthogonal Projection
      A Orthogonal Projection is a linear transformation that maps a vector to its closest point in 
      a subspace.
 
-72. Gram-Schmidt Process
+71. Gram-Schmidt Process
      A Gram-Schmidt Process is a method for constructing an orthogonal basis from a given basis.
 
-73. QR Decomposition
+72. QR Decomposition
      A QR Decomposition is a factorization of a matrix into a product of an orthogonal matrix Q and an upper triangular matrix R.
 
-74. Singular Value Decomposition (SVD)
+73. Singular Value Decomposition (SVD)
      A Singular Value Decomposition (SVD) is a factorization of a matrix into three matrices: U, Σ, and V^T.
      
-75. Spectral Decomposition
+74. Spectral Decomposition
      A Spectral Decomposition is a factorization of a matrix into a product of eigenvalues and eigenvectors.
 
 =========================
 PART-11 : NUMERICAL MATRIX
 ==========================
 
-76. Iterative Method
+75. Iterative Method
      An Iterative Method is a method for solving a problem through repeated application of an operator.
      
-77. Power Method
+76. Power Method
      A Power Method is an iterative method for finding the dominant eigenvalue and eigenvector of a matrix.
      
-78. Jacobi Method
+77. Jacobi Method
      A Jacobi Method is an iterative method for finding the eigenvalues and eigenvectors of a matrix.
      
-79. Gauss-Seidel Method
+78. Gauss-Seidel Method
      A Gauss-Seidel Method is an iterative method for solving a system of linear equations.
      
-80. Numerical Stability
+79. Numerical Stability
      Numerical Stability is a property of an algorithm that ensures that small changes in the input do not lead to large changes in the output.
 
 =========================
 PART-12 : MATRIX IN PROGRAMMING
 ===============================
 
-81. Array vs Matrix
-82. NumPy Matrix
-83. Matrix in Python
-84. Matrix in C
-85. Matrix in C++
-86. Matrix in Java
-87. Matrix in Kotlin
-88. Matrix Time Complexity
+80. Array vs Matrix
+81. NumPy Matrix
+82. Matrix in Python
+83. Matrix in C
+84. Matrix in C++
+85. Matrix in Java
+86. Matrix in Kotlin
+87. Matrix Time Complexity
 
 =========================
 PART-13 : MATRIX IN MACHINE LEARNING
 ====================================
 
-89. Feature Matrix
-90. Covariance Matrix
-91. Weight Matrix
-92. Transformation Matrix
-93. PCA
-94. Neural Network Matrix
+88. Feature Matrix
+89. Covariance Matrix
+90. Weight Matrix
+91. Transformation Matrix
+92. PCA
+93. Neural Network Matrix
 95. Embedding Matrix
 96. Recommendation Matrix
 
