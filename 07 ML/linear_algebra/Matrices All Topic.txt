@@ -1536,31 +1536,74 @@ PART-10 : ADVANCED LINEAR ALGEBRA
 =================================
 
 66. Vector Space
+     A vector space (or linear space) is a collection of objects called vectors, 
+     which may be added together and multiplied ("scaled") by numbers, called scalars.
+     
+     Example:
+     The set of all real numbers R with the usual addition and multiplication is a vector space.
+     
+     Properties:
+     - Closure under addition: If u and v are in V, then u + v is in V.
+     - Closure under scalar multiplication: If u is in V and c is a scalar, then cu is in V.
+     - Commutativity: u + v = v + u
+     - Associativity: (u + v) + w = u + (v + w)
+     - Additive identity: There exists a vector 0 such that u + 0 = u
+     - Additive inverse: For every u, there exists -u such that u + (-u) = 0
+     - Distributivity: c(u + v) = cu + cv
+     - Associativity of scalar multiplication: (cd)u = c(du)
+     - Multiplicative identity: 1u = u
+     
 
 67. Basis
+     A basis of a vector space V is a set of vectors that:
+     - Spans V (every vector in V can be written as a linear combination of the basis vectors)
+     - Is linearly independent (no vector in the set can be written as a linear combination of the others)
+     
 
 68. Dimension
-
+     The dimension of a vector space is the number of vectors in any basis for that space.
+     
 69. Linear Independence
-
+     A set of vectors is linearly independent if no vector in the set can be written as a linear 
+     combination of the others.
+     
 70. Orthogonality
-
+     Two vectors are orthogonal if their dot product is zero.
+     
 71. Orthogonal Projection
+     A Orthogonal Projection is a linear transformation that maps a vector to its closest point in 
+     a subspace.
 
 72. Gram-Schmidt Process
+     A Gram-Schmidt Process is a method for constructing an orthogonal basis from a given basis.
+
 73. QR Decomposition
+     A QR Decomposition is a factorization of a matrix into a product of an orthogonal matrix Q and an upper triangular matrix R.
+
 74. Singular Value Decomposition (SVD)
+     A Singular Value Decomposition (SVD) is a factorization of a matrix into three matrices: U, Σ, and V^T.
+     
 75. Spectral Decomposition
+     A Spectral Decomposition is a factorization of a matrix into a product of eigenvalues and eigenvectors.
 
 =========================
 PART-11 : NUMERICAL MATRIX
 ==========================
 
 76. Iterative Method
+     An Iterative Method is a method for solving a problem through repeated application of an operator.
+     
 77. Power Method
+     A Power Method is an iterative method for finding the dominant eigenvalue and eigenvector of a matrix.
+     
 78. Jacobi Method
+     A Jacobi Method is an iterative method for finding the eigenvalues and eigenvectors of a matrix.
+     
 79. Gauss-Seidel Method
+     A Gauss-Seidel Method is an iterative method for solving a system of linear equations.
+     
 80. Numerical Stability
+     Numerical Stability is a property of an algorithm that ensures that small changes in the input do not lead to large changes in the output.
 
 =========================
 PART-12 : MATRIX IN PROGRAMMING
