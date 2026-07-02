@@ -393,9 +393,7 @@ PART-3 : DETERMINANT
      -   +   -
      +   -   +
 
-=========================
 31. Cofactor Matrix
-=========================
      The cofactor matrix is formed by replacing every element of the matrix with its corresponding cofactor.
 
      A = [
@@ -487,10 +485,8 @@ PART-3 : DETERMINANT
      det(A) = 1 * (-3) - 2 * (-6) + 3 * (-3)
      det(A) = -3 + 12 - 9 = 0
 
-=========================
 35. Cramer's Rule
-=========================
-
+     A method for solving systems of linear equations using determinants.
      For a system AX = B,
 
      xᵢ = det(Aᵢ) / det(A)
