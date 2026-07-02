@@ -830,7 +830,7 @@ PART-4 : MATRIX INVERSE
           ]
 
 =========================
-PART-6 : MATRIX RANK
+PART-5 : MATRIX RANK
 =========================
      """
      Independent rows are those rows that cannot be created from other rows.
@@ -1096,7 +1096,7 @@ Important Exam Rules
      (after converting the matrix into Row Echelon Form).
 
 =========================
-PART-7 : LINEAR EQUATIONS     
+PART-6 : TYPES OF LINEAR EQUATIONS
 =========================
 
 49. System of Linear Equations
@@ -1857,7 +1857,7 @@ PART-7 : LINEAR EQUATIONS
      A block matrix is a matrix that is partitioned into submatrices, or blocks.
 
 =========================
-PART-10 : ADVANCED LINEAR ALGEBRA
+PART-7 : ADVANCED LINEAR ALGEBRA
 =================================
 
 65. Vector Space
@@ -1912,7 +1912,7 @@ PART-10 : ADVANCED LINEAR ALGEBRA
      A Spectral Decomposition is a factorization of a matrix into a product of eigenvalues and eigenvectors.
 
 =========================
-PART-11 : NUMERICAL MATRIX
+PART-8 : NUMERICAL MATRIX
 ==========================
 
 75. Iterative Method
@@ -1931,7 +1931,7 @@ PART-11 : NUMERICAL MATRIX
      Numerical Stability is a property of an algorithm that ensures that small changes in the input do not lead to large changes in the output.
 
 =========================
-PART-12 : MATRIX IN PROGRAMMING
+PART-9 : MATRIX IN PROGRAMMING
 ===============================
 
 80. Array vs Matrix
@@ -1944,7 +1944,7 @@ PART-12 : MATRIX IN PROGRAMMING
 87. Matrix Time Complexity
 
 =========================
-PART-13 : MATRIX IN MACHINE LEARNING
+PART-10 : MATRIX IN MACHINE LEARNING
 ====================================
 
 88. Feature Matrix
@@ -1957,7 +1957,7 @@ PART-13 : MATRIX IN MACHINE LEARNING
 95. Recommendation Matrix
 
 =========================
-PART-14 : IMPORTANT THEOREMS
+PART-11 : IMPORTANT THEOREMS
 ============================
 
 96. Cayley-Hamilton Theorem
