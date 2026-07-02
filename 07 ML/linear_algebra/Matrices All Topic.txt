@@ -1953,17 +1953,17 @@ PART-13 : MATRIX IN MACHINE LEARNING
 91. Transformation Matrix
 92. PCA
 93. Neural Network Matrix
-95. Embedding Matrix
-96. Recommendation Matrix
+94. Embedding Matrix
+95. Recommendation Matrix
 
 =========================
 PART-14 : IMPORTANT THEOREMS
 ============================
 
-97. Cayley-Hamilton Theorem
-98. Rank-Nullity Theorem
-99. Invertible Matrix Theorem
-100. Spectral Theorem
+96. Cayley-Hamilton Theorem
+97. Rank-Nullity Theorem
+98. Invertible Matrix Theorem
+99. Spectral Theorem
 
 =========================
 EXAM SHORT LIST
