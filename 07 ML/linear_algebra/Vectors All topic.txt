@@ -1,6 +1,2891 @@
-# MATRIX — ALL TOPICS (Complete Roadmap)
+Complete Vector Roadmap (Beginner → Advanced)
+=============================================
+
+Module 1: Introduction
+======================
+1. What is a Vector?
+
+   Mathematical Definition
+
+   A vector is a mathematical object that has both magnitude and direction.
+
+   Physical Definition
+
+   A vector represents a physical quantity that has both magnitude and direction.
+
+   Physical Examples
+
+   - Displacement
+   - Velocity
+   - Acceleration
+   - Force
+   - Momentum
+
+    --------------------------------------------------
+
+2. What is a Scalar?
+
+   Mathematical Definition
+
+   A scalar is a mathematical object that has only magnitude and no direction.
+
+   Physical Definition
+
+   A scalar represents a physical quantity that has magnitude only.
+
+   Physical Examples
+
+   - Mass
+   - Temperature
+   - Time
+   - Distance
+   - Energy
+   - Speed
+   - Volume
+
+    --------------------------------------------------
+
+3. Scalar vs Vector
+
+    | Scalar | Vector |
+    |--------|--------|
+    | Has only magnitude | Has magnitude and direction |
+    | No direction | Has direction |
+    | Represented by a single value | Represented by components |
+    | Can be added algebraically | Follows vector addition rules |
+    | Examples: Mass, Time, Temperature | Examples: Force, Velocity, Displacement |
+
+    --------------------------------------------------
+
+4. Magnitude
+
+    Definition
+
+    The magnitude of a vector is its length or size.
+
+    Symbol
+
+    For vector A
+
+    |A| or ||A||
+
+    Example
+
+    A = (3, 4)
+
+    |A| = √(3² + 4²)
+        = √25
+        = 5
+
+    --------------------------------------------------
+
+5. Direction
+
+    Definition
+
+    The direction of a vector describes its orientation relative to a reference axis or coordinate system.
+
+    Examples
+
+    A vector may point:
+
+    - Right
+    - Left
+    - Up
+    - Down
+    - Northeast
+    - Southwest
+
+    In 2D, direction is often measured by an angle.
+
+    Examples:
+
+    - 45°
+    - 90°
+    - 180°
+    - 270°
+
+    --------------------------------------------------
+
+6. Components
+
+    Definition
+
+    The components of a vector are its individual values along the coordinate axes.
+
+    Example 1
+
+    A = (3, 4)
+
+    x-component = 3
+
+    y-component = 4
+
+    Example 2
+
+    B = (2, -5)
+
+    x-component = 2
+
+    y-component = -5
+
+    --------------------------------------------------
+
+7. Coordinate System
+
+    Definition
+
+    A coordinate system is a framework used to describe the position and components of vectors.
+
+    Types of Coordinate Systems
+
+    A. Cartesian Coordinate System
+
+    Uses:
+
+    - x-axis
+    - y-axis
+    - z-axis
+
+    Examples
+
+    2D
+
+    (3, 4)
+
+    3D
+
+    (2, -1, 5)
+
+    --------------------------------
+
+    B. Polar Coordinate System
+
+    Represents vectors using:
+
+    - Magnitude (r)
+    - Angle (θ)
+
+    Example
+
+    (r, θ) = (5, 30°)
+
+    --------------------------------
+
+    C. Cylindrical Coordinate System
+
+    Represents vectors using:
+
+    (r, θ, z)
+
+    Used in:
+
+    - Engineering
+    - Physics
+
+    --------------------------------
+
+    D. Spherical Coordinate System
+
+    Represents vectors using:
+
+    (r, θ, φ)
+
+    Used in:
+
+    - 3D Geometry
+    - Astronomy
+    - Electromagnetics
+
+    --------------------------------------------------
+
+8. Vector Notation
+
+    Vectors can be represented in several ways.
+
+    Arrow Notation
+
+    →A
+
+    or
+
+    A⃗
+
+    --------------------------------
+
+    Bold Notation
+
+    A
+
+    (Bold font)
+
+    --------------------------------
+
+    Component Form
+
+    2D
+
+    (3, 4)
+
+    3D
+
+    (2, -1, 5)
+
+    --------------------------------
+
+    Column Matrix Form
+
+    2D
+
+    [3]
+    [4]
+
+    3D
+
+    [ 2 ]
+    [-1 ]
+    [ 5 ]
+
+    --------------------------------
+
+    Unit Vector Form
+
+    2D
+
+    3i + 4j
+
+    3D
+
+    2i - j + 5k
+
+    --------------------------------------------------
+
+9. Ordered Pair & Ordered Triple
+
+    Ordered Pair (2D)
+
+    An ordered pair represents a vector in two-dimensional space.
+
+    General Form
+
+    (x, y)
+
+    Examples
+
+    (3, 5)
+
+    (-2, 4)
+
+    --------------------------------
+
+    Ordered Triple (3D)
+
+    An ordered triple represents a vector in three-dimensional space.
+
+    General Form
+
+    (x, y, z)
+
+    Examples
+
+    (2, -1, 4)
+
+    (5, 0, -3)
+
+    --------------------------------------------------
+
 
 =========================
-PART-1 : INTRODUCTION
+Module 2: Types of Vectors
 =========================
-1. 
+1. Zero Vector (Null Vector)
+
+    Definition
+
+    A zero vector is a vector whose magnitude is zero and has no definite direction.
+
+    Notation
+
+    0⃗ or (0, 0) in 2D
+    (0, 0, 0) in 3D
+
+    Examples
+
+    (0, 0)
+    (0, 0, 0)
+
+    Properties
+
+    • Magnitude = 0
+    • Direction is undefined
+    • Acts as the additive identity of vectors
+
+    --------------------------------------------------
+
+2. Unit Vector
+
+    Definition
+
+    A unit vector is a vector whose magnitude is exactly 1.
+
+    Formula
+
+    â = A / |A|
+
+    Standard Unit Vectors
+
+    2D
+
+    i = (1, 0)
+    j = (0, 1)
+
+    3D
+
+    i = (1, 0, 0)
+    j = (0, 1, 0)
+    k = (0, 0, 1)
+
+    Example
+
+    A = (3, 4)
+
+    |A| = 5
+
+    Unit Vector
+
+    Â = (3/5, 4/5)
+
+    --------------------------------------------------
+
+3. Position Vector
+
+    Definition
+
+    A position vector represents the location of a point with respect to the origin.
+
+    General Form
+
+    OP = (x, y)
+
+    or
+
+    OP = (x, y, z)
+
+    Example
+
+    Point P(3, 4)
+
+    Position Vector
+
+    OP = (3, 4)
+
+    --------------------------------------------------
+
+4. Equal Vectors
+
+    Definition
+
+    Two vectors are equal if they have the same magnitude and the same direction, regardless of their position.
+
+    Example
+
+    A = (2, 5)
+
+    B = (2, 5)
+
+    Therefore,
+
+    A = B
+
+    --------------------------------------------------
+
+5. Negative Vector
+
+    Definition
+
+    A negative vector has the same magnitude as the original vector but points in the opposite direction.
+
+    Formula
+
+    If
+
+    A = (x, y)
+
+    Then
+
+    -A = (-x, -y)
+
+    Example
+
+    A = (3, 4)
+
+    -A = (-3, -4)
+
+    --------------------------------------------------
+
+6. Parallel Vectors
+
+    Definition
+
+    Two vectors are parallel if they have the same or opposite direction.
+
+    Condition
+
+    A = kB
+
+    where k is a scalar.
+
+    Examples
+
+    (2, 4)
+
+    (1, 2)
+
+    These vectors are parallel.
+
+    --------------------------------------------------
+
+7. Collinear Vectors
+
+    Definition
+
+    Collinear vectors lie along the same straight line or on parallel lines.
+
+    Examples
+
+    (2, 0)
+
+    (5, 0)
+
+    (-3, 0)
+
+    All are collinear vectors.
+
+    --------------------------------------------------
+
+8. Coinitial Vectors
+
+    Definition
+
+    Vectors that have the same initial point (starting point) are called coinitial vectors.
+
+    Example
+
+    OA and OB both start from the origin O.
+
+    --------------------------------------------------
+
+9. Coplanar Vectors
+
+    Definition
+
+    Vectors that lie in the same plane are called coplanar vectors.
+
+    Examples
+
+    (2, 3)
+
+    (4, -1)
+
+    (-1, 5)
+
+    These vectors lie in the XY-plane and are coplanar.
+
+    --------------------------------------------------
+
+10. Like & Unlike Vectors
+
+    Like Vectors
+
+    Definition
+
+    Vectors having the same direction are called like vectors.
+
+    Example
+
+    (2, 3)
+
+    (4, 6)
+
+    Unlike Vectors
+
+    Definition
+
+    Vectors having opposite directions are called unlike vectors.
+
+    Example
+
+    (2, 3)
+
+    (-2, -3)
+
+    --------------------------------------------------
+
+11. Free Vector
+
+    Definition
+
+    A free vector can be moved anywhere in space without changing its magnitude or direction.
+
+    Examples
+
+    Velocity
+
+    Displacement
+
+    --------------------------------------------------
+
+12. Bound (Fixed) Vector
+
+    Definition
+
+    A bound vector has a fixed initial point and cannot be moved without changing its meaning.
+
+    Examples
+
+    Force applied at a specific point
+
+    Weight acting on an object
+
+    --------------------------------------------------
+
+13. Sliding Vector
+
+    Definition
+
+    A sliding vector can move anywhere along its line of action without changing its effect.
+
+    Examples
+
+    Force acting on a rigid body
+
+    --------------------------------------------------
+
+14. Polar Vector
+
+    Definition
+
+    A polar vector represents quantities having both magnitude and direction.
+
+    Examples
+
+    Displacement
+
+    Velocity
+
+    Force
+
+    Acceleration
+
+    --------------------------------------------------
+
+15. Axial (Pseudo) Vector
+
+    Definition
+
+    An axial vector is associated with rotational motion and follows the right-hand rule.
+
+    Examples
+
+    Torque
+
+    Angular Velocity
+
+    Angular Momentum
+
+    Magnetic Field
+
+    --------------------------------------------------
+
+
+=========================
+Module 3: Vector Representation
+=========================
+1. Cartesian Form
+
+    Definition
+
+    The Cartesian form represents a vector using its coordinates along the x, y, and z axes.
+
+    General Form
+
+    2D
+
+    A = (x, y)
+
+    3D
+
+    A = (x, y, z)
+
+    Examples
+
+    (3, 4)
+
+    (-2, 5)
+
+    (2, -1, 6)
+
+    Applications
+
+    - Coordinate Geometry
+    - Physics
+    - Computer Graphics
+    - Engineering
+
+    --------------------------------------------------
+
+2. Component Form
+
+    Definition
+
+    A vector written as the sum of its components along each coordinate axis is called the component form.
+
+    General Form
+
+    2D
+
+    A = (Ax, Ay)
+
+    3D
+
+    A = (Ax, Ay, Az)
+
+    where
+
+    Ax = x-component
+
+    Ay = y-component
+
+    Az = z-component
+
+    Examples
+
+    A = (6, 8)
+
+    x-component = 6
+
+    y-component = 8
+
+    B = (2, -3, 5)
+
+    x-component = 2
+
+    y-component = -3
+
+    z-component = 5
+
+    --------------------------------------------------
+
+3. Column Vector
+
+    Definition
+
+    A column vector represents vector components in a vertical column.
+
+    General Form
+
+    2D
+
+    [ x ]
+    [ y ]
+
+    3D
+
+    [ x ]
+    [ y ]
+    [ z ]
+
+    Examples
+
+    [ 3 ]
+    [ 4 ]
+
+    [ 2 ]
+    [-1 ]
+    [ 5 ]
+
+    Applications
+
+    - Matrix Multiplication
+    - Linear Algebra
+    - Computer Science
+
+    --------------------------------------------------
+
+4. Row Vector
+
+    Definition
+
+    A row vector represents vector components in a horizontal row.
+
+    General Form
+
+    2D
+
+    [ x  y ]
+
+    3D
+
+    [ x  y  z ]
+
+    Examples
+
+    [ 3  4 ]
+
+    [ 2  -1  5 ]
+
+    Applications
+
+    - Matrix Operations
+    - Statistics
+    - Data Science
+
+    --------------------------------------------------
+
+5. Unit Vector Form
+
+    Definition
+
+    A vector can be represented using the standard unit vectors i, j, and k.
+
+    General Form
+
+    2D
+
+    A = Axi + Ayj
+
+    3D
+
+    A = Axi + Ayj + Azk
+
+    Standard Unit Vectors
+
+    i = (1, 0, 0)
+
+    j = (0, 1, 0)
+
+    k = (0, 0, 1)
+
+    Examples
+
+    2D
+
+    3i + 4j
+
+    3D
+
+    2i - j + 5k
+
+    --------------------------------------------------
+
+6. Polar Coordinates
+
+    Definition
+
+    In two dimensions, a vector can be represented by its magnitude and direction (angle).
+
+    General Form
+
+    (r, θ)
+
+    where
+
+    r = Magnitude
+
+    θ = Angle measured from the positive x-axis
+
+    Conversion to Cartesian
+
+    x = r cosθ
+
+    y = r sinθ
+
+    Conversion from Cartesian
+
+    r = √(x² + y²)
+
+    θ = tan⁻¹(y/x)
+
+    Example
+
+    Cartesian
+
+    (3, 4)
+
+    Magnitude
+
+    r = 5
+
+    Angle
+
+    θ ≈ 53.13°
+
+    Polar Form
+
+    (5, 53.13°)
+
+    Applications
+
+    - Navigation
+    - Robotics
+    - Physics
+
+    --------------------------------------------------
+
+7. Cylindrical Coordinates
+
+    Definition
+
+    A cylindrical coordinate system extends polar coordinates into three dimensions.
+
+    General Form
+
+    (r, θ, z)
+
+    where
+
+    r = Distance from z-axis
+
+    θ = Angle
+
+    z = Height
+
+    Conversion to Cartesian
+
+    x = r cosθ
+
+    y = r sinθ
+
+    z = z
+
+    Conversion from Cartesian
+
+    r = √(x² + y²)
+
+    θ = tan⁻¹(y/x)
+
+    z = z
+
+    Example
+
+    (5, 30°, 8)
+
+    Applications
+
+    - Mechanical Engineering
+    - Fluid Mechanics
+    - Electromagnetics
+
+    --------------------------------------------------
+
+8. Spherical Coordinates
+
+    Definition
+
+    Spherical coordinates represent a point in three-dimensional space using its distance from the origin and two angles.
+
+    General Form
+
+    (r, θ, φ)
+
+    where
+
+    r = Distance from Origin
+
+    θ = Azimuth Angle
+
+    φ = Polar Angle
+
+    Conversion to Cartesian
+
+    x = r sinφ cosθ
+
+    y = r sinφ sinθ
+
+    z = r cosφ
+
+    Conversion from Cartesian
+
+    r = √(x² + y² + z²)
+
+    θ = tan⁻¹(y/x)
+
+    φ = cos⁻¹(z/r)
+
+    Example
+
+    (6, 45°, 60°)
+
+    Applications
+
+    - Astronomy
+    - Satellite Systems
+    - 3D Graphics
+    - Electromagnetic Theory
+
+    --------------------------------------------------
+    
+
+===========================
+Module 4: Magnitude & Direction
+===========================
+1. Magnitude Formula (2D)
+
+    Definition
+
+    The magnitude (length) of a two-dimensional vector is calculated using the Pythagorean theorem.
+
+    General Formula
+
+    For A = (x, y)
+
+    |A| = √(x² + y²)
+
+    Example
+
+    A = (3, 4)
+
+    |A| = √(3² + 4²)
+        = √(9 + 16)
+        = √25
+        = 5
+
+    Applications
+
+    - Finding vector length
+    - Distance calculation
+    - Physics
+    - Engineering
+
+    --------------------------------------------------
+
+2. Magnitude Formula (3D)
+
+    Definition
+
+    The magnitude of a three-dimensional vector is calculated using its x, y, and z components.
+
+    General Formula
+
+    For A = (x, y, z)
+
+    |A| = √(x² + y² + z²)
+
+    Example
+
+    A = (2, -3, 6)
+
+    |A| = √(2² + (-3)² + 6²)
+        = √(4 + 9 + 36)
+        = √49
+        = 7
+
+    Applications
+
+    - 3D Geometry
+    - Computer Graphics
+    - Engineering
+    - Physics
+
+    --------------------------------------------------
+
+3. Magnitude Formula (nD)
+
+    Definition
+
+    The magnitude of an n-dimensional vector is the square root of the sum of the squares of all its components.
+
+    General Formula
+
+    For
+
+    A = (x₁, x₂, x₃, ..., xₙ)
+
+    |A| = √(x₁² + x₂² + x₃² + ... + xₙ²)
+
+    Example
+
+    A = (1, 2, 3, 4)
+
+    |A| = √(1² + 2² + 3² + 4²)
+        = √(1 + 4 + 9 + 16)
+        = √30
+
+    Applications
+
+    - Machine Learning
+    - Data Science
+    - Linear Algebra
+    - Artificial Intelligence
+
+    --------------------------------------------------
+
+4. Direction Cosines
+
+    Definition
+
+    Direction cosines are the cosines of the angles made by a vector with the positive x, y, and z axes.
+
+    Notation
+
+    l = cos α
+
+    m = cos β
+
+    n = cos γ
+
+    General Formula
+
+    For A = (x, y, z)
+
+    l = x / |A|
+
+    m = y / |A|
+
+    n = z / |A|
+
+    Property
+
+    l² + m² + n² = 1
+
+    Example
+
+    A = (2, 3, 6)
+
+    |A| = 7
+
+    l = 2/7
+
+    m = 3/7
+
+    n = 6/7
+
+    Applications
+
+    - 3D Geometry
+    - Physics
+    - Engineering
+    - Computer Graphics
+
+    --------------------------------------------------
+
+5. Direction Ratios
+
+    Definition
+
+    Direction ratios are numbers proportional to the components of a vector.
+
+    General Form
+
+    For
+
+    A = (a, b, c)
+
+    Direction Ratios = a : b : c
+
+    Example
+
+    A = (2, 4, 6)
+
+    Direction Ratios
+
+    2 : 4 : 6
+
+    Simplified
+
+    1 : 2 : 3
+
+    Relationship with Direction Cosines
+
+    Direction Ratios
+
+    a : b : c
+
+    Direction Cosines
+
+    l = a / √(a² + b² + c²)
+
+    m = b / √(a² + b² + c²)
+
+    n = c / √(a² + b² + c²)
+
+    Applications
+
+    - Coordinate Geometry
+    - Analytic Geometry
+    - Engineering
+
+    --------------------------------------------------
+
+6. Unit Direction Vector
+
+    Definition
+
+    A unit direction vector is a vector of magnitude 1 that points in the same direction as the original vector.
+
+    General Formula
+
+    For A
+
+    Â = A / |A|
+
+    2D
+
+    If
+
+    A = (x, y)
+
+    Then
+
+    Â = (x/|A|, y/|A|)
+
+    3D
+
+    If
+
+    A = (x, y, z)
+
+    Then
+
+    Â = (x/|A|, y/|A|, z/|A|)
+
+    Example
+
+    A = (3, 4)
+
+    |A| = 5
+
+    Unit Direction Vector
+
+    Â = (3/5, 4/5)
+
+    Verification
+
+    |(3/5, 4/5)|
+
+    = √((3/5)² + (4/5)²)
+
+    = √(9/25 + 16/25)
+
+    = √(25/25)
+
+    = 1
+
+    Applications
+
+    - Direction Representation
+    - Physics
+    - Robotics
+    - Computer Graphics
+
+    --------------------------------------------------
+
+
+===========================
+Module 5: Vector Algebra
+===========================
+1. Vector Addition
+
+    Definition
+
+    Vector addition is the process of combining two or more vectors by adding their corresponding components.
+
+    General Formula
+
+    If
+
+    A = (x₁, y₁)
+
+    B = (x₂, y₂)
+
+    Then
+
+    A + B = (x₁ + x₂, y₁ + y₂)
+
+    3D
+
+    If
+
+    A = (x₁, y₁, z₁)
+
+    B = (x₂, y₂, z₂)
+
+    Then
+
+    A + B = (x₁ + x₂, y₁ + y₂, z₁ + z₂)
+
+    Examples
+
+    2D
+
+    A = (3, 4)
+
+    B = (2, 5)
+
+    A + B = (5, 9)
+
+    3D
+
+    A = (1, 2, 3)
+
+    B = (4, -1, 5)
+
+    A + B = (5, 1, 8)
+
+    Applications
+
+    - Resultant Force
+    - Velocity Addition
+    - Displacement
+    - Engineering
+
+    --------------------------------------------------
+
+2. Vector Subtraction
+
+    Definition
+
+    Vector subtraction is performed by subtracting the corresponding components of two vectors.
+
+    General Formula
+
+    If
+
+    A = (x₁, y₁)
+
+    B = (x₂, y₂)
+
+    Then
+
+    A − B = (x₁ − x₂, y₁ − y₂)
+
+    3D
+
+    If
+
+    A = (x₁, y₁, z₁)
+
+    B = (x₂, y₂, z₂)
+
+    Then
+
+    A − B = (x₁ − x₂, y₁ − y₂, z₁ − z₂)
+
+    Examples
+
+    2D
+
+    A = (7, 5)
+
+    B = (2, 3)
+
+    A − B = (5, 2)
+
+    3D
+
+    A = (5, 3, 8)
+
+    B = (2, 1, 4)
+
+    A − B = (3, 2, 4)
+
+    Applications
+
+    - Relative Position
+    - Relative Velocity
+    - Physics
+    - Navigation
+
+    --------------------------------------------------
+
+3. Scalar Multiplication
+
+    Definition
+
+    Scalar multiplication multiplies every component of a vector by a scalar (real number).
+
+    General Formula
+
+    If
+
+    A = (x, y)
+
+    Then
+
+    kA = (kx, ky)
+
+    3D
+
+    If
+
+    A = (x, y, z)
+
+    Then
+
+    kA = (kx, ky, kz)
+
+    Examples
+
+    A = (3, 4)
+
+    k = 2
+
+    2A = (6, 8)
+
+    Another Example
+
+    A = (2, -1, 5)
+
+    k = -3
+
+    -3A = (-6, 3, -15)
+
+    Applications
+
+    - Scaling Vectors
+    - Computer Graphics
+    - Physics
+    - Engineering
+
+    --------------------------------------------------
+
+4. Linear Combination
+
+    Definition
+
+    A linear combination is an expression formed by multiplying vectors by scalars and then adding the results.
+
+    General Formula
+
+    If
+
+    A and B are vectors,
+
+    Then
+
+    k₁A + k₂B
+
+    is a linear combination.
+
+    Examples
+
+    A = (1, 2)
+
+    B = (3, 4)
+
+    Find
+
+    2A + 3B
+
+    2A = (2, 4)
+
+    3B = (9, 12)
+
+    Therefore
+
+    2A + 3B = (11, 16)
+
+    Applications
+
+    - Linear Algebra
+    - Machine Learning
+    - Data Science
+    - Engineering
+
+    --------------------------------------------------
+
+5. Properties of Vector Addition
+
+    Definition
+
+    Vector addition satisfies several important algebraic properties.
+
+    A. Commutative Property
+
+    A + B = B + A
+
+    Example
+
+    (1, 2) + (3, 4)
+
+    = (3, 4) + (1, 2)
+
+    B. Associative Property
+
+    (A + B) + C
+
+    =
+
+    A + (B + C)
+
+    C. Additive Identity
+
+    A + 0 = A
+
+    where
+
+    0 = Zero Vector
+
+    D. Additive Inverse
+
+    A + (-A) = 0
+
+    Applications
+
+    - Simplifying Calculations
+    - Mathematical Proofs
+    - Engineering
+
+    --------------------------------------------------
+
+6. Properties of Scalar Multiplication
+
+    Definition
+
+    Scalar multiplication also follows several algebraic properties.
+
+    A. Distributive Property over Vector Addition
+
+    k(A + B)
+
+    =
+
+    kA + kB
+
+    B. Distributive Property over Scalar Addition
+
+    (k + m)A
+
+    =
+
+    kA + mA
+
+    C. Associative Property
+
+    k(mA)
+
+    =
+
+    (km)A
+
+    D. Multiplicative Identity
+
+    1A = A
+
+    E. Multiplication by Zero
+
+    0A = 0
+
+    Applications
+
+    - Linear Algebra
+    - Matrix Operations
+    - Computer Graphics
+    - Physics
+
+    --------------------------------------------------
+
+===========================
+Module 6: Dot Product
+===========================
+1. Definition
+
+    The dot product (also called the scalar product) is an operation between two vectors that produces a scalar (real number).
+
+    Notation
+
+    A · B
+
+    or
+
+    A • B
+
+    --------------------------------------------------
+
+2. Formula
+
+    Component Form (2D)
+
+    If
+
+    A = (x₁, y₁)
+
+    B = (x₂, y₂)
+
+    Then
+
+    A · B = x₁x₂ + y₁y₂
+
+    Component Form (3D)
+
+    If
+
+    A = (x₁, y₁, z₁)
+
+    B = (x₂, y₂, z₂)
+
+    Then
+
+    A · B = x₁x₂ + y₁y₂ + z₁z₂
+
+    Magnitude Form
+
+    A · B = |A||B| cosθ
+
+    where
+
+    |A| = Magnitude of A
+
+    |B| = Magnitude of B
+
+    θ = Angle between A and B
+
+    Example
+
+    A = (3, 4)
+
+    B = (2, 5)
+
+    A · B
+
+    = (3×2) + (4×5)
+
+    = 6 + 20
+
+    = 26
+
+    --------------------------------------------------
+
+3. Properties
+
+    A. Commutative Property
+
+    A · B = B · A
+
+    B. Distributive Property
+
+    A · (B + C)
+
+    =
+
+    A · B + A · C
+
+    C. Scalar Multiplication
+
+    (kA) · B
+
+    =
+
+    k(A · B)
+
+    D. Dot Product with Zero Vector
+
+    A · 0 = 0
+
+    E. Self Dot Product
+
+    A · A = |A|²
+
+    --------------------------------------------------
+
+4. Geometric Interpretation
+
+    The dot product measures how much one vector points in the direction of another vector.
+
+    Cases
+
+    θ = 0°
+
+    Dot Product > 0
+
+    Vectors point in the same direction.
+
+    θ = 90°
+
+    Dot Product = 0
+
+    Vectors are perpendicular.
+
+    θ = 180°
+
+    Dot Product < 0
+
+    Vectors point in opposite directions.
+
+    --------------------------------------------------
+
+5. Angle Between Two Vectors
+
+    Formula
+
+    cosθ = (A · B) / (|A||B|)
+
+    Therefore
+
+    θ = cos⁻¹[(A · B) / (|A||B|)]
+
+    Example
+
+    A = (1, 2)
+
+    B = (2, 1)
+
+    A · B = 4
+
+    |A| = √5
+
+    |B| = √5
+
+    cosθ = 4/5
+
+    θ ≈ 36.87°
+
+    --------------------------------------------------
+
+6. Projection
+
+    Definition
+
+    The projection of one vector onto another gives the component of one vector in the direction of the other.
+
+    Scalar Projection
+
+    compB(A)
+
+    =
+
+    (A · B) / |B|
+
+    Vector Projection
+
+    projB(A)
+
+    =
+
+    [(A · B) / |B|²] B
+
+    Example
+
+    A = (3, 4)
+
+    B = (5, 0)
+
+    A · B = 15
+
+    |B| = 5
+
+    Scalar Projection
+
+    = 15/5
+
+    = 3
+
+    --------------------------------------------------
+
+7. Work Done
+
+    Definition
+
+    In Physics, work done by a force is the dot product of force and displacement.
+
+    Formula
+
+    Work = F · d
+
+    or
+
+    Work = |F||d| cosθ
+
+    where
+
+    F = Force
+
+    d = Displacement
+
+    θ = Angle between force and displacement
+
+    Unit
+
+    Joule (J)
+
+    Example
+
+    Force = 10 N
+
+    Displacement = 5 m
+
+    θ = 0°
+
+    Work
+
+    = 10 × 5 × cos0°
+
+    = 50 J
+
+    --------------------------------------------------
+
+8. Orthogonality
+
+    Definition
+
+    Two vectors are orthogonal if they are perpendicular to each other.
+
+    Condition
+
+    A · B = 0
+
+    Example
+
+    A = (2, 3)
+
+    B = (3, -2)
+
+    A · B
+
+    = (2×3) + (3×-2)
+
+    = 6 - 6
+
+    = 0
+
+    Therefore,
+
+    A and B are orthogonal vectors.
+
+    Applications
+
+    - Computer Graphics
+    - Machine Learning
+    - Engineering
+    - Physics
+
+    --------------------------------------------------
+
+===========================
+Module 7: Cross Product
+===========================
+1. Definition
+
+    The cross product (also called the vector product) is an operation between two vectors that produces another vector.
+
+    Notation
+
+    A × B
+
+    Applicable only to three-dimensional vectors.
+
+    --------------------------------------------------
+
+2. Formula
+
+    Component Form
+
+    If
+
+    A = (x₁, y₁, z₁)
+
+    B = (x₂, y₂, z₂)
+
+    Then
+
+    A × B = (y₁z₂ − z₁y₂)i
+        + (z₁x₂ − x₁z₂)j
+        + (x₁y₂ − y₁x₂)k
+
+    Determinant Form
+
+    |  i    j    k  |
+    | x₁   y₁   z₁ |
+    | x₂   y₂   z₂ |
+
+    Magnitude Form
+
+    |A × B| = |A||B| sinθ
+
+    where
+
+    θ = Angle between A and B
+
+    Example
+
+    A = (1, 2, 3)
+
+    B = (4, 5, 6)
+
+    A × B
+
+    = (-3, 6, -3)
+
+    --------------------------------------------------
+
+3. Right-Hand Rule
+
+    Definition
+
+    The direction of the cross product is determined by the right-hand rule.
+
+    Steps
+
+    1. Point your fingers in the direction of vector A.
+    2. Curl your fingers toward vector B.
+    3. Your thumb points in the direction of A × B.
+
+    Properties
+
+    - Determines the direction of the resulting vector.
+    - Used in Physics and Engineering.
+
+    --------------------------------------------------
+
+4. Properties
+
+    A. Anti-Commutative Property
+
+    A × B = -(B × A)
+
+    B. Distributive Property
+
+    A × (B + C)
+
+    =
+
+    A × B + A × C
+
+    C. Scalar Multiplication
+
+    (kA) × B
+
+    =
+
+    k(A × B)
+
+    D. Cross Product with Itself
+
+    A × A = 0
+
+    E. Cross Product with Zero Vector
+
+    A × 0 = 0
+
+    F. Magnitude Property
+
+    |A × B| = |A||B| sinθ
+
+    --------------------------------------------------
+
+5. Area of Parallelogram
+
+    Definition
+
+    The magnitude of the cross product gives the area of the parallelogram formed by two vectors.
+
+    Formula
+
+    Area = |A × B|
+
+    Example
+
+    If
+
+    |A × B| = 24
+
+    Then
+
+    Area of Parallelogram = 24 square units
+
+    --------------------------------------------------
+
+6. Area of Triangle
+
+    Definition
+
+    The area of a triangle formed by two vectors is half the magnitude of their cross product.
+
+    Formula
+
+    Area = ½|A × B|
+
+    Example
+
+    If
+
+    |A × B| = 24
+
+    Then
+
+    Area of Triangle
+
+    = 12 square units
+
+    --------------------------------------------------
+
+7. Normal Vector
+
+    Definition
+
+    The cross product of two non-parallel vectors produces a vector perpendicular (normal) to both vectors.
+
+    Formula
+
+    N = A × B
+
+    Properties
+
+    - Perpendicular to A
+    - Perpendicular to B
+    - Used to define planes and surfaces
+
+    Example
+
+    A = (1, 0, 0)
+
+    B = (0, 1, 0)
+
+    N = (0, 0, 1)
+
+    --------------------------------------------------
+
+8. Torque
+
+    Definition
+
+    Torque is the turning effect of a force about an axis.
+
+    Formula
+
+    τ = r × F
+
+    where
+
+    τ = Torque
+
+    r = Position Vector
+
+    F = Force
+
+    Magnitude
+
+    |τ| = |r||F| sinθ
+
+    Unit
+
+    Newton-meter (N·m)
+
+    Applications
+
+    - Rotational Mechanics
+    - Mechanical Engineering
+    - Robotics
+
+    --------------------------------------------------
+
+9. Angular Momentum
+
+    Definition
+
+    Angular momentum is the rotational equivalent of linear momentum.
+
+    Formula
+
+    L = r × p
+
+    where
+
+    L = Angular Momentum
+
+    r = Position Vector
+
+    p = Linear Momentum
+
+    Magnitude
+
+    |L| = |r||p| sinθ
+
+    Unit
+
+    kg·m²/s
+
+    Applications
+
+    - Rotational Motion
+    - Astronomy
+    - Quantum Mechanics
+    - Mechanical Engineering
+
+    --------------------------------------------------
+
+
+===========================
+Module 8: Triple Products
+===========================
+1. Scalar Triple Product
+
+    Definition
+
+    The scalar triple product is the dot product of one vector with the cross product of two other vectors. It produces a scalar.
+
+    Notation
+
+    A · (B × C)
+
+    Formula
+
+    A · (B × C)
+
+    =
+
+    | x₁  y₁  z₁ |
+    | x₂  y₂  z₂ |
+    | x₃  y₃  z₃ |
+
+    Properties
+
+    - Produces a scalar.
+    - Cyclic permutation does not change the value.
+
+    A · (B × C)
+
+    =
+
+    B · (C × A)
+
+    =
+
+    C · (A × B)
+
+    - Interchanging any two vectors changes the sign.
+
+    A · (B × C)
+
+    =
+
+    −A · (C × B)
+
+    Example
+
+    A = (1, 0, 0)
+
+    B = (0, 1, 0)
+
+    C = (0, 0, 1)
+
+    A · (B × C)
+
+    = 1
+
+    Applications
+
+    - Volume Calculation
+    - 3D Geometry
+    - Computer Graphics
+    - Physics
+
+    --------------------------------------------------
+
+2. Vector Triple Product
+
+    Definition
+
+    The vector triple product is the cross product of one vector with the cross product of two other vectors. It produces a vector.
+
+    Notation
+
+    A × (B × C)
+
+    Formula
+
+    A × (B × C)
+
+    =
+
+    (A · C)B − (A · B)C
+
+    Properties
+
+    - Produces a vector.
+    - Not associative.
+
+    A × (B × C)
+
+    ≠
+
+    (A × B) × C
+
+    Example
+
+    A = (1, 0, 0)
+
+    B = (0, 1, 0)
+
+    C = (1, 1, 0)
+
+    A × (B × C)
+
+    = (1, -1, 0)
+
+    Applications
+
+    - Electromagnetics
+    - Fluid Mechanics
+    - Physics
+    - Engineering
+
+    --------------------------------------------------
+
+3. BAC-CAB Rule
+
+    Definition
+
+    The BAC-CAB Rule is a shortcut formula used to evaluate the vector triple product.
+
+    Formula
+
+    A × (B × C)
+
+    =
+
+    B(A · C)
+
+    −
+
+    C(A · B)
+
+    Mnemonic
+
+    BAC − CAB
+
+    Meaning
+
+    B(A · C)
+
+    minus
+
+    C(A · B)
+
+    Example
+
+    If
+
+    A · C = 5
+
+    A · B = 2
+
+    Then
+
+    A × (B × C)
+
+    =
+
+    5B − 2C
+
+    Applications
+
+    - Vector Calculus
+    - Physics
+    - Engineering
+    - Computer Graphics
+
+    --------------------------------------------------
+
+4. Volume of Parallelepiped
+
+    Definition
+
+    The volume of a parallelepiped formed by three vectors equals the absolute value of their scalar triple product.
+
+    Formula
+
+    Volume
+
+    =
+
+    |A · (B × C)|
+
+    Example
+
+    If
+
+    A · (B × C)
+
+    = -36
+
+    Then
+
+    Volume
+
+    = |-36|
+
+    = 36 cubic units
+
+    Properties
+
+    - Volume is always non-negative.
+    - Volume = 0 if the three vectors are coplanar.
+
+    Applications
+
+    - 3D Geometry
+    - Engineering
+    - Architecture
+    - Computer Graphics
+
+    --------------------------------------------------
+
+
+===========================
+Module 9: Projection
+===========================
+1. Scalar Projection
+
+    Definition
+
+    The scalar projection (also called the scalar component) of a vector A onto a vector B is the signed magnitude of A in the direction of B.
+
+    Notation
+
+    compB(A)
+
+    Formula
+
+    compB(A)
+
+    =
+
+    (A · B) / |B|
+
+    where
+
+    A = Vector being projected
+
+    B = Reference vector
+
+    |B| = Magnitude of B
+
+    Example
+
+    A = (3, 4)
+
+    B = (5, 0)
+
+    A · B = 15
+
+    |B| = 5
+
+    Scalar Projection
+
+    = 15 / 5
+
+    = 3
+
+    Properties
+
+    - Produces a scalar.
+    - Can be positive, negative, or zero.
+    - Depends on the direction of the reference vector.
+
+    Applications
+
+    - Physics
+    - Engineering
+    - Force Analysis
+    - Computer Graphics
+
+    --------------------------------------------------
+
+2. Vector Projection
+
+    Definition
+
+    The vector projection of vector A onto vector B is the vector component of A that lies in the direction of B.
+
+    Notation
+
+    projB(A)
+
+    Formula
+
+    projB(A)
+
+    =
+
+    [(A · B) / |B|²] B
+
+    Alternative Formula
+
+    projB(A)
+
+    =
+
+    [(A · B) / |B|] B̂
+
+    where
+
+    B̂ = Unit vector in the direction of B
+
+    Example
+
+    A = (3, 4)
+
+    B = (5, 0)
+
+    A · B = 15
+
+    |B|² = 25
+
+    Vector Projection
+
+    = (15/25)(5, 0)
+
+    = (3, 0)
+
+    Properties
+
+    - Produces a vector.
+    - Has the same direction as B.
+    - Represents the parallel component of A.
+
+    Applications
+
+    - Vector Decomposition
+    - Engineering
+    - Robotics
+    - Computer Graphics
+
+    --------------------------------------------------
+
+3. Orthogonal Projection
+
+    Definition
+
+    Orthogonal projection is the perpendicular projection of one vector onto another vector or onto a plane.
+
+    Formula (Projection onto a Vector)
+
+    Orthogonal Projection
+
+    =
+
+    [(A · B) / |B|²] B
+
+    Orthogonal Component
+
+    The component of A perpendicular to B is
+
+    A⊥
+
+    =
+
+    A − projB(A)
+
+    Example
+
+    A = (3, 4)
+
+    B = (5, 0)
+
+    Projection
+
+    = (3, 0)
+
+    Orthogonal Component
+
+    = (3, 4) − (3, 0)
+
+    = (0, 4)
+
+    Properties
+
+    - Projection and orthogonal component are perpendicular.
+    - Their sum equals the original vector.
+
+    A
+
+    =
+
+    projB(A) + A⊥
+
+    Applications
+
+    - Least Squares Method
+    - Computer Graphics
+    - Engineering
+    - Machine Learning
+    - Signal Processing
+
+    --------------------------------------------------
+
+===========================
+Module 10: Vector Equations
+===========================
+1. Line Equation
+
+    Definition
+
+    A vector equation of a line represents all points lying on a straight line using a position vector and a direction vector.
+
+    General Formula
+
+    r = a + t d
+
+    where
+
+    r = Position vector of any point on the line
+
+    a = Position vector of a known point
+
+    d = Direction vector
+
+    t = Scalar parameter
+
+    Component Form (3D)
+
+    x = x₀ + at
+
+    y = y₀ + bt
+
+    z = z₀ + ct
+
+    Example
+
+    Point = (1, 2, 3)
+
+    Direction Vector = (2, -1, 4)
+
+    Line Equation
+
+    r = (1, 2, 3) + t(2, -1, 4)
+
+    Applications
+
+    - Coordinate Geometry
+    - Computer Graphics
+    - Robotics
+    - Physics
+
+    --------------------------------------------------
+
+2. Plane Equation
+
+    Definition
+
+    A vector equation of a plane represents all points lying on a plane using one point and two non-parallel vectors.
+
+    General Formula
+
+    r = a + s b + t c
+
+    where
+
+    r = Position vector of any point on the plane
+
+    a = Position vector of a known point
+
+    b, c = Non-parallel direction vectors
+
+    s, t = Scalar parameters
+
+    Cartesian Form
+
+    ax + by + cz = d
+
+    Normal Vector Form
+
+    n · (r − a) = 0
+
+    where
+
+    n = Normal vector to the plane
+
+    Example
+
+    Point = (1, 0, 2)
+
+    Direction Vectors
+
+    (2, 1, 0)
+
+    (1, 3, 4)
+
+    Plane Equation
+
+    r = (1, 0, 2) + s(2, 1, 0) + t(1, 3, 4)
+
+    Applications
+
+    - 3D Geometry
+    - Engineering
+    - Computer Graphics
+    - CAD
+
+    --------------------------------------------------
+
+3. Ray Equation
+
+    Definition
+
+    A ray starts from a fixed point and extends infinitely in one direction.
+
+    General Formula
+
+    r = a + t d
+
+    where
+
+    t ≥ 0
+
+    a = Starting point
+
+    d = Direction vector
+
+    Example
+
+    Starting Point
+
+    (2, 1)
+
+    Direction Vector
+
+    (3, 2)
+
+    Ray Equation
+
+    r = (2, 1) + t(3, 2)
+
+    t ≥ 0
+
+    Applications
+
+    - Ray Tracing
+    - Computer Graphics
+    - Optics
+    - Geometry
+
+    --------------------------------------------------
+
+4. Segment Equation
+
+    Definition
+
+    A line segment represents all points between two endpoints.
+
+    General Formula
+
+    r = (1 − t)a + tb
+
+    where
+
+    0 ≤ t ≤ 1
+
+    a = First endpoint
+
+    b = Second endpoint
+
+    Alternative Form
+
+    r = a + t(b − a)
+
+    where
+
+    0 ≤ t ≤ 1
+
+    Example
+
+    Endpoints
+
+    A = (1, 2)
+
+    B = (5, 6)
+
+    Segment Equation
+
+    r = (1, 2) + t(4, 4)
+
+    0 ≤ t ≤ 1
+
+    Applications
+
+    - Computer Graphics
+    - Animation
+    - CAD
+    - Geometry
+
+    --------------------------------------------------
+
+
+===========================
+Module 11: Vector Space
+===========================
+Vector Space
+Subspace
+Span
+Basis
+Dimension
+Linear Independence
+Linear Dependence
+Coordinate Vector
+
+
+===========================
+Module 12: Matrix & Vectors
+===========================
+Matrix as Vectors
+Matrix-Vector Multiplication
+Column Space
+Row Space
+Null Space
+Rank
+
+
+===========================
+Module 13: Transformations
+===========================
+Translation
+Rotation
+Scaling
+Reflection
+Shearing
+Projection Matrix
+
+
+===========================
+Module 14: Norms
+===========================
+L₀ Norm
+L₁ Norm
+L₂ Norm
+L∞ Norm
+p-Norm
+
+
+===========================
+Module 15: Distance Metrics
+===========================
+Euclidean Distance
+Manhattan Distance
+Chebyshev Distance
+Minkowski Distance
+Cosine Distance
+
+
+===========================
+Module 16: Orthogonality
+===========================
+Orthogonal Vectors
+Orthonormal Vectors
+Gram-Schmidt Process
+
+===========================
+Module 17: Eigen Topics
+===========================
+Eigenvalues
+Eigenvectors
+Spectral Decomposition
+Principal Components
+
+
+===========================
+Module 18: Machine Learning Applications
+===========================
+Feature Vector
+Input Vector
+Weight Vector
+Parameter Vector
+Gradient Vector
+Embedding Vector
+Word Embedding
+Image Embedding
+Sentence Embedding
+Latent Vector
+
+
+===========================
+Module 19: Computer Graphics
+===========================
+Normal Vector
+Light Vector
+Camera Vector
+Reflection Vector
+View Vector
+Texture Coordinates
+
+===========================
+Module 20: Physics Applications
+===========================
+Force
+Velocity
+Acceleration
+Momentum
+Impulse
+Torque
+Angular Velocity
+Angular Momentum
+Electric Field
+Magnetic Field
+
+===========================
+Module 21: Advanced Topics
+===========================
+Inner Product Space
+Outer Product
+Tensor
+Dual Vector (Covector)
+Affine Space
+Normed Space
+Metric Space
+Hilbert Space
+Banach Space
+
+===========================
+Module 22: Important Theorems
+===========================
+Triangle Inequality
+Cauchy-Schwarz Inequality
+Parallelogram Law
+Pythagorean Theorem
+Distributive Law
+Associative Law
+Commutative Law
+
+===========================
+Module 23: Practice Problems
+=========================== 
+Magnitude
+Direction
+Addition
+Subtraction
+Dot Product
+Cross Product
+Projection
+Line Equation
+Plane Equation
+Distance
+Matrix Problems
+Machine Learning Problems
+
+===========================
+Module 24: Complex Vectors
+===========================
+Complex Numbers
+Complex Vector
+Conjugate Vector
+Hermitian Inner Product
+Unitary Vector
+Complex Normal
+
+===========================
+Module 25: Vector Calculus
+===========================
+Vector-Valued Functions
+Limits
+Continuity
+Derivative
+Integration
+Gradient
+Directional Derivative
+Jacobian
+Divergence
+Curl
+Laplacian
+Line Integral
+Surface Integral
+Volume Integral
+Green's Theorem
+Stokes' Theorem
+Gauss Divergence Theorem
+
+===========================
+Module 26: Numerical Linear Algebra
+===========================
+LU Decomposition
+QR Decomposition
+Cholesky Decomposition
+Eigen Decomposition
+Singular Value Decomposition (SVD)
+Pseudo Inverse
+Condition Number
+
+===========================
+Module 27: Optimization
+===========================
+Gradient Descent
+Stochastic Gradient Descent (SGD)
+Mini-Batch Gradient Descent
+Momentum
+Nesterov Momentum
+Adam Optimizer
+RMSProp
+AdaGrad
+Loss Surface
+
+===========================
+Module 28: Deep Learning
+===========================
+Weight Matrix
+Bias Vector
+Activation Vector
+Hidden Representation
+Attention Vector
+Query Vector
+Key Vector
+Value Vector
+Positional Embedding
+Transformer Embedding
+Backpropagation Gradient
+
+===========================
+Module 29: Computer Vision
+===========================
+Pixel Vector
+Color Vector
+Feature Map
+Image Descriptor
+Optical Flow Vector
+Normal Map
+Depth Vector
+
+===========================
+Module 30: Robotics & Engineering
+===========================
+Pose Vector
+Twist Vector
+Wrench Vector
+Rotation Matrix
+Quaternion
+Homogeneous Transformation Matrix
+Forward Kinematics
+Inverse Kinematics
+
+===========================
+Module 31: Competitive Mathematics
+===========================
+Vector Identities
+Geometric Proofs
+Olympiad Problems
+JEE Advanced Problems
+University Problems
+
+===========================
+Module 32: Programming
+===========================
+NumPy Arrays
+PyTorch Tensor
+TensorFlow Tensor
+Vectorization
+Broadcasting
+SIMD
+GPU Vector Operations
+CUDA Basics
+
+===========================
+Module 33: Projects
+===========================
+2D Physics Engine
+3D Graphics Engine
+Ray Tracer
+Recommendation System
+Word2Vec
+Image Classification
+Face Recognition
+Object Detection
+Chatbot Embeddings
+Search Engine
