@@ -15,11 +15,11 @@ Module 1: Introduction
 
    Physical Examples
 
-   - Displacement
-   - Velocity
-   - Acceleration
-   - Force
-   - Momentum
+   - Displacement (সরণ) 
+   - Velocity (বেগ)
+   - Acceleration (ত্বরণ)
+   - Force (বল)
+   - Momentum (সংবেদনশীলতা)
 
     --------------------------------------------------
 
@@ -35,12 +35,12 @@ Module 1: Introduction
 
    Physical Examples
 
-   - Mass
-   - Temperature
-   - Time
-   - Distance
-   - Energy
-   - Speed
+   - Mass (ভার)
+   - Temperature (তাপমাত্রা)
+   - Time (সময়)
+   - Distance (দূরত্ব)
+   - Energy (শক্তি)
+   - Speed (গতি)
    - Volume
 
     --------------------------------------------------
