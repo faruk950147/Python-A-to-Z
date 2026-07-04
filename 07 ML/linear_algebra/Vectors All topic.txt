@@ -204,18 +204,13 @@ Module 1: Introduction
     Vectors can be represented in several ways.
 
     Arrow Notation
-
-    →A
-
-    or
-
-    A⃗
+     𝐴⃗
 
     --------------------------------
 
     Bold Notation
 
-    A
+    𝐴
 
     (Bold font)
 
@@ -302,23 +297,71 @@ Module 2: Types of Vectors
 
     Definition
 
-    A zero vector is a vector whose magnitude is zero and has no definite direction.
+    A zero vector (or null vector) is a vector whose magnitude is zero and has no definite direction.
 
     Notation
 
-    0⃗ or (0, 0) in 2D
-    (0, 0, 0) in 3D
+    In 2D:
+
+    0⃗ = (0, 0)
+
+    In 3D:
+
+    0⃗ = (0, 0, 0)
 
     Examples
 
     (0, 0)
+
     (0, 0, 0)
+
+    Magnitude
+
+    For a 2D zero vector:
+
+    |(0, 0)| = √(0² + 0²)
+
+    = √0
+
+    = 0
+
+    For a 3D zero vector:
+
+    |(0, 0, 0)| = √(0² + 0² + 0²)
+
+    = √0
+
+    = 0
 
     Properties
 
     • Magnitude = 0
-    • Direction is undefined
-    • Acts as the additive identity of vectors
+    • Direction is undefined.
+    • Acts as the additive identity of vectors.
+    • Adding a zero vector to any vector does not change the vector.
+
+    A⃗ + 0⃗ = A⃗
+
+    Example
+
+    Let,
+
+    A⃗ = (3, 5)
+
+    Then,
+
+    A⃗ + 0⃗
+
+    = (3, 5) + (0, 0)
+
+    = (3, 5)
+
+    Key Points
+
+    1. Every component of a zero vector is 0.
+    2. Its magnitude is always 0.
+    3. It has no unique direction.
+    4. It is the additive identity in vector algebra.
 
     --------------------------------------------------
 
@@ -334,11 +377,11 @@ Module 2: Types of Vectors
 
     Let,
 
-    A⃗ = Vector
-    |A⃗| = Magnitude of vector A⃗
-    Â = Unit vector of A⃗
+     𝐴 ⃗ = Vector
+    |𝐴 ⃗| = Magnitude of vector 𝐴 ⃗
+    Â = Unit vector of 𝐴 ⃗
 
-    Â = A⃗ / |A⃗|
+    Â = 𝐴 ⃗ / |𝐴 ⃗|
 
     In other words,
 
@@ -350,21 +393,21 @@ Module 2: Types of Vectors
 
     If,
 
-    A⃗ = (x, y)
+     𝐴 ⃗ = (x, y)
 
     Then,
 
-    |A⃗| = √(x² + y²)
+    |𝐴 ⃗| = √(x² + y²)
 
     For a 3D Vector
 
     If,
 
-    A⃗ = (x, y, z)
+     𝐴 ⃗ = (x, y, z)
 
     Then,
 
-    |A⃗| = √(x² + y² + z²)
+    |𝐴 ⃗| = √(x² + y² + z²)
 
     Standard Unit Vectors
 
@@ -400,11 +443,11 @@ Module 2: Types of Vectors
 
     Let,
 
-    A⃗ = (3, 4)
+     𝐴 ⃗ = (3, 4)
 
     Step 1: Find the Magnitude
 
-    |A⃗| = √(3² + 4²)
+    |𝐴 ⃗| = √(3² + 4²)
 
     = √(9 + 16)
 
@@ -442,15 +485,15 @@ Module 2: Types of Vectors
 
     If the unit vector and magnitude are known, the original vector can be found using:
 
-    A⃗ = Â × |A⃗|
+    𝐴 ⃗ = Â × |𝐴 ⃗|
 
     Example
 
     Â = (0.6, 0.8)
 
-    |A⃗| = 5
+    |𝐴 ⃗| = 5
 
-    A⃗ = (0.6, 0.8) × 5
+    𝐴 ⃗ = (0.6, 0.8) × 5
 
     = (3, 4)
 
@@ -471,21 +514,69 @@ Module 2: Types of Vectors
 
     A position vector represents the location of a point with respect to the origin.
 
+    It starts from the origin and ends at the given point.
+
     General Form
+
+    For a 2D point:
 
     OP = (x, y)
 
-    or
+    For a 3D point:
 
     OP = (x, y, z)
 
-    Example
+    Where,
+
+    O = Origin (0, 0) or (0, 0, 0)
+    P = Point (x, y) or (x, y, z)
+
+    The position vector OP points from the origin to point P.
+
+    Example 1 (2D)
 
     Point P(3, 4)
 
-    Position Vector
+    Position Vector:
 
     OP = (3, 4)
+
+    Example 2 (3D)
+
+    Point P(2, -1, 5)
+
+    Position Vector:
+
+    OP = (2, -1, 5)
+
+    Magnitude of a Position Vector
+
+    For a 2D position vector:
+
+    |OP| = √(x² + y²)
+
+    For a 3D position vector:
+
+    |OP| = √(x² + y² + z²)
+
+    Example
+
+    P(3, 4)
+
+    |OP| = √(3² + 4²)
+
+    = √(9 + 16)
+
+    = √25
+
+    = 5
+
+    Key Points
+
+    1. A position vector always starts from the origin.
+    2. It specifies the exact location of a point.
+    3. The components of the position vector are the same as the coordinates of the point.
+    4. The direction is from the origin to the point.
 
     --------------------------------------------------
 
@@ -495,15 +586,35 @@ Module 2: Types of Vectors
 
     Two vectors are equal if they have the same magnitude and the same direction, regardless of their position.
 
+    Condition
+
+    If
+
+     𝐴 ⃗ = (x₁, y₁)
+
+     𝐵 ⃗ = (x₂, y₂)
+
+    Then
+
+     𝐴 ⃗ = 𝐵 ⃗ if and only if
+
+    x₁ = x₂ and y₁ = y₂
+
     Example
 
-    A = (2, 5)
+     𝐴 ⃗ = (2, 5)
 
-    B = (2, 5)
+     𝐵 ⃗ = (2, 5)
 
-    Therefore,
+    Therefore
 
-    A = B
+    𝐴 ⃗ = 𝐵 ⃗
+
+    Key Points
+
+    • Same magnitude
+    • Same direction
+    • Position does not matter
 
     --------------------------------------------------
 
@@ -517,17 +628,33 @@ Module 2: Types of Vectors
 
     If
 
-    A = (x, y)
+     𝐴 ⃗ = (x, y)
 
     Then
 
-    -A = (-x, -y)
+    −𝐴 ⃗ = (−x, −y)
+
+    For a 3D vector
+
+    If
+
+     𝐴 ⃗ = (x, y, z)
+
+    Then
+
+    −𝐴 ⃗ = (−x, −y, −z)
 
     Example
 
-    A = (3, 4)
+     𝐴 ⃗ = (3, 4)
 
-    -A = (-3, -4)
+    −𝐴 ⃗ = (−3, −4)
+
+    Properties
+
+    • Same magnitude
+    • Opposite direction
+    • 𝐴 ⃗ + (−𝐴 ⃗) = 0⃗
 
     --------------------------------------------------
 
@@ -539,17 +666,32 @@ Module 2: Types of Vectors
 
     Condition
 
-    A = kB
+    𝐴 ⃗ = k𝐵 ⃗
 
     where k is a scalar.
 
-    Examples
+    If k > 0, the vectors have the same direction.
 
-    (2, 4)
+    If k < 0, the vectors have opposite directions.
 
-    (1, 2)
+    Example
 
-    These vectors are parallel.
+     𝐴 ⃗ = (2, 4)
+
+     𝐵 ⃗ = (1, 2)
+
+    Since
+
+    𝐴 ⃗ = 2𝐵 ⃗
+
+    Therefore
+
+    𝐴 ⃗ and 𝐵 ⃗ are parallel vectors.
+
+    Key Points
+
+    • Scalar multiples of each other
+    • May have different magnitudes
 
     --------------------------------------------------
 
@@ -565,9 +707,14 @@ Module 2: Types of Vectors
 
     (5, 0)
 
-    (-3, 0)
+    (−3, 0)
 
     All are collinear vectors.
+
+    Key Points
+
+    • Lie on the same line or parallel lines
+    • Directions may be the same or opposite
 
     --------------------------------------------------
 
@@ -579,7 +726,18 @@ Module 2: Types of Vectors
 
     Example
 
-    OA and OB both start from the origin O.
+     𝑂𝐴 ⃗ and 𝑂𝐵 ⃗ both start from the origin O.
+     
+     Example:
+     𝑂𝐴 ⃗ = (1, 0)
+     𝑂𝐵 ⃗ = (0, 1)
+
+
+    Key Points
+
+    • Same starting point
+    • End points may be different
+    • Directions may be different
 
     --------------------------------------------------
 
@@ -593,11 +751,16 @@ Module 2: Types of Vectors
 
     (2, 3)
 
-    (4, -1)
+    (4, −1)
 
-    (-1, 5)
+    (−1, 5)
 
     These vectors lie in the XY-plane and are coplanar.
+
+    Key Points
+
+    • All vectors lie in one plane
+    • Any two 2D vectors are always coplanar
 
     --------------------------------------------------
 
@@ -605,27 +768,32 @@ Module 2: Types of Vectors
 
     Like Vectors
 
-    Definition
+        Definition
 
-    Vectors having the same direction are called like vectors.
+        Vectors having the same direction are called like vectors.
 
-    Example
+        Example
 
-    (2, 3)
+        (2, 3)
 
-    (4, 6)
+        (4, 6)
 
     Unlike Vectors
 
-    Definition
+        Definition
 
-    Vectors having opposite directions are called unlike vectors.
+        Vectors having opposite directions are called unlike vectors.
 
-    Example
+        Example
 
-    (2, 3)
+        (2, 3)
 
-    (-2, -3)
+        (−2, −3)
+
+    Key Points
+
+    • Like vectors → Same direction
+    • Unlike vectors → Opposite direction
 
     --------------------------------------------------
 
@@ -641,19 +809,29 @@ Module 2: Types of Vectors
 
     Displacement
 
+    Key Points
+
+    • Position is not fixed
+    • Only magnitude and direction matter
+
     --------------------------------------------------
 
 12. Bound (Fixed) Vector
 
     Definition
 
-    A bound vector has a fixed initial point and cannot be moved without changing its meaning.
+    A bound (fixed) vector has a fixed initial point and cannot be moved without changing its meaning.
 
     Examples
 
     Force applied at a specific point
 
     Weight acting on an object
+
+    Key Points
+
+    • Starting point is fixed
+    • Position is important
 
     --------------------------------------------------
 
@@ -663,9 +841,14 @@ Module 2: Types of Vectors
 
     A sliding vector can move anywhere along its line of action without changing its effect.
 
-    Examples
+    Example
 
     Force acting on a rigid body
+
+    Key Points
+
+    • Can slide along the same line
+    • Magnitude and direction remain unchanged
 
     --------------------------------------------------
 
@@ -673,7 +856,7 @@ Module 2: Types of Vectors
 
     Definition
 
-    A polar vector represents quantities having both magnitude and direction.
+    A polar vector represents physical quantities that have both magnitude and direction.
 
     Examples
 
@@ -685,13 +868,18 @@ Module 2: Types of Vectors
 
     Acceleration
 
+    Key Points
+
+    • Represents linear motion
+    • Follows normal vector addition rules
+
     --------------------------------------------------
 
 15. Axial (Pseudo) Vector
 
     Definition
 
-    An axial vector is associated with rotational motion and follows the right-hand rule.
+    An axial (pseudo) vector is associated with rotational motion and follows the right-hand rule.
 
     Examples
 
@@ -703,7 +891,11 @@ Module 2: Types of Vectors
 
     Magnetic Field
 
-    --------------------------------------------------
+    Key Points
+
+    • Represents rotational quantities
+    • Direction is determined by the right-hand rule
+    • Also called a pseudo vector
 
 
 =========================
