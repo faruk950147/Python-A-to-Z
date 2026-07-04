@@ -23,19 +23,19 @@ Answer: 137.625 - 137.635 mg/dL
 
 8.40 ± 0.05
 
-এখানে ± (প্লাস-মাইনাস) মানে হলো = মানটি 8.40 থেকে 0.05 বেশি বা কম হতে পারে
-অর্থাৎ:
+here ± (plus-minus) means = the value can be 8.40 plus or minus 0.05
+that means:
 
-সর্বোচ্চ মান = 8.40 + 0.05 = 8.45
-সর্বনিম্ন মান = 8.40 - 0.05 = 8.35
+Upper bound = 8.40 + 0.05 = 8.45
+Lower bound = 8.40 - 0.05 = 8.35
 
-তাই প্রকৃত মানের পরিসর: 8.35 থেকে 8.45।
+so the actual range is: 8.35 to 8.45
 
 =============================================
 
-এখানে 0.05 হলো ত্রুটি (error) বা অনিশ্চয়তা (uncertainty)।
+here 0.05 is the error (error) or uncertainty (uncertainty).
 
-8.0 ± 0.5  এখানে দশমিকের পর 1 টা সংখ্যা তাই 0.5
-8.40 ± 0.05  এখানে দশমিকের পর 2 টা সংখ্যা তাই 0.05
-8.450 ± 0.005 এখানে দশমিকের পর 3 টা সংখ্যা তাই 0.005
-এই ভাবে যদি দশমিকের পর n টা সংখ্যা থাকে তাহলে ত্রুটির মানের দশমিকের পরও n টা সংখ্যা থাকবে
+8.0 ± 0.5  here decimal point has 1 digit so 0.5
+8.40 ± 0.05  here decimal point has 2 digits so 0.05
+8.450 ± 0.005 here decimal point has 3 digits so 0.005
+in this way if decimal point has n digits then error value also has n digits after decimal point
