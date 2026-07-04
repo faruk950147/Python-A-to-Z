@@ -329,7 +329,8 @@ Module 2: Types of Vectors
     A unit vector is a vector whose magnitude is exactly 1.
 
     Formula
-
+    A is vector and â is unit vector
+    |A| is magnitude of vector A
     â = A / |A|
 
     Standard Unit Vectors
@@ -349,7 +350,7 @@ Module 2: Types of Vectors
 
     A = (3, 4)
 
-    |A| = 5
+    |A| = √(3² + 4²) = 5
 
     Unit Vector
 
