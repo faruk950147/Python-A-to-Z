@@ -328,35 +328,141 @@ Module 2: Types of Vectors
 
     A unit vector is a vector whose magnitude is exactly 1.
 
+    It represents only the direction of a vector, while its magnitude is always 1.
+
     Formula
-    A is vector and â is unit vector
-    |A| is magnitude of vector A
-    â = A / |A|
+
+    Let,
+
+    A⃗ = Vector
+    |A⃗| = Magnitude of vector A⃗
+    Â = Unit vector of A⃗
+
+    Â = A⃗ / |A⃗|
+
+    In other words,
+
+    Unit Vector = Vector ÷ Magnitude
+
+    Magnitude Formula
+
+    For a 2D Vector
+
+    If,
+
+    A⃗ = (x, y)
+
+    Then,
+
+    |A⃗| = √(x² + y²)
+
+    For a 3D Vector
+
+    If,
+
+    A⃗ = (x, y, z)
+
+    Then,
+
+    |A⃗| = √(x² + y² + z²)
 
     Standard Unit Vectors
 
     2D
 
     i = (1, 0)
+
+    Represents the x-axis.
+    Magnitude = 1
+
     j = (0, 1)
+
+    Represents the y-axis.
+    Magnitude = 1
 
     3D
 
     i = (1, 0, 0)
+
+    Represents the x-axis.
+
     j = (0, 1, 0)
+
+    Represents the y-axis.
+
     k = (0, 0, 1)
+
+    Represents the z-axis.
+
+    All standard unit vectors have a magnitude of 1.
 
     Example
 
-    A = (3, 4)
+    Let,
 
-    |A| = √(3² + 4²) = 5
+    A⃗ = (3, 4)
 
-    Unit Vector
+    Step 1: Find the Magnitude
 
-    Â = (3/5, 4/5) = (0.6, 0.8)
-    A⃗ = Â * |A| = (0.6, 0.8) * 5 = (3, 4)
+    |A⃗| = √(3² + 4²)
 
+    = √(9 + 16)
+
+    = √25
+
+    = 5
+
+    Step 2: Find the Unit Vector
+
+    Â = (3, 4) / 5
+
+    = (3/5, 4/5)
+
+    = (0.6, 0.8)
+
+    Answer
+
+    Â = (0.6, 0.8)
+
+    Verification
+
+    Check the magnitude of the unit vector:
+
+    √((0.6)² + (0.8)²)
+
+    = √(0.36 + 0.64)
+
+    = √1
+
+    = 1
+
+    Therefore, (0.6, 0.8) is a unit vector.
+
+    Recovering the Original Vector
+
+    If the unit vector and magnitude are known, the original vector can be found using:
+
+    A⃗ = Â × |A⃗|
+
+    Example
+
+    Â = (0.6, 0.8)
+
+    |A⃗| = 5
+
+    A⃗ = (0.6, 0.8) × 5
+
+    = (3, 4)
+
+    Shortcut
+
+    1. Find the magnitude of the vector.
+    2. Divide each component of the vector by its magnitude.
+    3. The resulting vector is the unit vector.
+
+    Key Point
+
+    A unit vector always has a magnitude of 1 and points in the same direction as the original vector.
     --------------------------------------------------
 
 3. Position Vector
