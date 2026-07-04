@@ -69,6 +69,10 @@ Module 1: Introduction
 
     |A| or ||A||
 
+    Formula
+
+    |A| = √(x² + y²)
+
     Example
 
     A = (3, 4)
