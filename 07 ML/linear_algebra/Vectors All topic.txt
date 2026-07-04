@@ -68,11 +68,7 @@ Module 1: Introduction
     For vector A
 
     |A| or ||A||
-
-    Formula
-
-    |A| = √(x² + y²)
-
+    
     Example
 
     A = (3, 4)
