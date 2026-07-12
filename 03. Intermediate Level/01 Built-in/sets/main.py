@@ -43,26 +43,28 @@ print(f"Complement of {1, 2, 3} in universal set: {complement_set}")
 '''
 
 # ============================= Topic: Sets - Operations =============================
+A = {1, 2, 3}
+B = {3, 4, 5}   
 
 # Union is the combination of two sets
-print(f"Union of {1, 2, 3} and {3, 4, 5}: {1, 2, 3} | {3, 4, 5}")
+print(f"Union of {A} and {B}: {A | B}")
 # output: {1, 2, 3, 4, 5}
 
 # Intersection is the common elements between two sets
-print(f"Intersection of {1, 2, 3} and {3, 4, 5}: {1, 2, 3} & {3, 4, 5}")
+print(f"Intersection of {A} and {B}: {A & B}")
 # output: {3}
 
 # Difference is the elements that are in the first set but not in the second set
-print(f"Difference of {1, 2, 3} and {3, 4, 5}: {1, 2, 3} - {3, 4, 5}")
+print(f"Difference of {A} and {B}: {A - B}")
 # output: {1, 2}
-    
+
 # Symmetric Difference is the elements that are in either set but not in both
-print(f"Symmetric difference of {1, 2, 3} and {3, 4, 5}: {1, 2, 3} ^ {3, 4, 5}")
+print(f"Symmetric difference of {A} and {B}: {A ^ B}")
 # output: {1, 2, 4, 5}
 
 # Disjoint means that the sets have no common elements
-print(f"Are {1, 2, 3} and {4, 5, 6} disjoint? {1, 2, 3}.isdisjoint({4, 5, 6})")
-# output: True
+print(f"Are {A} and {B} disjoint? {A.isdisjoint(B)}")
+# output: False
 
 
 
