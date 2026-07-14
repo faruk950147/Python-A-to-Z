@@ -19,5 +19,3 @@ Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
 কখন কোনটা: - Precision → False alarm কমাতে - Recall → কিছু miss করা যাবে
 না - F1 → Precision ও Recall দুটোই গুরুত্বপূর্ণ
 
-Python: from sklearn.metrics import accuracy_score, precision_score,
-recall_score, f1_score
