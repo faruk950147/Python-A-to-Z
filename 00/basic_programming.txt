@@ -1,7 +1,0 @@
-# ===================== what is programming =====================
-programming is a process of creating a set of instructions that a computer can understand and execute.
-
-program is a set of instructions that a computer can understand and execute.
-
-# ===================== what is python =====================
-

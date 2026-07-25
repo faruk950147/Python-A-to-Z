@@ -1,0 +1,278 @@
+Today, we will learn about Programming Languages, Machine Language, and how computers understand, translate, and execute programs. We will also explore different number systems, source code, compilers, interpreters, object code, and machine code to understand the complete program execution process.
+
+আজ আমরা Programming Language, Machine Language এবং কম্পিউটার কীভাবে একটি প্রোগ্রামকে বুঝে, অনুবাদ করে এবং Execute করে তা শিখব। এছাড়াও আমরা বিভিন্ন Number System, Source Code, Compiler, Interpreter, Object Code এবং Machine Code সম্পর্কে জানব, যাতে একটি প্রোগ্রাম কীভাবে সম্পূর্ণভাবে Execute হয় তা সহজে বুঝতে পারি।
+
+1. What is Programming Language?
+     Definition (English)
+
+     A Programming Language is a formal language with a set of rules, syntax, and keywords that allows programmers to write instructions for a computer to perform specific tasks.
+
+     Alternative Simple Definition:
+
+     A Programming Language is a set of rules and syntax that allows humans to communicate instructions to computers.
+
+     বাংলা সংজ্ঞা
+
+     Programming Language হলো একটি আনুষ্ঠানিক (Formal) ভাষা, যার নির্দিষ্ট নিয়ম (Rules), সিনট্যাক্স (Syntax) এবং কীওয়ার্ড (Keywords) রয়েছে। এর মাধ্যমে প্রোগ্রামার কম্পিউটারকে নির্দিষ্ট কাজ করার জন্য নির্দেশনা (Instructions) প্রদান করেন।
+
+     সহজ ভাষায়:
+
+     Programming Language হলো এমন একটি ভাষা যার মাধ্যমে আমরা কম্পিউটারকে নির্দিষ্ট কাজ করার জন্য নির্দেশনা (Instructions) দেই।
+     Examples
+     Python
+     C
+     C++
+     Java
+     JavaScript
+     Go
+     Rust
+
+2. What is Machine Language?
+     Definition (English)
+
+     Machine Language is the lowest-level programming language that consists only of 0s and 1s (binary digits). It is directly understood and executed by the CPU.
+
+     বাংলা
+
+     Machine Language হলো কম্পিউটারের সবচেয়ে নিচের স্তরের ভাষা, যা শুধুমাত্র 0 এবং 1 দিয়ে তৈরি হয়। CPU সরাসরি এই ভাষা বুঝতে পারে।
+
+     Example
+     10101100
+     11001010
+     00011111
+     Advantages
+     Fastest execution
+     No translator required
+     Disadvantages
+     Very difficult to write
+     Very difficult to debug
+     Hardware dependent
+
+3. What is Binary Number System?
+     Definition
+
+     Binary is a number system that uses only two digits:
+
+     0
+     1
+     Base
+     Base = 2
+     Example
+     Binary = 1010
+     Decimal = 10
+     বাংলা
+
+     Binary হলো Base-2 সংখ্যা পদ্ধতি যেখানে শুধুমাত্র 0 এবং 1 ব্যবহার করা হয়।
+
+4. What is Decimal Number System?
+     Definition
+
+     Decimal is the number system we use every day.
+
+     Digits
+     0-9
+     Base
+     Base = 10
+
+     Example
+
+     254
+     বাংলা
+
+     Decimal হলো Base-10 সংখ্যা পদ্ধতি যেখানে 0 থেকে 9 পর্যন্ত সংখ্যা ব্যবহার করা হয়।
+
+5. What is Octal Number System?
+     Definition
+
+     Octal uses digits from
+
+     0–7
+     Base
+     Base = 8
+
+     Example
+
+     725
+     বাংলা
+
+     Octal হলো Base-8 সংখ্যা পদ্ধতি যেখানে 0–7 পর্যন্ত সংখ্যা ব্যবহার করা হয়।
+
+6. What is Hexadecimal Number System?
+     Definition
+
+     Hexadecimal uses
+
+     0–9
+     A–F
+     Base
+     Base = 16
+
+     Example
+
+     3AF
+     বাংলা
+
+     Hexadecimal হলো Base-16 সংখ্যা পদ্ধতি যেখানে 0–9 এবং A–F ব্যবহার করা হয়।
+
+7. What is Assembly Language?
+     Definition
+
+     Assembly Language is a low-level programming language that uses mnemonic instructions instead of binary.
+
+     Example
+     MOV AX,5
+     ADD AX,2
+     বাংলা
+
+     Assembly Language হলো Low-Level Programming Language যেখানে Binary-এর পরিবর্তে সহজে মনে রাখার মতো Mnemonic ব্যবহার করা হয়।
+
+     Examples
+     MOV
+     ADD
+     SUB
+     JMP
+
+     Assembler Assembly Language-কে Machine Code-এ রূপান্তর করে।
+
+8. What is High-Level Programming Language?
+     Definition
+
+     A High-Level Programming Language is designed to be easy for humans to read, write, and understand.
+
+     Examples
+     Python
+     Java
+     C
+     C++
+     JavaScript
+     PHP
+     বাংলা
+
+     High-Level Programming Language মানুষের জন্য সহজে পড়া ও লেখা যায় এমন Programming Language।
+
+     Example (Python)
+
+     print("Hello World")
+
+9. What is Source Code?
+     Definition
+
+     Source Code is the original code written by a programmer using a programming language.
+
+     Example
+     a = 10
+     b = 20
+     print(a+b)
+     বাংলা
+
+     Programmer যে কোড লিখে, সেটিই Source Code।
+
+     10. What is Compiler?
+     Definition
+
+     A Compiler is a program that translates the entire source code into machine code before execution.
+
+     বাংলা
+
+     Compiler হলো এমন একটি Translator Program যা পুরো Source Code একবারে Machine Code-এ রূপান্তর করে।
+
+     Features
+     Entire program at once
+     Generates executable file
+     Faster execution
+     Errors shown after compilation
+     Examples
+     GCC
+     Clang
+     MSVC
+11. What is Interpreter?
+     Definition
+
+     An Interpreter translates and executes source code one line at a time.
+
+     বাংলা
+
+     Interpreter Source Code-কে এক লাইন করে অনুবাদ এবং Execute করে।
+
+     Features
+     Line-by-line execution
+     No executable file
+     Easier debugging
+     Slower execution
+     Examples
+     Python
+     JavaScript
+     Ruby
+
+12. Compiler vs Interpreter
+     Compiler	Interpreter
+     Translates entire program	Translates line by line
+     Faster execution	Slower execution
+     Creates executable file	No executable file
+     Errors after compilation	Errors immediately
+     Example: C, C++	Example: Python, JavaScript
+
+13. What is Object Code?
+     Definition
+
+     Object Code is the machine-level code produced by a compiler or assembler before final linking.
+
+     বাংলা
+
+     Compiler বা Assembler Source Code অনুবাদ করার পরে যে Intermediate Machine-Level Code তৈরি করে তাকে Object Code বলে।
+
+     Usually
+
+     main.o
+     main.obj
+     14. What is Machine Code?
+     Definition
+
+     Machine Code is the final binary code that the CPU directly executes.
+
+     Example
+     10110011
+     00101010
+     11000001
+     বাংলা
+
+     Machine Code হলো CPU-এর সরাসরি বোঝার মতো Binary Instructions।
+
+15. Program Translation Process
+     Programmer
+          │
+          ▼
+     Source Code
+          │
+          ▼
+     Compiler / Interpreter
+          │
+          ▼
+     Object Code
+          │
+          ▼
+     Linker
+          │
+          ▼
+     Executable File
+          │
+          ▼
+     Machine Code
+          │
+          ▼
+     CPU Executes
+16. Summary
+     Topic	Key Point
+     Programming Language	Language for writing programs
+     Machine Language	Binary language understood by CPU
+     Binary	Base-2 number system
+     Decimal	Base-10 number system
+     Octal	Base-8 number system
+     Hexadecimal	Base-16 number system
+     Assembly Language	Low-level language using mnemonics
+     High-Level Language	Human-friendly programming language
+     Source Code	Original code written by programmer
+     Compiler	Translates whole program
+     Interpreter	Translates line by line
+     Object Code	Intermediate machine-level output
+     Machine Code	Final binary executed by CPU
