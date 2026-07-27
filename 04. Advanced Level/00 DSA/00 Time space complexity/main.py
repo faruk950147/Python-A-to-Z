@@ -1,42 +1,275 @@
 '''
-    Time and Space Complexity
+    ============================= Time and Space Complexity =============================
 
-    Time Complexity
-    Time Complexity measures how the execution time of an algorithm grows as the input size (n) increases.
-    It does not measure the actual time in seconds; instead, it describes the growth rate.
+    Time Complexity & Space Complexity
+        Time Complexity measures how the execution time of an algorithm grows as the input size (n) increases.
+        It does not measure the actual time in seconds; instead, it describes the growth rate.
+        
+        Space Complexity measures how the memory usage of an algorithm grows as the input size (n) increases.
+        It does not measure the actual memory in bytes; instead, it describes the growth rate.
 
+    Time Complexity Notation
 
-    Example:
+        Time Complexity Notation is a mathematical way to describe how the running time of an algorithm changes as the input size (n) increases. It helps compare algorithms based on efficiency rather than actual execution time.
 
-    for i in range(n):
-        print(i)
-    Number of operations: n
-    Time Complexity: O(n)
+        Common Time Complexity Notations
+        Notation	Name	Meaning
+        O(f(n))	Big O	Upper bound (Worst Case)
+        Ω(f(n))	Big Omega	Lower bound (Best Case)
+        Θ(f(n))	Big Theta	Tight Bound (Average/Exact Growth)
+    
+    1. Big O Notation (O)
 
-    Space Complexity
-    Space Complexity measures how much extra memory an algorithm requires as the input size (n) increases.
+        Definition:
+        Big O describes the maximum time an algorithm may take.
 
-    Example:
+        Used for: Worst-case analysis.
 
-    arr = [0] * n
-    The array stores n elements.
-    Space Complexity: O(n)
+        Examples
+        Linear Search (element at last position)
+        Time Complexity: O(n)
+        Binary Search
+        Time Complexity: O(log n)
+        Graphical Idea
+        Time
+        ^
+        |          O(n²)
+        |         /
+        |       /
+        |     /
+        |   /
+        | /
+        +---------------------> n
+    
+    2. Big Omega (Ω)
 
-    If an algorithm only uses a few variables regardless of input size:
+        Definition:
+        Big Omega describes the minimum time an algorithm takes.
 
-    a = 10
-    b = 20
-    c = a + b
-    Space Complexity: O(1) (constant memory)
-    Common Time Complexities
-    Complexity	Name	Example
-    O(1)	Constant	Accessing an array element
-    O(log n)	Logarithmic	Binary Search
-    O(n)	Linear	Traversing an array
-    O(n log n)	Linearithmic	Merge Sort, Heap Sort
-    O(n²)	Quadratic	Nested loops, Bubble Sort
-    O(2ⁿ)	Exponential	Recursive Fibonacci
-    O(n!)	Factorial	Generating all permutations
+        Used for: Best-case analysis.
+
+        Example
+
+        Linear Search:
+
+        Element found at the first position.
+        Time Complexity:
+        Ω(1)
+   
+    3. Big Theta (Θ)
+
+        Definition:
+        Big Theta gives the exact growth rate of an algorithm when the upper and lower bounds are the same.
+
+        Example
+
+        Traversing every element of an array:
+
+        for(i = 0; i < n; i++)
+        {
+            printf("%d", arr[i]);
+        }
+
+        Time Complexity:
+
+        Θ(n)
+        Common Time Complexities
+        Complexity	Name	Example
+        O(1)	Constant	Accessing an array element
+        O(log n)	Logarithmic	Binary Search
+        O(n)	Linear	Linear Search
+        O(n log n)	Linearithmic	Merge Sort, Heap Sort
+        O(n²)	Quadratic	Bubble Sort, Selection Sort
+        O(n³)	Cubic	Some Matrix Multiplication Algorithms
+        O(2ⁿ)	Exponential	Recursive Fibonacci
+        O(n!)	Factorial	Traveling Salesman (Brute Force)
+        Example: Linear Search
+        int linearSearch(int arr[], int n, int key)
+        {
+            for(int i = 0; i < n; i++)
+            {
+                if(arr[i] == key)
+                    return i;
+            }
+            return -1;
+        }
+        Best Case: Ω(1) (element is the first item)
+        Average Case: Θ(n)
+        Worst Case: O(n) (element is last or not present)
+        Growth Order (Fastest to Slowest)
+        O(1)
+        ↓
+        O(log n)
+        ↓
+        O(n)
+        ↓
+        O(n log n)
+        ↓
+        O(n²)
+        ↓
+        O(n³)
+        ↓
+        O(2ⁿ)
+        ↓
+        O(n!)
+        Why Time Complexity Is Important
+        Compares algorithms independently of hardware.
+        Predicts performance for large inputs.
+        Helps choose the most efficient algorithm.
+        Essential for optimizing software and solving competitive programming problems.
+        Summary
+        Big O (O): Worst-case performance.
+        Big Omega (Ω): Best-case performance.
+        Big Theta (Θ): Exact or tight bound on growth.
+        Lower time complexity generally means a more efficient algorithm for large input sizes.
+        
+
+    ==================================== Mathematical Examples ====================================
+    TIME COMPLEXITY NOTATION & MATHEMATICAL EXAMPLES
+
+    1. Big O Notation (Worst Case)
+
+        Definition:
+        f(n) = O(g(n))
+
+        If there exist positive constants c and n₀ such that
+
+        0 ≤ f(n) ≤ c·g(n), for all n ≥ n₀.
+
+        Example:
+        Let
+
+        f(n) = 3n + 2
+
+        Show that
+
+        3n + 2 = O(n)
+
+        Proof:
+        Choose:
+        g(n) = n
+        c = 5
+        n₀ = 1
+
+        For all n ≥ 1,
+
+        3n + 2 ≤ 3n + 2n
+                = 5n
+
+        Therefore,
+
+        3n + 2 ≤ 5n
+
+        Hence,
+
+        3n + 2 = O(n).
+
+    ------------------------------------------------------------
+
+    2. Big Omega Notation (Best Case)
+
+        Definition:
+        f(n) = Ω(g(n))
+
+        If there exist positive constants c and n₀ such that
+
+        f(n) ≥ c·g(n), for all n ≥ n₀.
+
+        Example:
+        Let
+
+        f(n) = 3n + 2
+
+        Show that
+
+        3n + 2 = Ω(n)
+
+        Proof:
+        Choose:
+        g(n) = n
+        c = 3
+        n₀ = 1
+
+        Since
+
+        3n + 2 ≥ 3n
+
+        Therefore,
+
+        3n + 2 ≥ 3n = c·n
+
+        Hence,
+
+        3n + 2 = Ω(n).
+
+    ------------------------------------------------------------
+
+    3. Big Theta Notation (Tight Bound)
+
+        Definition:
+        f(n) = Θ(g(n))
+
+        If there exist positive constants c₁, c₂, and n₀ such that
+
+        c₁g(n) ≤ f(n) ≤ c₂g(n)
+
+        for all n ≥ n₀.
+
+        Example:
+        Let
+
+        f(n) = 3n + 2
+
+        Show that
+
+        3n + 2 = Θ(n)
+
+        Proof:
+        Choose:
+        c₁ = 3
+        c₂ = 5
+        n₀ = 1
+
+        We have
+
+        3n ≤ 3n + 2 ≤ 5n
+
+        Therefore,
+
+        3n ≤ 3n + 2 ≤ 5n
+
+        Hence,
+
+        3n + 2 = Θ(n).
+
+    ------------------------------------------------------------
+
+    Another Example
+
+        Let
+
+        f(n) = 5n² + 4n + 7
+
+        For large values of n,
+
+        5n² + 4n + 7 ≈ 5n² (dominant term)
+
+        Therefore,
+
+        Big O     : O(n²)
+        Big Omega : Ω(n²)
+        Big Theta : Θ(n²)
+
+    ------------------------------------------------------------
+
+    Summary
+
+    Function            Big O      Big Ω      Big Θ
+    ------------------------------------------------
+    3n + 2              O(n)       Ω(n)       Θ(n)
+    5n² + 4n + 7        O(n²)      Ω(n²)      Θ(n²)
+    7                   O(1)       Ω(1)       Θ(1)
+    log n + 5           O(log n)   Ω(log n)   Θ(log n)
 '''
 '''
     # ============================== Time Complexity Examples ==============================
@@ -87,12 +320,41 @@
 '''
 
 # ==================================== Time Complexity Examples ====================================
+
+# Example 1: O(1) - Constant Time
 import time
 
 n = 2**20
+print(f"n = {n}")
+
+
+# Example 2: O(n) - Linear Time
+n = 2**20
 start_time = time.time()
-for i in range(n):
-    print(i, end=" ")
+arr = [i for i in range(n)]
 end_time = time.time()
 print(f"\nTime taken: {end_time - start_time} seconds")
-# ==================================== Space Complexity Examples ====================================
+
+# Example 3: O(n²) - Quadratic Time
+n = 2**10
+start_time = time.time()
+arr = [[i for i in range(n)] for j in range(n)]
+end_time = time.time()
+print(f"\nTime taken: {end_time - start_time} seconds")
+
+
+# dataset
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+dataset = {
+    'study_hours': [1, 2, 3, 4, 5],
+    'grades': [60, 70, 80, 90, 100]
+}
+df = pd.DataFrame(dataset)
+print(df)
+
+# Plot the data
+plt.scatter(df['study_hours'], df['grades'])
+plt.show()
+
