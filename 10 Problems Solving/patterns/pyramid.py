@@ -6,6 +6,8 @@ class Pyramid:
         """Pyramid Pattern"""
         print("\nPyramid Pattern\n")
         for i in range(1, self.rows + 1):
+            # " " * (self.rows - i) creates the leading spaces for centering
+            # "* " * i creates the stars with spaces between them
             print(" " * (self.rows - i) + "* " * i)
 
 
@@ -13,6 +15,8 @@ class Pyramid:
         """Inverted Pyramid Pattern"""
         print("\nInverted Pyramid Pattern\n")
         for i in range(self.rows, 0, -1):
+            # " " * (self.rows - i) creates the leading spaces for centering
+            # "* " * i creates the stars with spaces between them
             print(" " * (self.rows - i) + "* " * i)
 
 
@@ -21,9 +25,13 @@ class Pyramid:
         print("\nDiamond Pattern\n")
         # Upper part
         for i in range(1, self.rows + 1):
+            # " " * (self.rows - i) creates the leading spaces for centering
+            # "* " * i creates the stars with spaces between them
             print(" " * (self.rows - i) + "* " * i)
         # Lower part
         for i in range(self.rows - 1, 0, -1):
+            # " " * (self.rows - i) creates the leading spaces for centering
+            # "* " * i creates the stars with spaces between them
             print(" " * (self.rows - i) + "* " * i)
 
 
