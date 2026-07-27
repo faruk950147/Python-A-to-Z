@@ -1,32 +1,39 @@
-
-def pyramid(rows):
-    """Pyramid Pattern"""
-    print("\nPyramid Pattern\n")
-    for i in range(1, rows + 1):
-        print(" " * (rows - i) + "* " * i)
-
-
-def inverted_pyramid(rows):
-    """Inverted Pyramid Pattern"""
-    print("\nInverted Pyramid Pattern\n")
-    for i in range(rows, 0, -1):
-        print(" " * (rows - i) + "* " * i)
+class Pyramid:
+    def __init__(self, rows):
+        self.rows = rows
+    
+    def pyramid(self):
+        """Pyramid Pattern"""
+        print("\nPyramid Pattern\n")
+        for i in range(1, self.rows + 1):
+            print(" " * (self.rows - i) + "* " * i)
 
 
-def diamond(rows):
-    """Diamond Pattern"""
-    print("\nDiamond Pattern\n")
-    # Upper part
-    for i in range(1, rows + 1):
-        print(" " * (rows - i) + "* " * i)
-    # Lower part
-    for i in range(rows - 1, 0, -1):
-        print(" " * (rows - i) + "* " * i)
+    def inverted_pyramid(self):
+        """Inverted Pyramid Pattern"""
+        print("\nInverted Pyramid Pattern\n")
+        for i in range(self.rows, 0, -1):
+            print(" " * (self.rows - i) + "* " * i)
 
 
-# --- Program Run ---
-rows = int(input("\nEnter number of rows for pattern: "))
+    def diamond(self):
+        """Diamond Pattern"""
+        print("\nDiamond Pattern\n")
+        # Upper part
+        for i in range(1, self.rows + 1):
+            print(" " * (self.rows - i) + "* " * i)
+        # Lower part
+        for i in range(self.rows - 1, 0, -1):
+            print(" " * (self.rows - i) + "* " * i)
 
-pyramid(rows)
-inverted_pyramid(rows)
-diamond(rows)
+
+if __name__ == "__main__":
+    while True:
+        rows = int(input("Enter the number of rows: "))
+        if rows == 0:
+            break
+        pyramid = Pyramid(rows)
+        pyramid.pyramid()
+        pyramid.inverted_pyramid()
+        pyramid.diamond()
+
