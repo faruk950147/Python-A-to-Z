@@ -35,33 +35,25 @@
           for j = i + 1 to n - 1:
               if A[j] < A[min_index]:
                   min_index = j
-          
-          if min_index != i:
-              arr[i], arr[min_index] = arr[min_index], arr[i]
+          swap A[i] and A[min_index]
 
   Python Implementation
-class SelectionSort:
-    # Python implementation of Selection Sort
+  class SelectionSort:
+    # Python program for implementation of Selection Sort
 
-    def selection_sort(self, arr):
-        n = len(arr)
-
-        # Traverse the array
-        for i in range(n - 1):
-
-            # Assume the first unsorted element is the minimum
-            min_index = i
-
-            # Find the index of the minimum element
-            for j in range(i + 1, n):
-                if arr[j] < arr[min_index]:
-                    min_index = j
-
-            # Swap only if the minimum element is not already in place
-            if min_index != i:
-                arr[i], arr[min_index] = arr[min_index], arr[i]
-
-        return arr
+      def selection_sort(self, arr):
+          n = len(arr)
+          for i in range(n - 1):
+              # Assume the current position holds the minimum element
+              min_index = i
+              # Iterate through the unsorted portion to find the actual minimum element
+              for j in range(i + 1, n):
+                  if arr[j] < arr[min_index]:
+                      min_index = j
+              # Only swap if the minimum element is not already in the correct position
+              if i != min_index:
+                  arr[i], arr[min_index] = arr[min_index], arr[i]
+          return arr
 
   Example Walkthrough
 
@@ -194,30 +186,28 @@ class SelectionSort:
 """
 
 class SelectionSort:
-    # Python implementation of Selection Sort
+  # Python program for implementation of Selection Sort
 
     def selection_sort(self, arr):
         n = len(arr)
-
-        # Traverse the array
         for i in range(n - 1):
-
-            # Assume the first unsorted element is the minimum
+            # Assume the current position holds the minimum element
             min_index = i
-
-            # Find the index of the minimum element
+            sw = 0
+            # Iterate through the unsorted portion to find the actual minimum element
             for j in range(i + 1, n):
                 if arr[j] < arr[min_index]:
                     min_index = j
-
-            # Swap only if the minimum element is not already in place
-            if min_index != i:
+            # Only swap if the minimum element is not already in the correct position
+            if i != min_index:
                 arr[i], arr[min_index] = arr[min_index], arr[i]
-
+                sw += 1
+            print(f"After pass {i + 1}: {arr} (swaps: {sw})")
         return arr
       
 if __name__ == "__main__":
     selection_sort = SelectionSort()
-    print(f"Original array: [64, 34, 25, 12, 22, 11, 90]")
-    print(f"Selection Sort result: {selection_sort.selection_sort([64, 34, 25, 12, 22, 11, 90])}")
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    print(f"Original array: {arr}")
+    print(f"Selection Sort result: {selection_sort.selection_sort(arr)}")
     
