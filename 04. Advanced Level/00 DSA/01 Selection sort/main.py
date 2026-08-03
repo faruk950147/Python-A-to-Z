@@ -1,118 +1,181 @@
 """
-    Selection Sort
+What is Selection Sort?
+Selection Sort is a simple, comparison-based, in-place sorting algorithm. It repeatedly selects the smallest (or largest, if sorting descending) element from the unsorted part of the array and moves it to the boundary of the sorted part.
 
-    Selection Sort is a simple sorting algorithm that repeatedly finds the smallest element from the unsorted portion of the array and places it at the beginning.
+Core Idea
+The array is conceptually divided into two parts:
 
-    The algorithm maintains two parts of the array:
+- Sorted subarray — elements already in correct order (on the left).
+- Unsorted subarray — remaining elements that still need to be sorted (on the right).
 
-    Sorted subarray - Elements already arranged in order.
-    Unsorted subarray - Remaining elements that need to be sorted.
+In each pass:
+1. Find the minimum element in the unsorted subarray.
+2. Swap it with the first element of the unsorted subarray.
+3. Extend the sorted subarray by one position to the right.
 
-    In each pass, the minimum element from the unsorted subarray is selected and swapped with the first unsorted element.
+This process continues until the entire array is sorted.
 
-    Algorithm
-    Start from the first element.
-    Find the smallest element in the unsorted part of the array.
-    Swap it with the first unsorted element.
-    Move the boundary of the sorted subarray one position to the right.
-    Repeat until the array is completely sorted.
-    Example
+Algorithm (Step-by-Step)
+Given an array A of size n:
 
-    Initial array:
+1. Set i = 0 (start of unsorted part).
+2. While i < n - 1:
+   - Assume min_index = i.
+   - For each j from i + 1 to n - 1:
+     - If A[j] < A[min_index], update min_index = j.
+   - Swap A[i] and A[min_index].
+   - Increment i by 1 (sorted part grows by one).
 
-    [64, 34, 25, 12, 22, 11, 90]
-    Pass 1
+Pseudocode
 
-    Find the minimum element in the entire array.
+SELECTION-SORT(A):
+    n = length(A)
+    for i = 0 to n - 2:
+        min_index = i
+        for j = i + 1 to n - 1:
+            if A[j] < A[min_index]:
+                min_index = j
+        swap A[i] and A[min_index]
 
-    Minimum = 11
+Python Implementation
 
-    Swap 64 and 11
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        # Swap the found minimum element with the first unsorted element
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
 
-    [11, 34, 25, 12, 22, 64, 90]
-    Pass 2
+Example Walkthrough
 
-    Search in:
+Initial array:
+[64, 34, 25, 12, 22, 11, 90]
 
-    [34, 25, 12, 22, 64, 90]
+Pass 1
+- Search in: [64, 34, 25, 12, 22, 11, 90]
+- Minimum = 11 (at index 5)
+- Swap 64 and 11
+  → [11, 34, 25, 12, 22, 64, 90]
 
-    Minimum = 12
+Pass 2
+- Search in: [34, 25, 12, 22, 64, 90]
+- Minimum = 12
+- Swap 34 and 12
+  → [11, 12, 25, 34, 22, 64, 90]
 
-    Swap 34 and 12
+Pass 3
+- Search in: [25, 34, 22, 64, 90]
+- Minimum = 22
+- Swap 25 and 22
+  → [11, 12, 22, 34, 25, 64, 90]
 
-    [11, 12, 25, 34, 22, 64, 90]
-    Pass 3
+Pass 4
+- Search in: [34, 25, 64, 90]
+- Minimum = 25
+- Swap 34 and 25
+  → [11, 12, 22, 25, 34, 64, 90]
 
-    Search in:
+Pass 5
+- Search in: [34, 64, 90]
+- Minimum = 34
+- Already in correct position → no swap
+  → [11, 12, 22, 25, 34, 64, 90]
 
-    [25, 34, 22, 64, 90]
+Pass 6
+- Search in: [64, 90]
+- Minimum = 64
+- Already in correct position → no swap
+  → [11, 12, 22, 25, 34, 64, 90]
 
-    Minimum = 22
+Final sorted array:
+[11, 12, 22, 25, 34, 64, 90]
 
-    Swap 25 and 22
+Number of Comparisons
 
-    [11, 12, 22, 34, 25, 64, 90]
-    Pass 4
+For an array of n elements:
 
-    Search in:
+- Pass 1: n - 1 comparisons
+- Pass 2: n - 2 comparisons
+- ...
+- Pass n - 1: 1 comparison
 
-    [34, 25, 64, 90]
+Total comparisons:
 
-    Minimum = 25
+(n-1) + (n-2) + ... + 2 + 1 = n(n-1)/2
 
-    Swap 34 and 25
+For n = 7:
 
-    [11, 12, 22, 25, 34, 64, 90]
-    Pass 5
+6 + 5 + 4 + 3 + 2 + 1 = 21
 
-    Search in:
+Time Complexity
 
-    [34, 64, 90]
+- Best case: O(n^2)
+- Average case: O(n^2)
+- Worst case: O(n^2)
 
-    Minimum = 34
+Reason: The algorithm always performs the same number of comparisons regardless of input order; it always scans the unsorted part to find the minimum.
 
-    No swap needed.
+Space Complexity
 
-    [11, 12, 22, 25, 34, 64, 90]
-    Pass 6
+- Space: O(1)
+- It sorts in place using only a constant amount of extra memory (a few variables like min_index, i, j, and a temporary for swapping).
 
-    Search in:
+Number of Swaps
 
-    [64, 90]
+- At most n - 1 swaps (one per pass).
+- Often fewer than Bubble Sort for the same input, because it swaps only when the minimum is not already in place.
 
-    Minimum = 64
+Advantages
 
-    No swap needed.
+- Very easy to understand and implement.
+- In-place: requires only constant extra memory.
+- Performs fewer swaps than Bubble Sort, which can be useful when swaps are expensive.
 
-    [11, 12, 22, 25, 34, 64, 90]
-    Comparisons in Each Pass
+Disadvantages
 
-    For an array of 7 elements:
+- Inefficient for large datasets due to O(n^2) time.
+- Does not take advantage of existing order; even a sorted array requires O(n^2) comparisons.
+- Slower in practice than more advanced algorithms like:
+  - Merge Sort (O(n log n))
+  - Quick Sort (average O(n log n))
+  - Heap Sort (O(n log n))
 
-    Pass	Comparisons
-    Pass 1	6
-    Pass 2	5
-    Pass 3	4
-    Pass 4	3
-    Pass 5	2
-    Pass 6	1
-    Total	21
-    Time Complexity
-    Best Case: O(n²)
-    Average Case: O(n²)
-    Worst Case: O(n²)
-    Space Complexity
-    O(1) (In-place sorting)
-    Advantages
-    Easy to understand and implement.
-    Requires only constant extra memory.
-    Performs fewer swaps than Bubble Sort.
-    Disadvantages
-    Inefficient for large datasets.
-    Time complexity remains O(n²) even if the array is already sorted.
-    Generally slower than efficient algorithms like Merge Sort or Quick Sort for large inputs.
+Stability
 
-    Final Sorted Array:
+- Selection Sort is not stable by default.
+- Equal elements may change relative order due to swaps.
+- Example: if you have [2a, 2b, 1], after sorting you might get [1, 2b, 2a] depending on implementation.
 
-    [11, 12, 22, 25, 34, 64, 90]
+When to Use Selection Sort
+
+- Educational purposes: great for learning how sorting works.
+- Very small arrays where simplicity matters more than performance.
+- Situations where:
+  - Memory is extremely constrained (in-place is required).
+  - Writes/swaps are costly and you want to minimize them.
+
+When NOT to Use Selection Sort
+
+- Large datasets (use O(n log n) algorithms instead).
+- When performance matters in real applications.
+- When you need a stable sort and cannot modify the algorithm to ensure stability.
+
+Variants / Notes
+
+- Can be adapted to sort in descending order by selecting the maximum element instead of the minimum.
+- Can be made stable with extra care (e.g., using rotations instead of direct swaps), but this usually increases complexity and is rarely done in practice.
+
+Final Sorted Array (Example)
+
+Input:
+[64, 34, 25, 12, 22, 11, 90]
+
+Output:
+[11, 12, 22, 25, 34, 64, 90]
+
+
 """
