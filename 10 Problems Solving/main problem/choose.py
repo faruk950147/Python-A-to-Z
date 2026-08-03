@@ -48,11 +48,11 @@ class Chooser:
 
 if __name__ == "__main__":
     chooser = Chooser([1, 2, 3, 4, 5])
-    print(chooser.choose(3))
-    print(chooser)
-    print(repr(chooser))
+    print(f"Selected: {chooser.choose(3)}")
+    print(f"Current state: {chooser}")
+    print(f"Representation: {repr(chooser)}")
     chooser.reset()
-    print(chooser.choose(2))
-    print(chooser)
-    print(repr(chooser))
+    print(f"After reset: {chooser.choose(2)}")
+    print(f"Current state: {chooser}")
+    print(f"Representation: {repr(chooser)}")
 
