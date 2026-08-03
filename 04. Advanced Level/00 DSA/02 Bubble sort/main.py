@@ -48,8 +48,8 @@ BUBBLE-SORT-OPT(A):
             break
 
 Python Implementation
-
-def bubble_sort(arr):
+class BubbleSort:
+    def bubble_sort(self, arr):
     n = len(arr)
     for i in range(n - 1):
         swapped = False
