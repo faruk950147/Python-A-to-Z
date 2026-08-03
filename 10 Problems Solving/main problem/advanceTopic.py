@@ -14,25 +14,7 @@ print(reverseString("Sky is blue"))
 
 # output: blue is sky
 
-# 2. Question: Remove Duplicates from a List
-# lst [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
-# output [1, 4]
-
-def removeDuplicates(lst):
-    '''
-    Remove duplicates from a list and return the result
-    '''
-    result = []
-    for i in lst:
-        if lst.count(i) >= 1 and i not in result:
-            result.append(i)
-    return result
-
-print(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
-
-# output: [1, 2, 3, 4, 5, 6]
-
-# 3. Question: Count the Occurrences of Each Character in a String
+# 2. Question: Count the Occurrences of Each Character in a String
 # str1 = "a,a,a,b,b,c,c,c"
 # output = a:3, b:2, c:3
 def count_characters(s):
@@ -51,7 +33,7 @@ print(count_characters(str1))
 
 # output: a:3, b:2, c:3
 
-# 4. Question: Find the Longest Common Prefix
+# 3. Question: Find the Longest Common Prefix
 # strs = ["flower", "flow", "flight"]
 # output = "fl"
 def longestCommonPrefix(strs):
