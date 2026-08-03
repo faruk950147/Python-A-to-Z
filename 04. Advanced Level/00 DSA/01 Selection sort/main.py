@@ -35,24 +35,33 @@
           for j = i + 1 to n - 1:
               if A[j] < A[min_index]:
                   min_index = j
-          swap A[i] and A[min_index]
+          
+          if min_index != i:
+              arr[i], arr[min_index] = arr[min_index], arr[i]
 
   Python Implementation
-  class SelectionSort:
-    # Python program for implementation of Selection Sort
+class SelectionSort:
+    # Python implementation of Selection Sort
 
-      def selection_sort(self, arr):
-          n = len(arr)
-          for i in range(n - 1):
-              # Assume the current position holds the minimum element
-              min_index = i
-              # Iterate through the unsorted portion to find the actual minimum element
-              for j in range(i + 1, n):
-                  if arr[j] < arr[min_index]:
-                      min_index = j
-              # Swap the found minimum element with the first element of the unsorted portion
-              arr[i], arr[min_index] = arr[min_index], arr[i]
-          return arr
+    def selection_sort(self, arr):
+        n = len(arr)
+
+        # Traverse the array
+        for i in range(n - 1):
+
+            # Assume the first unsorted element is the minimum
+            min_index = i
+
+            # Find the index of the minimum element
+            for j in range(i + 1, n):
+                if arr[j] < arr[min_index]:
+                    min_index = j
+
+            # Swap only if the minimum element is not already in place
+            if min_index != i:
+                arr[i], arr[min_index] = arr[min_index], arr[i]
+
+        return arr
 
   Example Walkthrough
 
@@ -185,19 +194,26 @@
 """
 
 class SelectionSort:
-  # Python program for implementation of Selection Sort
+    # Python implementation of Selection Sort
 
     def selection_sort(self, arr):
         n = len(arr)
+
+        # Traverse the array
         for i in range(n - 1):
-            # Assume the current position holds the minimum element
+
+            # Assume the first unsorted element is the minimum
             min_index = i
-            # Iterate through the unsorted portion to find the actual minimum element
+
+            # Find the index of the minimum element
             for j in range(i + 1, n):
                 if arr[j] < arr[min_index]:
                     min_index = j
-            # Swap the found minimum element with the first element of the unsorted portion
-            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+            # Swap only if the minimum element is not already in place
+            if min_index != i:
+                arr[i], arr[min_index] = arr[min_index], arr[i]
+
         return arr
       
 if __name__ == "__main__":
