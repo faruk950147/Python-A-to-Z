@@ -190,10 +190,10 @@ class SelectionSort:
 
     def selection_sort(self, arr):
         n = len(arr)
+        sw = 0
         for i in range(n - 1):
             # Assume the current position holds the minimum element
             min_index = i
-            sw = 0
             # Iterate through the unsorted portion to find the actual minimum element
             for j in range(i + 1, n):
                 if arr[j] < arr[min_index]:
