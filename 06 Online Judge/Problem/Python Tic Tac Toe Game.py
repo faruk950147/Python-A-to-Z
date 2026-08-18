@@ -1,75 +1,66 @@
-class TicTacToe:
-    def __init__(self):
-        self.board = [" " for _ in range(9)]
-        self.current_player = "X"
+# Tic Tac Toe (2 Player)
+# Author: Faruk Example
 
-    def print_board(self):
-        print("\n")
-        print(f"{self.board[0]} | {self.board[1]} | {self.board[2]}")
-        print("--+---+--")
-        print(f"{self.board[3]} | {self.board[4]} | {self.board[5]}")
-        print("--+---+--")
-        print(f"{self.board[6]} | {self.board[7]} | {self.board[8]}")
-        print("\n")
+def print_board(board):
+    print("\n")
+    print(f"{board[0]} | {board[1]} | {board[2]}")
+    print("--+---+--")
+    print(f"{board[3]} | {board[4]} | {board[5]}")
+    print("--+---+--")
+    print(f"{board[6]} | {board[7]} | {board[8]}")
+    print("\n")
 
-    def make_move(self, position):
-        """Player sets the position"""
-        if self.board[position] == " ": # if the position is empty
-            self.board[position] = self.current_player
+def check_winner(board, player):
+    # All winning combinations
+    win_combinations = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # rows
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # columns
+        [0, 4, 8], [2, 4, 6]              # diagonals
+    ]
+    for combo in win_combinations:
+        if all(board[i] == player for i in combo):
             return True
-        else:
-            print("This position is already taken. Try again!")
-            return False
+    return False
 
-    def check_winner(self):
-        """Check if the current player has won"""
-        win_combinations = [
-            [0, 1, 2], [3, 4, 5], [6, 7, 8],  # rows
-            [0, 3, 6], [1, 4, 7], [2, 5, 8],  # columns
-            [0, 4, 8], [2, 4, 6]              # diagonals
-        ]
-        for combo in win_combinations:
-            if all(self.board[i] == self.current_player for i in combo):
-                return True
-        return False
+def tic_tac_toe():
+    board = [" " for _ in range(9)]
+    current_player = "X"
+    move_count = 0
 
-    def switch_player(self):
-        """Switch player"""
-        self.current_player = "O" if self.current_player == "X" else "X"
+    while True:
+        print_board(board)
+        print(f"Player {current_player}'s turn.")
+        move = input("Choose a position (1-9): ")
 
-    def is_draw(self):
-        """Check if the board is full"""
-        return " " not in self.board # if the board is full
+        # Input check
+        if not move.isdigit() or int(move) not in range(1, 10):
+            print("Invalid input! Please enter a number 1-9.")
+            continue
 
-    def play(self):
-        """Start the game"""
-        print("Welcome to Tic Tac Toe (OOP Version)")
-        self.print_board()
+        move = int(move) - 1
+        if board[move] != " ":
+            print("That spot is already taken!")
+            continue
 
-        while True:
-            try:
-                move = int(input(f"Player {self.current_player}, choose position (1-9): ")) - 1
-                if move < 0 or move > 8:
-                    print("Invalid position! Please choose between 1-9.")
-                    continue
-            except ValueError:
-                print("Please enter a valid number!")
-                continue
+        # Move set
+        board[move] = current_player
+        move_count += 1
 
-            if self.make_move(move):
-                self.print_board()
+        # Check winner
+        if check_winner(board, current_player):
+            print_board(board)
+            print(f"Player {current_player} wins!")
+            break
 
-                if self.check_winner():
-                    print(f"Player {self.current_player} wins!")
-                    break
-                elif self.is_draw():
-                    print("It's a draw!")
-                    break
+        # Draw check
+        if move_count == 9:
+            print_board(board)
+            print("It's a draw!")
+            break
 
-                self.switch_player()
+        # Player switch
+        current_player = "O" if current_player == "X" else "X"
 
-
-# Run the game
+# Program start
 if __name__ == "__main__":
-    game = TicTacToe()
-    game.play()
+    tic_tac_toe()

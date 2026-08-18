@@ -25,7 +25,7 @@ if __name__ == "__main__":
     grades = sorted(set([grade for name, grade in students]))
     second_lowest = grades[1]
     result = sorted([name for name, grade in students if grade == second_lowest])
-    # if we needs defrent sort
+    # if we needs deferent sort
     # result = [name for name, grade in students if grade == second_lowest]
     # result.sort()
     for name in result:
