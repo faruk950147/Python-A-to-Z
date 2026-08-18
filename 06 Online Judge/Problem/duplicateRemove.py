@@ -1,34 +1,47 @@
-def removeDuplicates(lst):
-    return list(set(lst))
+class RemoveDuplicates:
 
-print(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
+    def remove_duplicates(self, lst):
+        return list(set(lst))
 
-# output: [1, 2, 3, 4, 5, 6]
 
-def removeDuplicates1(lst):
-    return list(dict.fromkeys(lst))
+    def remove_duplicates1(self, lst):
+        return list(dict.fromkeys(lst))
 
-print(removeDuplicates1([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
 
-# output: [1, 2, 3, 4, 5, 6]
+    def remove_duplicates2(self, lst):
+        result = []
 
-def removeDuplicates2(lst):
-    result = []
-    for i in lst:
-        if i not in result:
-            result.append(i)
-    return result
+        for i in lst:
+            if i not in result:
+                result.append(i)
 
-print(removeDuplicates2([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
+        return result
 
-# output: [1, 2, 3, 4, 5, 6]
-def removeDuplicates3(lst):
-    result = []
-    for i in lst:
-        if lst.count(i) >= 1 and i not in result:
-            result.append(i)
-    return result
 
-print(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 6, 6]))
+    def remove_duplicates3(self, lst):
+        result = []
 
-# output: [1, 2, 3, 4, 5, 6]
+        for i in lst:
+            if lst.count(i) >= 1 and i not in result:
+                result.append(i)
+
+        return result
+
+
+duplicates = RemoveDuplicates()
+
+print(duplicates.remove_duplicates(
+    [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
+))
+
+print(duplicates.remove_duplicates1(
+    [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
+))
+
+print(duplicates.remove_duplicates2(
+    [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
+))
+
+print(duplicates.remove_duplicates3(
+    [1, 2, 2, 3, 3, 4, 5, 5, 6, 6]
+))
