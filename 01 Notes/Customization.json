@@ -80,5 +80,6 @@
     "numbers": "#0fbcf9",
     "functions": "#c494f1",
     "variables": "#b951e2"
-  }
+  },
+  "gitlens.mode.active": "review"
 }
