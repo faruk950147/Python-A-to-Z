@@ -1,33 +1,32 @@
 {
-  "windsurf.autocompleteSpeed": "default",
-  "windsurf.autoExecutionPolicy": "off",
-  "windsurf.chatFontSize": "22",
-  "windsurf.rememberLastModelSelection": true,
-  "windsurf.openRecentConversation": true,
   "files.autoSave": "afterDelay",
+
   "workbench.iconTheme": "material-icon-theme",
+
   "database-client.autoSync": true,
+
   "redhat.telemetry.enabled": true,
+
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
   "git.openRepositoryInParentFolders": "always",
+
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
       "icon": "terminal-powershell"
     },
     "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": []
     },
     "Git Bash": {
-      "source": "Git Bash"
+      "source": "Git Bash",
+      "icon": "terminal-git-bash"
     },
     "Cmder": {
       "path": "C:\\Windows\\System32\\cmd.exe",
@@ -37,14 +36,20 @@
       ]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Cmder",
+
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
   "python.createEnvironment.trigger": "off",
+
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": false,
+
   "editor.largeFileOptimizations": false,
+
   "workbench.editorAssociations": {
     "*.jar": "default"
   },
+
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -56,14 +61,19 @@
     },
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+
   "editor.fontSize": 21,
+
   "cSpell.userWords": [
     "Faruk"
   ],
+
   "workbench.colorTheme": "Shades of Purple",
+
   "workbench.colorCustomizations": {
     "editor.foreground": "#fff",
     "editor.background": "#2e2e4a",
@@ -73,6 +83,7 @@
     "sideBarTitle.foreground": "#2e2e4a",
     "sideBarSectionHeader.background": "#2e2e4a"
   },
+
   "editor.tokenColorCustomizations": {
     "comments": "#A3CB38",
     "keywords": "#ffa801",
@@ -81,5 +92,12 @@
     "functions": "#c494f1",
     "variables": "#b951e2"
   },
-  "gitlens.mode.active": "review"
+
+  "gitlens.mode.active": "review",
+
+  "editor.minimap.enabled": false,
+
+  "breadcrumbs.enabled": false,
+
+  "chat.disableAIFeatures": true
 }
