@@ -308,3 +308,22 @@ if prime.Is_Prime_Sieve1(7):
     print("Prime")
 else:
     print("Not Prime")
+    
+def sieve(n):
+    is_prime = [True] * (n + 1)
+
+    is_prime[0] = is_prime[1] = False
+
+    p = 2
+
+    while p * p <= n:
+        if is_prime[p]:
+            for multiple in range(p * p, n + 1, p):
+                is_prime[multiple] = False
+
+        p += 1
+
+    return [i for i in range(n + 1) if is_prime[i]]
+
+
+print(sieve(30))
