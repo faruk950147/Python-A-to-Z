@@ -620,3 +620,14 @@ if __name__ == "__main__":
         f"Selection Sort result: "
         f"{selection_sort.selection_sort(arr)}"
     )
+    
+class SelectionSort:
+    def selection_sort(self, arr):
+        n = len(arr)
+
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                if arr[i] > arr[j]:
+                    arr[i], arr[j] = arr[j], arr[i]
+
+        return arr
