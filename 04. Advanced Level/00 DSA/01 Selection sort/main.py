@@ -104,12 +104,9 @@
                       min_index = j
 
               if i != min_index:
-
-                  arr[i], arr[min_index] = (
-                      arr[min_index],
-                      arr[i]
-                  )
-
+              
+                  arr[i], arr[min_index] = arr[min_index], arr[i]
+                  
                   swap += 1
 
               print(
@@ -599,10 +596,7 @@ class SelectionSort:
             # Swap only if minimum is not already in place
             if i != min_index:
 
-                arr[i], arr[min_index] = (
-                    arr[min_index],
-                    arr[i]
-                )
+                arr[i], arr[min_index] = arr[min_index], arr[i]
 
                 swap += 1
 
