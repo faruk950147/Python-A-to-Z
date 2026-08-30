@@ -1,46 +1,194 @@
-# Class Condition: Submit a simple CLI calculator
+'''
+1. What is Programming Language?
+     A Programming Language is a formal language with a set of rules, syntax, and keywords that allows programmers to write instructions for a computer to perform specific tasks.
 
-# Simple CLI Calculator
+     Alternative Simple Definition:
 
-# def add(x, y):
-#     return x + y
+     A Programming Language is a set of rules and syntax that allows humans to communicate instructions to computers.
 
-# def subtract(x, y):
-#     return x - y
+     Examples
+     Python
+     C
+     C++
+     Java
+     JavaScript
+     Go
+     Rust
 
-# def multiply(x, y):
-#     return x * y
+2. What is Machine Language?
+     Machine Language is the lowest-level programming language that consists only of 0s and 1s (binary digits). It is directly understood and executed by the CPU.
 
-# def divide(x, y):
-#     if y == 0:
-#         return "Error: Division by zero!"
-#     return x / y
+     Example
+     10101100
+     11001010
+     00011111
+     Advantages
+     Fastest execution
+     No translator required
+     Disadvantages
+     Very difficult to write
+     Very difficult to debug
+     Hardware dependent
 
-# def calculator():
-#     print("Welcome to the CLI Calculator!")
-#     print("Select operation:")
-#     print("1. Add (+)")
-#     print("2. Subtract (-)")
-#     print("3. Multiply (*)")
-#     print("4. Divide (/)")
+3. What is Binary Number System?
+     Binary is a number system that uses only two digits:
 
-#     choice = input("Enter choice (1/2/3/4): ")
+     0
+     1
+     Base
+     Base = 2
+     Example
+     Binary = 1010
+     Decimal = 10
 
-#     if choice in ('1', '2', '3', '4'):
-#         num1 = float(input("Enter first number: "))
-#         num2 = float(input("Enter second number: "))
+4. What is Decimal Number System?
+     Decimal is the number system we use every day.
 
-#         if choice == '1':
-#             print(f"{num1} + {num2} = {add(num1, num2)}")
-#         elif choice == '2':
-#             print(f"{num1} - {num2} = {subtract(num1, num2)}")
-#         elif choice == '3':
-#             print(f"{num1} * {num2} = {multiply(num1, num2)}")
-#         elif choice == '4':
-#             print(f"{num1} / {num2} = {divide(num1, num2)}")
-#     else:
-#         print("Invalid input! Please select 1, 2, 3, or 4.")
+     Digits
+     0-9
+     Base
+     Base = 10
 
-# if __name__ == "__main__":
-#     calculator()
+     Example
+     254
 
+5. What is Octal Number System?
+     Octal uses digits from
+
+     0–7
+     Base
+     Base = 8
+
+     Example
+     725
+
+6. What is Hexadecimal Number System?
+     Hexadecimal uses
+
+     0–9
+     A–F
+     Base
+     Base = 16
+
+     Example
+     3AF
+
+7. What is Assembly Language?
+     Assembly Language is a low-level programming language that uses mnemonic instructions instead of binary.
+
+     Example
+     MOV AX,5
+     ADD AX,2
+     MOV
+     ADD
+     SUB
+     JMP
+
+8. What is High-Level Programming Language?
+     Assembly Language is a low-level programming language that uses mnemonic instructions instead of binary.
+
+     Example
+     MOV AX,5
+     ADD AX,2
+     MOV
+     ADD
+     SUB
+     JMP
+
+9. What is High-Level Programming Language?
+     A High-Level Programming Language is designed to be easy for humans to read, write, and understand.
+
+     Examples
+     Python
+     Java
+     C
+     C++
+     JavaScript
+     PHP
+     print("Hello World")
+
+10. What is Source Code?
+     Source Code is the original code written by a programmer using a programming language.
+
+     Example
+     a = 10
+     b = 20
+     print(a+b)
+
+     10. What is Compiler?
+     Definition
+
+     A Compiler is a program that translates the entire source code into machine code before execution.
+
+     Features
+     Entire program at once
+     Generates executable file
+     Faster execution
+     Errors shown after compilation
+     Examples
+     GCC
+     Clang
+     MSVC
+
+11. What is Interpreter?
+     An Interpreter translates and executes source code one line at a time.
+
+     Interpreter Source Code-কে এক লাইন করে অনুবাদ এবং Execute করে।
+
+     Features
+     Line-by-line execution
+     No executable file
+     Easier debugging
+     Slower execution
+     Examples
+     Python
+     JavaScript
+     Ruby
+
+12. Compiler vs Interpreter
+     Compiler	Interpreter
+     Translates entire program	Translates line by line
+     Faster execution	Slower execution
+     Creates executable file	No executable file
+     Errors after compilation	Errors immediately
+     Example: C, C++	Example: Python, JavaScript
+
+13. What is Object Code?
+     Object Code is the machine-level code produced by a compiler or assembler before final linking.
+
+     Usually
+     main.o
+     main.obj
+
+14. What is Machine Code?
+     Machine Code is the final binary code that the CPU directly executes.
+
+     Example
+     10110011
+     00101010
+     11000001
+
+14. Program Translation Process
+     Programmer
+          │
+          ▼
+     Source Code
+          │
+          ▼
+     Compiler / Interpreter
+          │
+          ▼
+     Object Code
+          │
+          ▼
+     Linker
+          │
+          ▼
+     Executable File
+          │
+          ▼
+     Machine Code
+          │
+          ▼
+     CPU Executes
+'''
