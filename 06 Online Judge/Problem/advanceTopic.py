@@ -2,7 +2,7 @@
 # input "Sky is blue"
 # output "blue is sky"
 
-def reverseString(str):
+def reverseString1(str):
     #split return list 
     str = str.split(" ") 
     #reverse list ['blue', 'is', 'Sky']
@@ -10,9 +10,15 @@ def reverseString(str):
     #join list 'blue is sky'
     return " ".join(str).lower()
 
-print(reverseString("Sky is blue"))
+print("reverseString1('Sky is blue'):", reverseString1("Sky is blue"))
 
-# output: blue is sky
+def reverseString2(str):
+    rev = ""
+    for i in range(len(str)-1, -1, -1):
+        rev += str[i]
+    return rev  
+print("Reversed:",reverseString2("blue"))
+# output: eulb
 
 # 2. Question: Count the Occurrences of Each Character in a String
 # str1 = "a,a,a,b,b,c,c,c"
