@@ -75,16 +75,6 @@ class Palindrome:
         # Compare original number with reversed number
         return original == reverse_num
 
-
-p = Palindrome()
-
-print(p.str_palindrome("madam"))   # True
-print(p.str_palindrome("hello"))   # False
-
-print(p.num_palindrome(121))       # True
-print(p.num_palindrome(123))       # False
-print(p.num_palindrome(1221))      # True
-
 class RecursionPalindrome:
     '''
         1. Define a recursive function that takes a string and two pointers (left and right).
@@ -126,3 +116,21 @@ class RecursionPalindrome:
 
         # Recursive case: check the substring excluding the first and last characters.
         return self.is_palindrome2(s[1:-1])
+    
+if __name__ == "__main__":
+    p = Palindrome()
+    print("It's first class method:")
+    print(p.str_palindrome("madam"))   # True
+    print(p.str_palindrome("hello"))   # False
+
+    print("It's first class method:")
+    print(p.num_palindrome(121))       # True
+    print(p.num_palindrome(123))       # False
+    print(p.num_palindrome(1221))      # True
+
+    r = RecursionPalindrome()
+    print("It's recursive method:")
+    print(r.is_palindrome1("madam"))   # True
+    print(r.is_palindrome1("hello"))   # False
+    print(r.is_palindrome2("madam"))   # True
+    print(r.is_palindrome2("hello"))   # False
