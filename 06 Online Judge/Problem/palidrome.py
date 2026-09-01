@@ -100,9 +100,6 @@ class RecursionPalindrome:
         pass
 
     def is_palindrome1(self, s, left=0, right=None):
-        # Preprocess the string: remove non-alphanumeric characters and convert to lowercase.
-        s = ''.join(filter(str.isalnum, s)).lower()
-
         # Set right pointer to the last index if not provided.
         if right is None:
             right = len(s) - 1
@@ -119,9 +116,6 @@ class RecursionPalindrome:
         return self.is_palindrome1(s, left + 1, right - 1)
 
     def is_palindrome2(self, s):
-        # Preprocess the string: remove non-alphanumeric characters and convert to lowercase.
-        s = ''.join(filter(str.isalnum, s)).lower()
-
         # Base case: stop recursion when the string is empty or has one character.
         if len(s) <= 1:
             return True
