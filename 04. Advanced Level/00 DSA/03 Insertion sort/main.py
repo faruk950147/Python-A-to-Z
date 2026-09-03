@@ -58,10 +58,9 @@
 
       def insertion_sort(self, arr):
           n = len(arr)
-          shifts = 0
+          shifts = 0 # Count the number of shifts that occur during the sorting process
 
           for i in range(1, n):
-
               # Store the current element
               item = arr[i]
 
@@ -506,7 +505,6 @@ class InsertionSort:
         shifts = 0
 
         for i in range(1, n):
-
             # Store the current element
             item = arr[i]
 
@@ -547,16 +545,20 @@ class InsertionSort:
         shifts = 0
 
         for i in range(1, n):
-            key = arr[i]
-
-            for j in range(i - 1, -1, -1):
-                if arr[j] > key:
+            item = arr[i]
+            # Find the position where item should be inserted in the sorted part of the array
+            # We start from the end of the sorted part and move backwards
+            # i - 1 is the last index of the sorted part
+            # -1 is the stopping condition for the loop (when we reach the beginning of the array)
+            # -1 is used to indicate that we want to go backwards in the array
+            for j in range(i - 1, -1, -1): 
+                if arr[j] > item:
                     arr[j + 1] = arr[j]
                     shifts += 1
                 else:
                     break
 
-            arr[j + 1] = key
+            arr[j + 1] = item
 
             print(f"After pass {i}: {arr} " f"(shifts: {shifts})")
 

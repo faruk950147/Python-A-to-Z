@@ -89,30 +89,21 @@
   class SelectionSort:
 
       def selection_sort(self, arr):
-
           n = len(arr)
           swap = 0
 
           for i in range(n - 1):
-
               min_index = i
 
               for j in range(i + 1, n):
-
                   if arr[j] < arr[min_index]:
-
                       min_index = j
 
               if i != min_index:
-              
                   arr[i], arr[min_index] = arr[min_index], arr[i]
-                  
                   swap += 1
 
-              print(
-                  f"After pass {i + 1}: "
-                  f"{arr} (swapaps: {swap})"
-              )
+              print(f"After pass {i + 1}: " f"{arr} (swaps: {swap})")
 
           return arr
 
@@ -583,27 +574,20 @@ class SelectionSort:
         swap = 0
 
         for i in range(n - 1):
-
             # Assume current position contains minimum
             min_index = i
 
             # Search minimum in the unsorted portion
             for j in range(i + 1, n):
-
                 if arr[j] < arr[min_index]:
                     min_index = j
 
             # Swap only if minimum is not already in place
             if i != min_index:
-
                 arr[i], arr[min_index] = arr[min_index], arr[i]
-
                 swap += 1
 
-            print(
-                f"After pass {i + 1}: "
-                f"{arr} (swaps: {swap})"
-            )
+            print(f"After pass {i + 1}: " f"{arr} (swaps: {swap})")
 
         return arr
 
@@ -616,10 +600,7 @@ if __name__ == "__main__":
 
     print(f"Original array: {arr}")
 
-    print(
-        f"Selection Sort result: "
-        f"{selection_sort.selection_sort(arr)}"
-    )
+    print(f"Selection Sort result: " f"{selection_sort.selection_sort(arr)}")
     
 class SelectionSort:
     def selection_sort(self, arr):

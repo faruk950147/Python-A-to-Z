@@ -65,31 +65,23 @@
   class BubbleSort:
 
       def bubble_sort(self, arr):
-
           n = len(arr)
           swaps = 0
 
           for i in range(n - 1):
-
               is_swapped = False
               pass_swaps = 0
 
               # Last i elements are already in correct position
               for j in range(0, n - i - 1):
-
                   if arr[j] > arr[j + 1]:
-
                       arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
                       is_swapped = True
                       swaps += 1
                       pass_swaps += 1
 
-              print(
-                  f"After pass {i + 1}: "
-                  f"{arr} "
-                  f"(swaps: {pass_swaps}, total swaps: {swaps})"
-              )
+              print(f"After pass {i + 1}: " f"{arr} " f"(swaps: {pass_swaps}, total swaps: {swaps})")
 
               # If no swap occurred, array is already sorted
               if not is_swapped:
@@ -476,26 +468,19 @@ class BubbleSort:
         swaps = 0
 
         for i in range(n - 1):
-
             is_swapped = False
             pass_swaps = 0
 
             # Last i elements are already in correct position
             for j in range(0, n - i - 1):
-
                 if arr[j] > arr[j + 1]:
-
                     arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
                     is_swapped = True
                     swaps += 1
                     pass_swaps += 1
 
-            print(
-                f"After pass {i + 1}: "
-                f"{arr} "
-                f"(swaps: {pass_swaps}, total swaps: {swaps})"
-            )
+            print(f"After pass {i + 1}: " f"{arr} " f"(swaps: {pass_swaps}, total swaps: {swaps})")
 
             # If no swap occurred, array is already sorted
             if not is_swapped:
