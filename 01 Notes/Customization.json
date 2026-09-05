@@ -39,8 +39,6 @@
 
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
 
-  "python.createEnvironment.trigger": "off",
-
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": false,
 
@@ -97,7 +95,5 @@
 
   "editor.minimap.enabled": false,
 
-  "breadcrumbs.enabled": false,
-
-  "chat.disableAIFeatures": true
+  "python.defaultInterpreterPath": "C:\\Python 3\\python.exe"
 }
