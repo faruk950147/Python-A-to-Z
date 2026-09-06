@@ -31,7 +31,7 @@
 
   [64, 34, 25, 12, 22, 11, 90]
    ↑
-  In selection sort consider 0 index is i marks the first element of the unsorted subarray.
+  In selection sort consider 0 index is min_index and marks the first element of the unsorted subarray.
   We have initially assume that element is the minimum:
 
 
