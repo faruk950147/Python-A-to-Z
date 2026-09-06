@@ -31,7 +31,9 @@
 
   [64, 34, 25, 12, 22, 11, 90]
    ↑
-  sorted starts here
+  sorted starts here the first element is considered sorted and the rest is unsorted. 
+  The first element is assumed to be the minimum, 64, 
+  and the algorithm searches for a smaller element in the unsorted part.
 
 
   After Pass 1:
