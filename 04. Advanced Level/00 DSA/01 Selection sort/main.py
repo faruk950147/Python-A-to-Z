@@ -31,9 +31,8 @@
 
   [64, 34, 25, 12, 22, 11, 90]
    ↑
-  sorted starts here the first element is considered sorted and the rest is unsorted. 
-  The first element is assumed to be the minimum, 64, 
-  and the algorithm searches for a smaller element in the unsorted part.
+  In selection sort consider 0 index is i marks the first element of the unsorted subarray.
+  We have initially assume that element is the minimum:
 
 
   After Pass 1:
